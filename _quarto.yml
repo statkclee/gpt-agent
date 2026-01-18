@@ -1,0 +1,122 @@
+project:
+  type: book
+  output-dir: docs
+  preview:
+    port: 7771
+    browser: false
+  render:
+    - "*.qmd"
+    - "!*.Rmd"
+
+lang: ko-KR
+
+# ---------------------------------- #
+book:
+  title: "AI Agent 코딩"
+  reader-mode: true
+  subtitle: "LLM과 IDE로 시작하는 차세대 프로그래밍"
+
+  page-footer:
+    left: |
+      AI Agent Coding with LLM
+    right: |
+      Built with <a href="https://quarto.org/">Quarto</a> · Powered by AI Agents
+
+  cover-image: images/book_cover.jpg
+  favicon: images/logo.png
+  site-url: https://r2bit.com/gpt-coding/
+  repo-url: https://github.com/bit2r/gpt-coding/
+  repo-branch: main
+  repo-actions: [edit, issue]
+
+  google-analytics: "UA-229551680-1"
+  author:
+    - name: "이광춘"
+      affiliations: "국가인공지능전략위원회 자문위원"
+  date: last-modified
+  date-format: "YYYY년 MM월 DD일"
+
+# ---------------------------------- #
+  chapters:
+    - index.qmd
+
+    - part: "**8부** AI 시대 프로그래밍"
+      chapters:
+        - 71-gpt.qmd
+        - 72-paradigm-shift.qmd
+        - 73-context-engineering.qmd
+        - 74-workflow.qmd
+        - 75-code-review.qmd
+        - 76-ai-tools.qmd
+        - 77-developer-future.qmd
+
+    - part: "**9부** 통합 개발 환경"
+      chapters:
+        - ide.qmd
+        - ide_positron.qmd
+        - ide_extension.qmd
+        - ide_setup.qmd
+        - docker_concept.qmd
+        - compendium.qmd
+
+    - part: "**부록**"
+      chapters:
+        - glossary.qmd
+
+    - references.qmd
+
+# ---------------------------------- #
+format:
+  html:
+    mermaid:
+      theme: neutral
+    theme:
+      light: [cosmo, assets/r2bit.scss]
+    number-depth: 3
+    number-sections: true
+    colorlinks: true
+    code-overflow: wrap
+    code-link: true
+    author-meta: "이광춘(Openai)"
+    callout-appearance: simple
+    tbl-cap-location: bottom
+
+# ---------------------------------- #
+filters:
+  - fontawesome
+  - include-code-files
+  - fancy-text
+
+code-annotations: hover
+
+bibliography: assets/references.bib
+csl: https://www.zotero.org/styles/ieee
+link-citations: true
+cite-method: citeproc
+
+# ---------------------------------- #
+glossary:
+  path: glossary.yml
+  popup: click
+  show: true
+
+# ---------------------------------- #
+engine: knitr
+jupyter: python3
+
+knitr:
+  opts_chunk:
+    message: false
+    warning: false
+    collapse: true
+    code-overflow: code-overflow
+    fig-crop: false
+    comment: "#>"
+    R.options:
+      knitr.graphics.auto_pdf: true
+editor_options:
+  chunk_output_type: console
+
+editor:
+  markdown:
+    wrap: 72

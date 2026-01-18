@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550">
+  <defs>
+    <style>
+      .tufte-title { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 20px; fill: #222; font-weight: bold; }
+      .tufte-subtitle { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 14px; fill: #666; }
+      .tufte-label { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 14px; fill: #333; font-weight: bold; }
+      .tufte-text { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 12px; fill: #444; }
+      .tufte-small { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 11px; fill: #666; }
+      .tufte-box { fill: #f9f9f9; stroke: #999; stroke-width: 1; }
+      .tufte-box-highlight { fill: #f0f0f0; stroke: #666; stroke-width: 1.5; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="900" height="550" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" class="tufte-title">LLM 배포 시나리오: 상용 vs 자체 호스팅</text>
+  <text x="450" y="55" text-anchor="middle" class="tufte-subtitle">실제 사용 사례 비교 (2025년)</text>
+
+  <!-- Scenario 1: Commercial API (Left) -->
+  <g transform="translate(50, 90)">
+    <text x="175" y="0" text-anchor="middle" class="tufte-label">시나리오 1: 스타트업 프로토타이핑</text>
+    <rect x="0" y="15" width="350" height="380" class="tufte-box" rx="5"/>
+    
+    <!-- Company Profile -->
+    <g transform="translate(20, 35)">
+      <text x="0" y="0" class="tufte-text" font-weight="bold">기업: AI 스타트업 (팀 5명)</text>
+      <text x="0" y="20" class="tufte-small">목표: MVP 3개월 내 출시</text>
+      <text x="0" y="35" class="tufte-small">사용량: ~100M 토큰/월</text>
+    </g>
+
+    <!-- Solution -->
+    <g transform="translate(20, 90)">
+      <text x="0" y="0" class="tufte-label" fill="#666">선택: 상용 API</text>
+      <line x1="0" y1="10" x2="310" y2="10" stroke="#ccc"/>
+      
+      <text x="0" y="30" class="tufte-text">• OpenAI GPT-4o (프로토타입)</text>
+      <text x="0" y="50" class="tufte-text">• Claude Haiku (대량 처리)</text>
+      <text x="0" y="70" class="tufte-text">• litellm으로 쉬운 전환</text>
+    </g>
+
+    <!-- Architecture -->
+    <g transform="translate(20, 180)">
+      <rect x="0" y="0" width="310" height="80" fill="#fcfcfc" stroke="#ddd" rx="3"/>
+      <text x="155" y="20" text-anchor="middle" class="tufte-small">아키텍처</text>
+      <text x="10" y="40" class="tufte-small">App → litellm → OpenAI/Claude</text>
+      <text x="10" y="55" class="tufte-small">클라우드 서버 (AWS/GCP)</text>
+      <text x="10" y="70" class="tufte-small">API 키 관리만 필요</text>
+    </g>
+
+    <!-- Cost & Benefits -->
+    <g transform="translate(20, 280)">
+      <text x="0" y="0" class="tufte-text" font-weight="bold">비용 (월)</text>
+      <text x="0" y="18" class="tufte-small">• API: ~$125 (100M 토큰)</text>
+      <text x="0" y="33" class="tufte-small">• 서버: $50 (관리형)</text>
+      <text x="0" y="48" class="tufte-small" fill="#888">총: ~$175/월</text>
+      
+      <text x="0" y="75" class="tufte-text" font-weight="bold">장점</text>
+      <text x="0" y="90" class="tufte-small">✓ 즉시 시작, 제로 설정</text>
+    </g>
+  </g>
+
+  <!-- Scenario 2: Self-Hosted (Right) -->
+  <g transform="translate(500, 90)">
+    <text x="175" y="0" text-anchor="middle" class="tufte-label">시나리오 2: 금융사 내부 시스템</text>
+    <rect x="0" y="15" width="350" height="380" class="tufte-box-highlight" rx="5"/>
+    
+    <!-- Company Profile -->
+    <g transform="translate(20, 35)">
+      <text x="0" y="0" class="tufte-text" font-weight="bold">기업: 금융기관 (AI팀 20명)</text>
+      <text x="0" y="20" class="tufte-small">목표: 고객 데이터 분석 자동화</text>
+      <text x="0" y="35" class="tufte-small">사용량: ~50B 토큰/월 (대량)</text>
+    </g>
+
+    <!-- Solution -->
+    <g transform="translate(20, 90)">
+      <text x="0" y="0" class="tufte-label" fill="#111">선택: 자체 호스팅</text>
+      <line x1="0" y1="10" x2="310" y2="10" stroke="#999"/>
+      
+      <text x="0" y="30" class="tufte-text">• Llama 4 Scout 70B (파인튜닝)</text>
+      <text x="0" y="50" class="tufte-text">• Qwen 3 Coder (코드 생성)</text>
+      <text x="0" y="70" class="tufte-text">• Ollama + 자체 인프라</text>
+    </g>
+
+    <!-- Architecture -->
+    <g transform="translate(20, 180)">
+      <rect x="0" y="0" width="310" height="80" fill="#f8f8f8" stroke="#999" rx="3"/>
+      <text x="155" y="20" text-anchor="middle" class="tufte-small">아키텍처</text>
+      <text x="10" y="40" class="tufte-small">App → Ollama API → Local GPU</text>
+      <text x="10" y="55" class="tufte-small">온프레미스 데이터센터</text>
+      <text x="10" y="70" class="tufte-small">8x H100 클러스터</text>
+    </g>
+
+    <!-- Cost & Benefits -->
+    <g transform="translate(20, 280)">
+      <text x="0" y="0" class="tufte-text" font-weight="bold">비용 (월)</text>
+      <text x="0" y="18" class="tufte-small">• GPU: ~$15,000 (8x H100)</text>
+      <text x="0" y="33" class="tufte-small">• 운영: $5,000 (엔지니어)</text>
+      <text x="0" y="48" class="tufte-small" fill="#888">총: ~$20,000/월</text>
+      
+      <text x="0" y="75" class="tufte-text" font-weight="bold">장점</text>
+      <text x="0" y="90" class="tufte-small">✓ 데이터 외부 미전송</text>
+    </g>
+  </g>
+
+  <!-- Bottom Comparison -->
+  <text x="450" y="510" text-anchor="middle" class="tufte-small" font-style="italic" fill="#666">
+    사용량 1B 토큰/월 기준 손익분기점: 상용 API $1,250 vs 자체 호스팅 $20,000 (약 16배)
+  </text>
+  <text x="450" y="530" text-anchor="middle" class="tufte-small" font-style="italic" fill="#888">
+    → 사용량이 많고(50B+) 프라이버시가 중요하면 자체 호스팅, 그 외는 상용 API
+  </text>
+
+</svg>

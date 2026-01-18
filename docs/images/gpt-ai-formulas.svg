@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <style>
+      .tufte-title {
+        font-family: Palatino, 'Book Antiqua', Georgia, serif;
+        font-size: 20px;
+        font-weight: bold;
+        fill: #222;
+      }
+      .formula-label {
+        font-family: 'Apple Myungjo', 'Songti SC', serif;
+        font-size: 16px;
+        font-weight: bold;
+        fill: #333;
+        text-anchor: start;
+      }
+      .plus-sign {
+        font-family: Palatino, Georgia, serif;
+        font-size: 24px;
+        fill: #666;
+        text-anchor: middle;
+      }
+      .arrow {
+        stroke: #666;
+        stroke-width: 1.5;
+        marker-end: url(#arrowhead);
+      }
+      .result-text {
+        font-family: 'Apple Myungjo', 'Songti SC', serif;
+        font-size: 18px;
+        font-weight: bold;
+        fill: #111;
+        text-anchor: start;
+      }
+      /* Element Box Style (Mini) */
+      .element-box {
+        fill: #fdfdfd;
+        stroke: #444;
+        stroke-width: 0.8;
+      }
+      .element-symbol {
+        font-family: Palatino, Georgia, serif;
+        font-size: 16px;
+        font-weight: bold;
+        fill: #111;
+        text-anchor: middle;
+      }
+      .element-kr {
+        font-family: 'Apple Myungjo', 'Songti SC', serif;
+        font-size: 10px;
+        fill: #555;
+        text-anchor: middle;
+      }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="400" fill="#ffffff"/>
+  
+  <text x="50" y="40" class="tufte-title">AI 아키텍처 화학식 (AI Architecture Formulas)</text>
+
+  <!-- Formula 1: RAG -->
+  <g transform="translate(50, 80)">
+    <text x="0" y="20" class="formula-label">1. RAG (검색 증강 생성)</text>
+    
+    <!-- Pr -->
+    <g transform="translate(0, 40)">
+      <rect width="60" height="50" class="element-box"/>
+      <text x="30" y="25" class="element-symbol">Pr</text>
+      <text x="30" y="42" class="element-kr">프롬프트</text>
+    </g>
+    <text x="80" y="75" class="plus-sign">+</text>
+
+    <!-- Em -->
+    <g transform="translate(100, 40)">
+      <rect width="60" height="50" class="element-box"/>
+      <text x="30" y="25" class="element-symbol">Em</text>
+      <text x="30" y="42" class="element-kr">임베딩</text>
+    </g>
+    <text x="180" y="75" class="plus-sign">+</text>
+
+    <!-- Vx -->
+    <g transform="translate(200, 40)">
+      <rect width="60" height="50" class="element-box"/>
+      <text x="30" y="25" class="element-symbol">Vx</text>
+      <text x="30" y="42" class="element-kr">벡터DB</text>
+    </g>
+    <text x="280" y="75" class="plus-sign">+</text>
+
+    <!-- Lg -->
+    <g transform="translate(300, 40)">
+      <rect width="60" height="50" class="element-box"/>
+      <text x="30" y="25" class="element-symbol">Lg</text>
+      <text x="30" y="42" class="element-kr">LLM</text>
+    </g>
+
+    <!-- Arrow & Result -->
+    <line x1="380" y1="65" x2="430" y2="65" class="arrow"/>
+    <text x="450" y="70" class="result-text">RAG System</text>
+  </g>
+
+  <!-- Formula 2: ReAct Agent -->
+  <g transform="translate(50, 200)">
+    <text x="0" y="20" class="formula-label">2. Autonomous Agent (자율 에이전트)</text>
+    
+    <!-- Pr -->
+    <g transform="translate(0, 40)">
+      <rect width="60" height="50" class="element-box"/>
+      <text x="30" y="25" class="element-symbol">Pr</text>
+      <text x="30" y="42" class="element-kr">프롬프트</text>
+    </g>
+    <text x="80" y="75" class="plus-sign">+</text>
+
+    <!-- Me -->
+    <g transform="translate(100, 40)">
+      <rect width="60" height="50" class="element-box"/>
+      <text x="30" y="25" class="element-symbol">Me</text>
+      <text x="30" y="42" class="element-kr">메모리</text>
+    </g>
+    <text x="180" y="75" class="plus-sign">+</text>
+
+    <!-- Fc -->
+    <g transform="translate(200, 40)">
+      <rect width="60" height="50" class="element-box"/>
+      <text x="30" y="25" class="element-symbol">Fc</text>
+      <text x="30" y="42" class="element-kr">함수호출</text>
+    </g>
+    <text x="280" y="75" class="plus-sign">+</text>
+
+    <!-- Th -->
+    <g transform="translate(300, 40)">
+      <rect width="60" height="50" class="element-box"/>
+      <text x="30" y="25" class="element-symbol">Th</text>
+      <text x="30" y="42" class="element-kr">추론</text>
+    </g>
+
+    <!-- Arrow & Result -->
+    <line x1="380" y1="65" x2="430" y2="65" class="arrow"/>
+    <text x="450" y="70" class="result-text">ReAct Agent</text>
+  </g>
+  
+  <!-- Source -->
+  <text x="750" y="380" style="font-family: Palatino, Georgia, serif; font-size: 9px; fill: #999; text-anchor: end;">Concept by IBM Technology (2025)</text>
+
+</svg>

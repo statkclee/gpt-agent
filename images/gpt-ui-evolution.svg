@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 70 800 350">
+  <defs>
+    <style>
+      .tufte-title { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 20px; fill: #111; font-weight: bold; }
+      .tufte-subtitle { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 14px; fill: #555; }
+      .tufte-label { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 14px; fill: #111; font-weight: bold; }
+      .tufte-desc { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 12px; fill: #444; }
+      .tufte-small { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 11px; fill: #666; }
+      .tufte-year { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 11px; fill: #888; font-style: italic; }
+      .tufte-box { fill: #fdfdfd; stroke: #888; stroke-width: 1; }
+      .tufte-box-highlight { fill: #f4f4f4; stroke: #333; stroke-width: 1.5; }
+      .tufte-line { stroke: #888; stroke-width: 1; }
+      .tufte-arrow { fill: #888; }
+      
+      .ui-dark { fill: #333; }
+      .ui-bg { fill: #fff; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" class="tufte-arrow"/>
+    </marker>
+  </defs>
+
+  <!-- White background -->
+  <rect x="0" y="0" width="800" height="450" fill="#ffffff"/>
+
+  <!-- Title Section -->
+  <!-- <text x="400" y="35" text-anchor="middle" class="tufte-title">사용자 인터페이스(UI)의 진화</text>
+  <text x="400" y="58" text-anchor="middle" class="tufte-subtitle">명령어(Command)에서 대화(Conversation)로</text> -->
+
+  <!-- Timeline base (Shifted Up) -->
+  <line x1="60" y1="380" x2="740" y2="380" class="tufte-line" stroke-width="1.5"/>
+
+  <!-- Era 1: CLI -->
+  <g transform="translate(120, 90)">
+    <rect x="-55" y="0" width="110" height="240" class="tufte-box" rx="3"/>
+    <text x="0" y="25" text-anchor="middle" class="tufte-label">CLI</text>
+    <text x="0" y="42" text-anchor="middle" class="tufte-small">Command Line</text>
+    
+    <rect x="-35" y="60" width="70" height="45" class="ui-dark" rx="2"/>
+    <text x="-28" y="78" font-family="Courier, monospace" font-size="9" fill="#fff">$ ls -al</text>
+    <text x="-28" y="90" font-family="Courier, monospace" font-size="9" fill="#fff">$ ./run</text>
+    <rect x="-28" y="95" width="5" height="8" fill="#fff"/>
+
+    <text x="0" y="135" text-anchor="middle" class="tufte-desc">텍스트 명령어</text>
+    <text x="0" y="155" text-anchor="middle" class="tufte-desc">엄격한 문법</text>
+    <text x="0" y="190" text-anchor="middle" class="tufte-small" fill="#666">Unix / DOS</text>
+
+    <line x1="0" y1="240" x2="0" y2="290" class="tufte-line" stroke-dasharray="3 2"/>
+    <circle cx="0" cy="290" r="4" fill="#666"/>
+    <text x="0" y="310" text-anchor="middle" class="tufte-year">1960s~</text>
+  </g>
+
+  <!-- Era 2: GUI -->
+  <g transform="translate(306, 90)">
+    <rect x="-55" y="0" width="110" height="240" class="tufte-box" rx="3"/>
+    <text x="0" y="25" text-anchor="middle" class="tufte-label">GUI</text>
+    <text x="0" y="42" text-anchor="middle" class="tufte-small">Graphical UI</text>
+    
+    <rect x="-35" y="60" width="70" height="45" class="ui-bg" stroke="#555" stroke-width="1" rx="2"/>
+    <rect x="-35" y="60" width="70" height="10" fill="#ddd" stroke="#555" stroke-width="0.5"/>
+    <circle cx="-28" cy="65" r="2" fill="#999"/><circle cx="-22" cy="65" r="2" fill="#bbb"/><circle cx="-16" cy="65" r="2" fill="#bbb"/>
+    <rect x="-25" y="75" width="15" height="15" fill="#eee" stroke="#999" stroke-width="0.5"/>
+    <path d="M 5 90 L 12 96 L 8 98 Z" fill="#333" />
+
+    <text x="0" y="135" text-anchor="middle" class="tufte-desc">메타포(창, 아이콘)</text>
+    <text x="0" y="155" text-anchor="middle" class="tufte-desc">마우스 클릭</text>
+    <text x="0" y="190" text-anchor="middle" class="tufte-small" fill="#666">Mac / Windows</text>
+
+    <line x1="0" y1="240" x2="0" y2="290" class="tufte-line" stroke-dasharray="3 2"/>
+    <circle cx="0" cy="290" r="4" fill="#666"/>
+    <text x="0" y="310" text-anchor="middle" class="tufte-year">1984~</text>
+  </g>
+
+  <!-- Era 3: Touch/Mobile -->
+  <g transform="translate(493, 90)">
+    <rect x="-55" y="0" width="110" height="240" class="tufte-box" rx="3"/>
+    <text x="0" y="25" text-anchor="middle" class="tufte-label">Mobile UI</text>
+    <text x="0" y="42" text-anchor="middle" class="tufte-small">Touch &amp; App</text>
+    
+    <rect x="-18" y="60" width="36" height="55" class="ui-dark" rx="4"/>
+    <rect x="-15" y="64" width="30" height="44" class="ui-bg"/>
+    <rect x="-10" y="70" width="8" height="8" fill="#ccc" rx="1"/><rect x="2" y="70" width="8" height="8" fill="#eee" rx="1"/>
+    <rect x="-10" y="82" width="8" height="8" fill="#eee" rx="1"/><rect x="2" y="82" width="8" height="8" fill="#ccc" rx="1"/>
+    <circle cx="0" cy="111" r="2" fill="#666"/>
+
+    <text x="0" y="135" text-anchor="middle" class="tufte-desc">직접 조작(Touch)</text>
+    <text x="0" y="155" text-anchor="middle" class="tufte-desc">언제 어디서나</text>
+    <text x="0" y="190" text-anchor="middle" class="tufte-small" fill="#666">iPhone / Android</text>
+
+    <line x1="0" y1="240" x2="0" y2="290" class="tufte-line" stroke-dasharray="3 2"/>
+    <circle cx="0" cy="290" r="4" fill="#666"/>
+    <text x="0" y="310" text-anchor="middle" class="tufte-year">2007~</text>
+  </g>
+
+  <!-- Era 4: LUI -->
+  <g transform="translate(680, 90)">
+    <rect x="-55" y="0" width="110" height="240" class="tufte-box-highlight" rx="3"/>
+    <text x="0" y="25" text-anchor="middle" class="tufte-label">LUI</text>
+    <text x="0" y="42" text-anchor="middle" class="tufte-small">Language UI</text>
+    
+    <path d="M -30 65 h 35 a 4 4 0 0 1 4 4 v 6 a 4 4 0 0 1 -4 4 h -35 a 4 4 0 0 1 -4 -4 v -6 a 4 4 0 0 1 4 -4" fill="#f0f0f0" stroke="#ccc"/>
+    <line x1="-25" y1="71" x2="-5" y2="71" stroke="#bbb" stroke-width="2"/>
+    <path d="M 30 85 h -35 a 4 4 0 0 0 -4 4 v 8 a 4 4 0 0 0 4 4 h 35 a 4 4 0 0 0 4 -4 v -8 a 4 4 0 0 0 -4 -4" fill="#333"/>
+    <text x="12" y="97" font-family="Palatino, serif" font-size="8" fill="#fff" text-anchor="middle">코드 짜줘</text>
+
+    <text x="0" y="135" text-anchor="middle" class="tufte-desc">자연어 대화</text>
+    <text x="0" y="155" text-anchor="middle" class="tufte-desc">의도와 맥락</text>
+    <text x="0" y="190" text-anchor="middle" class="tufte-small" fill="#333" font-weight="bold">ChatGPT / Claude</text>
+
+    <line x1="0" y1="240" x2="0" y2="290" class="tufte-line" stroke-width="2"/>
+    <circle cx="0" cy="290" r="5" fill="#333"/>
+    <text x="0" y="310" text-anchor="middle" class="tufte-year" fill="#333" font-weight="bold">2022~</text>
+  </g>
+
+  <!-- Evolution Arrows (Simplified) -->
+  <g transform="translate(0, 10)" opacity="0.3">
+      <line x1="185" y1="180" x2="240" y2="180" class="tufte-line" marker-end="url(#arrowhead)"/>
+      <line x1="370" y1="180" x2="425" y2="180" class="tufte-line" marker-end="url(#arrowhead)"/>
+      <line x1="555" y1="180" x2="610" y2="180" class="tufte-line" marker-end="url(#arrowhead)"/>
+  </g>
+  
+  <!-- Bottom Insight -->
+  <!-- <text x="400" y="420" text-anchor="middle" class="tufte-small" font-style="italic">
+    "기계가 이해하는 언어(Machine Code)" → "인간이 말하는 언어(Natural Language)"
+  </text> -->
+</svg>

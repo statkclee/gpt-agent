@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 480">
+  <defs>
+    <style>
+      .tufte-title { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 22px; fill: #111; font-weight: bold; }
+      .tufte-subtitle { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 15px; fill: #555; }
+      .tufte-header { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 16px; fill: #111; font-weight: bold; }
+      .tufte-label { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 14px; fill: #222; font-weight: bold; }
+      .tufte-text { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 13px; fill: #333; }
+      .tufte-small { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 11px; fill: #666; }
+      .tufte-box { fill: #fdfdfd; stroke: #999; stroke-width: 1; }
+      .tufte-box-highlight { fill: #f4f4f4; stroke: #444; stroke-width: 1.5; }
+      .tufte-line { stroke: #888; stroke-width: 1; }
+      .tufte-arrow { fill: #888; }
+      
+      .provider-logo { font-family: sans-serif; font-weight: bold; font-size: 14px; fill: #444; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" class="tufte-arrow"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="850" height="480" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="425" y="40" text-anchor="middle" class="tufte-title">LLM API 생태계: 파편화와 통합</text>
+  <text x="425" y="65" text-anchor="middle" class="tufte-subtitle">개별 SDK의 복잡성을 해결하는 통합 레이어</text>
+
+  <!-- Section 1: Fragmented Providers (Top) -->
+  <g transform="translate(0, 100)">
+    <text x="425" y="0" text-anchor="middle" class="tufte-label" fill="#666">프로바이더 계층 (파편화)</text>
+
+    <!-- OpenAI -->
+    <g transform="translate(70, 20)">
+      <rect x="0" y="0" width="200" height="110" class="tufte-box" rx="4"/>
+      <text x="100" y="25" text-anchor="middle" class="provider-logo">OpenAI</text>
+      <line x1="20" y1="35" x2="180" y2="35" class="tufte-line" stroke-width="0.5"/>
+      <text x="20" y="55" class="tufte-text">GPT-5.1 / GPT-4o</text>
+      <text x="20" y="75" class="tufte-small">표준 API 설계</text>
+      <text x="20" y="95" class="tufte-small" fill="#888">$1.25 / $10 (1M 토큰)</text>
+    </g>
+
+    <!-- Anthropic -->
+    <g transform="translate(325, 20)">
+      <rect x="0" y="0" width="200" height="110" class="tufte-box" rx="4"/>
+      <text x="100" y="25" text-anchor="middle" class="provider-logo">Anthropic</text>
+      <line x1="20" y1="35" x2="180" y2="35" class="tufte-line" stroke-width="0.5"/>
+      <text x="20" y="55" class="tufte-text">Claude Sonnet 4</text>
+      <text x="20" y="75" class="tufte-small">독자적 파라미터</text>
+      <text x="20" y="95" class="tufte-small" fill="#888">$3 / $15 (1M 토큰)</text>
+    </g>
+
+    <!-- Google -->
+    <g transform="translate(580, 20)">
+      <rect x="0" y="0" width="200" height="110" class="tufte-box" rx="4"/>
+      <text x="100" y="25" text-anchor="middle" class="provider-logo">Google</text>
+      <line x1="20" y1="35" x2="180" y2="35" class="tufte-line" stroke-width="0.5"/>
+      <text x="20" y="55" class="tufte-text">Gemini 2.5 Pro</text>
+      <text x="20" y="75" class="tufte-small">고유 인터페이스</text>
+      <text x="20" y="95" class="tufte-small" fill="#888">$1.25 / $10 (1M 토큰)</text>
+    </g>
+  </g>
+
+  <!-- Flow Arrows (Converging) -->
+  <g transform="translate(0, 230)">
+    <line x1="170" y1="0" x2="350" y2="40" class="tufte-line" marker-end="url(#arrowhead)"/>
+    <line x1="425" y1="0" x2="425" y2="40" class="tufte-line" marker-end="url(#arrowhead)"/>
+    <line x1="680" y1="0" x2="500" y2="40" class="tufte-line" marker-end="url(#arrowhead)"/>
+  </g>
+
+  <!-- Section 2: Unified Interface (Bottom) -->
+  <g transform="translate(0, 280)">
+    <text x="425" y="-10" text-anchor="middle" class="tufte-label" fill="#111">통합 계층 (단순화)</text>
+
+    <!-- LiteLLM Box -->
+    <g transform="translate(225, 10)">
+      <rect x="0" y="0" width="400" height="120" class="tufte-box-highlight" rx="5"/>
+      <text x="200" y="30" text-anchor="middle" class="tufte-header" font-size="18">LiteLLM</text>
+      <line x1="100" y1="45" x2="300" y2="45" class="tufte-line" stroke-width="0.5"/>
+
+      <g transform="translate(40, 65)">
+        <text x="0" y="0" class="tufte-text">✓ <tspan font-weight="bold">표준화:</tspan> 모든 API를 OpenAI 형식으로</text>
+        <text x="0" y="20" class="tufte-text">✓ <tspan font-weight="bold">교체 용이:</tspan> 1줄로 모델 변경</text>
+        <text x="0" y="40" class="tufte-text">✓ <tspan font-weight="bold">관리 기능:</tspan> 비용 추적 &amp; 장애 대응</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom Insight -->
+  <text x="425" y="450" text-anchor="middle" class="tufte-small" font-style="italic" fill="#555">
+    "특정 공급업체에 종속되지 않는 유연함이 핵심 경쟁력이다."
+  </text>
+</svg>

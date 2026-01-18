@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 70 900 390">
+  <defs>
+    <style>
+      /* Tufte Style: Strictly Grayscale, Serif, Minimal */
+      .tufte-text { font-family: Palatino, 'Book Antiqua', Georgia, serif; fill: #111; }
+      .title { font-size: 22px; font-weight: bold; }
+      .subtitle { font-size: 14px; fill: #555; }
+      .label { font-size: 16px; font-weight: bold; }
+      .detail { font-size: 14px; fill: #444; }
+      .note { font-size: 12px; fill: #666; font-style: italic; }
+
+      /* Highlight Styles (Grayscale) */
+      .highlight { fill: #e8e8e8; stroke: #000; stroke-width: 1.5; }
+      .highlight-text { fill: #000; font-weight: bold; }
+      .highlight-line { stroke: #333; stroke-width: 1.5; stroke-dasharray: 4,2; }
+
+      /* Standard Layers */
+      .layer { fill: #fff; stroke: #888; stroke-width: 1; }
+      .layer-shared { fill: #f9f9f9; stroke: #bbb; stroke-width: 1; }
+      .layer-isolated { fill: #f0f0f0; stroke: #666; stroke-width: 1.5; }
+      .layer-emphatic { fill: #ffffff; stroke: #444; stroke-width: 1; }
+      .layer-dotted { fill: none; stroke: #999; stroke-width: 1; stroke-dasharray: 3,3; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="500" fill="#ffffff"/>
+
+  <!-- Left: uv -->
+  <text x="225" y="100" text-anchor="middle" class="tufte-text label">uv (<tspan class="highlight-text">파이썬 런타임</tspan> + 패키지 격리)</text>
+
+  <rect x="75" y="390" width="300" height="50" rx="0" class="layer-shared"/>
+  <text x="225" y="415" text-anchor="middle" class="tufte-text detail">호스트 운영체제 (OS)</text>
+
+  <rect x="135" y="345" width="180" height="25" rx="0" class="layer" style="stroke-dasharray: 2,2;"/>
+  <text x="225" y="362" text-anchor="middle" class="tufte-text note">uv 도구</text>
+  <path d="M 225 345 L 225 325" fill="none" stroke="#888" stroke-width="1" marker-end="url(#arrow-up-sm)"/>
+
+  <rect x="95" y="130" width="260" height="190" rx="0" class="layer-isolated"/>
+  <text x="225" y="155" text-anchor="middle" class="tufte-text label">가상 환경 (.venv)</text>
+
+  <rect x="135" y="180" width="180" height="40" rx="0" class="layer-emphatic"/>
+  <text x="225" y="198" text-anchor="middle" class="tufte-text detail">파이썬 패키지</text>
+  <text x="225" y="213" text-anchor="middle" class="tufte-text detail">(site-packages)</text>
+
+  <rect x="115" y="240" width="220" height="60" rx="0" class="highlight"/>
+  <text x="225" y="260" text-anchor="middle" class="tufte-text label highlight-text">파이썬 인터프리터</text>
+  <text x="225" y="280" text-anchor="middle" class="tufte-text detail highlight-text">(uv가 설치/관리)</text>
+  <text x="225" y="295" text-anchor="middle" class="tufte-text note">시스템과 완전 분리</text>
+
+  <!-- Right: rig + renv -->
+  <text x="675" y="100" text-anchor="middle" class="tufte-text label">rig + renv (<tspan class="highlight-text">R 런타임</tspan> + 패키지 격리)</text>
+
+  <rect x="525" y="390" width="300" height="50" rx="0" class="layer-shared"/>
+  <text x="675" y="415" text-anchor="middle" class="tufte-text detail">호스트 운영체제 (OS)</text>
+
+  <rect x="585" y="345" width="180" height="25" rx="0" class="layer" style="stroke-dasharray: 2,2;"/>
+  <text x="675" y="362" text-anchor="middle" class="tufte-text note">rig 도구</text>
+  <path d="M 675 345 L 675 325" fill="none" stroke="#888" stroke-width="1" marker-end="url(#arrow-up-sm)"/>
+
+  <rect x="545" y="130" width="260" height="190" rx="0" class="layer-isolated"/>
+  <text x="675" y="155" text-anchor="middle" class="tufte-text label">rig + renv 프로젝트</text>
+
+  <rect x="585" y="180" width="180" height="40" rx="0" class="layer-emphatic"/>
+  <text x="675" y="198" text-anchor="middle" class="tufte-text detail">R 패키지 라이브러리</text>
+  <text x="675" y="213" text-anchor="middle" class="tufte-text detail">(renv/library)</text>
+
+  <rect x="565" y="240" width="220" height="60" rx="0" class="highlight"/>
+  <text x="675" y="260" text-anchor="middle" class="tufte-text label highlight-text">R 인터프리터</text>
+  <text x="675" y="280" text-anchor="middle" class="tufte-text detail highlight-text">(rig가 설치/관리)</text>
+  <text x="675" y="295" text-anchor="middle" class="tufte-text note">프로젝트별 R 버전</text>
+
+  <!-- Stack arrow -->
+  <path d="M 40 410 L 40 150" fill="none" stroke="#888" stroke-width="1" marker-end="url(#arrow-up)"/>
+  <text x="25" y="280" text-anchor="middle" class="tufte-text note" transform="rotate(-90, 25, 280)">격리 계층</text>
+
+  <defs>
+    <marker id="arrow-up" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 z" fill="#888" />
+    </marker>
+    <marker id="arrow-up-sm" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M 0 0 L 6 3 L 0 6 z" fill="#888" />
+    </marker>
+  </defs>
+
+  <!-- Comparison line -->
+  <line x1="335" y1="270" x2="565" y2="270" class="highlight-line"/>
+  <circle cx="335" cy="270" r="3" fill="#000"/>
+  <circle cx="565" cy="270" r="3" fill="#000"/>
+
+  <g transform="translate(0, 5)">
+    <text x="450" y="260" text-anchor="middle" class="tufte-text label highlight-text">런타임 격리 (공통점)</text>
+    <text x="450" y="280" text-anchor="middle" class="tufte-text detail" style="fill:#000;">프로젝트별 독립 런타임</text>
+    <text x="450" y="295" text-anchor="middle" class="tufte-text detail" style="fill:#000;">uv ≈ rig + renv</text>
+  </g>
+
+</svg>

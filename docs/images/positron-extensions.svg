@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 60 1100 450" style="background:#ffffff">
+  <defs>
+    <style>
+      .tufte-text {
+        font-family: Palatino, 'Book Antiqua', Georgia, serif;
+        fill: #222;
+        font-size: 13px;
+      }
+      .tufte-title {
+        font-family: Palatino, 'Book Antiqua', Georgia, serif;
+        fill: #111;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .tufte-header {
+        font-family: Palatino, 'Book Antiqua', Georgia, serif;
+        fill: #000;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .tufte-small {
+        font-family: Palatino, 'Book Antiqua', Georgia, serif;
+        fill: #555;
+        font-size: 11px;
+      }
+      .tufte-tiny {
+        font-family: 'Monaco', 'Courier New', monospace;
+        fill: #888;
+        font-size: 9px;
+      }
+      .tufte-line {
+        stroke: #999;
+        stroke-width: 1;
+        fill: none;
+      }
+      .tufte-bg {
+        fill: #ffffff; /* 흰 배경 */
+      }
+      .group-bg {
+        fill: #fafafa;
+        stroke: #ccc;
+        stroke-width: 1;
+      }
+      .item-box {
+        fill: #ffffff;
+        stroke: #bbb;
+        stroke-width: 1;
+      }
+      .new-badge {
+        font-size: 9px;
+        fill: #666;
+        font-weight: bold;
+      }
+    </style>
+  </defs>
+
+  <!-- 전체를 덮는 흰색 배경 -->
+  <rect x="0" y="0" width="1100" height="530" class="tufte-bg"/>
+
+  <!-- <text x="550" y="40" class="tufte-header" text-anchor="middle">
+    포지트론(Positron) 인터랙티브 데이터 과학 환경
+  </text>
+  <text x="550" y="60" class="tufte-small" text-anchor="middle">
+    Shiny 앱 개발, 인터랙티브 분석, 대규모 배포를 위한 15종 핵심 확장
+  </text> -->
+
+  <rect x="30" y="80" width="320" height="410" class="group-bg"/>
+  <text x="190" y="105" class="tufte-title" text-anchor="middle">
+    1. 엔진 &amp; 앱 개발(App Dev)
+  </text>
+  <line x1="30" y1="115" x2="350" y2="115" class="tufte-line"/>
+
+  <rect x="45" y="130" width="290" height="60" class="item-box"/>
+  <text x="55" y="150" class="tufte-text" font-weight="bold">R (Core)</text>
+  <text x="285" y="150" class="new-badge" text-anchor="end" fill="#999">* Positron 내장</text>
+  <text x="55" y="167" class="tufte-small">LSP 자동완성 · 디버거 · Shiny 실행 지원</text>
+  <text x="55" y="180" class="tufte-tiny">VS Code: REditorSupport.r</text>
+
+  <rect x="45" y="200" width="290" height="60" class="item-box"/>
+  <text x="55" y="220" class="tufte-text" font-weight="bold">Python (Core)</text>
+  <text x="285" y="220" class="new-badge" text-anchor="end" fill="#999">* Positron 내장</text>
+  <text x="55" y="237" class="tufte-small">Pylance 엔진 · Streamlit/Shiny 지원</text>
+  <text x="55" y="250" class="tufte-tiny">VS Code: ms-python.python</text>
+
+  <rect x="45" y="270" width="290" height="60" class="item-box"/>
+  <text x="55" y="290" class="tufte-text" font-weight="bold">Shiny &amp; Publisher</text>
+  <text x="280" y="290" class="new-badge" text-anchor="end">Interactive</text>
+  <text x="55" y="307" class="tufte-small">Shiny/Streamlit 앱 배포(Connect/ShinyApps)</text>
+  <text x="55" y="320" class="tufte-tiny">posit.publisher</text>
+
+  <rect x="45" y="340" width="290" height="60" class="item-box"/>
+  <text x="55" y="360" class="tufte-text" font-weight="bold">Quarto</text>
+  <text x="55" y="377" class="tufte-small">인터랙티브 문서(.qmd) · 대시보드 저작</text>
+  <text x="55" y="390" class="tufte-tiny">quarto.quarto</text>
+
+  <rect x="45" y="410" width="290" height="60" class="item-box"/>
+  <text x="55" y="430" class="tufte-text" font-weight="bold">Thunder Client</text>
+  <text x="280" y="430" class="new-badge" text-anchor="end">API Test</text>
+  <text x="55" y="447" class="tufte-small">모델 API (Plumber/FastAPI) 엔드포인트 테스트</text>
+  <text x="55" y="460" class="tufte-tiny">rangav.vscode-thunder-client</text>
+
+  <rect x="365" y="80" width="320" height="410" class="group-bg"/>
+  <text x="525" y="105" class="tufte-title" text-anchor="middle">
+    2. 인터랙티브 데이터 분석
+  </text>
+  <line x1="365" y1="115" x2="685" y2="115" class="tufte-line"/>
+
+  <rect x="380" y="130" width="290" height="60" class="item-box"/>
+  <text x="390" y="150" class="tufte-text" font-weight="bold">SandDance</text>
+  <text x="630" y="150" class="new-badge" text-anchor="end">Visual</text>
+  <text x="390" y="167" class="tufte-small">노코딩 3D/2D 데이터 탐색 · 패턴 발견</text>
+  <text x="390" y="180" class="tufte-tiny">msrvida.vscode-sanddance</text>
+
+  <rect x="380" y="200" width="290" height="60" class="item-box"/>
+  <text x="390" y="220" class="tufte-text" font-weight="bold">Data Wrangler</text>
+  <text x="390" y="237" class="tufte-small">GUI 데이터 전처리 → Python/Pandas 코드 변환</text>
+  <text x="390" y="250" class="tufte-tiny">ms-toolsai.datawrangler</text>
+
+  <rect x="380" y="270" width="290" height="60" class="item-box"/>
+  <text x="390" y="290" class="tufte-text" font-weight="bold">SQLTools</text>
+  <text x="390" y="307" class="tufte-small">DB 연결 · 쿼리 실행 · 결과 시각화</text>
+  <text x="390" y="320" class="tufte-tiny">mtxr.sqltools</text>
+
+  <rect x="380" y="340" width="290" height="60" class="item-box"/>
+  <text x="390" y="360" class="tufte-text" font-weight="bold">Geo Data Viewer</text>
+  <text x="630" y="360" class="new-badge" text-anchor="end">GIS</text>
+  <text x="390" y="377" class="tufte-small">GeoJSON, Shapefile, KML 지도 즉시 시각화</text>
+  <text x="390" y="390" class="tufte-tiny">randomfractals.geo-data-viewer</text>
+
+  <rect x="380" y="410" width="290" height="60" class="item-box"/>
+  <text x="390" y="430" class="tufte-text" font-weight="bold">Rainbow CSV</text>
+  <text x="390" y="447" class="tufte-small">대용량 CSV 색상 강조 · RBQL(SQL) 쿼리</text>
+  <text x="390" y="460" class="tufte-tiny">mechatroner.rainbow-csv</text>
+
+  <rect x="700" y="80" width="370" height="410" class="group-bg"/>
+  <text x="885" y="105" class="tufte-title" text-anchor="middle">
+    3. AI, 협업 &amp; 운영(Ops)
+  </text>
+  <line x1="700" y1="115" x2="1070" y2="115" class="tufte-line"/>
+
+  <rect x="715" y="130" width="340" height="60" class="item-box"/>
+  <text x="725" y="150" class="tufte-text" font-weight="bold">Jupyter</text>
+  <text x="1010" y="150" class="new-badge" text-anchor="end" fill="#999">* Positron 내장</text>
+  <text x="725" y="167" class="tufte-small">.ipynb 노트북 실행 · 위젯(Widgets) 지원</text>
+  <text x="725" y="180" class="tufte-tiny">VS Code: ms-toolsai.jupyter</text>
+
+  <rect x="715" y="200" width="340" height="60" class="item-box"/>
+  <text x="725" y="220" class="tufte-text" font-weight="bold">GitHub Copilot</text>
+  <text x="725" y="237" class="tufte-small">AI 코드 생성 · 채팅 · 테스트 케이스 작성</text>
+  <text x="725" y="250" class="tufte-tiny">GitHub.copilot</text>
+
+  <rect x="715" y="270" width="340" height="60" class="item-box"/>
+  <text x="725" y="290" class="tufte-text" font-weight="bold">Live Share</text>
+  <text x="1010" y="290" class="new-badge" text-anchor="end">Collab</text>
+  <text x="725" y="307" class="tufte-small">실시간 동시 편집 · 디버깅 공유 · 터미널 공유</text>
+  <text x="725" y="320" class="tufte-tiny">ms-vsliveshare.vsliveshare</text>
+
+  <rect x="715" y="340" width="340" height="60" class="item-box"/>
+  <text x="725" y="360" class="tufte-text" font-weight="bold">Remote - SSH</text>
+  <text x="725" y="377" class="tufte-small">고성능 GPU 서버 원격 개발 · 로컬 경험 유지</text>
+  <text x="725" y="390" class="tufte-tiny">ms-vscode-remote.remote-ssh</text>
+
+  <rect x="715" y="410" width="340" height="60" class="item-box"/>
+  <text x="725" y="430" class="tufte-text" font-weight="bold">Docker</text>
+  <text x="725" y="447" class="tufte-small">분석 환경 컨테이너화 · 재현성 보장</text>
+  <text x="725" y="460" class="tufte-tiny">ms-azuretools.vscode-docker</text>
+</svg>

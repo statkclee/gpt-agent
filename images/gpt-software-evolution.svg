@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 60 900 400">
+  <defs>
+    <style>
+      .tufte-title { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 20px; fill: #222; font-weight: bold; }
+      .tufte-subtitle { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 14px; fill: #666; }
+      .tufte-label { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 15px; fill: #333; font-weight: bold; }
+      .tufte-text { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 12px; fill: #444; }
+      .tufte-small { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 11px; fill: #666; }
+      .tufte-code { font-family: 'Courier New', Courier, monospace; font-size: 10px; fill: #333; }
+      .tufte-box { fill: #f9f9f9; stroke: #999; stroke-width: 1; }
+      .tufte-box-highlight { fill: #f0f0f0; stroke: #555; stroke-width: 1.5; }
+      .tufte-line { stroke: #999; stroke-width: 1.5; }
+      .tufte-arrow { fill: #666; }
+      .role-badge { fill: #e8e8e8; stroke: #999; stroke-width: 1; }
+      .role-badge-highlight { fill: #ddd; stroke: #666; stroke-width: 1.5; }
+      
+      /* New Styles for Bottom Section */
+      .diff-header { font-family: Palatino, serif; font-size: 14px; font-weight: bold; fill: #222; }
+      .diff-sub { font-family: Palatino, serif; font-size: 12px; fill: #555; }
+      .diff-item { font-family: Palatino, serif; font-size: 12px; fill: #333; }
+      .diff-icon { font-family: Palatino, serif; font-size: 12px; fill: #444; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" class="tufte-arrow"/>
+    </marker>
+  </defs>
+
+  <!-- White background -->
+  <rect x="0" y="0" width="900" height="550" fill="#ffffff"/>
+
+  <!-- ========================================== -->
+  <!-- TOP SECTION (Restored to Original)         -->
+  <!-- ========================================== -->
+
+  <!-- Title -->
+  <!-- <text x="450" y="35" text-anchor="middle" class="tufte-title">개발자 역할의 진화: Coder에서 Orchestrator로</text>
+  <text x="450" y="55" text-anchor="middle" class="tufte-subtitle">Software 1.0 → 2.0 → 3.0 패러다임 전환</text> -->
+
+  <!-- Software 1.0 -->
+  <g transform="translate(30, 85)">
+    <!-- Role badge -->
+    <rect x="60" y="0" width="120" height="28" class="role-badge" rx="14"/>
+    <text x="120" y="19" text-anchor="middle" class="tufte-label" font-size="13">Coder (코더)</text>
+
+    <rect x="0" y="40" width="240" height="180" class="tufte-box" rx="8"/>
+    <text x="120" y="65" text-anchor="middle" class="tufte-label">Software 1.0</text>
+    <text x="120" y="82" text-anchor="middle" class="tufte-small" font-style="italic">명시적 프로그래밍</text>
+
+    <!-- Icon: Code -->
+    <text x="120" y="110" text-anchor="middle" font-size="32" fill="#999">&lt;/&gt;</text>
+
+    <!-- Developer activities -->
+    <text x="20" y="135" class="tufte-text" font-weight="bold">개발자가 하는 일:</text>
+    <text x="25" y="152" class="tufte-small">• 알고리즘 직접 설계</text>
+    <text x="25" y="167" class="tufte-small">• 모든 로직 명시적 구현</text>
+    <text x="25" y="182" class="tufte-small">• if-else, loop 작성</text>
+
+    <!-- Output -->
+    <rect x="20" y="195" width="200" height="15" fill="#e8e8e8" rx="3"/>
+    <text x="30" y="206" class="tufte-small" font-weight="bold">산출물: 코드 (.py, .js)</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <line x1="275" y1="175" x2="310" y2="175" class="tufte-line" marker-end="url(#arrowhead)"/>
+  <text x="292" y="170" text-anchor="middle" class="tufte-small" fill="#666">2017</text>
+
+  <!-- Software 2.0 -->
+  <g transform="translate(330, 85)">
+    <!-- Role badge -->
+    <rect x="40" y="0" width="160" height="28" class="role-badge" rx="14"/>
+    <text x="120" y="19" text-anchor="middle" class="tufte-label" font-size="13">Data Engineer</text>
+
+    <rect x="0" y="40" width="240" height="180" class="tufte-box" rx="8"/>
+    <text x="120" y="65" text-anchor="middle" class="tufte-label">Software 2.0</text>
+    <text x="120" y="82" text-anchor="middle" class="tufte-small" font-style="italic">기계학습 기반</text>
+
+    <!-- Icon: Neural Network simplified -->
+    <g transform="translate(120, 95)">
+      <circle cx="-25" cy="0" r="5" fill="#ccc" stroke="#999"/>
+      <circle cx="-25" cy="15" r="5" fill="#ccc" stroke="#999"/>
+      <circle cx="0" cy="0" r="5" fill="#999" stroke="#666"/>
+      <circle cx="0" cy="15" r="5" fill="#999" stroke="#666"/>
+      <circle cx="25" cy="7.5" r="5" fill="#666" stroke="#333"/>
+      <line x1="-20" y1="0" x2="-5" y2="0" stroke="#ccc" stroke-width="0.5"/>
+      <line x1="-20" y1="15" x2="-5" y2="15" stroke="#ccc" stroke-width="0.5"/>
+      <line x1="5" y1="0" x2="20" y2="7.5" stroke="#999" stroke-width="0.5"/>
+      <line x1="5" y1="15" x2="20" y2="7.5" stroke="#999" stroke-width="0.5"/>
+    </g>
+
+    <!-- Developer activities -->
+    <text x="20" y="135" class="tufte-text" font-weight="bold">개발자가 하는 일:</text>
+    <text x="25" y="152" class="tufte-small">• 데이터 수집 &amp; 정제</text>
+    <text x="25" y="167" class="tufte-small">• 신경망 아키텍처 설계</text>
+    <text x="25" y="182" class="tufte-small">• 하이퍼파라미터 튜닝</text>
+
+    <!-- Output -->
+    <rect x="20" y="195" width="200" height="15" fill="#e8e8e8" rx="3"/>
+    <text x="30" y="206" class="tufte-small" font-weight="bold">산출물: 모델 (.pt, .h5)</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <line x1="575" y1="175" x2="610" y2="175" class="tufte-line" marker-end="url(#arrowhead)"/>
+  <text x="592" y="170" text-anchor="middle" class="tufte-small" fill="#666">2022</text>
+
+  <!-- Software 3.0 -->
+  <g transform="translate(630, 85)">
+    <!-- Role badge -->
+    <rect x="30" y="0" width="180" height="28" class="role-badge-highlight" rx="14"/>
+    <text x="120" y="19" text-anchor="middle" class="tufte-label" font-size="13">Orchestrator + Verifier</text>
+
+    <rect x="0" y="40" width="240" height="180" class="tufte-box-highlight" rx="8"/>
+    <text x="120" y="65" text-anchor="middle" class="tufte-label">Software 3.0</text>
+    <text x="120" y="82" text-anchor="middle" class="tufte-small" font-style="italic">LLM &amp; 프롬프트</text>
+
+    <!-- Icon: Chat bubble with sparkle -->
+    <g transform="translate(120, 95)">
+      <rect x="-20" y="-5" width="40" height="20" fill="none" stroke="#666" stroke-width="1.5" rx="5"/>
+      <line x1="0" y1="15" x2="-5" y2="20" stroke="#666" stroke-width="1.5"/>
+      <text x="0" y="7" text-anchor="middle" font-size="10" fill="#666">✦</text>
+    </g>
+
+    <!-- Developer activities -->
+    <text x="20" y="135" class="tufte-text" font-weight="bold">개발자가 하는 일:</text>
+    <text x="25" y="152" class="tufte-small">• 의도를 자연어로 명세</text>
+    <text x="25" y="167" class="tufte-small">• AI 생성 코드 검증</text>
+    <text x="25" y="182" class="tufte-small">• 시스템 오케스트레이션</text>
+
+    <!-- Output -->
+    <rect x="20" y="195" width="200" height="15" fill="#ddd" rx="3"/>
+    <text x="30" y="206" class="tufte-small" font-weight="bold">산출물: 프롬프트 (.md)</text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- BOTTOM SECTION (New Intuitive Layout)      -->
+  <!-- ========================================== -->
+
+
+  <!-- 3-Column Table Layout -->
+  <g transform="translate(60, 350)">
+    
+    <!-- Column 1: Changes (What Changed) -->
+    <g transform="translate(20, 0)">
+      <text x="0" y="0" class="diff-header">🔄 무엇이 바뀌었나</text>
+      <line x1="0" y1="10" x2="220" y2="10" stroke="#333" stroke-width="2"/>
+      
+      <!-- Row 1 -->
+      <text x="0" y="35" class="diff-item" font-weight="bold">작업의 본질</text>
+      <text x="10" y="52" class="diff-sub">구현(How) → 의도(What)</text>
+      
+      <!-- Row 2 -->
+      <text x="0" y="75" class="diff-item" font-weight="bold">최종 산출물</text>
+      <text x="10" y="92" class="diff-sub">소스코드 → 자연어 프롬프트</text>
+    </g>
+
+    <!-- Column 2: Constants (What Stays) -->
+    <g transform="translate(290, 0)">
+      <text x="0" y="0" class="diff-header">🔒 무엇이 남았나</text>
+      <line x1="0" y1="10" x2="220" y2="10" stroke="#333" stroke-width="2"/>
+      
+      <text x="0" y="35" class="diff-item">✓ 문제 정의 및 해결 능력</text>
+      <text x="0" y="60" class="diff-item">✓ 시스템 아키텍처 설계</text>
+      <text x="0" y="85" class="diff-item">✓ 논리적 사고와 검증</text>
+    </g>
+
+    <!-- Column 3: New Skills (What's New) -->
+    <g transform="translate(560, 0)">
+      <text x="0" y="0" class="diff-header">✨ 새로 필요한 것</text>
+      <line x1="0" y1="10" x2="220" y2="10" stroke="#333" stroke-width="2"/>
+      
+      <text x="0" y="35" class="diff-item">✦ 프롬프트 엔지니어링</text>
+      <text x="0" y="60" class="diff-item">✦ AI 출력 결과 검증(Audit)</text>
+      <text x="0" y="85" class="diff-item">✦ AI 도구 통합 및 조율</text>
+    </g>
+  </g>
+
+  <!-- Bottom quote -->
+  <!-- <text x="450" y="490" text-anchor="middle" class="tufte-text" font-style="italic" fill="#666">
+    "개발자는 더 이상 코드를 작성하는 기계가 아니라, AI라는 파트너를 지휘하는 오케스트라 지휘자다."
+  </text>
+  <text x="450" y="515" text-anchor="middle" class="tufte-small" fill="#999">
+    — Software 3.0 시대의 정의
+  </text> -->
+
+</svg>

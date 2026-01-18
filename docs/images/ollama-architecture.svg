@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <style>
+      .tufte-title { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 20px; fill: #222; font-weight: bold; }
+      .tufte-subtitle { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 14px; fill: #666; }
+      .tufte-label { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 14px; fill: #333; font-weight: bold; }
+      .tufte-text { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 12px; fill: #444; }
+      .tufte-small { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 11px; fill: #666; }
+      .tufte-box { fill: #f9f9f9; stroke: #999; stroke-width: 1; }
+      .tufte-box-highlight { fill: #f0f0f0; stroke: #666; stroke-width: 1.5; }
+      .tufte-arrow { fill: #666; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" class="tufte-arrow"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="450" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" class="tufte-title">Ollama: 오픈소스 LLM 실행 플랫폼</text>
+  <text x="400" y="55" text-anchor="middle" class="tufte-subtitle">로컬에서 LLM을 Docker처럼 쉽게 실행</text>
+
+  <!-- Traditional Way (Top) -->
+  <g transform="translate(80, 90)">
+    <text x="300" y="-10" text-anchor="middle" class="tufte-label" fill="#666">전통적 방식 (복잡)</text>
+    
+    <rect x="0" y="10" width="600" height="80" class="tufte-box" rx="5"/>
+    <text x="20" y="35" class="tufte-text" font-weight="bold">1. 모델 다운로드 → 2. 환경 설정 → 3. 의존성 설치</text>
+    <text x="20" y="55" class="tufte-text">→ 4. 양자화 → 5. GPU 설정 → 6. Python/C++ 코드 작성</text>
+    <text x="20" y="75" class="tufte-small" fill="#888">복잡한 설정, 전문 지식 필요</text>
+  </g>
+
+  <!-- Arrow Down -->
+  <line x1="380" y1="200" x2="380" y2="230" stroke="#999" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="420" y="220" class="tufte-small">Ollama 등장</text>
+
+  <!-- Ollama Way (Bottom) -->
+  <g transform="translate(80, 240)">
+    <text x="300" y="-10" text-anchor="middle" class="tufte-label" fill="#111">Ollama 방식 (간편)</text>
+    
+    <rect x="0" y="10" width="600" height="130" class="tufte-box-highlight" rx="5"/>
+    
+    <!-- Step 1 -->
+    <g transform="translate(20, 30)">
+      <rect x="0" y="0" width="250" height="40" fill="#fff" stroke="#999" rx="3"/>
+      <text x="10" y="15" class="tufte-text" font-weight="bold">1. 한 줄 명령</text>
+      <text x="10" y="30" class="tufte-small" font-family="monospace">ollama run llama3</text>
+    </g>
+
+    <!-- Arrow -->
+    <text x="290" y="50" class="tufte-label">→</text>
+
+    <!-- Step 2 -->
+    <g transform="translate(320, 30)">
+      <rect x="0" y="0" width="250" height="40" fill="#fff" stroke="#999" rx="3"/>
+      <text x="10" y="15" class="tufte-text" font-weight="bold">2. 즉시 사용</text>
+      <text x="10" y="30" class="tufte-small">자동 다운로드, 설정, 실행</text>
+    </g>
+
+    <!-- Benefits -->
+    <g transform="translate(20, 85)">
+      <text x="0" y="0" class="tufte-small">✓ Docker처럼 간편한 명령어</text>
+      <text x="200" y="0" class="tufte-small">✓ 자동 양자화 및 최적화</text>
+      <text x="400" y="0" class="tufte-small">✓ REST API 제공</text>
+    </g>
+  </g>
+
+  <!-- Bottom Insight -->
+  <text x="400" y="420" text-anchor="middle" class="tufte-small" font-style="italic" fill="#666">
+    "Ollama는 오픈소스 LLM의 진입 장벽을 대폭 낮췄다. Docker가 컨테이너를 쉽게 만든 것처럼."
+  </text>
+
+</svg>

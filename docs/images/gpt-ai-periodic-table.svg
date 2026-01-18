@@ -1,0 +1,297 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 50 800 600">
+  <defs>
+    <style>
+      /* Tufte Style Typography */
+      .tufte-title {
+        font-family: Palatino, 'Book Antiqua', Georgia, serif;
+        font-size: 24px;
+        font-weight: bold;
+        fill: #222;
+        letter-spacing: 1px;
+      }
+      .col-label-kr {
+        font-family: 'Apple Myungjo', 'Songti SC', serif;
+        font-size: 15px;
+        font-weight: bold;
+        fill: #333;
+        text-anchor: middle;
+      }
+      .col-label-en {
+        font-family: Palatino, Georgia, serif;
+        font-size: 10px;
+        font-style: italic;
+        fill: #777;
+        text-anchor: middle;
+        letter-spacing: 0.5px;
+      }
+      .row-label-kr {
+        font-family: 'Apple Myungjo', 'Songti SC', serif;
+        font-size: 14px;
+        font-weight: bold;
+        fill: #444;
+        text-anchor: end;
+      }
+      .row-label-en {
+        font-family: Palatino, Georgia, serif;
+        font-size: 9px;
+        font-style: italic;
+        fill: #888;
+        text-anchor: end;
+      }
+      .section-label {
+        font-family: 'Apple Myungjo', 'Songti SC', serif;
+        font-size: 13px;
+        font-weight: bold;
+        fill: #555;
+        text-anchor: start;
+      }
+      .element-symbol {
+        font-family: Palatino, Georgia, serif;
+        font-size: 22px;
+        font-weight: bold;
+        fill: #111;
+        text-anchor: middle;
+      }
+      .element-kr {
+        font-family: 'Apple Myungjo', 'Songti SC', serif;
+        font-size: 12px;
+        fill: #333;
+        text-anchor: middle;
+      }
+      .element-en {
+        font-family: Palatino, Georgia, serif;
+        font-size: 8px;
+        fill: #999;
+        text-anchor: middle;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+      }
+      /* Minimalist Cell Style */
+      .cell-box {
+        fill: #fdfdfd;
+        stroke: #999;
+        stroke-width: 0.5;
+      }
+      .cell-infra {
+        fill: #f4f4f4;
+        stroke: #888;
+        stroke-width: 0.5;
+        stroke-dasharray: 2,2;
+      }
+      .source-attribution {
+        font-family: Palatino, Georgia, serif;
+        font-size: 9px;
+        fill: #999;
+        text-anchor: end;
+      }
+    </style>
+  </defs>
+
+  <!-- Clean Background -->
+  <rect x="0" y="0" width="800" height="650" fill="#ffffff"/>
+
+  <!-- Title -->
+  <!-- <text x="400" y="40" class="tufte-title" text-anchor="middle">AI 기술 주기율표</text> -->
+
+  <!-- Column Headers (Groups) -->
+  <g transform="translate(195, 75)">
+    <text y="0" class="col-label-kr">실행</text>
+    <text y="14" class="col-label-en">Action</text>
+  </g>
+  <g transform="translate(305, 75)">
+    <text y="0" class="col-label-kr">지식</text>
+    <text y="14" class="col-label-en">Knowledge</text>
+  </g>
+  <g transform="translate(415, 75)">
+    <text y="0" class="col-label-kr">구조</text>
+    <text y="14" class="col-label-en">Structure</text>
+  </g>
+  <g transform="translate(525, 75)">
+    <text y="0" class="col-label-kr">안전</text>
+    <text y="14" class="col-label-en">Safety</text>
+  </g>
+  <g transform="translate(635, 75)">
+    <text y="0" class="col-label-kr">모델</text>
+    <text y="14" class="col-label-en">Model</text>
+  </g>
+
+  <!-- Row Labels -->
+  <g transform="translate(125, 140)">
+    <text y="0" class="row-label-kr">원자</text>
+    <text y="12" class="row-label-en">Atomic</text>
+  </g>
+  <g transform="translate(125, 240)">
+    <text y="0" class="row-label-kr">분자</text>
+    <text y="12" class="row-label-en">Molecular</text>
+  </g>
+  <g transform="translate(125, 340)">
+    <text y="0" class="row-label-kr">시스템</text>
+    <text y="12" class="row-label-en">System</text>
+  </g>
+  <g transform="translate(125, 440)">
+    <text y="0" class="row-label-kr">프런티어</text>
+    <text y="12" class="row-label-en">Frontier</text>
+  </g>
+
+  <!-- Periodic Grid -->
+  <!-- Row 1: Atomic -->
+  <g transform="translate(140, 100)">
+    <rect width="110" height="85" class="cell-box"/>
+    <text x="55" y="32" class="element-symbol">Pr</text>
+    <text x="55" y="55" class="element-kr">프롬프트</text>
+    <text x="55" y="70" class="element-en">Prompts</text>
+  </g>
+  <g transform="translate(250, 100)">
+    <rect width="110" height="85" class="cell-box"/>
+    <text x="55" y="32" class="element-symbol">Em</text>
+    <text x="55" y="55" class="element-kr">임베딩</text>
+    <text x="55" y="70" class="element-en">Embeddings</text>
+  </g>
+  <g transform="translate(360, 100)">
+    <rect width="110" height="85" class="cell-box"/>
+    <text x="55" y="32" class="element-symbol">Me</text>
+    <text x="55" y="55" class="element-kr">메모리</text>
+    <text x="55" y="70" class="element-en">Memory</text>
+  </g>
+  <g transform="translate(470, 100)">
+    <rect width="110" height="85" class="cell-box"/>
+    <text x="55" y="32" class="element-symbol">Ev</text>
+    <text x="55" y="55" class="element-kr">평가</text>
+    <text x="55" y="70" class="element-en">Evaluations</text>
+  </g>
+  <g transform="translate(580, 100)">
+    <rect width="110" height="85" class="cell-box"/>
+    <text x="55" y="32" class="element-symbol">Lg</text>
+    <text x="55" y="55" class="element-kr">대형 언어모델</text>
+    <text x="55" y="70" class="element-en">LLM</text>
+  </g>
+
+  <!-- Row 2: Molecular -->
+  <g transform="translate(140, 200)">
+    <rect width="110" height="85" class="cell-box"/>
+    <text x="55" y="32" class="element-symbol">Fc</text>
+    <text x="55" y="55" class="element-kr">함수 호출</text>
+    <text x="55" y="70" class="element-en">Function Call</text>
+  </g>
+  <g transform="translate(250, 200)">
+    <rect width="110" height="85" class="cell-box"/>
+    <text x="55" y="32" class="element-symbol">Vx</text>
+    <text x="55" y="55" class="element-kr">벡터 DB</text>
+    <text x="55" y="70" class="element-en">Vector DB</text>
+  </g>
+  <g transform="translate(360, 200)">
+    <rect width="110" height="85" class="cell-box"/>
+    <text x="55" y="32" class="element-symbol">Rg</text>
+    <text x="55" y="55" class="element-kr">검색 증강 생성</text>
+    <text x="55" y="70" class="element-en">RAG</text>
+  </g>
+  <g transform="translate(470, 200)">
+    <rect width="110" height="85" class="cell-box"/>
+    <text x="55" y="32" class="element-symbol">Gr</text>
+    <text x="55" y="55" class="element-kr">가드레일</text>
+    <text x="55" y="70" class="element-en">Guardrails</text>
+  </g>
+  <g transform="translate(580, 200)">
+    <rect width="110" height="85" class="cell-box"/>
+    <text x="55" y="32" class="element-symbol">Mm</text>
+    <text x="55" y="55" class="element-kr">멀티모달</text>
+    <text x="55" y="70" class="element-en">Multimodal</text>
+  </g>
+
+  <!-- Row 3: System -->
+  <g transform="translate(140, 300)">
+    <rect width="110" height="85" class="cell-box"/>
+    <text x="55" y="32" class="element-symbol">Ag</text>
+    <text x="55" y="55" class="element-kr">에이전트</text>
+    <text x="55" y="70" class="element-en">Agent</text>
+  </g>
+  <g transform="translate(250, 300)">
+    <rect width="110" height="85" class="cell-box"/>
+    <text x="55" y="32" class="element-symbol">Ft</text>
+    <text x="55" y="55" class="element-kr">파인튜닝</text>
+    <text x="55" y="70" class="element-en">Fine-tuning</text>
+  </g>
+  <g transform="translate(360, 300)">
+    <rect width="110" height="85" class="cell-box"/>
+    <text x="55" y="32" class="element-symbol">Fw</text>
+    <text x="55" y="55" class="element-kr">프레임워크</text>
+    <text x="55" y="70" class="element-en">Framework</text>
+  </g>
+  <g transform="translate(470, 300)">
+    <rect width="110" height="85" class="cell-box"/>
+    <text x="55" y="32" class="element-symbol">Rt</text>
+    <text x="55" y="55" class="element-kr">레드팀</text>
+    <text x="55" y="70" class="element-en">Red-teaming</text>
+  </g>
+  <g transform="translate(580, 300)">
+    <rect width="110" height="85" class="cell-box"/>
+    <text x="55" y="32" class="element-symbol">Sm</text>
+    <text x="55" y="55" class="element-kr">소형 모델</text>
+    <text x="55" y="70" class="element-en">Small Models</text>
+  </g>
+
+  <!-- Row 4: Frontier -->
+  <g transform="translate(140, 400)">
+    <rect width="110" height="85" class="cell-box"/>
+    <text x="55" y="32" class="element-symbol">Ma</text>
+    <text x="55" y="55" class="element-kr">멀티 에이전트</text>
+    <text x="55" y="70" class="element-en">Multi-agent</text>
+  </g>
+  <g transform="translate(250, 400)">
+    <rect width="110" height="85" class="cell-box"/>
+    <text x="55" y="32" class="element-symbol">Sy</text>
+    <text x="55" y="55" class="element-kr">합성 데이터</text>
+    <text x="55" y="70" class="element-en">Synthetic Data</text>
+  </g>
+  <g transform="translate(360, 400)">
+    <rect width="110" height="85" class="cell-box"/>
+    <text x="55" y="32" class="element-symbol">Op</text>
+    <text x="55" y="55" class="element-kr">최적화기</text>
+    <text x="55" y="70" class="element-en">Optimizers</text>
+  </g>
+  <g transform="translate(470, 400)">
+    <rect width="110" height="85" class="cell-box"/>
+    <text x="55" y="32" class="element-symbol">In</text>
+    <text x="55" y="55" class="element-kr">해석가능성</text>
+    <text x="55" y="70" class="element-en">Interpretability</text>
+  </g>
+  <g transform="translate(580, 400)">
+    <rect width="110" height="85" class="cell-box"/>
+    <text x="55" y="32" class="element-symbol">Th</text>
+    <text x="55" y="55" class="element-kr">추론 모델</text>
+    <text x="55" y="70" class="element-en">Reasoning Models</text>
+  </g>
+
+  <!-- Section: Infrastructure & Ops -->
+  <text x="140" y="530" class="section-label">Infrastructure &amp; Ops (기반 기술)</text>
+  <line x1="140" y1="535" x2="690" y2="535" stroke="#ccc" stroke-width="0.5" />
+
+  <!-- Infra Elements -->
+  <g transform="translate(195, 545)">
+    <rect width="110" height="85" class="cell-infra"/>
+    <text x="55" y="32" class="element-symbol">Mo</text>
+    <text x="55" y="55" class="element-kr">모니터링</text>
+    <text x="55" y="70" class="element-en">Monitoring</text>
+  </g>
+  <g transform="translate(305, 545)">
+    <rect width="110" height="85" class="cell-infra"/>
+    <text x="55" y="32" class="element-symbol">Sv</text>
+    <text x="55" y="55" class="element-kr">서빙</text>
+    <text x="55" y="70" class="element-en">Serving</text>
+  </g>
+  <g transform="translate(415, 545)">
+    <rect width="110" height="85" class="cell-infra"/>
+    <text x="55" y="32" class="element-symbol">Qz</text>
+    <text x="55" y="55" class="element-kr">양자화</text>
+    <text x="55" y="70" class="element-en">Quantization</text>
+  </g>
+  <g transform="translate(525, 545)">
+    <rect width="110" height="85" class="cell-infra"/>
+    <text x="55" y="32" class="element-symbol">Gp</text>
+    <text x="55" y="55" class="element-kr">연산 장치</text>
+    <text x="55" y="70" class="element-en">Compute/GPU</text>
+  </g>
+
+  <!-- Footer -->
+  <!-- <text x="735" y="630" class="source-attribution">출처: IBM Technology (2025) 재구성</text> -->
+</svg>

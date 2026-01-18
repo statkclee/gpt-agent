@@ -1,0 +1,291 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
+  <defs>
+    <style>
+      /* Tufte Style Typography */
+      .tufte-title {
+        font-family: Palatino, 'Book Antiqua', Georgia, serif;
+        font-size: 20px;
+        font-weight: bold;
+        fill: #222;
+        letter-spacing: 0.5px;
+      }
+      .element-symbol {
+        font-family: Palatino, Georgia, serif;
+        font-size: 28px;
+        font-weight: bold;
+        fill: #111;
+        text-anchor: middle;
+      }
+      .element-kr {
+        font-family: 'Apple Myungjo', 'Songti SC', serif;
+        font-size: 13px;
+        fill: #333;
+        text-anchor: middle;
+      }
+      .element-en {
+        font-family: Palatino, Georgia, serif;
+        font-size: 9px;
+        fill: #666;
+        text-anchor: middle;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+      }
+      .isotope-symbol {
+        font-family: Palatino, Georgia, serif;
+        font-size: 16px;
+        font-weight: bold;
+        fill: #333;
+      }
+      .isotope-super {
+        font-family: Palatino, Georgia, serif;
+        font-size: 10px;
+        fill: #555;
+      }
+      .isotope-name {
+        font-family: Palatino, Georgia, serif;
+        font-size: 11px;
+        fill: #666;
+      }
+      .isotope-desc {
+        font-family: 'Apple Myungjo', 'Songti SC', serif;
+        font-size: 10px;
+        fill: #888;
+      }
+      .cell-box {
+        fill: #f9f9f9;
+        stroke: #999;
+        stroke-width: 0.5;
+      }
+      .isotope-box {
+        fill: #ffffff;
+        stroke: #bbb;
+        stroke-width: 0.5;
+        stroke-dasharray: 3,2;
+      }
+      .arrow {
+        stroke: #666;
+        stroke-width: 1.5;
+        fill: none;
+      }
+      .arrow-head {
+        fill: #666;
+      }
+      .section-label {
+        font-family: 'Apple Myungjo', 'Songti SC', serif;
+        font-size: 12px;
+        font-weight: bold;
+        fill: #444;
+      }
+      .annotation {
+        font-family: Palatino, Georgia, serif;
+        font-size: 10px;
+        font-style: italic;
+        fill: #888;
+      }
+    </style>
+  </defs>
+
+  <!-- Clean Background -->
+  <rect x="0" y="0" width="800" height="520" fill="#ffffff"/>
+
+  <!-- Title -->
+  <!-- <text x="400" y="35" class="tufte-title" text-anchor="middle">AI 원소의 동위원소 (Isotopes)</text> -->
+
+  <!-- LLM (Lg) Element and Isotopes -->
+  <g transform="translate(40, 50)">
+    <!-- Main Element -->
+    <rect width="100" height="90" class="cell-box"/>
+    <text x="50" y="35" class="element-symbol">Lg</text>
+    <text x="50" y="58" class="element-kr">대형 언어모델</text>
+    <text x="50" y="75" class="element-en">LLM</text>
+
+    <!-- Arrow -->
+    <path d="M 110 45 L 160 45" class="arrow"/>
+    <polygon points="160,45 152,41 152,49" class="arrow-head"/>
+
+    <!-- Isotopes -->
+    <g transform="translate(170, 0)">
+      <rect width="200" height="90" class="isotope-box"/>
+      <text x="10" y="20" class="section-label">동위원소</text>
+
+      <text x="15" y="40" class="isotope-super">GPT</text>
+      <text x="40" y="40" class="isotope-symbol">Lg</text>
+      <text x="65" y="40" class="isotope-name">— GPT-4o, o1, o3</text>
+
+      <text x="15" y="58" class="isotope-super">Cla</text>
+      <text x="40" y="58" class="isotope-symbol">Lg</text>
+      <text x="65" y="58" class="isotope-name">— Claude Opus/Sonnet</text>
+
+      <text x="15" y="76" class="isotope-super">Lla</text>
+      <text x="40" y="76" class="isotope-symbol">Lg</text>
+      <text x="65" y="76" class="isotope-name">— Llama 3, Mistral</text>
+    </g>
+  </g>
+
+  <!-- Vector DB (Vx) Element and Isotopes -->
+  <g transform="translate(420, 50)">
+    <!-- Main Element -->
+    <rect width="100" height="90" class="cell-box"/>
+    <text x="50" y="35" class="element-symbol">Vx</text>
+    <text x="50" y="58" class="element-kr">벡터 DB</text>
+    <text x="50" y="75" class="element-en">Vector DB</text>
+
+    <!-- Arrow -->
+    <path d="M 110 45 L 160 45" class="arrow"/>
+    <polygon points="160,45 152,41 152,49" class="arrow-head"/>
+
+    <!-- Isotopes -->
+    <g transform="translate(170, 0)">
+      <rect width="200" height="90" class="isotope-box"/>
+      <text x="10" y="20" class="section-label">동위원소</text>
+
+      <text x="15" y="40" class="isotope-super">Pin</text>
+      <text x="40" y="40" class="isotope-symbol">Vx</text>
+      <text x="65" y="40" class="isotope-name">— Pinecone</text>
+
+      <text x="15" y="58" class="isotope-super">Chr</text>
+      <text x="40" y="58" class="isotope-symbol">Vx</text>
+      <text x="65" y="58" class="isotope-name">— Chroma</text>
+
+      <text x="15" y="76" class="isotope-super">Pg</text>
+      <text x="40" y="76" class="isotope-symbol">Vx</text>
+      <text x="65" y="76" class="isotope-name">— pgvector</text>
+    </g>
+  </g>
+
+  <!-- Embedding (Em) Element and Isotopes -->
+  <g transform="translate(40, 175)">
+    <!-- Main Element -->
+    <rect width="100" height="90" class="cell-box"/>
+    <text x="50" y="35" class="element-symbol">Em</text>
+    <text x="50" y="58" class="element-kr">임베딩</text>
+    <text x="50" y="75" class="element-en">Embeddings</text>
+
+    <!-- Arrow -->
+    <path d="M 110 45 L 160 45" class="arrow"/>
+    <polygon points="160,45 152,41 152,49" class="arrow-head"/>
+
+    <!-- Isotopes -->
+    <g transform="translate(170, 0)">
+      <rect width="200" height="90" class="isotope-box"/>
+      <text x="10" y="20" class="section-label">동위원소</text>
+
+      <text x="15" y="40" class="isotope-super">Ada</text>
+      <text x="40" y="40" class="isotope-symbol">Em</text>
+      <text x="65" y="40" class="isotope-name">— text-embedding-3</text>
+
+      <text x="15" y="58" class="isotope-super">Voy</text>
+      <text x="40" y="58" class="isotope-symbol">Em</text>
+      <text x="65" y="58" class="isotope-name">— voyage-3</text>
+
+      <text x="15" y="76" class="isotope-super">BGE</text>
+      <text x="40" y="76" class="isotope-symbol">Em</text>
+      <text x="65" y="76" class="isotope-name">— bge-m3 (오픈소스)</text>
+    </g>
+  </g>
+
+  <!-- Framework (Fw) Element and Isotopes -->
+  <g transform="translate(420, 175)">
+    <!-- Main Element -->
+    <rect width="100" height="90" class="cell-box"/>
+    <text x="50" y="35" class="element-symbol">Fw</text>
+    <text x="50" y="58" class="element-kr">프레임워크</text>
+    <text x="50" y="75" class="element-en">Framework</text>
+
+    <!-- Arrow -->
+    <path d="M 110 45 L 160 45" class="arrow"/>
+    <polygon points="160,45 152,41 152,49" class="arrow-head"/>
+
+    <!-- Isotopes -->
+    <g transform="translate(170, 0)">
+      <rect width="200" height="90" class="isotope-box"/>
+      <text x="10" y="20" class="section-label">동위원소</text>
+
+      <text x="15" y="40" class="isotope-super">LC</text>
+      <text x="40" y="40" class="isotope-symbol">Fw</text>
+      <text x="65" y="40" class="isotope-name">— LangChain</text>
+
+      <text x="15" y="58" class="isotope-super">LI</text>
+      <text x="40" y="58" class="isotope-symbol">Fw</text>
+      <text x="65" y="58" class="isotope-name">— LlamaIndex</text>
+
+      <text x="15" y="76" class="isotope-super">DSP</text>
+      <text x="40" y="76" class="isotope-symbol">Fw</text>
+      <text x="65" y="76" class="isotope-name">— DSPy</text>
+    </g>
+  </g>
+
+  <!-- Agent (Ag) Element and Isotopes -->
+  <g transform="translate(40, 300)">
+    <!-- Main Element -->
+    <rect width="100" height="90" class="cell-box"/>
+    <text x="50" y="35" class="element-symbol">Ag</text>
+    <text x="50" y="58" class="element-kr">에이전트</text>
+    <text x="50" y="75" class="element-en">Agent</text>
+
+    <!-- Arrow -->
+    <path d="M 110 45 L 160 45" class="arrow"/>
+    <polygon points="160,45 152,41 152,49" class="arrow-head"/>
+
+    <!-- Isotopes -->
+    <g transform="translate(170, 0)">
+      <rect width="200" height="90" class="isotope-box"/>
+      <text x="10" y="20" class="section-label">동위원소</text>
+
+      <text x="15" y="40" class="isotope-super">CC</text>
+      <text x="40" y="40" class="isotope-symbol">Ag</text>
+      <text x="65" y="40" class="isotope-name">— Claude Code</text>
+
+      <text x="15" y="58" class="isotope-super">Dev</text>
+      <text x="40" y="58" class="isotope-symbol">Ag</text>
+      <text x="65" y="58" class="isotope-name">— Devin</text>
+
+      <text x="15" y="76" class="isotope-super">CW</text>
+      <text x="40" y="76" class="isotope-symbol">Ag</text>
+      <text x="65" y="76" class="isotope-name">— Copilot Workspace</text>
+    </g>
+  </g>
+
+  <!-- Guardrails (Gr) Element and Isotopes -->
+  <g transform="translate(420, 300)">
+    <!-- Main Element -->
+    <rect width="100" height="90" class="cell-box"/>
+    <text x="50" y="35" class="element-symbol">Gr</text>
+    <text x="50" y="58" class="element-kr">가드레일</text>
+    <text x="50" y="75" class="element-en">Guardrails</text>
+
+    <!-- Arrow -->
+    <path d="M 110 45 L 160 45" class="arrow"/>
+    <polygon points="160,45 152,41 152,49" class="arrow-head"/>
+
+    <!-- Isotopes -->
+    <g transform="translate(170, 0)">
+      <rect width="200" height="90" class="isotope-box"/>
+      <text x="10" y="20" class="section-label">동위원소</text>
+
+      <text x="15" y="40" class="isotope-super">NM</text>
+      <text x="40" y="40" class="isotope-symbol">Gr</text>
+      <text x="65" y="40" class="isotope-name">— NeMo Guardrails</text>
+
+      <text x="15" y="58" class="isotope-super">GH</text>
+      <text x="40" y="58" class="isotope-symbol">Gr</text>
+      <text x="65" y="58" class="isotope-name">— Guardrails Hub</text>
+
+      <text x="15" y="76" class="isotope-super">Lla</text>
+      <text x="40" y="76" class="isotope-symbol">Gr</text>
+      <text x="65" y="76" class="isotope-name">— Llama Guard</text>
+    </g>
+  </g>
+
+  <!-- Annotation -->
+  <g transform="translate(40, 430)">
+    <line x1="0" y1="0" x2="720" y2="0" stroke="#ccc" stroke-width="0.5"/>
+
+    <text x="0" y="25" class="section-label">화학 동위원소와의 비유</text>
+
+    <text x="0" y="50" class="annotation">화학에서 동위원소는 같은 원소이지만 중성자 수가 달라 질량이 다르다.</text>
+    <text x="0" y="68" class="annotation">탄소-12(¹²C)와 탄소-14(¹⁴C)는 화학적 성질은 같지만, 질량과 안정성이 다르다.</text>
+    <text x="0" y="86" class="annotation">AI에서도 동일한 역할(원소)을 수행하지만 구현체에 따라 성능, 비용, 특성이 다르다.</text>
+  </g>
+
+</svg>

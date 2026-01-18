@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 70 800 320">
+  <defs>
+    <style>
+      .tufte-title { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 20px; fill: #111; font-weight: bold; }
+      .tufte-subtitle { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 14px; fill: #555; }
+      .tufte-header { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 15px; fill: #111; font-weight: bold; }
+      .tufte-label { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 13px; fill: #222; font-weight: bold; }
+      .tufte-text { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 12px; fill: #333; }
+      .tufte-small { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 11px; fill: #666; }
+      .tufte-box { fill: #fdfdfd; stroke: #999; stroke-width: 1; }
+      .tufte-box-highlight { fill: #f9f9f9; stroke: #444; stroke-width: 1.5; }
+      .tufte-line { stroke: #888; stroke-width: 1; }
+      .tufte-arrow { fill: #888; }
+      .icon { fill: none; stroke: #555; stroke-width: 1.5; }
+      
+      .timeline-dot { fill: #fff; stroke: #555; stroke-width: 2; }
+      .timeline-dot-active { fill: #333; stroke: #333; stroke-width: 2; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" class="tufte-arrow"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="420" fill="#ffffff"/>
+
+  <!-- Title -->
+  <!-- <text x="400" y="35" text-anchor="middle" class="tufte-title">컨텍스트 공학의 부상</text>
+  <text x="400" y="58" text-anchor="middle" class="tufte-subtitle">단순한 질문(프롬프트)에서 시스템 설계(컨텍스트)로</text> -->
+
+  <!-- Section 1: Evolution Timeline -->
+  <g transform="translate(0, 80)">
+    <!-- Timeline Line -->
+    <line x1="100" y1="40" x2="700" y2="40" class="tufte-line" stroke-width="1.5"/>
+
+    <!-- Stage 1 -->
+    <g transform="translate(150, 40)">
+      <circle cx="0" cy="0" r="6" class="timeline-dot"/>
+      <text x="0" y="-15" text-anchor="middle" class="tufte-small">2022</text>
+      <text x="0" y="25" text-anchor="middle" class="tufte-label">프롬프트 공학</text>
+      <text x="0" y="40" text-anchor="middle" class="tufte-small" fill="#666">마법의 문장 찾기</text>
+    </g>
+
+    <!-- Stage 2 -->
+    <g transform="translate(400, 40)">
+      <circle cx="0" cy="0" r="6" class="timeline-dot"/>
+      <text x="0" y="-15" text-anchor="middle" class="tufte-small">2023-2024</text>
+      <text x="0" y="25" text-anchor="middle" class="tufte-label">고급 프롬프팅</text>
+      <text x="0" y="40" text-anchor="middle" class="tufte-small" fill="#666">사고 연쇄 / 예시 제공</text>
+    </g>
+
+    <!-- Stage 3 -->
+    <g transform="translate(650, 40)">
+      <circle cx="0" cy="0" r="7" class="timeline-dot-active"/>
+      <text x="0" y="-15" text-anchor="middle" class="tufte-small" font-weight="bold">2025+</text>
+      <text x="0" y="25" text-anchor="middle" class="tufte-label" fill="#111">컨텍스트 공학</text>
+      <text x="0" y="40" text-anchor="middle" class="tufte-small" fill="#333">시스템 설계</text>
+    </g>
+  </g>
+
+  <!-- Section 2: Core Components -->
+  <g transform="translate(0, 160)">
+    <text x="650" y="35" text-anchor="middle" class="tufte-header">컨텍스트 공학 4대 기둥</text>
+
+    <!-- Container Box -->
+    <rect x="50" y="10" width="700" height="205" fill="none" stroke="#ddd" rx="5"/>
+
+    <!-- Component 1: System Context -->
+    <g transform="translate(70, 55)">
+      <rect x="0" y="0" width="150" height="140" class="tufte-box" rx="3"/>
+      <text x="75" y="25" text-anchor="middle" class="tufte-label">1. 시스템 규칙</text>
+      <line x1="20" y1="35" x2="130" y2="35" class="tufte-line" stroke-width="0.5"/>
+      <text x="15" y="60" class="tufte-text">• 페르소나/역할 정의</text>
+      <text x="15" y="80" class="tufte-text">• 제약 조건</text>
+      <text x="15" y="100" class="tufte-text">• 프로젝트 규칙</text>
+      <text x="75" y="125" text-anchor="middle" class="tufte-small" font-family="monospace" fill="#555">.cursorrules / .md</text>
+    </g>
+
+    <!-- Component 2: Dynamic Context -->
+    <g transform="translate(240, 55)">
+      <rect x="0" y="0" width="150" height="140" class="tufte-box" rx="3"/>
+      <text x="75" y="25" text-anchor="middle" class="tufte-label">2. 동적 맥락</text>
+      <line x1="20" y1="35" x2="130" y2="35" class="tufte-line" stroke-width="0.5"/>
+      <text x="15" y="60" class="tufte-text">• RAG (관련 문서)</text>
+      <text x="15" y="80" class="tufte-text">• 코드베이스 상태</text>
+      <text x="15" y="100" class="tufte-text">• 실행 로그/히스토리</text>
+      <text x="75" y="125" text-anchor="middle" class="tufte-small" font-family="monospace" fill="#555">자동 맥락 주입</text>
+    </g>
+
+    <!-- Component 3: Tool Integration -->
+    <g transform="translate(410, 55)">
+      <rect x="0" y="0" width="150" height="140" class="tufte-box-highlight" rx="3"/>
+      <text x="75" y="25" text-anchor="middle" class="tufte-label">3. 도구 통합</text>
+      <line x1="20" y1="35" x2="130" y2="35" class="tufte-line" stroke-width="0.5"/>
+      <text x="15" y="60" class="tufte-text">• 파일 시스템 접근</text>
+      <text x="15" y="80" class="tufte-text">• 외부 API 연동</text>
+      <text x="15" y="100" class="tufte-text">• DB 쿼리 실행</text>
+      <text x="75" y="125" text-anchor="middle" class="tufte-small" font-family="monospace" fill="#333">MCP (표준 프로토콜)</text>
+    </g>
+
+    <!-- Component 4: Structured Output -->
+    <g transform="translate(580, 55)">
+      <rect x="0" y="0" width="150" height="140" class="tufte-box" rx="3"/>
+      <text x="75" y="25" text-anchor="middle" class="tufte-label">4. 구조화 출력</text>
+      <line x1="20" y1="35" x2="130" y2="35" class="tufte-line" stroke-width="0.5"/>
+      <text x="15" y="60" class="tufte-text">• JSON 포맷 강제</text>
+      <text x="15" y="80" class="tufte-text">• 타입 검증</text>
+      <text x="15" y="100" class="tufte-text">• 파싱 가능 구조</text>
+      <text x="75" y="125" text-anchor="middle" class="tufte-small" font-family="monospace" fill="#555">스키마 정의</text>
+    </g>
+  </g>
+
+  <!-- Bottom Quote -->
+  <!-- <text x="400" y="380" text-anchor="middle" class="tufte-small" font-style="italic" fill="#555">
+    "프롬프트가 마법의 주문이라면, 컨텍스트 공학은 AI가 활약할 무대와 대본을 설계하는 것이다."
+  </text>
+  <text x="400" y="400" text-anchor="middle" class="tufte-small" fill="#777">
+    — Tobi Lütke &amp; Andrej Karpathy 인사이트 기반 (2025)
+  </text> -->
+
+</svg>

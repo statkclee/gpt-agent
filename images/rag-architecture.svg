@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <defs>
+    <style>
+      .tufte-title { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 18px; fill: #222; font-weight: bold; }
+      .tufte-label { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 14px; fill: #333; font-weight: bold; }
+      .tufte-text { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 12px; fill: #444; }
+      .tufte-small { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 11px; fill: #666; }
+      .tufte-code { font-family: 'Courier New', monospace; font-size: 10px; fill: #333; }
+      .box { fill: #f9f9f9; stroke: #999; stroke-width: 1; }
+      .box-highlight { fill: #f0f0f0; stroke: #555; stroke-width: 1.5; }
+      .arrow { stroke: #666; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="400" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" class="tufte-title">RAG 아키텍처: 검색 증강 생성</text>
+  <text x="450" y="50" text-anchor="middle" class="tufte-small">LLM의 환각 문제를 외부 지식으로 해결</text>
+
+  <!-- Traditional LLM (Top) -->
+  <g transform="translate(50, 80)">
+    <text x="0" y="0" class="tufte-label">전통적 LLM (환각 발생)</text>
+
+    <rect x="0" y="15" width="800" height="60" class="box" rx="5"/>
+    <text x="400" y="35" text-anchor="middle" class="tufte-text">사용자 질문: "2025년 최신 Python 패키지는?"</text>
+    <path d="M400,45 L400,55" class="arrow"/>
+
+    <rect x="300" y="55" width="200" height="30" fill="#e8e8e8" stroke="#999" rx="3"/>
+    <text x="400" y="73" text-anchor="middle" class="tufte-text">LLM (학습 데이터 2024년)</text>
+
+    <text x="400" y="100" text-anchor="middle" class="tufte-small" fill="#c00">❌ "Python 3.12가 최신입니다" (환각 - 실제는 3.14)</text>
+  </g>
+
+  <!-- RAG Architecture (Bottom) -->
+  <g transform="translate(50, 200)">
+    <text x="0" y="0" class="tufte-label">RAG: 외부 지식 참조</text>
+
+    <!-- Step 1: User Query -->
+    <rect x="0" y="15" width="150" height="50" class="box-highlight" rx="5"/>
+    <text x="75" y="35" text-anchor="middle" class="tufte-text">1. 사용자 질문</text>
+    <text x="75" y="50" text-anchor="middle" class="tufte-small">"최신 Python?"</text>
+
+    <path d="M150,40 L200,40" class="arrow"/>
+
+    <!-- Step 2: Search Vector DB -->
+    <rect x="200" y="15" width="150" height="50" class="box-highlight" rx="5"/>
+    <text x="275" y="35" text-anchor="middle" class="tufte-text">2. Vector DB 검색</text>
+    <text x="275" y="50" text-anchor="middle" class="tufte-small">관련 문서 찾기</text>
+
+    <path d="M350,40 L400,40" class="arrow"/>
+
+    <!-- Step 3: Retrieve -->
+    <rect x="400" y="15" width="150" height="50" class="box-highlight" rx="5"/>
+    <text x="475" y="35" text-anchor="middle" class="tufte-text">3. 문서 검색</text>
+    <text x="475" y="50" text-anchor="middle" class="tufte-small">"Python 3.14..."</text>
+
+    <path d="M550,40 L600,40" class="arrow"/>
+
+    <!-- Step 4: Augmented LLM -->
+    <rect x="600" y="15" width="200" height="50" class="box-highlight" rx="5"/>
+    <text x="700" y="30" text-anchor="middle" class="tufte-text">4. LLM + 검색 결과</text>
+    <text x="700" y="45" text-anchor="middle" class="tufte-small">질문 + 참조 문서</text>
+    <text x="700" y="58" text-anchor="middle" class="tufte-small">→ 정확한 답변</text>
+
+    <!-- Result -->
+    <text x="400" y="95" text-anchor="middle" class="tufte-small" fill="#060">✓ "Python 3.14가 2025년 1월 출시되었습니다"</text>
+  </g>
+
+  <!-- Vector DB Detail -->
+  <g transform="translate(50, 320)">
+    <rect x="0" y="0" width="800" height="60" fill="#f5f5f5" stroke="#ccc" rx="5"/>
+    <text x="400" y="20" text-anchor="middle" class="tufte-label">Vector DB 구성 요소</text>
+
+    <g transform="translate(50, 30)">
+      <text x="0" y="0" class="tufte-small">• 문서 청킹: 긴 문서 → 작은 조각</text>
+      <text x="250" y="0" class="tufte-small">• 임베딩: 텍스트 → 벡터 (768차원)</text>
+      <text x="550" y="0" class="tufte-small">• 유사도 검색: 코사인 거리</text>
+    </g>
+  </g>
+</svg>
