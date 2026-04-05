@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380">
+  <defs>
+    <style>
+      .tufte-title { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 18px; fill: #222; font-weight: bold; }
+      .tufte-subtitle { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 13px; fill: #666; }
+      .tufte-label { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 13px; fill: #333; font-weight: bold; }
+      .tufte-text { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 11px; fill: #444; }
+      .tufte-small { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 10px; fill: #666; }
+      .tufte-date { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 10px; fill: #999; }
+      .tufte-code { font-family: 'Courier New', Courier, monospace; font-size: 10px; fill: #555; }
+      .tufte-box { fill: #f9f9f9; stroke: #999; stroke-width: 1; }
+      .tufte-box-hl { fill: #f0f0f0; stroke: #555; stroke-width: 1.5; }
+      .tufte-line { stroke: #999; stroke-width: 1.5; }
+      .tufte-arrow { fill: #666; }
+      .era-label { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 11px; fill: #888; font-style: italic; }
+    </style>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" class="tufte-arrow"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="380" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="450" y="28" text-anchor="middle" class="tufte-title">Glushko C·A·C 모델 → Quarto 구현</text>
+  <text x="450" y="46" text-anchor="middle" class="tufte-subtitle">2005년 XML로 구상한 원칙이 2022년 Markdown으로 실현된다</text>
+
+  <!-- Column Headers -->
+  <text x="225" y="78" text-anchor="middle" class="era-label">Glushko &amp; McGrath (2005)</text>
+  <text x="675" y="78" text-anchor="middle" class="era-label">Quarto (2022)</text>
+
+  <!-- Center arrow label -->
+  <text x="450" y="78" text-anchor="middle" class="tufte-date">XML → Markdown</text>
+
+  <!-- Row 1: Component Model -->
+  <g transform="translate(30, 95)">
+    <!-- Glushko side -->
+    <rect x="0" y="0" width="350" height="80" class="tufte-box" rx="5"/>
+    <text x="20" y="22" class="tufte-label">Component Model</text>
+    <text x="350" y="22" text-anchor="end" class="tufte-date">원자적 단위 정의</text>
+    <line x1="15" y1="30" x2="335" y2="30" stroke="#eee"/>
+    <text x="20" y="48" class="tufte-small">Atomic: 이름, 날짜, 금액</text>
+    <text x="20" y="63" class="tufte-small">Aggregate: 주문항목, 배송정보</text>
+    <text x="20" y="78" class="tufte-code">XML Schema &lt;element&gt; 정의</text>
+
+    <!-- Arrow -->
+    <line x1="360" y1="40" x2="440" y2="40" class="tufte-line" marker-end="url(#arr)"/>
+
+    <!-- Quarto side -->
+    <rect x="450" y="0" width="350" height="80" class="tufte-box-hl" rx="5"/>
+    <text x="470" y="22" class="tufte-label">Shortcode</text>
+    <text x="800" y="22" text-anchor="end" class="tufte-date">재사용 원자 콘텐츠</text>
+    <line x1="465" y1="30" x2="785" y2="30" stroke="#ddd"/>
+    <text x="470" y="48" class="tufte-small">비디오, 콜아웃, 교차참조</text>
+    <text x="470" y="63" class="tufte-small">한 번 정의, 어디서든 호출</text>
+    <text x="470" y="78" class="tufte-code">{{&lt; video src="demo.mp4" &gt;}}</text>
+  </g>
+
+  <!-- Row 2: Assembly Model -->
+  <g transform="translate(30, 195)">
+    <!-- Glushko side -->
+    <rect x="0" y="0" width="350" height="80" class="tufte-box" rx="5"/>
+    <text x="20" y="22" class="tufte-label">Assembly Model</text>
+    <text x="350" y="22" text-anchor="end" class="tufte-date">계층적 조립</text>
+    <line x1="15" y1="30" x2="335" y2="30" stroke="#eee"/>
+    <text x="20" y="48" class="tufte-small">컴포넌트를 문서로 조립</text>
+    <text x="20" y="63" class="tufte-small">XML 트리 구조, 단일 소스 다중 출력</text>
+    <text x="20" y="78" class="tufte-code">XSLT transform → HTML/PDF</text>
+
+    <!-- Arrow -->
+    <line x1="360" y1="40" x2="440" y2="40" class="tufte-line" marker-end="url(#arr)"/>
+
+    <!-- Quarto side -->
+    <rect x="450" y="0" width="350" height="80" class="tufte-box-hl" rx="5"/>
+    <text x="470" y="22" class="tufte-label">Include</text>
+    <text x="800" y="22" text-anchor="end" class="tufte-date">모듈 조립</text>
+    <line x1="465" y1="30" x2="785" y2="30" stroke="#ddd"/>
+    <text x="470" y="48" class="tufte-small">.qmd 모듈을 선택적으로 조립</text>
+    <text x="470" y="63" class="tufte-small">Pandoc 변환 → HTML/PDF/ePub</text>
+    <text x="470" y="78" class="tufte-code">{{&lt; include _shared/intro.qmd &gt;}}</text>
+  </g>
+
+  <!-- Row 3: Context Model -->
+  <g transform="translate(30, 295)">
+    <!-- Glushko side -->
+    <rect x="0" y="0" width="350" height="80" class="tufte-box" rx="5"/>
+    <text x="20" y="22" class="tufte-label">Context Model</text>
+    <text x="350" y="22" text-anchor="end" class="tufte-date">맥락별 의미 변환</text>
+    <line x1="15" y1="30" x2="335" y2="30" stroke="#eee"/>
+    <text x="20" y="48" class="tufte-small">동일 컴포넌트, 다른 문서에서 다른 의미</text>
+    <text x="20" y="63" class="tufte-small">"금액" → 주문서/송장/영수증 각각 다른 효력</text>
+    <text x="20" y="78" class="tufte-code">XML namespace + context rules</text>
+
+    <!-- Arrow -->
+    <line x1="360" y1="40" x2="440" y2="40" class="tufte-line" marker-end="url(#arr)"/>
+
+    <!-- Quarto side -->
+    <rect x="450" y="0" width="350" height="80" class="tufte-box-hl" rx="5"/>
+    <text x="470" y="22" class="tufte-label">Params</text>
+    <text x="800" y="22" text-anchor="end" class="tufte-date">매개변수 문서 생성</text>
+    <line x1="465" y1="30" x2="785" y2="30" stroke="#ddd"/>
+    <text x="470" y="48" class="tufte-small">동일 템플릿 + 매개변수 → N개 문서</text>
+    <text x="470" y="63" class="tufte-small">기획팀/인사팀/개발팀 → 3개 PDF 자동생성</text>
+    <text x="470" y="78" class="tufte-code">quarto render -P dept:"기획팀"</text>
+  </g>
+
+</svg>
