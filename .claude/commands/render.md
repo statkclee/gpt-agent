@@ -37,7 +37,7 @@ quarto preview --port 7771 --no-browser
 
 렌더링된 파일:
   ✅ index.html
-  ✅ 71-gpt.html
+  ✅ p1-intro.html
   ...
 
 경고사항:

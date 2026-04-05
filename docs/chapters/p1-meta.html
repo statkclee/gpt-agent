@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko-KR" xml:lang="ko-KR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.23">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="이광춘(Openai)">
+
+<title>4&nbsp; 메타프로그래밍 – AI 에이전트 글쓰기</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/p1-context.html" rel="next">
+<link href="../chapters/p1-paradigm.html" rel="prev">
+<link href="../images/logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a10cfefd4a74d1695ded868c564009f8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-c68594dfef9b4fb828be3ca3c7ed08e4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
+  }
+}</script>
+
+<script type="text/javascript">
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-229551680-1', 'auto');
+
+ga('send', {
+  hitType: 'pageview',
+  'anonymizeIp': true,
+});
+</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/p1-intro.html"><strong>1부</strong> AI 시대 프로그래밍</a></li><li class="breadcrumb-item"><a href="../chapters/p1-meta.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">메타프로그래밍</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">AI 에이전트 글쓰기</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/statkclee/gpt-agent/" title="소스 코드" class="quarto-navigation-tool px-1" aria-label="소스 코드"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="리더 모드 전환">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="검색"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">서문</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text"><strong>도입</strong> 글쓰기의 대전환</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/p0-writing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">도구가 사고를 바꾸는 글쓰기</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text"><strong>1부</strong> AI 시대 프로그래밍</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/p1-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">소프트웨어 3.0 시대</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/p1-paradigm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">재사용에서 재생성으로</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/p1-meta.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">메타프로그래밍</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/p1-context.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">프롬프트에서 컨텍스트로</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/p1-workflow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">AI 코딩 실전 워크플로우</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/p1-review.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">코드 리뷰와 품질 관리</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/p1-tools.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">AI 도구 생태계</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/p1-future.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">개발자의 미래</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text"><strong>2부</strong> 통합 개발 환경</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/p2-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">IDE 선택과 발전</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/p2-positron.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">포지트론</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/p2-zed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Zed</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/p2-extension.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">IDE 확장 프로그램</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/p2-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">개발 환경 구축</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/p2-docker.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">도커: 재현 환경</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/p2-compendium.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">연구 컴펜디엄</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text"><strong>부록</strong></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">용어사전</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">참고문헌</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#sec-meta-history" id="toc-sec-meta-history" class="nav-link active" data-scroll-target="#sec-meta-history"><span class="header-section-number">4.1</span> 프로그램이 프로그램을 작성하다</a>
+  <ul class="collapse">
+  <li><a href="#컴파일러-최초의-메타프로그램-1951" id="toc-컴파일러-최초의-메타프로그램-1951" class="nav-link" data-scroll-target="#컴파일러-최초의-메타프로그램-1951"><span class="header-section-number">4.1.1</span> 컴파일러: 최초의 메타프로그램 (1951)</a></li>
+  <li><a href="#lisp-매크로-코드는-데이터다-1958" id="toc-lisp-매크로-코드는-데이터다-1958" class="nav-link" data-scroll-target="#lisp-매크로-코드는-데이터다-1958"><span class="header-section-number">4.1.2</span> Lisp 매크로: 코드는 데이터다 (1958)</a></li>
+  <li><a href="#컴파일러-컴파일러-문법에서-파서로-1970s" id="toc-컴파일러-컴파일러-문법에서-파서로-1970s" class="nav-link" data-scroll-target="#컴파일러-컴파일러-문법에서-파서로-1970s"><span class="header-section-number">4.1.3</span> 컴파일러-컴파일러: 문법에서 파서로 (1970s)</a></li>
+  <li><a href="#템플릿과-제네릭-타입이-코드를-생성하다-1990s" id="toc-템플릿과-제네릭-타입이-코드를-생성하다-1990s" class="nav-link" data-scroll-target="#템플릿과-제네릭-타입이-코드를-생성하다-1990s"><span class="header-section-number">4.1.4</span> 템플릿과 제네릭: 타입이 코드를 생성하다 (1990s)</a></li>
+  <li><a href="#런타임-메타프로그래밍-주류화-2000s" id="toc-런타임-메타프로그래밍-주류화-2000s" class="nav-link" data-scroll-target="#런타임-메타프로그래밍-주류화-2000s"><span class="header-section-number">4.1.5</span> 런타임 메타프로그래밍 주류화 (2000s)</a></li>
+  <li><a href="#ai-코드-생성-자연어가-메타언어가-되다-2020s" id="toc-ai-코드-생성-자연어가-메타언어가-되다-2020s" class="nav-link" data-scroll-target="#ai-코드-생성-자연어가-메타언어가-되다-2020s"><span class="header-section-number">4.1.6</span> AI 코드 생성: 자연어가 메타언어가 되다 (2020s)</a></li>
+  </ul></li>
+  <li><a href="#sec-meta-taxonomy" id="toc-sec-meta-taxonomy" class="nav-link" data-scroll-target="#sec-meta-taxonomy"><span class="header-section-number">4.2</span> 메타프로그래밍 분류 체계</a>
+  <ul class="collapse">
+  <li><a href="#동형-메타프로그래밍-vs.-이종-메타프로그래밍" id="toc-동형-메타프로그래밍-vs.-이종-메타프로그래밍" class="nav-link" data-scroll-target="#동형-메타프로그래밍-vs.-이종-메타프로그래밍"><span class="header-section-number">4.2.1</span> 동형 메타프로그래밍 vs.&nbsp;이종 메타프로그래밍</a></li>
+  <li><a href="#컴파일-타임-vs.-런타임" id="toc-컴파일-타임-vs.-런타임" class="nav-link" data-scroll-target="#컴파일-타임-vs.-런타임"><span class="header-section-number">4.2.2</span> 컴파일 타임 vs.&nbsp;런타임</a></li>
+  </ul></li>
+  <li><a href="#sec-meta-python-r" id="toc-sec-meta-python-r" class="nav-link" data-scroll-target="#sec-meta-python-r"><span class="header-section-number">4.3</span> Python과 R의 메타프로그래밍</a>
+  <ul class="collapse">
+  <li><a href="#python-데코레이터에서-ast까지" id="toc-python-데코레이터에서-ast까지" class="nav-link" data-scroll-target="#python-데코레이터에서-ast까지"><span class="header-section-number">4.3.1</span> Python: 데코레이터에서 AST까지</a></li>
+  <li><a href="#r-비표준-평가와-tidy-evaluation" id="toc-r-비표준-평가와-tidy-evaluation" class="nav-link" data-scroll-target="#r-비표준-평가와-tidy-evaluation"><span class="header-section-number">4.3.2</span> R: 비표준 평가와 tidy evaluation</a></li>
+  </ul></li>
+  <li><a href="#sec-meta-ai-era" id="toc-sec-meta-ai-era" class="nav-link" data-scroll-target="#sec-meta-ai-era"><span class="header-section-number">4.4</span> AI 시대의 메타프로그래밍</a>
+  <ul class="collapse">
+  <li><a href="#연속성-추상화-사다리" id="toc-연속성-추상화-사다리" class="nav-link" data-scroll-target="#연속성-추상화-사다리"><span class="header-section-number">4.4.1</span> 연속성: 추상화 사다리</a></li>
+  <li><a href="#단절-결정론에서-확률론으로" id="toc-단절-결정론에서-확률론으로" class="nav-link" data-scroll-target="#단절-결정론에서-확률론으로"><span class="header-section-number">4.4.2</span> 단절: 결정론에서 확률론으로</a></li>
+  <li><a href="#자기-개선-에이전트-메타-메타프로그래밍" id="toc-자기-개선-에이전트-메타-메타프로그래밍" class="nav-link" data-scroll-target="#자기-개선-에이전트-메타-메타프로그래밍"><span class="header-section-number">4.4.3</span> 자기 개선 에이전트: 메타-메타프로그래밍</a></li>
+  </ul></li>
+  <li><a href="#sec-meta-intersection" id="toc-sec-meta-intersection" class="nav-link" data-scroll-target="#sec-meta-intersection"><span class="header-section-number">4.5</span> 메타프로그래밍과 AI 코딩의 교차점</a>
+  <ul class="collapse">
+  <li><a href="#컨텍스트-파일은-메타프로그램이다" id="toc-컨텍스트-파일은-메타프로그램이다" class="nav-link" data-scroll-target="#컨텍스트-파일은-메타프로그램이다"><span class="header-section-number">4.5.1</span> 컨텍스트 파일은 메타프로그램이다</a></li>
+  <li><a href="#테스트-주도-개발은-실행-가능한-메타-명세다" id="toc-테스트-주도-개발은-실행-가능한-메타-명세다" class="nav-link" data-scroll-target="#테스트-주도-개발은-실행-가능한-메타-명세다"><span class="header-section-number">4.5.2</span> 테스트 주도 개발은 실행 가능한 메타 명세다</a></li>
+  <li><a href="#dsl-설계-능력이-ai-활용-능력을-결정한다" id="toc-dsl-설계-능력이-ai-활용-능력을-결정한다" class="nav-link" data-scroll-target="#dsl-설계-능력이-ai-활용-능력을-결정한다"><span class="header-section-number">4.5.3</span> DSL 설계 능력이 AI 활용 능력을 결정한다</a></li>
+  </ul></li>
+  <li><a href="#생각해볼-점" id="toc-생각해볼-점" class="nav-link" data-scroll-target="#생각해볼-점">생각해볼 점</a></li>
+  <li><a href="#프로젝트" id="toc-프로젝트" class="nav-link" data-scroll-target="#프로젝트">프로젝트</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/statkclee/gpt-agent/edit/main/chapters/p1-meta.qmd" class="toc-action"><i class="bi bi-github"></i>편집</a></li><li><a href="https://github.com/statkclee/gpt-agent/issues/new" class="toc-action"><i class="bi empty"></i>이슈 보고</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/p1-intro.html"><strong>1부</strong> AI 시대 프로그래밍</a></li><li class="breadcrumb-item"><a href="../chapters/p1-meta.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">메타프로그래밍</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-metaprogramming" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">메타프로그래밍</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p> </p>
+<p>프로그래밍의 역사는 <strong>프로그램이 프로그램을 작성하는</strong> 기술의 발전사다. 1951년 그레이스 호퍼(Grace Hopper)가 최초의 컴파일러를 만들었을 때, “수학 표기를 기계어로 자동 번역하는 프로그램”이라는 개념 자체가 혁명이었다. 당시 프로그래머들은 “기계가 프로그램을 작성할 수 있다”는 주장을 믿지 않았다<span class="citation" data-cites="Ceruzzi2003"><a href="references.html#ref-Ceruzzi2003" role="doc-biblioref">[1]</a></span>.</p>
+<p>70년이 지난 2025년, AI 에이전트가 자연어 지시만으로 수백 줄의 코드를 생성한다. Claude Code, GitHub Copilot, Cursor는 프롬프트를 입력받아 Python, R, JavaScript 코드를 만들어낸다. 본질적으로 같은 일이다—<strong>프로그램이 프로그램을 작성한다.</strong></p>
+<p>메타프로그래밍(Metaprogramming)은 다른 프로그램을 데이터로 취급하여 읽고, 생성하고, 분석하고, 변환하는 프로그램을 작성하는 기술이다<span class="citation" data-cites="Lilis2019"><a href="references.html#ref-Lilis2019" role="doc-biblioref">[2]</a></span>. 컴파일러, Lisp 매크로, C++ 템플릿, Python 데코레이터, R의 비표준 평가(NSE)가 모두 메타프로그래밍에 속한다. AI 코드 생성은 자연어를 메타언어로 사용하는 가장 최신 형태의 메타프로그래밍이다.</p>
+<div id="fig-meta-concept" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-meta-concept-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/meta-concept.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="그림&nbsp;4.1: 메타프로그래밍의 핵심 개념"><img src="../images/meta-concept.svg" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-meta-concept-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;4.1: 메타프로그래밍의 핵심 개념
+</figcaption>
+</figure>
+</div>
+<section id="sec-meta-history" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="sec-meta-history"><span class="header-section-number">4.1</span> 프로그램이 프로그램을 작성하다</h2>
+<p> </p>
+<p>메타프로그래밍의 역사는 컴퓨터 과학의 역사와 궤를 같이한다. 매 시대마다 “프로그램이 프로그램을 작성하는” 새로운 방식이 등장했고, 추상화 수준은 일관되게 상승했다.</p>
+<div id="fig-meta-evolution" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-meta-evolution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/meta-evolution.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="그림&nbsp;4.2: 메타프로그래밍의 진화: 프로그램이 프로그램을 작성하다"><img src="../images/meta-evolution.svg" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-meta-evolution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;4.2: 메타프로그래밍의 진화: 프로그램이 프로그램을 작성하다
+</figcaption>
+</figure>
+</div>
+<section id="컴파일러-최초의-메타프로그램-1951" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="컴파일러-최초의-메타프로그램-1951"><span class="header-section-number">4.1.1</span> 컴파일러: 최초의 메타프로그램 (1951)</h3>
+<p></p>
+<p>그레이스 호퍼가 1951년 개발한 A-0 컴파일러는 수학적 표기법을 기계어로 변환하는 프로그램이었다. 당시 “자동 프로그래밍(automatic programming)”이라 불린 컴파일러의 등장은 근본적인 질문을 제기했다—프로그래머의 역할은 무엇인가?</p>
+<p>호퍼 자신의 회고에 따르면, 동료들은 “컴퓨터는 산술만 할 수 있지, 프로그램을 작성할 수는 없다”고 반대했다. 컴파일러가 증명한 것은 정반대였다. 프로그래밍의 상당 부분은 기계적 변환이며, 기계가 더 정확하고 빠르게 수행할 수 있다.</p>
+<p>2025년에도 동일한 논쟁이 반복된다. “AI가 진짜 프로그래밍을 할 수 있는가?”라는 질문은 70년 전 “컴파일러가 진짜 프로그래밍을 할 수 있는가?”와 구조적으로 같다.</p>
+</section>
+<section id="lisp-매크로-코드는-데이터다-1958" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="lisp-매크로-코드는-데이터다-1958"><span class="header-section-number">4.1.2</span> Lisp 매크로: 코드는 데이터다 (1958)</h3>
+<p> </p>
+<p>존 매카시(John McCarthy)가 1958년 설계한 Lisp는 프로그래밍 언어의 역사에서 특별한 위치를 차지한다. <strong>동형성 (homoiconicity)</strong>—코드와 데이터가 동일한 구조(S-expression)를 공유한다는 특성—덕분에 Lisp 프로그램은 자기 자신을 데이터로 조작할 수 있다.</p>
+<div id="fig-meta-homoiconicity" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-meta-homoiconicity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/meta-homoiconicity.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="그림&nbsp;4.3: 동형성: 코드는 데이터다"><img src="../images/meta-homoiconicity.svg" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-meta-homoiconicity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;4.3: 동형성: 코드는 데이터다
+</figcaption>
+</figure>
+</div>
+<p>1963년 티모시 하트(Timothy Hart)가 도입한 Lisp 매크로는 이 동형성을 활용한 최초의 체계적 메타프로그래밍 도구였다. 매크로는 컴파일 시점에 코드를 받아 새로운 코드를 생성하는 함수다.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode lisp code-with-copy"><code class="sourceCode commonlisp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">;; Lisp 매크로 예시: when 매크로 정의</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>(<span class="kw">defmacro</span><span class="fu"> when </span>(<span class="kw">condition</span> &amp;body body)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  `(<span class="kw">if</span> ,<span class="kw">condition</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>       (<span class="kw">progn</span> ,@body)))</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">;; 사용: (when (&gt; x 0) (print x)) 는</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">;; (if (&gt; x 0) (progn (print x))) 로 확장됨</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>when</code> 매크로는 코드(<code>condition</code>과 <code>body</code>)를 입력받아 <code>if</code> 표현식이라는 새로운 코드를 출력한다. 프로그램이 프로그램을 작성하는 가장 직접적인 형태다.</p>
+<p>R 언어가 통계 컴퓨팅에서 독보적인 위치를 차지하는 이유 중 하나도 Lisp에서 물려받은 메타프로그래밍 능력이다. <code>dplyr::filter(df, x &gt; 0)</code>에서 <code>x &gt; 0</code>은 즉시 평가되지 않고 표현식으로 캡처되어 데이터 프레임 맥락에서 평가된다. Lisp의 “코드는 데이터다” 원칙이 60년 후에도 살아 있는 것이다.</p>
+</section>
+<section id="컴파일러-컴파일러-문법에서-파서로-1970s" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="컴파일러-컴파일러-문법에서-파서로-1970s"><span class="header-section-number">4.1.3</span> 컴파일러-컴파일러: 문법에서 파서로 (1970s)</h3>
+<p> </p>
+<p>yacc(Yet Another Compiler-Compiler)와 lex는 1970년대에 등장한 <strong>이종 메타프로그래밍(heterogeneous metaprogramming)</strong>의 대표 사례다. 문법 명세(BNF 표기)를 입력받아 C 언어로 된 파서 소스코드를 자동 생성한다. 메타언어(문법 명세)와 대상 언어(C 코드)가 다르다는 점에서 Lisp 매크로의 동형 메타프로그래밍과 구별된다.</p>
+<pre><code>/* yacc 문법 명세 → C 파서 코드 자동 생성 */
+expr : expr '+' term   { $$ = $1 + $3; }
+     | expr '-' term   { $$ = $1 - $3; }
+     | term
+     ;</code></pre>
+<p>2026년 Anthropic이 16개 Claude 에이전트를 병렬 투입하여 10만 줄 규모의 C 컴파일러를 Rust로 구축한 사례<span class="citation" data-cites="Anthropic2026CCompiler"><a href="references.html#ref-Anthropic2026CCompiler" role="doc-biblioref">[3]</a></span>는 상징적 의미를 갖는다. 1970년대 컴파일러-컴파일러가 문법에서 파서를 생성했다면, 2026년 AI 에이전트는 자연어 명세에서 컴파일러 전체를 생성했다. 메타프로그래밍의 원환이 완성된 것이다.</p>
+</section>
+<section id="템플릿과-제네릭-타입이-코드를-생성하다-1990s" class="level3" data-number="4.1.4">
+<h3 data-number="4.1.4" class="anchored" data-anchor-id="템플릿과-제네릭-타입이-코드를-생성하다-1990s"><span class="header-section-number">4.1.4</span> 템플릿과 제네릭: 타입이 코드를 생성하다 (1990s)</h3>
+<p> </p>
+<p>C++ 템플릿 메타프로그래밍은 1994년 얼윈 언루(Erwin Unruh)가 컴파일 에러 메시지로 소수를 계산하는 프로그램을 시연하면서 발견되었다<span class="citation" data-cites="Veldhuizen2003"><a href="references.html#ref-Veldhuizen2003" role="doc-biblioref">[4]</a></span>. 컴파일러가 템플릿을 인스턴스화하는 과정 자체가 튜링 완전(Turing-complete)하다는 사실은 의도된 설계가 아니라 우연한 발견이었다.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// C++ 컴파일 타임 팩토리얼 계산</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">template</span><span class="op">&lt;</span><span class="dt">int</span> N<span class="op">&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">struct</span> Factorial <span class="op">{</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">static</span> <span class="at">const</span> <span class="dt">int</span> value <span class="op">=</span> N <span class="op">*</span> Factorial<span class="op">&lt;</span>N<span class="op">-</span><span class="dv">1</span><span class="op">&gt;::</span>value<span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="op">};</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="kw">template</span><span class="op">&lt;&gt;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="kw">struct</span> Factorial<span class="op">&lt;</span><span class="dv">0</span><span class="op">&gt;</span> <span class="op">{</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">static</span> <span class="at">const</span> <span class="dt">int</span> value <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="op">};</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co">// Factorial&lt;5&gt;::value는 컴파일 시점에 120으로 계산됨</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
+<p>타입 시스템이 곧 프로그래밍 언어가 된다는 발견은 메타프로그래밍의 범위를 넓혔다. Java의 제네릭, Rust의 <code>proc_macro</code>, Haskell의 Template Haskell은 모두 이 계보에 속한다.</p>
+</section>
+<section id="런타임-메타프로그래밍-주류화-2000s" class="level3" data-number="4.1.5">
+<h3 data-number="4.1.5" class="anchored" data-anchor-id="런타임-메타프로그래밍-주류화-2000s"><span class="header-section-number">4.1.5</span> 런타임 메타프로그래밍 주류화 (2000s)</h3>
+<p> </p>
+<p>2000년대에 이르러 메타프로그래밍은 일상적인 개발 도구가 되었다. Python의 데코레이터와 메타클래스, Ruby의 <code>method_missing</code>, R의 비표준 평가(NSE)는 런타임에 코드를 검사하고 변형하는 능력을 제공한다.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Python 데코레이터: 함수를 감싸는 메타프로그래밍</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> timer(func):</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> wrapper(<span class="op">*</span>args, <span class="op">**</span>kwargs):</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        start <span class="op">=</span> time.time()</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> func(<span class="op">*</span>args, <span class="op">**</span>kwargs)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>func<span class="sc">.</span><span class="va">__name__</span><span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>time<span class="sc">.</span>time()<span class="op">-</span>start<span class="sc">:.3f}</span><span class="ss">초"</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> result</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> wrapper</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="at">@timer</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> train_model(data):</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 모델 학습 코드</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    ...</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R 비표준 평가: 표현식을 데이터로 캡처</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># x &gt; 0은 즉시 평가되지 않고 표현식으로 캡처됨</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span> <span class="fu">filter</span>(x <span class="sc">&gt;</span> <span class="dv">0</span>, y <span class="sc">&lt;</span> <span class="dv">100</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># tidy evaluation: 프로그래밍적 메타프로그래밍</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>my_filter <span class="ot">&lt;-</span> <span class="cf">function</span>(data, var, threshold) {</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">|&gt;</span> <span class="fu">filter</span>({{ var }} <span class="sc">&gt;</span> threshold)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
+<p>데코레이터 <code>@timer</code>는 <code>train_model</code> 함수를 입력받아 시간 측정 기능이 추가된 새로운 함수를 출력한다. R의 <code>filter(x &gt; 0)</code>에서 <code>x &gt; 0</code>은 R 표현식으로 캡처되어 데이터 프레임의 열 이름으로 해석된다. 두 경우 모두 <strong>코드가 데이터로 취급되어 변환된다</strong>는 메타프로그래밍의 핵심 원리가 작동한다.</p>
+</section>
+<section id="ai-코드-생성-자연어가-메타언어가-되다-2020s" class="level3" data-number="4.1.6">
+<h3 data-number="4.1.6" class="anchored" data-anchor-id="ai-코드-생성-자연어가-메타언어가-되다-2020s"><span class="header-section-number">4.1.6</span> AI 코드 생성: 자연어가 메타언어가 되다 (2020s)</h3>
+<p> </p>
+<p>2021년 GitHub Copilot의 출시와 함께 메타프로그래밍의 새로운 장이 열렸다. LLM 기반 코드 생성은 자연어를 메타언어로, 프로그래밍 언어를 대상 언어로 사용하는 이종 메타프로그래밍이다.</p>
+<p>전통적 메타프로그래밍과 AI 메타프로그래밍의 본질적 차이는 <strong>결정론 vs.&nbsp;확률론</strong>에 있다. Lisp 매크로는 동일한 입력에 대해 항상 동일한 코드를 생성한다. AI는 동일한 프롬프트에도 매번 다른 코드를 생성할 수 있다. 규칙 기반 변환에서 통계적 생성으로의 전환이 핵심이다.</p>
+<p>안드레이 카파시가 2025년 2월 제안한 “Vibe Coding”은 이 전환의 극단적 표현이다—“코드가 존재한다는 것조차 잊어라.” 메타프로그래밍 관점에서 보면, 메타언어가 형식 문법에서 자연어로 완전히 이동한 것이다.</p>
+</section>
+</section>
+<section id="sec-meta-taxonomy" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="sec-meta-taxonomy"><span class="header-section-number">4.2</span> 메타프로그래밍 분류 체계</h2>
+<p> </p>
+<p>메타프로그래밍은 두 축으로 분류할 수 있다<span class="citation" data-cites="Lilis2019"><a href="references.html#ref-Lilis2019" role="doc-biblioref">[2]</a></span>. <strong>메타언어와 대상 언어의 관계</strong>(동형/이종)와 <strong>실행 시점</strong> (컴파일 타임/런타임)이 그것이다.</p>
+<div id="fig-meta-taxonomy" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-meta-taxonomy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/meta-taxonomy.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="그림&nbsp;4.4: 메타프로그래밍 분류 체계"><img src="../images/meta-taxonomy.svg" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-meta-taxonomy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;4.4: 메타프로그래밍 분류 체계
+</figcaption>
+</figure>
+</div>
+<section id="동형-메타프로그래밍-vs.-이종-메타프로그래밍" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="동형-메타프로그래밍-vs.-이종-메타프로그래밍"><span class="header-section-number">4.2.1</span> 동형 메타프로그래밍 vs.&nbsp;이종 메타프로그래밍</h3>
+<p><strong>동형 메타프로그래밍(Homogeneous)</strong>에서는 메타언어와 대상 언어가 같다. Lisp 매크로가 대표적이다—Lisp 코드가 Lisp 코드를 생성한다. 코드와 데이터의 경계가 사라지며, 언어 자체를 확장하는 것이 가능해진다. Rust의 <code>proc_macro</code>, Julia의 매크로 시스템, Elixir의 <code>defmacro</code>도 동형 메타프로그래밍에 속한다.</p>
+<p><strong>이종 메타프로그래밍(Heterogeneous)</strong>에서는 메타언어와 대상 언어가 다르다. yacc가 문법 명세(BNF)로부터 C 코드를 생성하고, Protocol Buffers가 스키마 정의에서 Python/Java/Go 코드를 생성하는 것이 이에 해당한다.</p>
+<p>AI 코드 생성은 <strong>이종 메타프로그래밍의 극단적 형태</strong>다. 메타언어가 형식 언어가 아닌 자연어이며, 대상 언어는 Python, R, JavaScript 등 모든 프로그래밍 언어가 될 수 있다.</p>
+<div id="tbl-meta-classification" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<div aria-describedby="tbl-meta-classification-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<thead>
+<tr class="header">
+<th>분류</th>
+<th>메타언어</th>
+<th>대상 언어</th>
+<th>사례</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>동형</td>
+<td>Lisp</td>
+<td>Lisp</td>
+<td>Lisp 매크로</td>
+</tr>
+<tr class="even">
+<td>동형</td>
+<td>Python</td>
+<td>Python</td>
+<td>메타클래스, 데코레이터</td>
+</tr>
+<tr class="odd">
+<td>동형</td>
+<td>R</td>
+<td>R</td>
+<td>NSE, tidy evaluation</td>
+</tr>
+<tr class="even">
+<td>이종</td>
+<td>BNF 문법</td>
+<td>C</td>
+<td>yacc/lex</td>
+</tr>
+<tr class="odd">
+<td>이종</td>
+<td>스키마</td>
+<td>다중 언어</td>
+<td>protobuf, GraphQL</td>
+</tr>
+<tr class="even">
+<td>이종</td>
+<td><strong>자연어</strong></td>
+<td><strong>다중 언어</strong></td>
+<td><strong>AI 코드 생성</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-meta-classification-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;4.1: 메타프로그래밍 분류와 사례
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="컴파일-타임-vs.-런타임" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="컴파일-타임-vs.-런타임"><span class="header-section-number">4.2.2</span> 컴파일 타임 vs.&nbsp;런타임</h3>
+<p>실행 시점에 따른 구분도 중요하다.</p>
+<p><strong>컴파일 타임 메타프로그래밍</strong>은 코드가 실행되기 전에 변환이 완료된다. C++ 템플릿은 컴파일 시점에 타입별 코드를 생성하고, Rust의 <code>proc_macro</code>는 컴파일 시점에 토큰 스트림을 변환한다. 실행 시 오버헤드가 없다는 장점이 있지만, 디버깅이 어렵다.</p>
+<p><strong>런타임 메타프로그래밍</strong>은 프로그램 실행 중에 코드를 검사하고 변형한다. Python의 <code>type()</code>, <code>getattr()</code>, <code>eval()</code>과 R의 <code>substitute()</code>, <code>eval()</code>, <code>parse()</code>가 대표적이다. 유연하지만 성능 비용과 보안 위험이 따른다.</p>
+<p>AI 코드 생성은 이 분류에서 독특한 위치를 차지한다. 코드 생성 자체는 “실행 전”에 일어나지만, 대화형 에이전트 환경에서는 생성-실행-수정이 반복적으로 순환한다. 컴파일 타임도 런타임도 아닌 <strong>“대화 타임(conversation-time)”</strong> 이라는 새로운 범주가 필요할 수 있다.</p>
+</section>
+</section>
+<section id="sec-meta-python-r" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="sec-meta-python-r"><span class="header-section-number">4.3</span> Python과 R의 메타프로그래밍</h2>
+<p> </p>
+<p>데이터 과학과 AI 분야의 양대 언어인 Python과 R은 각각 고유한 메타프로그래밍 전통을 가지고 있다. 두 언어의 메타프로그래밍을 이해하면 AI 코드 생성이 어떤 전통 위에 서 있는지 파악할 수 있다.</p>
+<section id="python-데코레이터에서-ast까지" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="python-데코레이터에서-ast까지"><span class="header-section-number">4.3.1</span> Python: 데코레이터에서 AST까지</h3>
+<p> </p>
+<p>Python의 메타프로그래밍은 네 가지 층위로 구성된다.</p>
+<div id="fig-meta-python-layers" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-meta-python-layers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/meta-python-layers.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="그림&nbsp;4.5: Python 메타프로그래밍 4층 구조"><img src="../images/meta-python-layers.svg" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-meta-python-layers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;4.5: Python 메타프로그래밍 4층 구조
+</figcaption>
+</figure>
+</div>
+<p><strong>1층 데코레이터</strong>: 함수나 클래스를 감싸서 행동을 수정한다. <code>@property</code>, <code>@staticmethod</code>, <code>@dataclass</code>처럼 표준 라이브러리 곳곳에서 활용된다. 가장 접근성 높은 메타프로그래밍이다.</p>
+<p><strong>2층 디스크립터</strong>: <code>__get__</code>, <code>__set__</code>, <code>__delete__</code> 메서드를 구현하여 속성 접근을 제어한다. ORM(SQLAlchemy), 폼 검증 (Django), 타입 체크(attrs) 등의 기반이다.</p>
+<p><strong>3층 메타클래스</strong>: <code>type</code>을 상속받아 클래스 생성 과정을 제어한다. Django의 <code>ModelBase</code>, SQLAlchemy의 <code>DeclarativeMeta</code>가 메타클래스를 활용하여 선언적 API를 제공한다.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 메타클래스: 클래스가 생성될 때 자동으로 registry에 등록</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> PluginMeta(<span class="bu">type</span>):</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    registry <span class="op">=</span> {}</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__new__</span>(mcs, name, bases, namespace):</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        cls <span class="op">=</span> <span class="bu">super</span>().<span class="fu">__new__</span>(mcs, name, bases, namespace)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> name <span class="op">!=</span> <span class="st">'Plugin'</span>:</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>            mcs.registry[name] <span class="op">=</span> cls</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> cls</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Plugin(metaclass<span class="op">=</span>PluginMeta):</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> CSVLoader(Plugin):    <span class="co"># 자동 등록됨</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> JSONLoader(Plugin):   <span class="co"># 자동 등록됨</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(PluginMeta.registry)</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="co"># {'CSVLoader': &lt;class 'CSVLoader'&gt;,</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="co">#  'JSONLoader': &lt;class 'JSONLoader'&gt;}</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>4층 AST 조작</strong>: <code>ast</code> 모듈을 사용하여 Python 소스 코드를 추상 구문 트리(Abstract Syntax Tree)로 파싱하고 변환한다. pytest의 <code>assert</code> 재작성, mypy의 타입 검사, black의 코드 포매팅이 AST 수준에서 동작한다.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ast</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Python 코드를 AST로 파싱</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>code <span class="op">=</span> <span class="st">"result = x + y * 2"</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>tree <span class="op">=</span> ast.parse(code)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># AST를 순회하며 분석</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> node <span class="kw">in</span> ast.walk(tree):</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">isinstance</span>(node, ast.BinOp):</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"연산: </span><span class="sc">{</span><span class="bu">type</span>(node.op)<span class="sc">.</span><span class="va">__name__</span><span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 출력: 연산: Add</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co">#       연산: Mult</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
+<p>AI 코드 생성 도구도 내부적으로 AST를 활용한다. 생성된 코드의 구문 검증, 자동 포매팅, 보안 취약점 탐지에 AST 분석이 필수적이다.</p>
+</section>
+<section id="r-비표준-평가와-tidy-evaluation" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="r-비표준-평가와-tidy-evaluation"><span class="header-section-number">4.3.2</span> R: 비표준 평가와 tidy evaluation</h3>
+<p> </p>
+<p>R은 Lisp의 직계 후손(S → R)으로서 언어 수준의 메타프로그래밍 능력을 갖추고 있다. 해들리 위컴(Hadley Wickham)은 R의 메타프로그래밍을 “코드를 데이터로 취급하여 프로그래밍적으로 검사하고 수정하는 것”으로 정의한다<span class="citation" data-cites="Wickham2019"><a href="references.html#ref-Wickham2019" role="doc-biblioref">[5]</a></span>.</p>
+<p><strong>비표준 평가(Non-Standard Evaluation, NSE)</strong>는 R의 핵심 메타프로그래밍 메커니즘이다. 일반적인 함수 호출에서 인자는 값으로 평가된 후 전달되지만, NSE에서는 표현식 자체가 캡처된다.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 표준 평가: x의 '값'이 전달됨</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(x)   <span class="co"># 10이 출력됨</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 비표준 평가: 'x &gt; 0'이라는 표현식이 캡처됨</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span> <span class="fu">filter</span>(x <span class="sc">&gt;</span> <span class="dv">0</span>)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co"># x &gt; 0은 df의 열 x를 기준으로 평가됨</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>filter(x &gt; 0)</code>에서 R은 <code>x &gt; 0</code>을 즉시 평가하지 않는다. 표현식을 캡처한 뒤, 데이터 프레임 <code>df</code>의 맥락에서 열 이름 <code>x</code>를 참조하여 평가한다. SQL의 <code>WHERE x &gt; 0</code>과 유사하되, R 코드 안에서 자연스럽게 작동한다.</p>
+<p><strong>tidy evaluation</strong>은 NSE를 체계화한 현대적 프레임워크다. <code>rlang</code> 패키지가 제공하는 세 가지 핵심 메커니즘이 있다.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rlang)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. 인용(Quoting): 표현식을 캡처</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">expr</span>(x <span class="sc">+</span> y)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># x + y  (평가되지 않은 표현식)</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. 역인용(Unquoting): 캡처된 표현식을 주입</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>var <span class="ot">&lt;-</span> <span class="fu">expr</span>(speed)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="fu">expr</span>(<span class="fu">mean</span>(<span class="sc">!!</span>var))</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co"># mean(speed)</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. 컬리-컬리(Curly-Curly): 함수 인자 전달</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>summarize_var <span class="ot">&lt;-</span> <span class="cf">function</span>(data, var) {</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">|&gt;</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>({{ var }}),</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>              <span class="at">sd =</span> <span class="fu">sd</span>({{ var }}))</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">|&gt;</span> <span class="fu">summarize_var</span>(mpg)</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
+<p>R의 공식(formula) 문법 <code>y ~ x1 + x2</code>도 메타프로그래밍이다. 통계 모델 명세를 코드 안에서 표현하는 도메인 특화 언어(DSL)로, <code>lm()</code>, <code>glm()</code> 등 모델링 함수가 공식을 해석하여 설계 행렬을 자동 구성한다. <code>dbplyr</code>은 R의 tidy 표현식을 SQL로 변환하는데, 메타프로그래밍의 코드-변환 능력이 언어 간 경계를 넘는 사례다.</p>
+</section>
+</section>
+<section id="sec-meta-ai-era" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="sec-meta-ai-era"><span class="header-section-number">4.4</span> AI 시대의 메타프로그래밍</h2>
+<p> </p>
+<p>AI 코드 생성을 메타프로그래밍의 맥락에서 바라보면, 기술적 연속성과 단절 모두가 선명하게 드러난다.</p>
+<section id="연속성-추상화-사다리" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="연속성-추상화-사다리"><span class="header-section-number">4.4.1</span> 연속성: 추상화 사다리</h3>
+<p>프로그래밍 역사의 모든 주요 진보는 새로운 형태의 메타프로그래밍이었다. 추상화 수준은 일관되게 상승했다.</p>
+<div id="tbl-meta-abstraction" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<div aria-describedby="tbl-meta-abstraction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<thead>
+<tr class="header">
+<th>단계</th>
+<th>메타언어</th>
+<th>대상</th>
+<th>추상화 수준</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>기계어</td>
+<td>없음</td>
+<td>하드웨어</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>어셈블리</td>
+<td>니모닉</td>
+<td>기계어</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>컴파일러</td>
+<td>고급 언어</td>
+<td>어셈블리</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>매크로</td>
+<td>코드 패턴</td>
+<td>코드</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>코드 생성기</td>
+<td>스키마/문법</td>
+<td>소스 코드</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>AI 코드 생성</td>
+<td><strong>자연어</strong></td>
+<td><strong>모든 언어</strong></td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-meta-abstraction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;4.2: 메타프로그래밍 추상화 사다리
+</figcaption>
+</figure>
+</div>
+<p>매 단계에서 동일한 패턴이 반복되었다.</p>
+<ol type="1">
+<li>새로운 메타프로그래밍 도구가 등장한다.</li>
+<li>“기계가 프로그래밍을 할 수 있는가?”라는 회의론이 제기된다.</li>
+<li>도구가 보편화되면서 프로그래머의 역할이 한 단계 상승한다.</li>
+<li>이전 단계의 수동 작업은 “왜 그렇게 했는가?” 수준의 역사가 된다.</li>
+</ol>
+<p>컴파일러가 어셈블리 프로그래머의 역할을 대체하지 않고 재정의했듯, AI 코드 생성도 프로그래머를 대체하지 않고 역할을 재정의한다. 코드 작성자에서 의도 명세자, 결과 검증자, 시스템 오케스트레이터로의 전환이다.</p>
+</section>
+<section id="단절-결정론에서-확률론으로" class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="단절-결정론에서-확률론으로"><span class="header-section-number">4.4.2</span> 단절: 결정론에서 확률론으로</h3>
+<p>전통적 메타프로그래밍은 <strong>결정론적</strong>이다. 동일한 매크로에 동일한 입력을 넣으면 항상 동일한 코드가 나온다. C++ 템플릿의 <code>Factorial&lt;5&gt;::value</code>는 반드시 120이다. yacc에 같은 문법을 넣으면 같은 파서가 생성된다.</p>
+<div id="fig-meta-deterministic" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-meta-deterministic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/meta-deterministic-vs-probabilistic.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="그림&nbsp;4.6: 결정론 vs.&nbsp;확률론: 메타프로그래밍의 패러다임 전환"><img src="../images/meta-deterministic-vs-probabilistic.svg" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-meta-deterministic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;4.6: 결정론 vs.&nbsp;확률론: 메타프로그래밍의 패러다임 전환
+</figcaption>
+</figure>
+</div>
+<p>AI 코드 생성은 <strong>확률론적</strong>이다. “피보나치 수열을 계산하는 함수를 작성하라”는 동일한 프롬프트에 대해 재귀, 반복, 메모이제이션, 행렬 거듭제곱 등 다양한 구현이 나올 수 있다. temperature 설정에 따라 동일 모델도 매번 다른 코드를 생성한다.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 같은 프롬프트, 다른 결과—AI 메타프로그래밍의 확률론적 특성</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 결과 A: 재귀 방식</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fibonacci(n):</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">&lt;=</span> <span class="dv">1</span>:</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> n</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fibonacci(n<span class="op">-</span><span class="dv">1</span>) <span class="op">+</span> fibonacci(n<span class="op">-</span><span class="dv">2</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 결과 B: 반복 방식</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fibonacci(n):</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    a, b <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>        a, b <span class="op">=</span> b, a <span class="op">+</span> b</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="co"># 결과 C: 메모이제이션 방식</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> functools <span class="im">import</span> lru_cache</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="at">@lru_cache</span>(maxsize<span class="op">=</span><span class="va">None</span>)</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fibonacci(n):</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">&lt;=</span> <span class="dv">1</span>:</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> n</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fibonacci(n<span class="op">-</span><span class="dv">1</span>) <span class="op">+</span> fibonacci(n<span class="op">-</span><span class="dv">2</span>)</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
+<p>결정론적 메타프로그래밍에서는 생성된 코드의 정확성을 형식적으로 증명할 수 있었다. 확률론적 메타프로그래밍에서는 <strong>검증</strong>이 필수 단계가 된다. AI 생성 코드를 신뢰하되 검증하라(trust but verify)는 원칙은 확률론적 메타프로그래밍의 본질적 특성에서 비롯된다.</p>
+</section>
+<section id="자기-개선-에이전트-메타-메타프로그래밍" class="level3" data-number="4.4.3">
+<h3 data-number="4.4.3" class="anchored" data-anchor-id="자기-개선-에이전트-메타-메타프로그래밍"><span class="header-section-number">4.4.3</span> 자기 개선 에이전트: 메타-메타프로그래밍</h3>
+<p> </p>
+<p>메타프로그래밍의 가장 최신 형태는 <strong>자기 자신을 수정하는 AI 에이전트</strong>다. SICA(Self-Improving Coding Agent, 2025)는 자신의 코드베이스와 프롬프트를 편집하여 성능을 개선한다. Reflexion 패턴은 AI가 생성한 코드를 실행하고, 오류를 분석하여, 수정된 코드를 다시 생성하는 순환 구조를 갖는다.</p>
+<div id="fig-meta-reflexion" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-meta-reflexion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/meta-reflexion-loop.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="그림&nbsp;4.7: 자기 개선 에이전트: Reflexion 순환 구조"><img src="../images/meta-reflexion-loop.svg" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-meta-reflexion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;4.7: 자기 개선 에이전트: Reflexion 순환 구조
+</figcaption>
+</figure>
+</div>
+<p>Lisp에서 시작된 “코드가 자기 자신을 수정한다”는 개념이 LLM 에이전트에서 새로운 차원으로 실현되고 있다. 2025년 arXiv에 발표된 “From Tool Calling to Symbolic Thinking: LLMs in a Persistent Lisp Metaprogramming Loop”은 LLM을 Lisp REPL에 내장하여 자기 프로그래밍 에이전트를 구현하는 연구로, 60년 된 Lisp의 동형성과 최신 LLM 기술을 직접 연결한다.</p>
+</section>
+</section>
+<section id="sec-meta-intersection" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="sec-meta-intersection"><span class="header-section-number">4.5</span> 메타프로그래밍과 AI 코딩의 교차점</h2>
+<p>메타프로그래밍을 이해하면 AI 코딩 도구를 더 효과적으로 활용할 수 있다. 핵심 연결점은 세 가지다.</p>
+<div id="fig-meta-ai-intersection" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-meta-ai-intersection-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/meta-ai-intersection.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="그림&nbsp;4.8: 메타프로그래밍과 AI 코딩의 교차점"><img src="../images/meta-ai-intersection.svg" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-meta-ai-intersection-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;4.8: 메타프로그래밍과 AI 코딩의 교차점
+</figcaption>
+</figure>
+</div>
+<section id="컨텍스트-파일은-메타프로그램이다" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="컨텍스트-파일은-메타프로그램이다"><span class="header-section-number">4.5.1</span> 컨텍스트 파일은 메타프로그램이다</h3>
+<p>CLAUDE.md, <code>.cursorrules</code>, <code>.github/copilot-instructions.md</code> 같은 컨텍스트 파일은 AI 에이전트의 행동을 제어하는 메타프로그램이다. 프로그래밍 언어가 아닌 자연어로 작성되지만, 기능적으로 매크로 정의나 컴파일러 플래그와 동일한 역할을 한다— 코드 생성 과정을 제어한다.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- CLAUDE.md의 규칙은 메타프로그래밍적 지시다 --&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## 코딩 규칙</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>모든 함수에 타입 힌트를 포함할 것</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>테스트는 pytest 프레임워크를 사용할 것</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>데이터베이스 쿼리는 ORM으로만 작성할 것</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
+<p>위 규칙은 C++ 컴파일러에 <code>-Wall -Werror</code> 플래그를 전달하는 것과 본질이 같다. 코드를 직접 작성하지 않으면서 생성될 코드의 특성을 제어한다.</p>
+</section>
+<section id="테스트-주도-개발은-실행-가능한-메타-명세다" class="level3" data-number="4.5.2">
+<h3 data-number="4.5.2" class="anchored" data-anchor-id="테스트-주도-개발은-실행-가능한-메타-명세다"><span class="header-section-number">4.5.2</span> 테스트 주도 개발은 실행 가능한 메타 명세다</h3>
+<p>AI 코딩에서 테스트 코드를 먼저 작성하고 AI에게 구현을 맡기는 패턴(TDD + AI)은 메타프로그래밍의 관점에서 보면 <strong>실행 가능한 명세(executable specification)</strong>를 메타언어로 사용하는 것이다.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 테스트 코드 = AI를 위한 메타 명세</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_tokenize():</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> tokenize(<span class="st">"hello world"</span>) <span class="op">==</span> [<span class="st">"hello"</span>, <span class="st">"world"</span>]</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> tokenize(<span class="st">"  spaces  "</span>) <span class="op">==</span> [<span class="st">"spaces"</span>]</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> tokenize(<span class="st">""</span>) <span class="op">==</span> []</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> tokenize(<span class="st">"hello-world"</span>) <span class="op">==</span> [<span class="st">"hello"</span>, <span class="st">"world"</span>]</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
+<p>테스트 코드가 정의하는 입출력 관계는 yacc의 문법 명세와 구조적으로 유사하다. 형식 명세가 파서를 생성하듯, 테스트 명세가 구현 코드를 생성한다.</p>
+</section>
+<section id="dsl-설계-능력이-ai-활용-능력을-결정한다" class="level3" data-number="4.5.3">
+<h3 data-number="4.5.3" class="anchored" data-anchor-id="dsl-설계-능력이-ai-활용-능력을-결정한다"><span class="header-section-number">4.5.3</span> DSL 설계 능력이 AI 활용 능력을 결정한다</h3>
+<p>메타프로그래밍의 정수는 <strong>도메인 특화 언어(DSL)</strong> 설계에 있다. R의 formula(<code>y ~ x</code>), ggplot2의 문법(<code>aes(x, y) + geom_point()</code>), dplyr의 파이프라인(<code>filter |&gt; mutate |&gt; summarize</code>)은 모두 특정 도메인의 문제를 간결하게 표현하는 DSL이다.</p>
+<p>AI 코딩에서도 프롬프트를 구조화하는 능력—즉 문제 도메인의 언어를 AI가 이해할 수 있는 형태로 설계하는 능력—이 생산성을 좌우한다. 프롬프트 공학에서 컨텍스트 공학으로의 진화(<a href="p1-context.html#sec-context-engineering" class="quarto-xref"><span>섹션 5.1</span></a>)는 메타프로그래밍에서 DSL 설계의 진화와 같은 궤적을 따른다.</p>
+</section>
+</section>
+<section id="생각해볼-점" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="생각해볼-점">생각해볼 점</h2>
+<p>메타프로그래밍은 “프로그램이 프로그램을 작성하는” 기술이다. 1951년 컴파일러에서 시작된 이 전통은 Lisp 매크로(1958), 컴파일러-컴파일러(1970s), C++ 템플릿(1990s), Python/R 런타임 메타프로그래밍(2000s)을 거쳐 AI 코드 생성(2020s)에 이르렀다.</p>
+<p>각 세대마다 메타언어의 추상화 수준이 상승했고, 최종적으로 자연어에 도달했다. 형식 문법에서 자연어로의 전환은 혁명적이지만, “프로그램이 프로그램을 작성한다”는 본질은 70년 전과 같다.</p>
+<p>AI 코딩이 메타프로그래밍의 최신 형태라는 인식은 두 가지 실천적 시사점을 제공한다.</p>
+<p>첫째, <strong>검증의 필요성</strong>. 결정론적 매크로와 달리 확률론적 AI 생성은 동일 입력에 다른 결과를 낼 수 있다. 테스트와 코드 리뷰는 선택이 아니라 구조적 필수다.</p>
+<p>둘째, <strong>추상화 사고의 가치</strong>. 메타프로그래밍의 역사가 보여주듯, 저수준 작업의 자동화는 고수준 사고의 가치를 높인다. 어셈블리 작성 능력이 아닌 시스템 설계 능력이, 코드 타이핑이 아닌 의도 명세 능력이 프로그래머의 핵심 역량이 된다.</p>
+<p> </p>
+</section>
+<section id="프로젝트" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="프로젝트">프로젝트</h2>
+<p></p>
+<ol type="1">
+<li><p>Python 데코레이터를 작성하여 함수 호출을 로깅하는 메타프로그램을 구현하라. 함수명, 인자, 반환값, 실행 시간을 기록하는 <code>@log_call</code> 데코레이터를 만들어보라.</p></li>
+<li><p>R의 tidy evaluation을 활용하여 사용자 정의 요약 함수를 작성하라. <code>my_summary(data, group_var, value_var)</code>처럼 열 이름을 인자로 받아 그룹별 통계를 계산하는 함수를 구현하라.</p></li>
+<li><p>AI 코드 생성 도구(Claude Code, Copilot 등)에 동일한 프롬프트를 3회 입력하여 생성된 코드를 비교하라. 결정론적 메타프로그래밍과 확률론적 메타프로그래밍의 차이를 실증적으로 확인하라.</p></li>
+<li><p>CLAUDE.md 또는 <code>.cursorrules</code> 파일을 “메타프로그램”으로 바라보고, 코드 생성 결과에 미치는 영향을 실험하라. 규칙 추가 전후의 생성 코드를 비교하여 컨텍스트 파일의 메타프로그래밍적 효과를 분석하라.</p></li>
+</ol>
+
+
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Ceruzzi2003" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">P. E. Ceruzzi, <em>A History of Modern Computing</em>, 2nd ed. Cambridge, MA: MIT Press, 2003.</div>
+</div>
+<div id="ref-Lilis2019" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">Y. Lilis 와/과 A. Savidis, <span>“A Survey of Metaprogramming Languages”</span>, <em>ACM Computing Surveys</em>, vol 52, 호 6, pp 1–39, 2019, doi: <a href="https://doi.org/10.1145/3354584">10.1145/3354584</a>.</div>
+</div>
+<div id="ref-Anthropic2026CCompiler" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">Anthropic Engineering, <span>“Building a C Compiler with Parallel Claudes”</span>. Anthropic Engineering Blog, 2026년 2월. Available at: <a href="https://www.anthropic.com/engineering/building-c-compiler">https://www.anthropic.com/engineering/building-c-compiler</a></div>
+</div>
+<div id="ref-Veldhuizen2003" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">T. L. Veldhuizen, <span>“C++ Templates are Turing Complete”</span>, <em>Indiana University Computer Science Technical Report</em>, 2003, Available at: <a href="https://citeseerx.ist.psu.edu/document?repid=rep1&amp;type=pdf&amp;doi=c8c020ab6b86cc2bd62ee3a730ffdd1c08c0adcd">https://citeseerx.ist.psu.edu/document?repid=rep1&amp;type=pdf&amp;doi=c8c020ab6b86cc2bd62ee3a730ffdd1c08c0adcd</a></div>
+</div>
+<div id="ref-Wickham2019" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">H. Wickham, <em>Advanced R</em>, 2nd ed. Chapman; Hall/CRC, 2019. Available at: <a href="https://adv-r.hadley.nz/">https://adv-r.hadley.nz/</a></div>
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "복사완료!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "복사완료!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/statkclee\.github\.io\/gpt-agent\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+        for (let i=0; i<annoteTargets.length; i++) {
+          const annoteTarget = annoteTargets[i];
+          const targetCell = annoteTarget.getAttribute("data-target-cell");
+          const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+          const contentFn = () => {
+            const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+            if (content) {
+              const tipContent = content.cloneNode(true);
+              tipContent.classList.add("code-annotation-tip-content");
+              return tipContent.outerHTML;
+            }
+          }
+          const config = {
+            allowHTML: true,
+            content: contentFn,
+            onShow: (instance) => {
+              selectCodeLines(instance.reference);
+              instance.reference.classList.add('code-annotation-active');
+              window.tippy.hideAll();
+            },
+            onHide: (instance) => {
+              unselectCodeLines();
+              instance.reference.classList.remove('code-annotation-active');
+            },
+            maxWidth: 300,
+            delay: [50, 0],
+            duration: [200, 0],
+            offset: [5, 10],
+            arrow: true,
+            appendTo: function(el) {
+              return el.parentElement.parentElement.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'quarto',
+            placement: 'right',
+            popperOptions: {
+              modifiers: [
+              {
+                name: 'flip',
+                options: {
+                  flipVariations: false, // true by default
+                  allowedAutoPlacements: ['right'],
+                  fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
+                },
+              },
+              {
+                name: 'preventOverflow',
+                options: {
+                  mainAxis: false,
+                  altAxis: false
+                }
+              }
+              ]        
+            }      
+          };
+          window.tippy(annoteTarget, config); 
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/p1-paradigm.html" class="pagination-link" aria-label="재사용에서 재생성으로">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">재사용에서 재생성으로</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/p1-context.html" class="pagination-link" aria-label="프롬프트에서 컨텍스트로">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">프롬프트에서 컨텍스트로</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>AI 에이전트 글쓰기 — 과학기술 저작</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/statkclee/gpt-agent/edit/main/chapters/p1-meta.qmd" class="toc-action"><i class="bi bi-github"></i>편집</a></li><li><a href="https://github.com/statkclee/gpt-agent/issues/new" class="toc-action"><i class="bi empty"></i>이슈 보고</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org/">Quarto</a> · Powered by AI Agents</p>
+</div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

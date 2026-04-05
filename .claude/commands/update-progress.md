@@ -47,7 +47,7 @@ wc -l *.qmd
 📝 진행 기록 갱신 완료
 
 변경된 챕터:
-  📄 73-context-engineering.qmd: 115줄 → 420줄 (★★☆☆☆ → ★★★★☆)
+  📄 p1-context.qmd: 115줄 → 420줄 (★★☆☆☆ → ★★★★☆)
   📄 glossary.qmd: 159줄 → 175줄
 
 PLAN.md 업데이트:

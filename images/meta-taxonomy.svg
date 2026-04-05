@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 580">
+  <defs>
+    <style>
+      .title {
+        font-family: 'Noto Sans KR', Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+        fill: #333333;
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .subtitle {
+        font-family: 'Noto Sans KR', Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+        fill: #666666;
+        font-size: 12px;
+        font-style: italic;
+      }
+      .axis-label {
+        font-family: 'Noto Sans KR', Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+        fill: #333333;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .axis-sub {
+        font-family: 'Noto Sans KR', Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+        fill: #999999;
+        font-size: 10px;
+      }
+      .quadrant-title {
+        font-family: 'Noto Sans KR', Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+        fill: #333333;
+        font-size: 13px;
+        font-weight: 600;
+      }
+      .example {
+        font-family: 'D2Coding', 'Consolas', 'Courier New', monospace;
+        fill: #555555;
+        font-size: 11.5px;
+      }
+      .example-desc {
+        font-family: 'Noto Sans KR', Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+        fill: #666666;
+        font-size: 10.5px;
+      }
+      .highlight-title {
+        font-family: 'Noto Sans KR', Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+        fill: #333333;
+        font-size: 14px;
+        font-weight: 700;
+      }
+      .arrow-label {
+        font-family: 'Noto Sans KR', Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+        fill: #666666;
+        font-size: 11px;
+      }
+    </style>
+  </defs>
+
+  <!-- White background -->
+  <rect x="0" y="0" width="800" height="580" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="400" y="38" class="title" text-anchor="middle">메타프로그래밍 분류 체계</text>
+  <text x="400" y="56" class="subtitle" text-anchor="middle">Taxonomy of Metaprogramming</text>
+
+  <!-- ===== AXES ===== -->
+
+  <!-- Horizontal axis label: top -->
+  <text x="270" y="88" class="axis-label" text-anchor="middle">동형(Homogeneous)</text>
+  <text x="270" y="103" class="axis-sub" text-anchor="middle">메타언어 = 대상언어</text>
+
+  <text x="580" y="88" class="axis-label" text-anchor="middle">이종(Heterogeneous)</text>
+  <text x="580" y="103" class="axis-sub" text-anchor="middle">메타언어 ≠ 대상언어</text>
+
+  <!-- Horizontal axis arrow -->
+  <line x1="115" y1="118" x2="735" y2="118" stroke="#999999" stroke-width="1"/>
+  <polygon points="735,118 728,114 728,122" fill="#999999"/>
+
+  <!-- Vertical axis labels -->
+  <text x="93" y="220" class="axis-label" text-anchor="middle" transform="rotate(-90, 93, 220)">컴파일 타임</text>
+  <text x="80" y="220" class="axis-sub" text-anchor="middle" transform="rotate(-90, 80, 220)">Compile-time</text>
+
+  <text x="93" y="420" class="axis-label" text-anchor="middle" transform="rotate(-90, 93, 420)">런타임</text>
+  <text x="80" y="420" class="axis-sub" text-anchor="middle" transform="rotate(-90, 80, 420)">Runtime</text>
+
+  <!-- Vertical axis arrow -->
+  <line x1="115" y1="118" x2="115" y2="530" stroke="#999999" stroke-width="1"/>
+  <polygon points="115,530 111,523 119,523" fill="#999999"/>
+
+  <!-- Center dividers -->
+  <line x1="425" y1="118" x2="425" y2="525" stroke="#CCCCCC" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="115" y1="320" x2="735" y2="320" stroke="#CCCCCC" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- ===== QUADRANTS ===== -->
+
+  <!-- Q1: Top-Left (동형 + 컴파일 타임) -->
+  <rect x="120" y="123" width="300" height="192" fill="#F5F5F5" stroke="#CCCCCC" stroke-width="0.75"/>
+  <text x="270" y="152" class="quadrant-title" text-anchor="middle">동형 + 컴파일 타임</text>
+  <line x1="195" y1="160" x2="345" y2="160" stroke="#CCCCCC" stroke-width="0.5"/>
+
+  <circle cx="155" cy="190" r="2.5" fill="#666666"/>
+  <text x="165" y="194" class="example">Lisp 매크로</text>
+  <text x="170" y="210" class="example-desc">코드가 코드를 생성하는 원형</text>
+
+  <circle cx="155" cy="232" r="2.5" fill="#666666"/>
+  <text x="165" y="236" class="example">Rust proc_macro</text>
+  <text x="170" y="252" class="example-desc">컴파일 시점 안전한 코드 변환</text>
+
+  <circle cx="155" cy="274" r="2.5" fill="#666666"/>
+  <text x="165" y="278" class="example">Julia 매크로</text>
+  <text x="170" y="294" class="example-desc">AST 수준 코드 재작성</text>
+
+  <!-- Q2: Top-Right (이종 + 컴파일 타임) -->
+  <rect x="430" y="123" width="300" height="192" fill="#F5F5F5" stroke="#CCCCCC" stroke-width="0.75"/>
+  <text x="580" y="152" class="quadrant-title" text-anchor="middle">이종 + 컴파일 타임</text>
+  <line x1="505" y1="160" x2="655" y2="160" stroke="#CCCCCC" stroke-width="0.5"/>
+
+  <circle cx="465" cy="190" r="2.5" fill="#666666"/>
+  <text x="475" y="194" class="example">yacc / lex</text>
+  <text x="480" y="210" class="example-desc">문법 정의 → 파서 코드 생성</text>
+
+  <circle cx="465" cy="232" r="2.5" fill="#666666"/>
+  <text x="475" y="236" class="example">protobuf</text>
+  <text x="480" y="252" class="example-desc">스키마 → 다중 언어 코드 생성</text>
+
+  <circle cx="465" cy="274" r="2.5" fill="#666666"/>
+  <text x="475" y="278" class="example">C++ 템플릿</text>
+  <text x="480" y="294" class="example-desc">타입 매개변수 → 특수화 코드</text>
+
+  <!-- Q3: Bottom-Left (동형 + 런타임) -->
+  <rect x="120" y="325" width="300" height="195" fill="#F5F5F5" stroke="#CCCCCC" stroke-width="0.75"/>
+  <text x="270" y="354" class="quadrant-title" text-anchor="middle">동형 + 런타임</text>
+  <line x1="195" y1="362" x2="345" y2="362" stroke="#CCCCCC" stroke-width="0.5"/>
+
+  <circle cx="155" cy="392" r="2.5" fill="#666666"/>
+  <text x="165" y="396" class="example">Python 메타클래스</text>
+  <text x="170" y="412" class="example-desc">클래스 생성 과정을 제어</text>
+
+  <circle cx="155" cy="434" r="2.5" fill="#666666"/>
+  <text x="165" y="438" class="example">R eval / parse</text>
+  <text x="170" y="454" class="example-desc">문자열을 코드로 평가·실행</text>
+
+  <circle cx="155" cy="476" r="2.5" fill="#666666"/>
+  <text x="165" y="480" class="example">Ruby method_missing</text>
+  <text x="170" y="496" class="example-desc">호출 시점에 메서드를 동적 생성</text>
+
+  <!-- Q4: Bottom-Right (이종 + 런타임) — HIGHLIGHTED -->
+  <rect x="430" y="325" width="300" height="195" fill="#E8E8E8" stroke="#333333" stroke-width="2"/>
+  <text x="580" y="354" class="highlight-title" text-anchor="middle">이종 + 런타임</text>
+  <line x1="505" y1="362" x2="655" y2="362" stroke="#999999" stroke-width="0.75"/>
+
+  <circle cx="465" cy="392" r="3" fill="#333333"/>
+  <text x="475" y="396" class="highlight-title">AI 코드 생성</text>
+  <text x="480" y="412" class="example-desc">자연어 → Python / R / JS</text>
+
+  <circle cx="465" cy="434" r="2.5" fill="#666666"/>
+  <text x="475" y="438" class="example">Claude Code, Copilot</text>
+  <text x="480" y="454" class="example-desc">LLM 기반 실시간 코드 합성</text>
+
+  <circle cx="465" cy="476" r="2.5" fill="#666666"/>
+  <text x="475" y="480" class="example">MCP / Tool Use</text>
+  <text x="480" y="496" class="example-desc">에이전트가 도구를 조합·실행</text>
+
+  <!-- Emphasis annotation arrow pointing to Q4 -->
+  <line x1="748" y1="360" x2="738" y2="370" stroke="#333333" stroke-width="1"/>
+  <line x1="748" y1="360" x2="748" y2="510" stroke="#333333" stroke-width="1"/>
+  <text x="756" y="420" class="arrow-label" transform="rotate(90, 756, 420)" text-anchor="middle">가장 새로운 패러다임</text>
+
+  <!-- Footer note -->
+  <text x="400" y="565" class="axis-sub" text-anchor="middle">동형(Homogeneous): 메타언어와 대상언어가 동일 · 이종(Heterogeneous): 메타언어와 대상언어가 상이</text>
+
+</svg>

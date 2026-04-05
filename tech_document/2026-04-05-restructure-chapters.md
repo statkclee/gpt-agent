@@ -12,20 +12,20 @@
 
 ```
 gpt-agent/
-├── 71-gpt.qmd                  ← 콘텐츠 (이동 대상)
-├── 72-paradigm-shift.qmd       ← 콘텐츠
-├── 73-context-engineering.qmd  ← 콘텐츠
-├── 74-workflow.qmd             ← 콘텐츠
-├── 75-code-review.qmd          ← 콘텐츠
-├── 76-ai-tools.qmd             ← 콘텐츠
-├── 77-developer-future.qmd     ← 콘텐츠
-├── ide.qmd                     ← 콘텐츠
-├── ide_positron.qmd            ← 콘텐츠
-├── ide_zed.qmd                 ← 콘텐츠
-├── ide_extension.qmd           ← 콘텐츠
-├── ide_setup.qmd               ← 콘텐츠
-├── docker_concept.qmd          ← 콘텐츠
-├── compendium.qmd              ← 콘텐츠
+├── p1-intro.qmd                  ← 콘텐츠 (이동 대상)
+├── p1-paradigm.qmd       ← 콘텐츠
+├── p1-context.qmd  ← 콘텐츠
+├── p1-workflow.qmd             ← 콘텐츠
+├── p1-review.qmd          ← 콘텐츠
+├── p1-tools.qmd             ← 콘텐츠
+├── p1-future.qmd     ← 콘텐츠
+├── p2-intro.qmd                     ← 콘텐츠
+├── p2-positron.qmd            ← 콘텐츠
+├── p2-zed.qmd                 ← 콘텐츠
+├── p2-extension.qmd           ← 콘텐츠
+├── p2-setup.qmd               ← 콘텐츠
+├── p2-docker.qmd          ← 콘텐츠
+├── p2-compendium.qmd              ← 콘텐츠
 ├── glossary.qmd                ← 콘텐츠
 ├── references.qmd              ← 콘텐츠
 ├── index.qmd                   ← 콘텐츠
@@ -68,20 +68,20 @@ gpt-agent/
 ├── index.qmd                   ← 서문 (Quarto book 홈페이지, 루트 필수)
 │
 ├── chapters/                   ← 📂 본문 챕터 (신규)
-│   ├── 71-gpt.qmd
-│   ├── 72-paradigm-shift.qmd
-│   ├── 73-context-engineering.qmd
-│   ├── 74-workflow.qmd
-│   ├── 75-code-review.qmd
-│   ├── 76-ai-tools.qmd
-│   ├── 77-developer-future.qmd
-│   ├── ide.qmd
-│   ├── ide_positron.qmd
-│   ├── ide_zed.qmd
-│   ├── ide_extension.qmd
-│   ├── ide_setup.qmd
-│   ├── docker_concept.qmd
-│   ├── compendium.qmd
+│   ├── p1-intro.qmd
+│   ├── p1-paradigm.qmd
+│   ├── p1-context.qmd
+│   ├── p1-workflow.qmd
+│   ├── p1-review.qmd
+│   ├── p1-tools.qmd
+│   ├── p1-future.qmd
+│   ├── p2-intro.qmd
+│   ├── p2-positron.qmd
+│   ├── p2-zed.qmd
+│   ├── p2-extension.qmd
+│   ├── p2-setup.qmd
+│   ├── p2-docker.qmd
+│   ├── p2-compendium.qmd
 │   ├── glossary.qmd
 │   └── references.qmd
 │
@@ -149,8 +149,8 @@ render:
 ```bash
 mkdir chapters/
 mv index.qmd chapters/
-mv 71-gpt.qmd 72-paradigm-shift.qmd ... chapters/
-mv ide.qmd ide_positron.qmd ... chapters/
+mv p1-intro.qmd p1-paradigm.qmd ... chapters/
+mv p2-intro.qmd p2-positron.qmd ... chapters/
 mv glossary.qmd references.qmd chapters/
 ```
 

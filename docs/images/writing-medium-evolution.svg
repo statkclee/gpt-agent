@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380">
+  <defs>
+    <style>
+      .tufte-title { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 18px; fill: #222; font-weight: bold; }
+      .tufte-subtitle { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 13px; fill: #666; }
+      .tufte-label { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 13px; fill: #333; font-weight: bold; }
+      .tufte-text { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 11px; fill: #444; }
+      .tufte-small { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 10px; fill: #666; }
+      .tufte-date { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 10px; fill: #999; }
+      .tufte-box { fill: #f9f9f9; stroke: #999; stroke-width: 1; }
+      .tufte-line { stroke: #999; stroke-width: 1.5; }
+      .tufte-arrow { fill: #666; }
+      .era-label { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 11px; fill: #888; font-style: italic; }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" class="tufte-arrow"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="380" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" class="tufte-title">매체 + 문자 = 문서 시스템</text>
+  <text x="450" y="48" text-anchor="middle" class="tufte-subtitle">36,000년 기록 역사의 7대 전환</text>
+
+  <!-- Main timeline axis -->
+  <line x1="60" y1="90" x2="860" y2="90" stroke="#ccc" stroke-width="2"/>
+
+  <!-- Era markers on timeline -->
+  <!-- 1. Cave Paintings -->
+  <g transform="translate(80, 90)">
+    <circle cx="0" cy="0" r="5" fill="#999" stroke="#666" stroke-width="1"/>
+    <text x="0" y="-15" text-anchor="middle" class="tufte-date">BC 17,000</text>
+    <rect x="-48" y="15" width="96" height="72" class="tufte-box" rx="4"/>
+    <text x="0" y="33" text-anchor="middle" class="tufte-label">동굴벽화</text>
+    <text x="0" y="48" text-anchor="middle" class="tufte-small">벽 + 그림</text>
+    <line x1="-35" y1="57" x2="35" y2="57" stroke="#ddd"/>
+    <text x="0" y="70" text-anchor="middle" class="tufte-text">기억의 외부화</text>
+  </g>
+
+  <!-- 2. Cuneiform -->
+  <g transform="translate(195, 90)">
+    <circle cx="0" cy="0" r="5" fill="#999" stroke="#666" stroke-width="1"/>
+    <text x="0" y="-15" text-anchor="middle" class="tufte-date">BC 3,400</text>
+    <rect x="-48" y="15" width="96" height="72" class="tufte-box" rx="4"/>
+    <text x="0" y="33" text-anchor="middle" class="tufte-label">설형문자</text>
+    <text x="0" y="48" text-anchor="middle" class="tufte-small">점토판 + 쐐기</text>
+    <line x1="-35" y1="57" x2="35" y2="57" stroke="#ddd"/>
+    <text x="0" y="70" text-anchor="middle" class="tufte-text">행정 기록</text>
+  </g>
+
+  <!-- 3. Papyrus -->
+  <g transform="translate(310, 90)">
+    <circle cx="0" cy="0" r="5" fill="#999" stroke="#666" stroke-width="1"/>
+    <text x="0" y="-15" text-anchor="middle" class="tufte-date">BC 3,000</text>
+    <rect x="-48" y="15" width="96" height="72" class="tufte-box" rx="4"/>
+    <text x="0" y="33" text-anchor="middle" class="tufte-label">상형문자</text>
+    <text x="0" y="48" text-anchor="middle" class="tufte-small">파피루스 + 기호</text>
+    <line x1="-35" y1="57" x2="35" y2="57" stroke="#ddd"/>
+    <text x="0" y="70" text-anchor="middle" class="tufte-text">문서 시스템</text>
+  </g>
+
+  <!-- 4. Paper + Movable Type -->
+  <g transform="translate(425, 90)">
+    <circle cx="0" cy="0" r="5" fill="#999" stroke="#666" stroke-width="1"/>
+    <text x="0" y="-15" text-anchor="middle" class="tufte-date">1377~1455</text>
+    <rect x="-48" y="15" width="96" height="72" class="tufte-box" rx="4"/>
+    <text x="0" y="33" text-anchor="middle" class="tufte-label">금속활자</text>
+    <text x="0" y="48" text-anchor="middle" class="tufte-small">종이 + 활자</text>
+    <line x1="-35" y1="57" x2="35" y2="57" stroke="#ddd"/>
+    <text x="0" y="70" text-anchor="middle" class="tufte-text">복제 비용 붕괴</text>
+  </g>
+
+  <!-- 5. WYSIWYG -->
+  <g transform="translate(540, 90)">
+    <circle cx="0" cy="0" r="5" fill="#999" stroke="#666" stroke-width="1"/>
+    <text x="0" y="-15" text-anchor="middle" class="tufte-date">1974</text>
+    <rect x="-48" y="15" width="96" height="72" class="tufte-box" rx="4"/>
+    <text x="0" y="33" text-anchor="middle" class="tufte-label">WYSIWYG</text>
+    <text x="0" y="48" text-anchor="middle" class="tufte-small">화면 + GUI</text>
+    <line x1="-35" y1="57" x2="35" y2="57" stroke="#ddd"/>
+    <text x="0" y="70" text-anchor="middle" class="tufte-text">편집 비용 붕괴</text>
+  </g>
+
+  <!-- 6. Markdown -->
+  <g transform="translate(655, 90)">
+    <circle cx="0" cy="0" r="5" fill="#999" stroke="#666" stroke-width="1"/>
+    <text x="0" y="-15" text-anchor="middle" class="tufte-date">2004</text>
+    <rect x="-48" y="15" width="96" height="72" class="tufte-box" rx="4"/>
+    <text x="0" y="33" text-anchor="middle" class="tufte-label">Markdown</text>
+    <text x="0" y="48" text-anchor="middle" class="tufte-small">브라우저 + 텍스트</text>
+    <line x1="-35" y1="57" x2="35" y2="57" stroke="#ddd"/>
+    <text x="0" y="70" text-anchor="middle" class="tufte-text">의미/표현 분리</text>
+  </g>
+
+  <!-- 7. LLM -->
+  <g transform="translate(790, 90)">
+    <circle cx="0" cy="0" r="6" fill="#666" stroke="#333" stroke-width="1.5"/>
+    <text x="0" y="-15" text-anchor="middle" class="tufte-date">2022~</text>
+    <rect x="-55" y="15" width="110" height="72" fill="#f0f0f0" stroke="#555" stroke-width="1.5" rx="4"/>
+    <text x="0" y="33" text-anchor="middle" class="tufte-label">LLM + AI</text>
+    <text x="0" y="48" text-anchor="middle" class="tufte-small">LLM + 자연어</text>
+    <line x1="-40" y1="57" x2="40" y2="57" stroke="#bbb"/>
+    <text x="0" y="70" text-anchor="middle" class="tufte-text">생성 비용 붕괴</text>
+  </g>
+
+  <!-- Bottom: Three cost collapses -->
+  <g transform="translate(0, 220)">
+    <line x1="60" y1="0" x2="860" y2="0" stroke="#eee" stroke-width="1"/>
+
+    <!-- Cost 1: Replication -->
+    <g transform="translate(150, 25)">
+      <rect x="-110" y="-10" width="220" height="55" fill="none" stroke="#ccc" stroke-width="1" rx="6" stroke-dasharray="4,3"/>
+      <text x="0" y="8" text-anchor="middle" class="tufte-label">1차 혁명: 복제 비용</text>
+      <text x="0" y="25" text-anchor="middle" class="tufte-small">인쇄 (1377~1455)</text>
+      <text x="0" y="38" text-anchor="middle" class="tufte-date">수개월 → 수일 / 부</text>
+    </g>
+
+    <!-- Arrow -->
+    <line x1="275" y1="30" x2="325" y2="30" class="tufte-line" marker-end="url(#arrowhead)"/>
+
+    <!-- Cost 2: Editing -->
+    <g transform="translate(450, 25)">
+      <rect x="-110" y="-10" width="220" height="55" fill="none" stroke="#ccc" stroke-width="1" rx="6" stroke-dasharray="4,3"/>
+      <text x="0" y="8" text-anchor="middle" class="tufte-label">2차 혁명: 편집 비용</text>
+      <text x="0" y="25" text-anchor="middle" class="tufte-small">디지털 (1974~2004)</text>
+      <text x="0" y="38" text-anchor="middle" class="tufte-date">재식자 → 즉시 수정</text>
+    </g>
+
+    <!-- Arrow -->
+    <line x1="575" y1="30" x2="625" y2="30" class="tufte-line" marker-end="url(#arrowhead)"/>
+
+    <!-- Cost 3: Generation -->
+    <g transform="translate(750, 25)">
+      <rect x="-110" y="-10" width="220" height="55" fill="#f5f5f5" stroke="#999" stroke-width="1.5" rx="6"/>
+      <text x="0" y="8" text-anchor="middle" class="tufte-label">3차 혁명: 생성 비용</text>
+      <text x="0" y="25" text-anchor="middle" class="tufte-small">AI (2022~)</text>
+      <text x="0" y="38" text-anchor="middle" class="tufte-date">10-20일 → 3-5시간</text>
+    </g>
+  </g>
+
+  <!-- Bottom margin note -->
+  <text x="450" y="340" text-anchor="middle" class="era-label">매체의 전파 속도가 곧 문명의 전파 속도다</text>
+  <text x="450" y="358" text-anchor="middle" class="tufte-date">종이: 중국 → 유럽 1,000년 | ChatGPT: 전 세계 2개월</text>
+
+</svg>

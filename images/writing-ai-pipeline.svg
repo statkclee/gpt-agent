@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <defs>
+    <style>
+      .tufte-title { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 18px; fill: #222; font-weight: bold; }
+      .tufte-subtitle { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 13px; fill: #666; }
+      .tufte-label { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 13px; fill: #333; font-weight: bold; }
+      .tufte-text { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 11px; fill: #444; }
+      .tufte-small { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 10px; fill: #666; }
+      .tufte-date { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 10px; fill: #999; }
+      .tufte-code { font-family: 'Courier New', Courier, monospace; font-size: 10px; fill: #555; }
+      .tufte-box { fill: #f9f9f9; stroke: #999; stroke-width: 1; }
+      .tufte-box-hl { fill: #f0f0f0; stroke: #555; stroke-width: 1.5; }
+      .tufte-line { stroke: #999; stroke-width: 1.5; }
+      .tufte-arrow { fill: #666; }
+      .pillar-label { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 11px; fill: #555; font-weight: bold; }
+      .era-label { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 11px; fill: #888; font-style: italic; }
+    </style>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" class="tufte-arrow"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="400" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="450" y="28" text-anchor="middle" class="tufte-title">AI + Quarto 재현가능 문서 파이프라인</text>
+  <text x="450" y="46" text-anchor="middle" class="tufte-subtitle">프롬프트에서 배포까지 — 모든 산출물이 플레인 텍스트</text>
+
+  <!-- Pipeline: 5 steps -->
+  <!-- Step 1: Goal Setting -->
+  <g transform="translate(55, 75)">
+    <rect x="0" y="0" width="130" height="90" class="tufte-box" rx="5"/>
+    <text x="65" y="20" text-anchor="middle" class="tufte-label">1. 목표 설정</text>
+    <line x1="10" y1="28" x2="120" y2="28" stroke="#eee"/>
+    <text x="65" y="44" text-anchor="middle" class="tufte-small">목적 · 독자 · 형식</text>
+    <text x="65" y="58" text-anchor="middle" class="tufte-small">정의</text>
+    <rect x="25" y="65" width="80" height="16" fill="#e8e8e8" rx="3"/>
+    <text x="65" y="77" text-anchor="middle" class="tufte-code">CLAUDE.md</text>
+  </g>
+
+  <line x1="190" y1="120" x2="215" y2="120" class="tufte-line" marker-end="url(#arr)"/>
+
+  <!-- Step 2: AI Generation -->
+  <g transform="translate(220, 75)">
+    <rect x="0" y="0" width="130" height="90" class="tufte-box-hl" rx="5"/>
+    <text x="65" y="20" text-anchor="middle" class="tufte-label">2. AI 생성</text>
+    <line x1="10" y1="28" x2="120" y2="28" stroke="#ddd"/>
+    <text x="65" y="44" text-anchor="middle" class="tufte-small">프롬프트 기반</text>
+    <text x="65" y="58" text-anchor="middle" class="tufte-small">문서 · 다이어그램 생성</text>
+    <rect x="15" y="65" width="45" height="16" fill="#e0e0e0" rx="3"/>
+    <text x="37" y="77" text-anchor="middle" class="tufte-code">.qmd</text>
+    <rect x="65" y="65" width="45" height="16" fill="#e0e0e0" rx="3"/>
+    <text x="87" y="77" text-anchor="middle" class="tufte-code">.svg</text>
+  </g>
+
+  <line x1="355" y1="120" x2="380" y2="120" class="tufte-line" marker-end="url(#arr)"/>
+
+  <!-- Step 3: Human Review -->
+  <g transform="translate(385, 75)">
+    <rect x="0" y="0" width="130" height="90" class="tufte-box" rx="5"/>
+    <text x="65" y="20" text-anchor="middle" class="tufte-label">3. 인간 검토</text>
+    <line x1="10" y1="28" x2="120" y2="28" stroke="#eee"/>
+    <text x="65" y="44" text-anchor="middle" class="tufte-small">사실 확인</text>
+    <text x="65" y="58" text-anchor="middle" class="tufte-small">논리 검증 · 문체 교정</text>
+    <rect x="25" y="65" width="80" height="16" fill="#e8e8e8" rx="3"/>
+    <text x="65" y="77" text-anchor="middle" class="tufte-code">git diff</text>
+  </g>
+
+  <line x1="520" y1="120" x2="545" y2="120" class="tufte-line" marker-end="url(#arr)"/>
+
+  <!-- Step 4: Quarto Render -->
+  <g transform="translate(550, 75)">
+    <rect x="0" y="0" width="130" height="90" class="tufte-box" rx="5"/>
+    <text x="65" y="20" text-anchor="middle" class="tufte-label">4. Quarto 렌더</text>
+    <line x1="10" y1="28" x2="120" y2="28" stroke="#eee"/>
+    <text x="65" y="44" text-anchor="middle" class="tufte-small">다중 출력</text>
+    <text x="65" y="58" text-anchor="middle" class="tufte-small">HTML · PDF · ePub</text>
+    <rect x="10" y="65" width="110" height="16" fill="#e8e8e8" rx="3"/>
+    <text x="65" y="77" text-anchor="middle" class="tufte-code">quarto render</text>
+  </g>
+
+  <line x1="685" y1="120" x2="710" y2="120" class="tufte-line" marker-end="url(#arr)"/>
+
+  <!-- Step 5: CI/CD Deploy -->
+  <g transform="translate(715, 75)">
+    <rect x="0" y="0" width="150" height="90" class="tufte-box" rx="5"/>
+    <text x="75" y="20" text-anchor="middle" class="tufte-label">5. CI/CD 배포</text>
+    <line x1="10" y1="28" x2="140" y2="28" stroke="#eee"/>
+    <text x="75" y="44" text-anchor="middle" class="tufte-small">자동 빌드 · 배포</text>
+    <text x="75" y="58" text-anchor="middle" class="tufte-small">GitHub Pages</text>
+    <rect x="15" y="65" width="120" height="16" fill="#e8e8e8" rx="3"/>
+    <text x="75" y="77" text-anchor="middle" class="tufte-code">GitHub Actions</text>
+  </g>
+
+  <!-- Four Pillars of Reproducibility -->
+  <text x="450" y="210" text-anchor="middle" class="tufte-label" font-size="14">재현가능성의 4대 기둥</text>
+  <line x1="100" y1="220" x2="800" y2="220" stroke="#ddd" stroke-width="1"/>
+
+  <!-- Pillar 1 -->
+  <g transform="translate(100, 235)">
+    <rect x="0" y="0" width="150" height="80" fill="none" stroke="#ccc" stroke-width="1" rx="5"/>
+    <text x="75" y="22" text-anchor="middle" class="pillar-label">소스 추적</text>
+    <text x="75" y="40" text-anchor="middle" class="tufte-small">Git 버전 관리</text>
+    <text x="75" y="55" text-anchor="middle" class="tufte-small">전체 변경 이력</text>
+    <text x="75" y="70" text-anchor="middle" class="tufte-code">git log / git blame</text>
+  </g>
+
+  <!-- Pillar 2 -->
+  <g transform="translate(275, 235)">
+    <rect x="0" y="0" width="150" height="80" fill="none" stroke="#ccc" stroke-width="1" rx="5"/>
+    <text x="75" y="22" text-anchor="middle" class="pillar-label">환경 고정</text>
+    <text x="75" y="40" text-anchor="middle" class="tufte-small">renv / venv / Docker</text>
+    <text x="75" y="55" text-anchor="middle" class="tufte-small">패키지 버전 잠금</text>
+    <text x="75" y="70" text-anchor="middle" class="tufte-code">renv.lock / .venv</text>
+  </g>
+
+  <!-- Pillar 3 -->
+  <g transform="translate(450, 235)">
+    <rect x="0" y="0" width="150" height="80" fill="none" stroke="#ccc" stroke-width="1" rx="5"/>
+    <text x="75" y="22" text-anchor="middle" class="pillar-label">빌드 자동화</text>
+    <text x="75" y="40" text-anchor="middle" class="tufte-small">GitHub Actions</text>
+    <text x="75" y="55" text-anchor="middle" class="tufte-small">원클릭 재현</text>
+    <text x="75" y="70" text-anchor="middle" class="tufte-code">quarto publish</text>
+  </g>
+
+  <!-- Pillar 4 -->
+  <g transform="translate(625, 235)">
+    <rect x="0" y="0" width="150" height="80" fill="#f5f5f5" stroke="#999" stroke-width="1.5" rx="5"/>
+    <text x="75" y="22" text-anchor="middle" class="pillar-label">프롬프트 기록</text>
+    <text x="75" y="40" text-anchor="middle" class="tufte-small">AI 기여 추적</text>
+    <text x="75" y="55" text-anchor="middle" class="tufte-small">의도의 영구 보존</text>
+    <text x="75" y="70" text-anchor="middle" class="tufte-code">Co-Authored-By</text>
+  </g>
+
+  <!-- Bottom contrast -->
+  <g transform="translate(0, 345)">
+    <line x1="100" y1="0" x2="800" y2="0" stroke="#eee"/>
+    <text x="300" y="20" text-anchor="middle" class="tufte-small">ChatGPT 대화 = 휘발성</text>
+    <text x="300" y="35" text-anchor="middle" class="tufte-date">대화 내역 유실 가능, 버전 관리 불가</text>
+    <text x="600" y="20" text-anchor="middle" class="tufte-small" font-weight="bold">Claude Code + Git = 영구적</text>
+    <text x="600" y="35" text-anchor="middle" class="tufte-date">모든 변경 추적, AI 기여 명시적 기록</text>
+
+    <line x1="450" y1="5" x2="450" y2="40" stroke="#ddd" stroke-width="1"/>
+  </g>
+
+</svg>

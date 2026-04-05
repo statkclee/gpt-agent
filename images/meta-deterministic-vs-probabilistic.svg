@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="Palatino, 'Book Antiqua', Georgia, serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#666666"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#333333">결정론 vs. 확률론: 메타프로그래밍의 패러다임 전환</text>
+
+  <!-- Vertical dashed divider -->
+  <line x1="400" y1="50" x2="400" y2="390" stroke="#CCCCCC" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- ============================================ -->
+  <!-- LEFT COLUMN: Deterministic Metaprogramming   -->
+  <!-- ============================================ -->
+  <text x="200" y="68" text-anchor="middle" font-size="14" font-weight="bold" fill="#333333">결정론적 메타프로그래밍</text>
+
+  <!-- Input box -->
+  <rect x="110" y="85" width="180" height="36" rx="3" fill="#F5F5F5" stroke="#999999" stroke-width="1"/>
+  <text x="200" y="108" text-anchor="middle" font-size="13" fill="#333333">입력: Factorial&lt;5&gt;</text>
+
+  <!-- Arrow down -->
+  <line x1="200" y1="121" x2="200" y2="150" stroke="#999999" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- Process box -->
+  <rect x="110" y="155" width="180" height="36" rx="3" fill="#F5F5F5" stroke="#999999" stroke-width="1"/>
+  <text x="200" y="178" text-anchor="middle" font-size="13" fill="#333333">C++ 템플릿</text>
+
+  <!-- Arrow down (single) -->
+  <line x1="200" y1="191" x2="200" y2="220" stroke="#999999" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- Output box -->
+  <rect x="110" y="225" width="180" height="36" rx="3" fill="#F5F5F5" stroke="#999999" stroke-width="1"/>
+  <text x="200" y="248" text-anchor="middle" font-size="13" fill="#333333">출력: 120</text>
+
+  <!-- Caption -->
+  <text x="200" y="290" text-anchor="middle" font-size="11" font-style="italic" fill="#666666">동일 입력 → 동일 출력 (항상)</text>
+
+  <!-- ============================================ -->
+  <!-- RIGHT COLUMN: Probabilistic Metaprogramming  -->
+  <!-- ============================================ -->
+  <text x="600" y="68" text-anchor="middle" font-size="14" font-weight="bold" fill="#333333">확률론적 메타프로그래밍</text>
+
+  <!-- Input box -->
+  <rect x="490" y="85" width="220" height="36" rx="3" fill="#F5F5F5" stroke="#999999" stroke-width="1"/>
+  <text x="600" y="108" text-anchor="middle" font-size="13" fill="#333333">입력: '피보나치 함수 작성'</text>
+
+  <!-- Arrow down -->
+  <line x1="600" y1="121" x2="600" y2="150" stroke="#999999" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- Process box -->
+  <rect x="510" y="155" width="180" height="36" rx="3" fill="#F5F5F5" stroke="#999999" stroke-width="1"/>
+  <text x="600" y="178" text-anchor="middle" font-size="13" fill="#333333">LLM (AI)</text>
+
+  <!-- Branching arrows: center to left, center, right -->
+  <!-- Center arrow -->
+  <line x1="600" y1="191" x2="600" y2="220" stroke="#999999" stroke-width="1" marker-end="url(#arrow)"/>
+  <!-- Left branch arrow -->
+  <path d="M 600 191 L 600 200 L 510 200 L 510 220" fill="none" stroke="#999999" stroke-width="1" marker-end="url(#arrow)"/>
+  <!-- Right branch arrow -->
+  <path d="M 600 191 L 600 200 L 690 200 L 690 220" fill="none" stroke="#999999" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- Three output boxes side by side -->
+  <!-- Left: 재귀 -->
+  <rect x="470" y="225" width="80" height="36" rx="3" fill="#F5F5F5" stroke="#999999" stroke-width="1"/>
+  <text x="510" y="248" text-anchor="middle" font-size="13" fill="#333333">재귀</text>
+
+  <!-- Center: 반복 -->
+  <rect x="560" y="225" width="80" height="36" rx="3" fill="#F5F5F5" stroke="#999999" stroke-width="1"/>
+  <text x="600" y="248" text-anchor="middle" font-size="13" fill="#333333">반복</text>
+
+  <!-- Right: 메모이제이션 -->
+  <rect x="650" y="225" width="80" height="36" rx="3" fill="#F5F5F5" stroke="#999999" stroke-width="1"/>
+  <text x="690" y="248" text-anchor="middle" font-size="13" fill="#333333">메모이제이션</text>
+
+  <!-- Caption -->
+  <text x="600" y="290" text-anchor="middle" font-size="11" font-style="italic" fill="#666666">동일 입력 → 다양한 출력 (매번 다름)</text>
+
+  <!-- ============================================ -->
+  <!-- BOTTOM: Key Insight Box                      -->
+  <!-- ============================================ -->
+  <rect x="130" y="330" width="540" height="44" rx="3" fill="#F5F5F5" stroke="#333333" stroke-width="2"/>
+  <text x="400" y="357" text-anchor="middle" font-size="13" font-weight="bold" fill="#333333">→ 결정론: 정확성 증명 가능  |  확률론: 검증이 필수</text>
+</svg>

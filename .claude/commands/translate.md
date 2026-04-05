@@ -76,14 +76,14 @@
 
 ■ 불일치 발견
   "context"
-    → 73-context-engineering.qmd:25 "컨텍스트"
-    → 73-context-engineering.qmd:88 "문맥"
+    → p1-context.qmd:25 "컨텍스트"
+    → p1-context.qmd:88 "문맥"
     → glossary.qmd 표준: "컨텍스트"
     → 제안: 라인 88 "문맥" → "컨텍스트"로 통일
 
   "large language model"
-    → 71-gpt.qmd:30 "대규모 언어 모델"
-    → 74-workflow.qmd:15 "대형 언어 모델"
+    → p1-intro.qmd:30 "대규모 언어 모델"
+    → p1-workflow.qmd:15 "대형 언어 모델"
     → 제안: "대규모 언어 모델(LLM)"로 통일
 
 ■ 원어 병기 누락

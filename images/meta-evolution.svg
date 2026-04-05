@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 720">
+  <defs>
+    <style>
+      .title {
+        font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+        fill: #333;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .subtitle {
+        font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+        fill: #666;
+        font-size: 13px;
+        font-style: italic;
+      }
+      .year {
+        font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+        fill: #333;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .tech {
+        font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+        fill: #333;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .desc {
+        font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+        fill: #666;
+        font-size: 12.5px;
+      }
+      .label {
+        font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+        fill: #999;
+        font-size: 11px;
+      }
+      .arrow-label {
+        font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+        fill: #666;
+        font-size: 12px;
+        font-style: italic;
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="720" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="400" y="40" class="title" text-anchor="middle">메타프로그래밍의 진화: 프로그램이 프로그램을 작성하다</text>
+
+  <!-- Subtitle: transition arrow -->
+  <text x="290" y="65" class="subtitle" text-anchor="end">형식 문법</text>
+  <line x1="296" y1="61" x2="390" y2="61" stroke="#999" stroke-width="1.2"/>
+  <polygon points="390,57 400,61 390,65" fill="#999"/>
+  <text x="408" y="65" class="subtitle" text-anchor="start">자연어</text>
+
+  <!-- Thin top rule -->
+  <line x1="60" y1="82" x2="740" y2="82" stroke="#CCCCCC" stroke-width="0.8"/>
+
+  <!-- Column headers -->
+  <text x="95" y="102" class="label" text-anchor="middle">연대</text>
+  <text x="210" y="102" class="label" text-anchor="start">기술</text>
+  <text x="400" y="102" class="label" text-anchor="start">의미</text>
+
+  <!-- Header rule -->
+  <line x1="60" y1="110" x2="740" y2="110" stroke="#999" stroke-width="1"/>
+
+  <!-- Vertical timeline line -->
+  <line x1="140" y1="125" x2="140" y2="660" stroke="#999" stroke-width="1.5"/>
+
+  <!-- ======= Milestone 1: 1951 ======= -->
+  <circle cx="140" cy="148" r="4" fill="#333"/>
+  <line x1="148" y1="148" x2="195" y2="148" stroke="#CCCCCC" stroke-width="0.8"/>
+  <text x="95" y="152" class="year" text-anchor="middle">1951</text>
+  <text x="210" y="145" class="tech">컴파일러 (Grace Hopper A-0)</text>
+  <text x="210" y="163" class="desc">"수학 표기 → 기계어" 자동 번역의 시작</text>
+
+  <!-- Milestone 2: 1958 -->
+  <circle cx="140" cy="228" r="4" fill="#333"/>
+  <line x1="148" y1="228" x2="195" y2="228" stroke="#CCCCCC" stroke-width="0.8"/>
+  <text x="95" y="232" class="year" text-anchor="middle">1958</text>
+  <text x="210" y="225" class="tech">Lisp 매크로</text>
+  <text x="210" y="243" class="desc">"코드 = 데이터" 동형성(homoiconicity) 탄생</text>
+
+  <!-- Milestone 3: 1970s -->
+  <circle cx="140" cy="308" r="4" fill="#333"/>
+  <line x1="148" y1="308" x2="195" y2="308" stroke="#CCCCCC" stroke-width="0.8"/>
+  <text x="95" y="312" class="year" text-anchor="middle">1970s</text>
+  <text x="210" y="305" class="tech">yacc / lex</text>
+  <text x="210" y="323" class="desc">문법 명세 → 파서 자동 생성 (컴파일러-컴파일러)</text>
+
+  <!-- Milestone 4: 1990s -->
+  <circle cx="140" cy="388" r="4" fill="#333"/>
+  <line x1="148" y1="388" x2="195" y2="388" stroke="#CCCCCC" stroke-width="0.8"/>
+  <text x="95" y="392" class="year" text-anchor="middle">1990s</text>
+  <text x="210" y="385" class="tech">C++ 템플릿</text>
+  <text x="210" y="403" class="desc">컴파일 타임 튜링 완전 메타프로그래밍</text>
+
+  <!-- Milestone 5: 2000s -->
+  <circle cx="140" cy="468" r="4" fill="#333"/>
+  <line x1="148" y1="468" x2="195" y2="468" stroke="#CCCCCC" stroke-width="0.8"/>
+  <text x="95" y="472" class="year" text-anchor="middle">2000s</text>
+  <text x="210" y="465" class="tech">Python / R 반영</text>
+  <text x="210" y="483" class="desc">데코레이터, 메타클래스, NSE 주류화</text>
+
+  <!-- Divider: AI era -->
+  <line x1="80" y1="520" x2="740" y2="520" stroke="#CCCCCC" stroke-width="0.8" stroke-dasharray="4,3"/>
+  <text x="740" y="516" class="label" text-anchor="end">AI 시대</text>
+
+  <!-- Milestone 6: 2021 -->
+  <circle cx="140" cy="558" r="5" fill="#666"/>
+  <line x1="149" y1="558" x2="195" y2="558" stroke="#CCCCCC" stroke-width="0.8"/>
+  <text x="95" y="562" class="year" text-anchor="middle">2021</text>
+  <text x="210" y="555" class="tech">GitHub Copilot</text>
+  <text x="210" y="573" class="desc">LLM 기반 코드 생성 등장</text>
+
+  <!-- Milestone 7: 2025 -->
+  <circle cx="140" cy="638" r="6" fill="#333"/>
+  <line x1="150" y1="638" x2="195" y2="638" stroke="#CCCCCC" stroke-width="0.8"/>
+  <text x="95" y="642" class="year" text-anchor="middle">2025</text>
+  <text x="210" y="632" class="tech">AI 에이전트 코딩</text>
+  <text x="210" y="650" class="desc">자연어 → 코드 (Vibe Coding, Claude Code)</text>
+  <!-- Emphasis box for final milestone -->
+  <rect x="202" y="617" width="340" height="42" fill="none" stroke="#999" stroke-width="1" rx="2"/>
+
+  <!-- Bottom rule -->
+  <line x1="60" y1="680" x2="740" y2="680" stroke="#CCCCCC" stroke-width="0.8"/>
+
+  <!-- Side annotation: abstraction arrow -->
+  <text x="52" y="400" class="label" text-anchor="middle"
+        transform="rotate(-90, 52, 400)">추상화 수준 ↑</text>
+
+  <!-- Footer note -->
+  <text x="400" y="702" class="label" text-anchor="middle">각 단계는 "프로그램이 프로그램을 작성하는" 추상화 수준을 한 단계씩 끌어올렸다.</text>
+</svg>

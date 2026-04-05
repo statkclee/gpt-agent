@@ -20,25 +20,29 @@
 
 모든 챕터는 `chapters/` 폴더에 위치한다. 이미지 참조 시 `../images/` 경로를 사용한다.
 
+### 도입: 글쓰기의 대전환
+
+- `p0-writing.qmd` — 도구가 사고를 바꾸는 글쓰기
+
 ### 1부: AI 시대 프로그래밍
 
-- `71-gpt.qmd` — AI 시대 프로그래밍의 도래
-- `72-paradigm-shift.qmd` — 재사용에서 재생성으로
-- `73-context-engineering.qmd` — 프롬프트에서 컨텍스트로
-- `74-workflow.qmd` — AI 코딩 실전 워크플로우
-- `75-code-review.qmd` — 코드 리뷰와 품질 관리
-- `76-ai-tools.qmd` — AI 도구 생태계
-- `77-developer-future.qmd` — 개발자의 미래
+- `p1-intro.qmd` — AI 시대 프로그래밍의 도래
+- `p1-paradigm.qmd` — 재사용에서 재생성으로
+- `p1-context.qmd` — 프롬프트에서 컨텍스트로
+- `p1-workflow.qmd` — AI 코딩 실전 워크플로우
+- `p1-review.qmd` — 코드 리뷰와 품질 관리
+- `p1-tools.qmd` — AI 도구 생태계
+- `p1-future.qmd` — 개발자의 미래
 
 ### 2부: 통합 개발 환경
 
-- `ide.qmd` — IDE 역사부터 미래
-- `ide_positron.qmd` — Positron
-- `ide_extension.qmd` — IDE 확장 프로그램
-- `ide_setup.qmd` — 개발 환경 구축
-- `ide_zed.qmd` — Zed 에디터
-- `docker_concept.qmd` — Docker
-- `compendium.qmd` — Research Compendium
+- `p2-intro.qmd` — IDE 역사부터 미래
+- `p2-positron.qmd` — Positron
+- `p2-extension.qmd` — IDE 확장 프로그램
+- `p2-setup.qmd` — 개발 환경 구축
+- `p2-zed.qmd` — Zed 에디터
+- `p2-docker.qmd` — Docker
+- `p2-compendium.qmd` — Research Compendium
 
 ### 부록
 

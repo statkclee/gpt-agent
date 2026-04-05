@@ -394,7 +394,6 @@ ollama serve                 # localhost:11434에서 API 제공
 - A100 클라우드: $5/시간 (약 200M 토큰 생성 가능)
 - 손익분기: 600M 토큰/일 이상 처리 시 오픈소스 유리
 :::
-```
 
 Ollama의 또 다른 장점은 REST API를 제공한다는 점이다.
 `ollama serve` 명령으로 로컬 API 서버를 띄우면, OpenAI API와 유사한 인터페이스로 오픈소스 LLM을 호출할 수 있다.

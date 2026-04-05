@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420">
+  <defs>
+    <style>
+      .tufte-title { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 18px; fill: #222; font-weight: bold; }
+      .tufte-subtitle { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 13px; fill: #666; }
+      .tufte-label { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 13px; fill: #333; font-weight: bold; }
+      .tufte-text { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 11px; fill: #444; }
+      .tufte-small { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 10px; fill: #666; }
+      .tufte-date { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 10px; fill: #999; }
+      .tufte-code { font-family: 'Courier New', Courier, monospace; font-size: 11px; fill: #333; }
+      .tufte-box { fill: #f9f9f9; stroke: #999; stroke-width: 1; }
+      .fossil-age { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 20px; fill: #888; font-weight: bold; }
+      .era-label { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 11px; fill: #888; font-style: italic; }
+    </style>
+  </defs>
+
+  <rect width="900" height="420" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" class="tufte-title">디지털 화석 — 사라진 장치, 남은 규격</text>
+  <text x="450" y="48" text-anchor="middle" class="tufte-subtitle">경로 의존성(Path Dependence)과 스큐어모피즘(Skeuomorphism)</text>
+
+  <!-- Fossil 1: QWERTY -->
+  <g transform="translate(30, 75)">
+    <rect x="0" y="0" width="260" height="130" class="tufte-box" rx="5"/>
+    <text x="20" y="25" class="tufte-label">QWERTY 배열</text>
+    <text x="245" y="25" text-anchor="end" class="fossil-age">152년</text>
+    <line x1="15" y1="35" x2="245" y2="35" stroke="#ddd"/>
+    <text x="20" y="52" class="tufte-small">기원: 타자기 활자봉 충돌 방지 (1873)</text>
+    <text x="20" y="67" class="tufte-small">전파: IBM PC (1981) → iPhone (2007)</text>
+    <text x="20" y="82" class="tufte-small">지속 원인: 네트워크 효과</text>
+    <line x1="15" y1="92" x2="245" y2="92" stroke="#eee"/>
+    <text x="20" y="108" class="tufte-text" font-style="italic">물리적 제약은 사라졌으나</text>
+    <text x="20" y="122" class="tufte-text" font-style="italic">자기강화 순환은 깨지지 않는다</text>
+  </g>
+
+  <!-- Fossil 2: 80-column -->
+  <g transform="translate(320, 75)">
+    <rect x="0" y="0" width="260" height="130" class="tufte-box" rx="5"/>
+    <text x="20" y="25" class="tufte-label">80칼럼 규칙</text>
+    <text x="245" y="25" text-anchor="end" class="fossil-age">97년</text>
+    <line x1="15" y1="35" x2="245" y2="35" stroke="#ddd"/>
+    <text x="20" y="52" class="tufte-small">기원: IBM 천공카드 폭 (1928)</text>
+    <text x="20" y="67" class="tufte-small">전파: VT100 (1978) → PEP 8 (2001)</text>
+    <text x="20" y="82" class="tufte-small">지속 원인: 터미널 표준 관성</text>
+    <line x1="15" y1="92" x2="245" y2="92" stroke="#eee"/>
+    <text x="20" y="108" class="tufte-text" font-style="italic">미국 지폐 크기 → 카드 폭 →</text>
+    <text x="20" y="122" class="tufte-text" font-style="italic">코드 스타일 가이드</text>
+  </g>
+
+  <!-- Fossil 3: CR+LF -->
+  <g transform="translate(610, 75)">
+    <rect x="0" y="0" width="260" height="130" class="tufte-box" rx="5"/>
+    <text x="20" y="25" class="tufte-label">CR+LF 줄바꿈</text>
+    <text x="245" y="25" text-anchor="end" class="fossil-age">157년</text>
+    <line x1="15" y1="35" x2="245" y2="35" stroke="#ddd"/>
+    <text x="20" y="52" class="tufte-small">기원: 타자기 두 동작 (1868)</text>
+    <text x="20" y="67" class="tufte-small">분열: Win \r\n vs Unix \n</text>
+    <text x="20" y="82" class="tufte-small">현상: git diff 전체 변경 표시</text>
+    <line x1="15" y1="92" x2="245" y2="92" stroke="#eee"/>
+    <text x="20" y="108" class="tufte-text" font-style="italic">캐리지 복귀 + 줄넘김이라는</text>
+    <text x="20" y="122" class="tufte-text" font-style="italic">물리적 동작이 OS를 분열시킨다</text>
+  </g>
+
+  <!-- Fossil 4: hjkl -->
+  <g transform="translate(30, 230)">
+    <rect x="0" y="0" width="260" height="130" class="tufte-box" rx="5"/>
+    <text x="20" y="25" class="tufte-label">Vim hjkl 이동</text>
+    <text x="245" y="25" text-anchor="end" class="fossil-age">50년</text>
+    <line x1="15" y1="35" x2="245" y2="35" stroke="#ddd"/>
+    <text x="20" y="52" class="tufte-small">기원: ADM-3A 터미널 키캡 (1976)</text>
+    <text x="20" y="67" class="tufte-small">전파: vi → Vim → Neovim</text>
+    <text x="20" y="82" class="tufte-small">지속 원인: 근육 기억</text>
+    <line x1="15" y1="92" x2="245" y2="92" stroke="#eee"/>
+    <text x="20" y="108" class="tufte-text" font-style="italic">방향키가 있는 시대에도</text>
+    <text x="20" y="122" class="tufte-text" font-style="italic">수백만 개발자의 손가락이 기억한다</text>
+  </g>
+
+  <!-- Fossil 5: Floppy Disk Icon -->
+  <g transform="translate(320, 230)">
+    <rect x="0" y="0" width="260" height="130" class="tufte-box" rx="5"/>
+    <text x="20" y="25" class="tufte-label">플로피 디스크 아이콘</text>
+    <text x="245" y="25" text-anchor="end" class="fossil-age">44년</text>
+    <line x1="15" y1="35" x2="245" y2="35" stroke="#ddd"/>
+    <text x="20" y="52" class="tufte-small">기원: 3.5인치 디스크 (1981)</text>
+    <text x="20" y="67" class="tufte-small">사망: 생산 중단 (2011)</text>
+    <text x="20" y="82" class="tufte-small">현상: "저장" 아이콘으로 영생</text>
+    <line x1="15" y1="92" x2="245" y2="92" stroke="#eee"/>
+    <text x="20" y="108" class="tufte-text" font-style="italic">스큐어모피즘 — 사물은 사라져도</text>
+    <text x="20" y="122" class="tufte-text" font-style="italic">아이콘은 남는다</text>
+  </g>
+
+  <!-- Fossil 6: @ # Cc -->
+  <g transform="translate(610, 230)">
+    <rect x="0" y="0" width="260" height="130" class="tufte-box" rx="5"/>
+    <text x="20" y="25" class="tufte-label">기호의 변신</text>
+    <text x="245" y="25" text-anchor="end" class="fossil-age">500년+</text>
+    <line x1="15" y1="35" x2="245" y2="35" stroke="#ddd"/>
+    <text x="20" y="55" class="tufte-code">@</text>
+    <text x="40" y="55" class="tufte-small">상인 가격단위 → 이메일 → 멘션</text>
+    <text x="20" y="75" class="tufte-code">#</text>
+    <text x="40" y="75" class="tufte-small">파운드 무게 → C언어 → 해시태그</text>
+    <text x="20" y="95" class="tufte-code">Cc</text>
+    <text x="45" y="95" class="tufte-small">먹지 복사 → 이메일 참조</text>
+    <line x1="15" y1="105" x2="245" y2="105" stroke="#eee"/>
+    <text x="20" y="122" class="tufte-text" font-style="italic">기술은 사라져도 이름은 남는다</text>
+  </g>
+
+  <!-- Bottom insight -->
+  <rect x="200" y="380" width="500" height="28" fill="#f5f5f5" stroke="#ccc" rx="4"/>
+  <text x="450" y="399" text-anchor="middle" class="era-label">"오늘 만드는 선택이 100년 뒤의 화석이 된다"</text>
+
+</svg>

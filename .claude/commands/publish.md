@@ -96,9 +96,9 @@ gh run list --limit 3
   변경 파일: 5개 (.qmd 2, docs/ 3)
 
 ■ 변경 내역
-  M  73-context-engineering.qmd
+  M  p1-context.qmd
   M  images/context-flow.svg
-  M  docs/73-context-engineering.html
+  M  docs/p1-context.html
   M  docs/search.json
   M  docs/sitemap.xml
 

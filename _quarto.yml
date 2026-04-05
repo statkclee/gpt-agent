@@ -40,25 +40,30 @@ book:
   chapters:
     - index.qmd
 
+    - part: "**도입** 글쓰기의 대전환"
+      chapters:
+        - chapters/p0-writing.qmd
+
     - part: "**1부** AI 시대 프로그래밍"
       chapters:
-        - chapters/71-gpt.qmd
-        - chapters/72-paradigm-shift.qmd
-        - chapters/73-context-engineering.qmd
-        - chapters/74-workflow.qmd
-        - chapters/75-code-review.qmd
-        - chapters/76-ai-tools.qmd
-        - chapters/77-developer-future.qmd
+        - chapters/p1-intro.qmd
+        - chapters/p1-paradigm.qmd
+        - chapters/p1-meta.qmd
+        - chapters/p1-context.qmd
+        - chapters/p1-workflow.qmd
+        - chapters/p1-review.qmd
+        - chapters/p1-tools.qmd
+        - chapters/p1-future.qmd
 
     - part: "**2부** 통합 개발 환경"
       chapters:
-        - chapters/ide.qmd
-        - chapters/ide_positron.qmd
-        - chapters/ide_zed.qmd
-        - chapters/ide_extension.qmd
-        - chapters/ide_setup.qmd
-        - chapters/docker_concept.qmd
-        - chapters/compendium.qmd
+        - chapters/p2-intro.qmd
+        - chapters/p2-positron.qmd
+        - chapters/p2-zed.qmd
+        - chapters/p2-extension.qmd
+        - chapters/p2-setup.qmd
+        - chapters/p2-docker.qmd
+        - chapters/p2-compendium.qmd
 
     - part: "**부록**"
       chapters:

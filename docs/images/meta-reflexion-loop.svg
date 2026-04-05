@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .tufte-title {
+        font-family: Palatino, 'Book Antiqua', Georgia, serif;
+        fill: #333;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .tufte-label {
+        font-family: Palatino, 'Book Antiqua', Georgia, serif;
+        fill: #333;
+        font-size: 13px;
+      }
+      .tufte-label-bold {
+        font-family: Palatino, 'Book Antiqua', Georgia, serif;
+        fill: #333;
+        font-size: 13px;
+        font-weight: bold;
+      }
+      .tufte-caption {
+        font-family: Palatino, 'Book Antiqua', Georgia, serif;
+        fill: #666;
+        font-size: 11px;
+        font-style: italic;
+      }
+      .tufte-center {
+        font-family: Palatino, 'Book Antiqua', Georgia, serif;
+        fill: #333;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .tufte-center-sub {
+        font-family: Palatino, 'Book Antiqua', Georgia, serif;
+        fill: #666;
+        font-size: 12px;
+        font-style: italic;
+      }
+      .tufte-annotation {
+        font-family: Palatino, 'Book Antiqua', Georgia, serif;
+        fill: #666;
+        font-size: 11px;
+        font-style: italic;
+      }
+      .node-box {
+        fill: #f5f5f5;
+        stroke: #999;
+        stroke-width: 1;
+        rx: 3;
+        ry: 3;
+      }
+    </style>
+    <marker id="arrowHead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#666" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" class="tufte-title">자기 개선 에이전트: Reflexion 순환 구조</text>
+
+  <!-- Node positions (pentagon/circular arrangement) -->
+  <!-- Center: 400, 265 -->
+  <!-- 1. 의도 명세 (top center): 400, 80 -->
+  <!-- 2. 코드 생성 (right-top): 620, 175 -->
+  <!-- 3. 실행 & 테스트 (right-bottom): 560, 355 -->
+  <!-- 4. 오류 분석 (left-bottom): 240, 355 -->
+  <!-- 5. 코드 수정 (left-top): 180, 175 -->
+
+  <!-- Node 1: 의도 명세 -->
+  <rect x="310" y="60" width="180" height="52" class="node-box" rx="3" ry="3" />
+  <text x="400" y="82" text-anchor="middle" class="tufte-label-bold">① 의도 명세</text>
+  <text x="400" y="100" text-anchor="middle" class="tufte-caption">자연어로 목표 기술</text>
+
+  <!-- Node 2: 코드 생성 -->
+  <rect x="540" y="149" width="180" height="52" class="node-box" rx="3" ry="3" />
+  <text x="630" y="171" text-anchor="middle" class="tufte-label-bold">② 코드 생성</text>
+  <text x="630" y="189" text-anchor="middle" class="tufte-caption">LLM이 코드 작성</text>
+
+  <!-- Node 3: 실행 & 테스트 -->
+  <rect x="480" y="329" width="180" height="52" class="node-box" rx="3" ry="3" />
+  <text x="570" y="351" text-anchor="middle" class="tufte-label-bold">③ 실행 &amp; 테스트</text>
+  <text x="570" y="369" text-anchor="middle" class="tufte-caption">코드 실행, 결과 확인</text>
+
+  <!-- Node 4: 오류 분석 -->
+  <rect x="140" y="329" width="180" height="52" class="node-box" rx="3" ry="3" />
+  <text x="230" y="351" text-anchor="middle" class="tufte-label-bold">④ 오류 분석</text>
+  <text x="230" y="369" text-anchor="middle" class="tufte-caption">실패 원인 진단</text>
+
+  <!-- Node 5: 코드 수정 -->
+  <rect x="80" y="149" width="180" height="52" class="node-box" rx="3" ry="3" />
+  <text x="170" y="171" text-anchor="middle" class="tufte-label-bold">⑤ 코드 수정</text>
+  <text x="170" y="189" text-anchor="middle" class="tufte-caption">수정된 코드 재생성</text>
+
+  <!-- Arrow 1→2: 의도 명세 → 코드 생성 -->
+  <path d="M 490,92 Q 530,110 540,155"
+        fill="none" stroke="#999" stroke-width="1.2" marker-end="url(#arrowHead)" />
+
+  <!-- Arrow 2→3: 코드 생성 → 실행 & 테스트 -->
+  <path d="M 650,201 Q 660,270 630,329"
+        fill="none" stroke="#999" stroke-width="1.2" marker-end="url(#arrowHead)" />
+
+  <!-- Arrow 3→4: 실행 & 테스트 → 오류 분석 -->
+  <path d="M 480,365 Q 400,400 320,365"
+        fill="none" stroke="#999" stroke-width="1.2" marker-end="url(#arrowHead)" />
+
+  <!-- Arrow 4→5: 오류 분석 → 코드 수정 -->
+  <path d="M 160,329 Q 120,270 145,201"
+        fill="none" stroke="#999" stroke-width="1.2" marker-end="url(#arrowHead)" />
+
+  <!-- Arrow 5→2: 코드 수정 → 코드 생성 (back to node 2, the main loop) -->
+  <path d="M 260,165 Q 400,130 540,165"
+        fill="none" stroke="#999" stroke-width="1.2" stroke-dasharray="6 3" marker-end="url(#arrowHead)" />
+
+  <!-- Arrow 5→1 connection (alternative: back to 의도 명세 is implicit) -->
+  <!-- Small label on the dashed arrow -->
+  <text x="400" y="140" text-anchor="middle" class="tufte-caption">재시도</text>
+
+  <!-- Center text -->
+  <text x="400" y="258" text-anchor="middle" class="tufte-center">자기 개선 순환</text>
+  <text x="400" y="278" text-anchor="middle" class="tufte-center-sub">(Reflexion Loop)</text>
+
+  <!-- Subtle center circle decoration -->
+  <circle cx="400" cy="265" r="42" fill="none" stroke="#ccc" stroke-width="0.8" stroke-dasharray="3 3" />
+
+  <!-- Bottom annotation -->
+  <text x="400" y="475" text-anchor="middle" class="tufte-annotation">Lisp '자기 수정 코드'의 현대적 계승</text>
+
+  <!-- Circular flow indicator: subtle large ellipse behind nodes -->
+  <ellipse cx="400" cy="250" rx="250" ry="150" fill="none" stroke="#ccc" stroke-width="0.5" stroke-dasharray="2 4" />
+
+</svg>

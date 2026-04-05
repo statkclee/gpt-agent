@@ -13,7 +13,7 @@
 
 약한 챕터를 보강하여 1부의 전체적인 완성도를 끌어올린다.
 
-### 1-1. 컨텍스트 엔지니어링 심화 (`73-context-engineering.qmd`)
+### 1-1. 컨텍스트 엔지니어링 심화 (`p1-context.qmd`)
 
 **현재**: 115줄, Vibe Coding 소개 수준
 **목표**: 400줄 이상, 컨텍스트 엔지니어링의 핵심 가이드
@@ -24,7 +24,7 @@
 - [ ] Vibe Coding vs. Context Engineering 실전 비교
 - [ ] 관련 Tufte SVG 다이어그램 추가
 
-### 1-2. 패러다임 전환 확장 (`72-paradigm-shift.qmd`)
+### 1-2. 패러다임 전환 확장 (`p1-paradigm.qmd`)
 
 **현재**: 143줄, 기본 프레임워크
 **목표**: 350줄 이상, 구체적 사례 포함
@@ -34,7 +34,7 @@
 - [ ] 전통 소프트웨어 vs. AI 생성 소프트웨어 비교
 - [ ] "코드는 소모품" 개념 심화
 
-### 1-3. 코드 리뷰와 품질 관리 (`75-code-review.qmd`)
+### 1-3. 코드 리뷰와 품질 관리 (`p1-review.qmd`)
 
 **현재**: 139줄, 보안 감사 기본
 **목표**: 400줄 이상, AI 코드 품질 관리 체계
@@ -45,7 +45,7 @@
 - [ ] 실전 코드 리뷰 사례 (Before/After)
 - [ ] 테스트 전략: AI 코드에 대한 신뢰 구축
 
-### 1-4. 개발자의 미래 (`77-developer-future.qmd`)
+### 1-4. 개발자의 미래 (`p1-future.qmd`)
 
 **현재**: 165줄, 역할 변화 기본 틀
 **목표**: 350줄 이상, 미래 개발자 역량 로드맵
@@ -82,10 +82,10 @@
 
 ### 2-3. IDE 개요 및 Positron 보강
 
-- [ ] `ide.qmd` 보강: IDE 선택 기준 매트릭스, AI IDE 비교표
-- [ ] `ide_positron.qmd` 보강: 실전 사용법, R/Python 전환 워크플로우
+- [ ] `p2-intro.qmd` 보강: IDE 선택 기준 매트릭스, AI IDE 비교표
+- [ ] `p2-positron.qmd` 보강: 실전 사용법, R/Python 전환 워크플로우
 
-### 2-4. Docker 챕터 보강 (`docker_concept.qmd`)
+### 2-4. Docker 챕터 보강 (`p2-docker.qmd`)
 
 - [ ] Dockerfile 작성 실전 예제 추가
 - [ ] Docker Compose 기본 활용

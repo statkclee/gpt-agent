@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380">
+  <defs>
+    <style>
+      .tufte-title { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 18px; fill: #222; font-weight: bold; }
+      .tufte-subtitle { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 13px; fill: #666; }
+      .tufte-label { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 14px; fill: #333; font-weight: bold; }
+      .tufte-text { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 11px; fill: #444; }
+      .tufte-small { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 10px; fill: #666; }
+      .tufte-date { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 10px; fill: #999; }
+      .tufte-code { font-family: 'Courier New', Courier, monospace; font-size: 10px; fill: #555; }
+      .tufte-box { fill: #f9f9f9; stroke: #999; stroke-width: 1; }
+      .tufte-box-hl { fill: #f0f0f0; stroke: #555; stroke-width: 1.5; }
+      .tufte-line { stroke: #999; stroke-width: 1.5; }
+      .tufte-arrow { fill: #666; }
+      .era-label { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 11px; fill: #888; font-style: italic; }
+      .acronym { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 10px; fill: #777; }
+    </style>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" class="tufte-arrow"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="380" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" class="tufte-title">글쓰기 패러다임의 세 번의 전환</text>
+  <text x="450" y="48" text-anchor="middle" class="tufte-subtitle">보이는 대로 → 의미하는 대로 → 의도하는 대로</text>
+
+  <!-- Box 1: WYSIWYG -->
+  <g transform="translate(30, 70)">
+    <rect x="0" y="0" width="250" height="240" class="tufte-box" rx="6"/>
+
+    <!-- Header -->
+    <rect x="0" y="0" width="250" height="42" fill="#e8e8e8" stroke="#999" stroke-width="1" rx="6"/>
+    <rect x="0" y="30" width="250" height="12" fill="#e8e8e8" stroke="none"/>
+    <text x="125" y="20" text-anchor="middle" class="tufte-label" font-size="15">WYSIWYG</text>
+    <text x="125" y="36" text-anchor="middle" class="acronym">What You See Is What You Get</text>
+
+    <!-- Content -->
+    <text x="20" y="62" class="tufte-text" font-weight="bold">보이는 대로 얻는다</text>
+    <text x="20" y="80" class="tufte-date">1974 Xerox PARC Bravo ~</text>
+
+    <line x1="15" y1="90" x2="235" y2="90" stroke="#eee"/>
+
+    <text x="20" y="108" class="tufte-small">포맷: 바이너리 (.hwp, .docx)</text>
+    <text x="20" y="123" class="tufte-small">편집: GUI 직접 조작</text>
+    <text x="20" y="138" class="tufte-small">협업: diff/merge 불가</text>
+    <text x="20" y="153" class="tufte-small">자동화: 수동 반복</text>
+
+    <line x1="15" y1="163" x2="235" y2="163" stroke="#eee"/>
+
+    <text x="20" y="180" class="tufte-text" font-weight="bold">붕괴시킨 비용:</text>
+    <text x="20" y="196" class="tufte-text">진입 장벽 (비전문가 접근)</text>
+
+    <text x="20" y="220" class="tufte-small" font-style="italic">대표: Word, HWP, Google Docs</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <g transform="translate(283, 190)">
+    <line x1="0" y1="0" x2="40" y2="0" class="tufte-line" marker-end="url(#arr)"/>
+    <text x="20" y="-8" text-anchor="middle" class="tufte-date">한계 축적</text>
+  </g>
+
+  <!-- Box 2: WYSIWYM -->
+  <g transform="translate(325, 70)">
+    <rect x="0" y="0" width="250" height="240" class="tufte-box" rx="6"/>
+
+    <!-- Header -->
+    <rect x="0" y="0" width="250" height="42" fill="#e0e0e0" stroke="#999" stroke-width="1" rx="6"/>
+    <rect x="0" y="30" width="250" height="12" fill="#e0e0e0" stroke="none"/>
+    <text x="125" y="20" text-anchor="middle" class="tufte-label" font-size="15">WYSIWYM</text>
+    <text x="125" y="36" text-anchor="middle" class="acronym">What You See Is What You Mean</text>
+
+    <!-- Content -->
+    <text x="20" y="62" class="tufte-text" font-weight="bold">의미하는 대로 표현한다</text>
+    <text x="20" y="80" class="tufte-date">1980 Scribe → 2004 Markdown ~</text>
+
+    <line x1="15" y1="90" x2="235" y2="90" stroke="#eee"/>
+
+    <text x="20" y="108" class="tufte-small">포맷: 플레인 텍스트 (.md, .qmd)</text>
+    <text x="20" y="123" class="tufte-small">편집: 의미/표현 분리</text>
+    <text x="20" y="138" class="tufte-small">협업: Git diff/merge 가능</text>
+    <text x="20" y="153" class="tufte-small">자동화: CI/CD 파이프라인</text>
+
+    <line x1="15" y1="163" x2="235" y2="163" stroke="#eee"/>
+
+    <text x="20" y="180" class="tufte-text" font-weight="bold">붕괴시킨 비용:</text>
+    <text x="20" y="196" class="tufte-text">편집 비용 (자동 변환)</text>
+
+    <text x="20" y="220" class="tufte-small" font-style="italic">대표: Markdown, LaTeX, Quarto</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <g transform="translate(578, 190)">
+    <line x1="0" y1="0" x2="40" y2="0" class="tufte-line" marker-end="url(#arr)"/>
+    <text x="20" y="-8" text-anchor="middle" class="tufte-date">AI 등장</text>
+  </g>
+
+  <!-- Box 3: WYAIWYM -->
+  <g transform="translate(620, 70)">
+    <rect x="0" y="0" width="250" height="240" class="tufte-box-hl" rx="6"/>
+
+    <!-- Header -->
+    <rect x="0" y="0" width="250" height="42" fill="#d5d5d5" stroke="#555" stroke-width="1.5" rx="6"/>
+    <rect x="0" y="30" width="250" height="12" fill="#d5d5d5" stroke="none"/>
+    <text x="125" y="20" text-anchor="middle" class="tufte-label" font-size="15">WYAIWYM</text>
+    <text x="125" y="36" text-anchor="middle" class="acronym">What You Aim Is What You Mean</text>
+
+    <!-- Content -->
+    <text x="20" y="62" class="tufte-text" font-weight="bold">의도하는 대로 생성된다</text>
+    <text x="20" y="80" class="tufte-date">2022 ChatGPT → Claude Code ~</text>
+
+    <line x1="15" y1="90" x2="235" y2="90" stroke="#eee"/>
+
+    <text x="20" y="108" class="tufte-small">포맷: 자연어 프롬프트 + .qmd</text>
+    <text x="20" y="123" class="tufte-small">편집: 의도 명세 → AI 생성</text>
+    <text x="20" y="138" class="tufte-small">협업: AI Co-Authored-By</text>
+    <text x="20" y="153" class="tufte-small">자동화: 에이전트 파이프라인</text>
+
+    <line x1="15" y1="163" x2="235" y2="163" stroke="#eee"/>
+
+    <text x="20" y="180" class="tufte-text" font-weight="bold">붕괴시킨 비용:</text>
+    <text x="20" y="196" class="tufte-text">생성 비용 (50-100배 가속)</text>
+
+    <text x="20" y="220" class="tufte-small" font-style="italic">대표: Claude Code, Cursor + Quarto</text>
+  </g>
+
+  <!-- Bottom: Role evolution -->
+  <g transform="translate(0, 335)">
+    <text x="155" y="0" text-anchor="middle" class="tufte-small">저자 역할: 타이피스트</text>
+    <text x="450" y="0" text-anchor="middle" class="tufte-small">저자 역할: 편집자</text>
+    <text x="745" y="0" text-anchor="middle" class="tufte-small" font-weight="bold">저자 역할: 설계자(Architect)</text>
+  </g>
+
+  <!-- Bottom line -->
+  <line x1="60" y1="355" x2="860" y2="355" stroke="#eee"/>
+  <text x="450" y="373" text-anchor="middle" class="era-label">Writer → Editor → Architect → Orchestrator</text>
+
+</svg>
