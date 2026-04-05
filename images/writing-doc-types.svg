@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420">
+  <defs>
+    <style>
+      .tufte-title { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 18px; fill: #222; font-weight: bold; }
+      .tufte-subtitle { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 13px; fill: #666; }
+      .tufte-label { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 12px; fill: #333; font-weight: bold; }
+      .tufte-text { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 10.5px; fill: #444; }
+      .tufte-small { font-family: Palatino, 'Book Antiqua', Georgia, serif; font-size: 9.5px; fill: #666; }
+      .tufte-code { font-family: 'Courier New', Courier, monospace; font-size: 9px; fill: #555; }
+      .tufte-box { fill: #f9f9f9; stroke: #999; stroke-width: 1; }
+      .tufte-box-hl { fill: #f0f0f0; stroke: #555; stroke-width: 1.5; }
+    </style>
+  </defs>
+
+  <rect width="900" height="420" fill="#ffffff"/>
+
+  <text x="450" y="28" text-anchor="middle" class="tufte-title">과학기술 저작물의 8대 유형</text>
+  <text x="450" y="46" text-anchor="middle" class="tufte-subtitle">목적 → 포맷 → 도구</text>
+
+  <!-- Row 1: 4 types -->
+  <g transform="translate(20, 65)">
+    <rect x="0" y="0" width="200" height="80" class="tufte-box" rx="5"/>
+    <text x="100" y="20" text-anchor="middle" class="tufte-label">기록 (Record)</text>
+    <line x1="15" y1="27" x2="185" y2="27" stroke="#eee"/>
+    <text x="15" y="43" class="tufte-text">지식 보존 · 검색 가능성</text>
+    <text x="15" y="58" class="tufte-small">메모, 연구 노트, 회의록</text>
+    <text x="15" y="73" class="tufte-code">Markdown + Git</text>
+  </g>
+
+  <g transform="translate(235, 65)">
+    <rect x="0" y="0" width="200" height="80" class="tufte-box" rx="5"/>
+    <text x="100" y="20" text-anchor="middle" class="tufte-label">보고서 (Report)</text>
+    <line x1="15" y1="27" x2="185" y2="27" stroke="#eee"/>
+    <text x="15" y="43" class="tufte-text">반복 전달 · 매개변수화</text>
+    <text x="15" y="58" class="tufte-small">주간 보고, 분석 리포트</text>
+    <text x="15" y="73" class="tufte-code">Quarto + Params</text>
+  </g>
+
+  <g transform="translate(450, 65)">
+    <rect x="0" y="0" width="200" height="80" class="tufte-box" rx="5"/>
+    <text x="100" y="20" text-anchor="middle" class="tufte-label">학술논문 (Paper)</text>
+    <line x1="15" y1="27" x2="185" y2="27" stroke="#eee"/>
+    <text x="15" y="43" class="tufte-text">학술 출판 · 재현가능성</text>
+    <text x="15" y="58" class="tufte-small">저널 논문, 학위논문</text>
+    <text x="15" y="73" class="tufte-code">Quarto Manuscript + Typst</text>
+  </g>
+
+  <g transform="translate(665, 65)">
+    <rect x="0" y="0" width="215" height="80" class="tufte-box" rx="5"/>
+    <text x="107" y="20" text-anchor="middle" class="tufte-label">대시보드 (Dashboard)</text>
+    <line x1="15" y1="27" x2="200" y2="27" stroke="#eee"/>
+    <text x="15" y="43" class="tufte-text">분석 + 상호작용</text>
+    <text x="15" y="58" class="tufte-small">KPI 모니터링, 탐색적 분석</text>
+    <text x="15" y="73" class="tufte-code">Quarto Dashboard + OJS</text>
+  </g>
+
+  <!-- Row 2: 4 types -->
+  <g transform="translate(20, 170)">
+    <rect x="0" y="0" width="200" height="80" class="tufte-box" rx="5"/>
+    <text x="100" y="20" text-anchor="middle" class="tufte-label">증명서 (Certification)</text>
+    <line x1="15" y1="27" x2="185" y2="27" stroke="#eee"/>
+    <text x="15" y="43" class="tufte-text">법적 증빙 · 위변조 방지</text>
+    <text x="15" y="58" class="tufte-small">수료증, 성적표, 인증서</text>
+    <text x="15" y="73" class="tufte-code">Quarto Typst + PKI</text>
+  </g>
+
+  <g transform="translate(235, 170)">
+    <rect x="0" y="0" width="200" height="80" class="tufte-box" rx="5"/>
+    <text x="100" y="20" text-anchor="middle" class="tufte-label">발표자료 (Presentation)</text>
+    <line x1="15" y1="27" x2="185" y2="27" stroke="#eee"/>
+    <text x="15" y="43" class="tufte-text">설득 + 교육</text>
+    <text x="15" y="58" class="tufte-small">학회 발표, 강의 슬라이드</text>
+    <text x="15" y="73" class="tufte-code">Quarto Revealjs</text>
+  </g>
+
+  <g transform="translate(450, 170)">
+    <rect x="0" y="0" width="200" height="80" class="tufte-box" rx="5"/>
+    <text x="100" y="20" text-anchor="middle" class="tufte-label">사양서 (Specification)</text>
+    <line x1="15" y1="27" x2="185" y2="27" stroke="#eee"/>
+    <text x="15" y="43" class="tufte-text">계약 + 실행 명세</text>
+    <text x="15" y="58" class="tufte-small">API 문서, 매뉴얼</text>
+    <text x="15" y="73" class="tufte-code">OpenAPI + Quarto Web</text>
+  </g>
+
+  <g transform="translate(665, 170)">
+    <rect x="0" y="0" width="215" height="80" class="tufte-box-hl" rx="5"/>
+    <text x="107" y="20" text-anchor="middle" class="tufte-label">실행문서 (Executable)</text>
+    <line x1="15" y1="27" x2="200" y2="27" stroke="#ddd"/>
+    <text x="15" y="43" class="tufte-text">지시 + 자동화 (AI 시대 신유형)</text>
+    <text x="15" y="58" class="tufte-small">CLAUDE.md, Terraform, YAML</text>
+    <text x="15" y="73" class="tufte-code">자연어 → AI 실행</text>
+  </g>
+
+  <!-- Bottom: Complexity spectrum -->
+  <text x="450" y="290" text-anchor="middle" class="tufte-title" font-size="16">문서 복잡도 5단계 스펙트럼</text>
+
+  <g transform="translate(40, 310)">
+    <!-- Spectrum bar -->
+    <rect x="0" y="0" width="820" height="30" fill="none" stroke="#ccc" rx="4"/>
+    <rect x="0" y="0" width="120" height="30" fill="#f5f5f5" stroke="#ccc" rx="4"/>
+    <rect x="120" y="0" width="160" height="30" fill="#ececec" stroke="#ccc"/>
+    <rect x="280" y="0" width="180" height="30" fill="#e3e3e3" stroke="#ccc"/>
+    <rect x="460" y="0" width="180" height="30" fill="#dadada" stroke="#ccc"/>
+    <rect x="640" y="0" width="180" height="30" fill="#d0d0d0" stroke="#ccc" rx="4"/>
+
+    <text x="60" y="20" text-anchor="middle" class="tufte-small" font-weight="bold">Lv.0 메모</text>
+    <text x="200" y="20" text-anchor="middle" class="tufte-small" font-weight="bold">Lv.1 단순 문서</text>
+    <text x="370" y="20" text-anchor="middle" class="tufte-small" font-weight="bold">Lv.2 재현성</text>
+    <text x="550" y="20" text-anchor="middle" class="tufte-small" font-weight="bold">Lv.3 다중 출력</text>
+    <text x="730" y="20" text-anchor="middle" class="tufte-small" font-weight="bold">Lv.4 자동화+규제</text>
+
+    <!-- Tool labels below -->
+    <text x="60" y="50" text-anchor="middle" class="tufte-code">텍스트 에디터</text>
+    <text x="200" y="50" text-anchor="middle" class="tufte-code">Word / HWP</text>
+    <text x="370" y="50" text-anchor="middle" class="tufte-code">Quarto 시작</text>
+    <text x="550" y="50" text-anchor="middle" class="tufte-code">Quarto + Git</text>
+    <text x="730" y="50" text-anchor="middle" class="tufte-code">Quarto + CI/CD</text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="450" y="400" text-anchor="middle" font-family="Palatino, serif" font-size="11" fill="#888" font-style="italic">복잡도가 성장할 가능성이 있다면, 처음부터 한 단계 높은 도구로 시작한다</text>
+
+</svg>

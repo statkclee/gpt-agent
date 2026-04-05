@@ -8,7 +8,7 @@
 
 <meta name="author" content="이광춘(Openai)">
 
-<title>8&nbsp; 코드 리뷰와 품질 관리 – AI 에이전트 글쓰기</title>
+<title>3&nbsp; 저자와 독자의 변환 – AI 에이전트 글쓰기</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -24,42 +24,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
 }
-</style>
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -69,8 +54,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/p1-tools.html" rel="next">
-<link href="../chapters/p1-workflow.html" rel="prev">
+<link href="../chapters/p1-paradigm.html" rel="next">
+<link href="../chapters/p0-environment.html" rel="prev">
 <link href="../images/logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -83,6 +68,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-c68594dfef9b4fb828be3ca3c7ed08e4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -137,7 +125,7 @@ ga('send', {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/p1-paradigm.html"><strong>1부</strong> AI 코딩</a></li><li class="breadcrumb-item"><a href="../chapters/p1-review.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">코드 리뷰와 품질 관리</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/p0-writing.html"><strong>도입</strong> AI 시대 글쓰기 환경</a></li><li class="breadcrumb-item"><a href="../chapters/p1-communication.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">저자와 독자의 변환</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
@@ -199,7 +187,7 @@ ga('send', {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/p1-communication.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/p1-communication.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">저자와 독자의 변환</span></span></a>
   </div>
 </li>
@@ -240,7 +228,7 @@ ga('send', {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/p1-review.html" class="sidebar-item-text sidebar-link active">
+  <a href="../chapters/p1-review.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">코드 리뷰와 품질 관리</span></span></a>
   </div>
 </li>
@@ -344,21 +332,30 @@ ga('send', {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#sec-ai-code-risks" id="toc-sec-ai-code-risks" class="nav-link active" data-scroll-target="#sec-ai-code-risks"><span class="header-section-number">8.1</span> AI 코드의 위험성</a></li>
-  <li><a href="#sec-security-audit" id="toc-sec-security-audit" class="nav-link" data-scroll-target="#sec-security-audit"><span class="header-section-number">8.2</span> 보안 감사 체크리스트</a></li>
-  <li><a href="#sec-review-checklist" id="toc-sec-review-checklist" class="nav-link" data-scroll-target="#sec-review-checklist"><span class="header-section-number">8.3</span> 코드 리뷰 체크리스트</a></li>
-  <li><a href="#sec-static-analysis" id="toc-sec-static-analysis" class="nav-link" data-scroll-target="#sec-static-analysis"><span class="header-section-number">8.4</span> 정적 분석 도구</a></li>
+  <li><a href="#sec-comm-quadrant" id="toc-sec-comm-quadrant" class="nav-link active" data-scroll-target="#sec-comm-quadrant"><span class="header-section-number">3.1</span> 저자 × 독자: 4분면 프레임워크</a>
+  <ul class="collapse">
+  <li><a href="#인간-인간-전통-문서" id="toc-인간-인간-전통-문서" class="nav-link" data-scroll-target="#인간-인간-전통-문서"><span class="header-section-number">3.1.1</span> 인간 → 인간: 전통 문서</a></li>
+  <li><a href="#기계-인간-ai-생성-문서" id="toc-기계-인간-ai-생성-문서" class="nav-link" data-scroll-target="#기계-인간-ai-생성-문서"><span class="header-section-number">3.1.2</span> 기계 → 인간: AI 생성 문서</a></li>
+  <li><a href="#인간-기계-실행-문서" id="toc-인간-기계-실행-문서" class="nav-link" data-scroll-target="#인간-기계-실행-문서"><span class="header-section-number">3.1.3</span> 인간 → 기계: 실행 문서</a></li>
+  <li><a href="#기계-기계-자동-교환" id="toc-기계-기계-자동-교환" class="nav-link" data-scroll-target="#기계-기계-자동-교환"><span class="header-section-number">3.1.4</span> 기계 → 기계: 자동 교환</a></li>
+  </ul></li>
+  <li><a href="#sec-comm-spectrum" id="toc-sec-comm-spectrum" class="nav-link" data-scroll-target="#sec-comm-spectrum"><span class="header-section-number">3.2</span> 문서 유형 스펙트럼</a></li>
+  <li><a href="#sec-comm-ai-coding" id="toc-sec-comm-ai-coding" class="nav-link" data-scroll-target="#sec-comm-ai-coding"><span class="header-section-number">3.3</span> 4분면과 AI 코딩</a>
+  <ul class="collapse">
+  <li><a href="#코딩-세션의-4분면-순환" id="toc-코딩-세션의-4분면-순환" class="nav-link" data-scroll-target="#코딩-세션의-4분면-순환"><span class="header-section-number">3.3.1</span> 코딩 세션의 4분면 순환</a></li>
+  <li><a href="#문서-판단력-ai가-대신할-수-없는-것" id="toc-문서-판단력-ai가-대신할-수-없는-것" class="nav-link" data-scroll-target="#문서-판단력-ai가-대신할-수-없는-것"><span class="header-section-number">3.3.2</span> 문서 판단력: AI가 대신할 수 없는 것</a></li>
+  </ul></li>
   <li><a href="#생각해볼-점" id="toc-생각해볼-점" class="nav-link" data-scroll-target="#생각해볼-점">생각해볼 점</a></li>
   <li><a href="#프로젝트" id="toc-프로젝트" class="nav-link" data-scroll-target="#프로젝트">프로젝트</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/statkclee/gpt-agent/edit/main/chapters/p1-review.qmd" class="toc-action"><i class="bi bi-github"></i>편집</a></li><li><a href="https://github.com/statkclee/gpt-agent/issues/new" class="toc-action"><i class="bi empty"></i>이슈 보고</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/statkclee/gpt-agent/edit/main/chapters/p1-communication.qmd" class="toc-action"><i class="bi bi-github"></i>편집</a></li><li><a href="https://github.com/statkclee/gpt-agent/issues/new" class="toc-action"><i class="bi empty"></i>이슈 보고</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/p1-paradigm.html"><strong>1부</strong> AI 코딩</a></li><li class="breadcrumb-item"><a href="../chapters/p1-review.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">코드 리뷰와 품질 관리</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/p0-writing.html"><strong>도입</strong> AI 시대 글쓰기 환경</a></li><li class="breadcrumb-item"><a href="../chapters/p1-communication.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">저자와 독자의 변환</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-code-review" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">코드 리뷰와 품질 관리</span></span></h1>
+<h1 class="title"><span id="sec-communication" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">저자와 독자의 변환</span></span></h1>
 </div>
 
 
@@ -376,71 +373,257 @@ ga('send', {
 
 
 <p> </p>
-<p>AI가 생성한 코드를 무조건 신뢰해서는 안 된다. Veracode의 2025년 연구에 따르면 AI 생성 코드의 45%에 보안 취약점이 포함되어 있다. 코드 리뷰와 품질 관리는 AI 시대 개발자의 핵심 역량이다.</p>
-<section id="sec-ai-code-risks" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="sec-ai-code-risks"><span class="header-section-number">8.1</span> AI 코드의 위험성</h2>
-<p>AI 생성 코드에서 자주 발견되는 문제 유형:</p>
-<p><strong>보안 취약점</strong>: SQL 인젝션, XSS, 인증/인가 누락, 하드코딩된 시크릿 <strong>로직 오류</strong>: 엣지 케이스 처리 누락, 경계 조건 실수, 비즈니스 규칙 위반 <strong>성능 문제</strong>: 비효율적 알고리즘, N+1 쿼리, 메모리 누수 <strong>스타일 이슈</strong>: 일관성 없는 네이밍, 불필요한 주석, 복잡한 구조</p>
-<p>“Vibe Coding Hangover”라는 표현이 등장할 정도로, 검증 없이 배포된 AI 코드는 심각한 문제를 일으킨다.</p>
+<p>5,000년 전 수메르의 점토판부터 2025년 ChatGPT의 응답까지, 문서의 본질은 <strong>저자가 독자에게 정보를 전달하는 행위</strong>다. 그런데 저자와 독자가 반드시 인간이어야 할까?</p>
+<p>전통적 문서는 인간이 쓰고 인간이 읽었다. 편지, 보고서, 논문, 매뉴얼—모두 사람이 작성하고 사람이 해석하는 구조였다. 그러나 1968년 EDI(Electronic Data Interchange)가 등장하면서 <strong>기계가 기계에게 보내는 문서</strong>가 탄생했다. 주문서, 송장, 배송 명세서가 사람의 개입 없이 컴퓨터 간에 자동 교환되었다.</p>
+<p>2022년 ChatGPT의 등장은 나머지 두 사분면을 열었다. <strong>기계가 인간을 위해 문서를 작성</strong>하고(AI 보고서, 자동 뉴스), <strong>인간이 기계를 위해 문서를 작성</strong>한다(프롬프트, CLAUDE.md, Terraform). “누가 쓰고 누가 읽는가?”—이 질문이 AI 시대 문서의 첫 번째 좌표가 되었다<span class="citation" data-cites="Glushko2005"><a href="references.html#ref-Glushko2005" role="doc-biblioref">[1]</a></span>.</p>
+<section id="sec-comm-quadrant" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="sec-comm-quadrant"><span class="header-section-number">3.1</span> 저자 × 독자: 4분면 프레임워크</h2>
+<p> </p>
+<p>문서를 저자(Author)와 독자(Reader)의 조합으로 분류하면 네 개의 사분면이 나타난다.</p>
+<div id="fig-comm-matrix" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-comm-matrix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/comm-author-reader-matrix.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="그림&nbsp;3.1: 저자 × 독자: 문서의 새 좌표계"><img src="../images/comm-author-reader-matrix.svg" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-comm-matrix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;3.1: 저자 × 독자: 문서의 새 좌표계
+</figcaption>
+</figure>
+</div>
+<section id="인간-인간-전통-문서" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="인간-인간-전통-문서"><span class="header-section-number">3.1.1</span> 인간 → 인간: 전통 문서</h3>
+<p> </p>
+<p>수천 년간 문서의 유일한 형태였다. 저자가 생각을 정리하고, 독자가 해석한다. 소설, 학술 논문, 기술 매뉴얼, 법률 문서, 비즈니스 보고서가 모두 여기에 속한다.</p>
+<p>글루시코와 맥그래스(Glushko &amp; McGrath)는 이를 <strong>서사형 문서(Narrative Document)</strong>라 분류했다<span class="citation" data-cites="Glushko2005"><a href="references.html#ref-Glushko2005" role="doc-biblioref">[1]</a></span>. 표현(Presentation), 구조(Structure), 내용(Content)의 세 요소 중 표현과 내용의 비중이 높고, 인간의 해석이 의미를 완성한다.</p>
+<p>이 사분면의 도구 진화는 명확한 궤적을 따른다. troff(1970s) → TeX(1978) → SGML(1986) → Markdown(2004) → Quarto(2022). 매번 “구조와 표현의 분리”가 심화되었고, 저자는 내용에 더 집중할 수 있게 되었다.</p>
 </section>
-<section id="sec-security-audit" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="sec-security-audit"><span class="header-section-number">8.2</span> 보안 감사 체크리스트</h2>
-<p></p>
-<p><strong>1. 입력 검증</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 위험: 사용자 입력을 직접 SQL에 사용</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="ss">f"SELECT * FROM users WHERE name = '</span><span class="sc">{</span>user_input<span class="sc">}</span><span class="ss">'"</span>  <span class="co"># SQL Injection!</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 안전: 파라미터화된 쿼리</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"SELECT * FROM users WHERE name = ?"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>cursor.execute(query, (user_input,))</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>2. 인증과 인가</strong> - API 엔드포인트에 인증 확인이 있는가? - 권한 검사가 누락되지 않았는가? - 세션 관리가 안전한가?</p>
-<p><strong>3. 민감 정보 보호</strong> - 비밀번호, API 키가 하드코딩되지 않았는가? - 로그에 민감 정보가 기록되지 않는가? - HTTPS 사용이 강제되는가?</p>
-<p><strong>4. XSS 방어</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 위험: 사용자 입력을 직접 HTML에 삽입</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>html <span class="op">=</span> <span class="ss">f"&lt;div&gt;</span><span class="sc">{</span>user_comment<span class="sc">}</span><span class="ss">&lt;/div&gt;"</span>  <span class="co"># XSS!</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 안전: 이스케이프 처리</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> html <span class="im">import</span> escape</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>html <span class="op">=</span> <span class="ss">f"&lt;div&gt;</span><span class="sc">{</span>escape(user_comment)<span class="sc">}</span><span class="ss">&lt;/div&gt;"</span></span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="기계-인간-ai-생성-문서" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="기계-인간-ai-생성-문서"><span class="header-section-number">3.1.2</span> 기계 → 인간: AI 생성 문서</h3>
+<p> </p>
+<p>2022년 이후 급격히 성장한 사분면이다. ChatGPT, Claude, Gemini가 생성하는 텍스트, GitHub Copilot이 제안하는 코드, AI가 작성하는 뉴스 기사와 보고서가 여기에 속한다.</p>
+<p>이 사분면의 <strong>지배적 차원은 검증</strong>이다. “누가 썼는가?”보다 <strong>“이것이 맞는가?”</strong>가 핵심 질문이다. Grand View Research에 따르면 AI 콘텐츠 시장은 연 40% 이상 성장하고 있으며, GitHub은 Copilot이 제안하는 코드의 수용률이 30%에 달한다고 보고했다(2023).</p>
+<p>실무 워크플로우의 변화는 극적이다.</p>
+<div id="tbl-comm-ai-workflow" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<div aria-describedby="tbl-comm-ai-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<thead>
+<tr class="header">
+<th>단계</th>
+<th>전통 방식</th>
+<th>AI 생성 방식</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>초안 작성</td>
+<td>백지에서 6시간</td>
+<td>AI 초안 30분</td>
+</tr>
+<tr class="even">
+<td>검토/수정</td>
+<td>1시간</td>
+<td>인간 검증 2~4시간</td>
+</tr>
+<tr class="odd">
+<td><strong>총 소요</strong></td>
+<td><strong>7시간</strong></td>
+<td><strong>2.5~4.5시간 (60%↓)</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-comm-ai-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;3.1: 기계→인간 문서의 워크플로우 변화
+</figcaption>
+</figure>
+</div>
+<p>초안 작성 시간은 급감했지만 검증 시간은 오히려 늘어난다. AI가 생성한 코드의 45%에 보안 취약점이 포함된다는 Veracode(2025) 보고는 검증의 중요성을 강조한다. 인간의 역할이 “작성자”에서 “검증자”로 전환되는 것이 이 사분면의 핵심 특성이다.</p>
 </section>
-<section id="sec-review-checklist" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="sec-review-checklist"><span class="header-section-number">8.3</span> 코드 리뷰 체크리스트</h2>
-<p><strong>로직 정확성</strong> - 의도대로 동작하는가? - 엣지 케이스가 처리되는가? - 비즈니스 규칙을 준수하는가?</p>
-<p><strong>예외 처리</strong> - try-except가 적절한가? - 에러 메시지가 유용한가? - 리소스 정리(close, cleanup)가 되는가?</p>
-<p><strong>성능</strong> - 시간 복잡도가 합리적인가? - 불필요한 반복이 있는가? - 캐싱이 필요한가?</p>
-<p><strong>가독성</strong> - 변수/함수 이름이 명확한가? - 복잡한 로직에 주석이 있는가? - 코드 구조가 단순한가?</p>
+<section id="인간-기계-실행-문서" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="인간-기계-실행-문서"><span class="header-section-number">3.1.3</span> 인간 → 기계: 실행 문서</h3>
+<p> </p>
+<p><strong>읽히는 동시에 실행되는 문서</strong>가 AI 시대의 새로운 문서 유형으로 부상했다. 코드는 이미 “인간이 쓰고 기계가 읽는” 문서였지만, AI 에이전트의 등장으로 그 범위가 크게 확장되었다.</p>
+<p>CLAUDE.md가 대표적이다. 프로젝트 문서이자 동시에 AI 에이전트의 행동 규칙서다. 인간 개발자가 읽어도 프로젝트 구조를 파악할 수 있고, Claude Code가 읽으면 코딩 규칙을 따른다. 문서와 프로그램의 경계가 사라진다.</p>
+<p>실행 문서의 스펙트럼은 넓다.</p>
+<div id="tbl-comm-executable" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<div aria-describedby="tbl-comm-executable-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<thead>
+<tr class="header">
+<th>문서</th>
+<th style="text-align: center;">인간 가독성</th>
+<th style="text-align: center;">기계 실행성</th>
+<th>용도</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CLAUDE.md</td>
+<td style="text-align: center;">★★★★★</td>
+<td style="text-align: center;">★★★☆☆</td>
+<td>AI 에이전트 규칙</td>
+</tr>
+<tr class="even">
+<td>Terraform</td>
+<td style="text-align: center;">★★★★☆</td>
+<td style="text-align: center;">★★★★★</td>
+<td>인프라 정의</td>
+</tr>
+<tr class="odd">
+<td>OpenAPI 스펙</td>
+<td style="text-align: center;">★★★☆☆</td>
+<td style="text-align: center;">★★★★★</td>
+<td>API 문서+코드 생성</td>
+</tr>
+<tr class="even">
+<td>GitHub Actions</td>
+<td style="text-align: center;">★★★☆☆</td>
+<td style="text-align: center;">★★★★★</td>
+<td>CI/CD 파이프라인</td>
+</tr>
+<tr class="odd">
+<td>스마트 계약</td>
+<td style="text-align: center;">★★☆☆☆</td>
+<td style="text-align: center;">★★★★★</td>
+<td>자동 실행 계약</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-comm-executable-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;3.2: 실행 문서 스펙트럼
+</figcaption>
+</figure>
+</div>
+<p>도널드 커누스(Donald Knuth)가 1984년 제안한 문학적 프로그래밍(Literate Programming)의 TANGLE/WEAVE 패러다임— 하나의 소스에서 인간용 문서(WEAVE)와 기계용 코드(TANGLE)를 동시에 추출한다—이 40년 만에 완전히 실현된 것이다.</p>
+<p>메타프로그래밍(<a href="p1-meta.html" class="quarto-xref"><span>장 5</span></a>)의 관점에서 보면, 실행 문서는 <strong>자연어를 메타언어로 사용하는 이종 메타프로그래밍</strong>의 실천적 형태다. CLAUDE.md의 규칙이 생성될 코드의 특성을 제어하는 것은 컴파일러 플래그가 컴파일 결과를 제어하는 것과 본질이 같다.</p>
 </section>
-<section id="sec-static-analysis" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="sec-static-analysis"><span class="header-section-number">8.4</span> 정적 분석 도구</h2>
-<p></p>
-<p><strong>pylint</strong>: 스타일 가이드 준수 확인</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pylint</span> your_module.py</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>mypy</strong>: 타입 힌트 검증</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">mypy</span> your_module.py</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>bandit</strong>: 보안 취약점 탐지</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">bandit</span> <span class="at">-r</span> your_project/</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>black</strong>: 자동 코드 포맷팅</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">black</span> your_module.py</span></code></pre></div><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></div>
-<p>IDE 통합으로 실시간 린팅이 가능하다. VS Code, Positron에서는 저장 시 자동으로 검사하고 문제를 표시한다.</p>
+<section id="기계-기계-자동-교환" class="level3" data-number="3.1.4">
+<h3 data-number="3.1.4" class="anchored" data-anchor-id="기계-기계-자동-교환"><span class="header-section-number">3.1.4</span> 기계 → 기계: 자동 교환</h3>
+<p> </p>
+<p>전체 데이터 교환의 <strong>80~90%</strong>는 인간이 한 번도 보지 않는 “보이지 않는 문서”다. EDI로 시작된 기계 간 문서 교환은 API, IoT, 블록체인으로 확장되어 현대 디지털 인프라의 근간을 이룬다.</p>
+<div id="tbl-comm-m2m-scale" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<div aria-describedby="tbl-comm-m2m-scale-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<thead>
+<tr class="header">
+<th>채널</th>
+<th>규모</th>
+<th>비고</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>API 호출</td>
+<td>연 1.7조 건</td>
+<td>REST, gRPC, GraphQL</td>
+</tr>
+<tr class="even">
+<td>IoT 기기</td>
+<td>170억+ 대</td>
+<td>MQTT, CoAP 프로토콜</td>
+</tr>
+<tr class="odd">
+<td>블록체인 트랜잭션</td>
+<td>일 15억 건</td>
+<td>스마트 계약 자동 실행</td>
+</tr>
+<tr class="even">
+<td>DNS 쿼리</td>
+<td>초당 1.88억 건</td>
+<td>인터넷 기본 인프라</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-comm-m2m-scale-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;3.3: 기계→기계 문서 교환 규모
+</figcaption>
+</figure>
+</div>
+<p>한국의 <strong>전자세금계산서</strong>는 4분면을 모두 관통하는 사례다. 사업자(인간)가 발행 → 시스템(기계)이 전송 → 국세청 시스템(기계)이 검증 → 세무 담당자(인간)가 결과를 확인한다. XML+PKI(공개키 기반 인프라)로 구성된 전자세금계산서는 2011년 의무화되었고, 2023년 매출 1억 이상 모든 사업자로 확대되었다.</p>
+<p>EDI(1968)에서 시작된 기계 간 문서 교환의 다음 단계는 <strong>AI 에이전트 간 통신</strong>이다. Claude Code의 도구 호출(tool calling)이 이미 이 형태를 취하고 있다. AI 에이전트가 다른 AI 에이전트에게 JSON 형식의 요청을 보내고 응답을 받는 구조는 EDI의 직계 후손이다.</p>
+</section>
+</section>
+<section id="sec-comm-spectrum" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="sec-comm-spectrum"><span class="header-section-number">3.2</span> 문서 유형 스펙트럼</h2>
+<p> </p>
+<p>글루시코와 맥그래스의 문서 공학(Document Engineering) 프레임워크는 문서를 서사형(Narrative) ↔︎ 트랜잭션형(Transactional)의 연속체(spectrum)로 파악한다<span class="citation" data-cites="Glushko2005"><a href="references.html#ref-Glushko2005" role="doc-biblioref">[1]</a></span>. 하이브리드(Hybrid) 문서는 양쪽 특성을 모두 갖는다.</p>
+<div id="fig-comm-spectrum" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-comm-spectrum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../images/comm-doc-spectrum.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="그림&nbsp;3.2: 문서 유형 스펙트럼과 진화"><img src="../images/comm-doc-spectrum.svg" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-comm-spectrum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;3.2: 문서 유형 스펙트럼과 진화
+</figcaption>
+</figure>
+</div>
+<p><strong>서사형 문서</strong>는 인간이 읽고 해석한다. 표현과 내용이 핵심이며, 구조는 저자의 논리를 따른다. 소설, 논문, 매뉴얼이 대표적이다.</p>
+<p><strong>트랜잭션형 문서</strong>는 기계가 자동 처리한다. 구조가 핵심이며, 스키마에 맞지 않으면 거부된다. EDI 메시지, API 페이로드, 전자세금계산서가 여기에 속한다.</p>
+<p><strong>하이브리드 문서</strong>는 텍스트, 코드, 데이터가 공존한다. Jupyter 노트북, Quarto 문서, 재현가능 논문이 대표적이다. 커누스의 문학적 프로그래밍(1984)에서 시작되어 Sweave(2002), knitr(2012), Jupyter(2014)를 거쳐 Quarto(2022)에서 세 유형이 수렴했다.</p>
+<p>세 유형은 동일한 3단계 진화 경로를 따랐다.</p>
+<ol type="1">
+<li><strong>WYSIWYG 단계</strong>: 보이는 대로 편집 (HWP, Word, Excel)</li>
+<li><strong>도메인 마크업 단계</strong>: 구조와 표현의 분리 (TeX, XML, Markdown)</li>
+<li><strong>텍스트+AI 단계</strong>: AI가 생성하고 검증하는 문서 (Quarto+LLM)</li>
+</ol>
+<p>교차 영향도 중요하다. SGML(서사형)이 XML(트랜잭션형)의 직계 조상이 되었고, 트랜잭션형의 스키마 사고(스키마→인스턴스)가 하이브리드에 유입되어 매개변수 문서(parameterized document)를 낳았다.</p>
+</section>
+<section id="sec-comm-ai-coding" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="sec-comm-ai-coding"><span class="header-section-number">3.3</span> 4분면과 AI 코딩</h2>
+<p> </p>
+<p>4분면 프레임워크는 AI 코딩의 일상적 워크플로우를 설명하는 유용한 렌즈를 제공한다.</p>
+<section id="코딩-세션의-4분면-순환" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="코딩-세션의-4분면-순환"><span class="header-section-number">3.3.1</span> 코딩 세션의 4분면 순환</h3>
+<p>AI 에이전트와 함께 코딩하는 개발자의 하루는 4분면을 끊임없이 순환한다.</p>
+<ol type="1">
+<li><p><strong>인간→기계</strong>: 개발자가 프롬프트를 작성하고, CLAUDE.md에 규칙을 정의한다. “사용자 인증 API를 FastAPI로 구현해줘”라는 자연어 지시가 실행 문서가 된다.</p></li>
+<li><p><strong>기계→인간</strong>: AI가 코드를 생성하고 설명을 덧붙인다. 개발자는 생성된 코드를 읽고 검증한다.</p></li>
+<li><p><strong>기계→기계</strong>: AI가 테스트를 실행하고, 린터를 돌리고, 빌드 파이프라인을 트리거한다. JSON 형식의 도구 호출이 오간다.</p></li>
+<li><p><strong>인간→인간</strong>: 개발자가 코드 리뷰를 요청하고, PR 설명을 작성하고, 문서를 업데이트한다.</p></li>
+</ol>
+</section>
+<section id="문서-판단력-ai가-대신할-수-없는-것" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="문서-판단력-ai가-대신할-수-없는-것"><span class="header-section-number">3.3.2</span> 문서 판단력: AI가 대신할 수 없는 것</h3>
+<p>AI가 초안을 작성해주더라도, <strong>“어떤 종류의 문서를 만들 것인가”</strong>는 인간이 결정해야 한다. 목적(why), 독자(who: 인간인가 기계인가), 복잡도(how much)를 판단하여 도구를 선택하는 능력—이것이 AI 시대의 <strong>문서 판단력(Document Literacy)</strong>이다.</p>
+<p>“4분면 중 어디에 속하는 문서인가?”라는 질문을 던지는 것이 그 시작이다.</p>
+<ul>
+<li>README.md → 인간→인간 (개발자가 읽는 안내서)</li>
+<li>CLAUDE.md → 인간→기계 (AI 에이전트가 실행하는 규칙서)</li>
+<li>ChatGPT 응답 → 기계→인간 (인간이 검증할 초안)</li>
+<li>API 명세 → 인간→기계 + 기계→기계 (양면 문서)</li>
+<li>전자세금계산서 → 4분면 전체를 관통</li>
+</ul>
+</section>
 </section>
 <section id="생각해볼-점" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="생각해볼-점">생각해볼 점</h2>
-<p>45%라는 보안 취약점 비율은 AI 코드 검증이 선택이 아닌 필수임을 보여준다. 빠른 코드 생성은 장점이지만, 검증 없는 속도는 위험하다. “AI는 속도(실행)를 제공하고, 인간은 안전(검증)을 제공한다”는 원칙을 잊지 말아야 한다.</p>
-<p>코드 리뷰 체크리스트와 정적 분석 도구는 검증 프로세스를 체계화한다. 보안, 로직, 성능, 가독성을 순차적으로 점검하는 습관이 필요하다. 도구는 기계적 오류를 찾아주지만, 비즈니스 로직의 정확성은 인간이 판단해야 한다.</p>
-<p>숙련된 개발자와 초보자의 차이는 코드를 빠르게 읽고 문제를 파악하는 속도에 있다. AI 시대에도 코드 리뷰 능력은 여전히 핵심 역량이다. 단, 목적이 “직접 코드를 작성”에서 “AI 출력물을 평가”로 바뀌었을 뿐이다.</p>
+<p>문서를 “누가 쓰고 누가 읽는가”로 분류하면 네 개의 사분면이 나타난다. 인간→인간(전통 문서), 기계→인간(AI 생성), 인간→기계(실행 문서), 기계→기계(자동 교환).</p>
+<p>전통적으로 문서는 좌상단(인간→인간)에만 존재했다. EDI(1968)가 우하단(기계→기계)을 열었고, ChatGPT(2022)가 나머지 두 사분면을 활성화했다. 현재 전체 데이터 교환의 80~90%는 기계→기계이며, AI 콘텐츠 시장은 연 40% 이상 성장하고 있다.</p>
+<p>AI 코딩에서 이 프레임워크는 실전적 의미를 갖는다. CLAUDE.md는 인간→기계 사분면의 핵심 문서이고, AI 생성 코드는 기계→인간 사분면에서 검증을 기다리는 초안이다. 프롬프트 작성은 “인간→기계 문서 작성” 능력이며, 코드 리뷰는 “기계→인간 문서 검증” 능력이다.</p>
+<p>“어떤 사분면의 문서를 만들 것인가?”—이 질문에 답할 수 있는 문서 판단력이 AI 시대 프로그래머의 기초 역량이 된다.</p>
 <p> </p>
 </section>
 <section id="프로젝트" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="프로젝트">프로젝트</h2>
 <p></p>
 <ol type="1">
-<li>AI에게 로그인 기능을 요청하고, 생성된 코드에서 보안 취약점을 찾아라. SQL 인젝션, 평문 비밀번호 저장 등을 확인한다.</li>
-<li>bandit과 pylint를 AI 생성 코드에 실행하고, 발견된 문제를 수정하라.</li>
-<li>동일한 기능을 두 번 요청하여 서로 다른 구현을 받아라. 어느 쪽이 더 안전하고 효율적인지 비교 분석하라.</li>
-<li>코드 리뷰 체크리스트를 만들고, 앞으로 AI 생성 코드를 검토할 때 사용하라.</li>
+<li><p>자신의 일상 업무에서 생산하는 문서를 4분면으로 분류해보라. 인간→인간, 기계→인간, 인간→기계, 기계→기계 각 사분면에 해당하는 문서를 최소 2개씩 나열하라.</p></li>
+<li><p>CLAUDE.md 또는 <code>.cursorrules</code> 파일을 “인간→기계 문서”로 바라보고, AI 에이전트의 코드 생성 결과에 미치는 영향을 실험하라. 규칙의 유무에 따른 차이를 비교하라.</p></li>
+<li><p>전자세금계산서의 처리 흐름을 4분면 관점에서 분석하라. 어느 단계에서 인간→기계, 기계→기계, 기계→인간 전환이 일어나는가?</p></li>
+<li><p>AI가 생성한 코드(기계→인간)를 검증하는 나만의 체크리스트를 만들어보라. 보안, 성능, 가독성, 정확성 각 차원에서 무엇을 확인해야 하는가?</p></li>
 </ol>
 
 
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Glushko2005" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">R. J. Glushko 와/과 T. McGrath, <em>Document Engineering: Analyzing and Designing Documents for Business Informatics and Web Services</em>. Cambridge, MA: MIT Press, 2005.</div>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -885,13 +1068,13 @@ ga('send', {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/p1-workflow.html" class="pagination-link" aria-label="AI 코딩 실전 워크플로우">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">AI 코딩 실전 워크플로우</span></span>
+      <a href="../chapters/p0-environment.html" class="pagination-link" aria-label="소프트웨어 3.0 시대">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">소프트웨어 3.0 시대</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/p1-tools.html" class="pagination-link" aria-label="AI 도구 생태계">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">AI 도구 생태계</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/p1-paradigm.html" class="pagination-link" aria-label="재사용에서 재생성으로">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">재사용에서 재생성으로</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -903,12 +1086,44 @@ ga('send', {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/statkclee/gpt-agent/edit/main/chapters/p1-review.qmd" class="toc-action"><i class="bi bi-github"></i>편집</a></li><li><a href="https://github.com/statkclee/gpt-agent/issues/new" class="toc-action"><i class="bi empty"></i>이슈 보고</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/statkclee/gpt-agent/edit/main/chapters/p1-communication.qmd" class="toc-action"><i class="bi bi-github"></i>편집</a></li><li><a href="https://github.com/statkclee/gpt-agent/issues/new" class="toc-action"><i class="bi empty"></i>이슈 보고</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Built with <a href="https://quarto.org/">Quarto</a> · Powered by AI Agents</p>
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

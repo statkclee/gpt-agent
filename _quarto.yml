@@ -44,6 +44,8 @@ book:
       chapters:
         - chapters/p0-writing.qmd
         - chapters/p0-environment.qmd
+        - chapters/p0-documents.qmd
+        - chapters/p1-communication.qmd
 
     - part: "**1부** AI 코딩"
       chapters:
