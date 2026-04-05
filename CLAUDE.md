@@ -20,14 +20,15 @@
 
 모든 챕터는 `chapters/` 폴더에 위치한다. 이미지 참조 시 `../images/` 경로를 사용한다.
 
-### 도입: 글쓰기의 대전환
+### 도입: AI 시대 글쓰기 환경
 
 - `p0-writing.qmd` — 도구가 사고를 바꾸는 글쓰기
+- `p0-environment.qmd` — 소프트웨어 3.0 시대
 
-### 1부: AI 시대 프로그래밍
+### 1부: AI 코딩
 
-- `p1-intro.qmd` — AI 시대 프로그래밍의 도래
 - `p1-paradigm.qmd` — 재사용에서 재생성으로
+- `p1-meta.qmd` — 메타프로그래밍
 - `p1-context.qmd` — 프롬프트에서 컨텍스트로
 - `p1-workflow.qmd` — AI 코딩 실전 워크플로우
 - `p1-review.qmd` — 코드 리뷰와 품질 관리
