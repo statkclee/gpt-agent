@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" font-family="Palatino Linotype, Palatino, Georgia, serif">
+  <rect width="900" height="360" fill="#fafafa" rx="4"/>
+  <text x="450" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">프롬프트에서 컨텍스트로 -- 진화의 타임라인</text>
+  <line x1="100" y1="50" x2="800" y2="50" stroke="#999" stroke-width="0.5"/>
+  <defs>
+    <marker id="arC" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Timeline -->
+  <line x1="80" y1="110" x2="820" y2="110" stroke="#888" stroke-width="2"/>
+
+  <!-- 2022 -->
+  <circle cx="130" cy="110" r="6" fill="#aaa"/>
+  <text x="130" y="95" text-anchor="middle" font-size="12" font-weight="bold" fill="#888">2022</text>
+  <text x="130" y="135" text-anchor="middle" font-size="10" fill="#999">프롬프트</text>
+  <text x="130" y="148" text-anchor="middle" font-size="10" fill="#999">엔지니어링 등장</text>
+
+  <!-- 2023 -->
+  <circle cx="280" cy="110" r="6" fill="#888"/>
+  <text x="280" y="95" text-anchor="middle" font-size="12" font-weight="bold" fill="#777">2023</text>
+  <text x="280" y="135" text-anchor="middle" font-size="10" fill="#888">Chain-of-Thought</text>
+  <text x="280" y="148" text-anchor="middle" font-size="10" fill="#888">Few-shot</text>
+
+  <!-- 2024 -->
+  <circle cx="430" cy="110" r="7" fill="#666"/>
+  <text x="430" y="93" text-anchor="middle" font-size="12" font-weight="bold" fill="#555">2024</text>
+  <text x="430" y="135" text-anchor="middle" font-size="10" fill="#666">RAG, 메모리</text>
+  <text x="430" y="148" text-anchor="middle" font-size="10" fill="#666">llms.txt 제안</text>
+
+  <!-- 2025 -->
+  <circle cx="580" cy="110" r="8" fill="#444"/>
+  <text x="580" y="90" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">2025</text>
+  <text x="580" y="135" text-anchor="middle" font-size="11" font-weight="bold" fill="#444">컨텍스트</text>
+  <text x="580" y="150" text-anchor="middle" font-size="11" font-weight="bold" fill="#444">엔지니어링 명명</text>
+  <text x="580" y="166" text-anchor="middle" font-size="10" fill="#666">Karpathy, Lutke</text>
+
+  <!-- 2026 -->
+  <circle cx="730" cy="110" r="9" fill="#333"/>
+  <text x="730" y="88" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">2026</text>
+  <text x="730" y="135" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">하네스</text>
+  <text x="730" y="150" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">엔지니어링</text>
+  <text x="730" y="166" text-anchor="middle" font-size="10" fill="#555">에이전트 루프</text>
+
+  <!-- Three phases -->
+  <rect x="60" y="190" width="250" height="90" rx="5" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="185" y="212" text-anchor="middle" font-size="12" font-weight="bold" fill="#888">프롬프트 엔지니어링</text>
+  <text x="185" y="232" text-anchor="middle" font-size="11" fill="#999">"어떻게 물을 것인가"</text>
+  <text x="185" y="250" text-anchor="middle" font-size="10" fill="#aaa">단일 질의 최적화</text>
+  <text x="185" y="268" text-anchor="middle" font-size="10" fill="#aaa">역할 지정, 예시 제공</text>
+
+  <line x1="310" y1="235" x2="340" y2="235" stroke="#555" stroke-width="1.5" marker-end="url(#arC)"/>
+
+  <rect x="340" y="190" width="250" height="90" rx="5" fill="none" stroke="#555" stroke-width="1.5"/>
+  <text x="465" y="212" text-anchor="middle" font-size="12" font-weight="bold" fill="#444">컨텍스트 엔지니어링</text>
+  <text x="465" y="232" text-anchor="middle" font-size="11" fill="#555">"무엇을 제공할 것인가"</text>
+  <text x="465" y="250" text-anchor="middle" font-size="10" fill="#666">정보 생태계 설계</text>
+  <text x="465" y="268" text-anchor="middle" font-size="10" fill="#666">CLAUDE.md, MCP, RAG, 메모리</text>
+
+  <line x1="590" y1="235" x2="620" y2="235" stroke="#555" stroke-width="1.5" marker-end="url(#arC)"/>
+
+  <rect x="620" y="190" width="240" height="90" rx="5" fill="none" stroke="#333" stroke-width="2"/>
+  <text x="740" y="212" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">하네스 엔지니어링</text>
+  <text x="740" y="232" text-anchor="middle" font-size="11" fill="#444">"실행 인프라를 설계"</text>
+  <text x="740" y="250" text-anchor="middle" font-size="10" fill="#555">에이전트 루프, 도구 체인</text>
+  <text x="740" y="268" text-anchor="middle" font-size="10" fill="#555">가드레일, 안전 장치</text>
+
+  <!-- Bottom -->
+  <rect x="120" y="300" width="660" height="44" rx="3" fill="#f0f0f0"/>
+  <text x="450" y="318" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Karpathy: "컨텍스트 윈도우를 적절한 정보로 채우는 정교한 기술과 과학"</text>
+  <text x="450" y="336" text-anchor="middle" font-size="11" fill="#666">프롬프트(지시 최적화) → 컨텍스트(정보 생태계) → 하네스(실행 인프라)</text>
+</svg>

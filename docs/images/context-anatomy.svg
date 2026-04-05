@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" font-family="Palatino Linotype, Palatino, Georgia, serif">
+  <rect width="900" height="480" fill="#fafafa" rx="4"/>
+  <text x="450" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">컨텍스트의 해부학 -- Karpathy의 7대 구성 요소</text>
+  <line x1="100" y1="50" x2="800" y2="50" stroke="#999" stroke-width="0.5"/>
+
+  <!-- Context Window frame -->
+  <rect x="40" y="65" width="820" height="370" rx="8" fill="none" stroke="#333" stroke-width="2"/>
+  <text x="60" y="88" font-size="13" font-weight="bold" fill="#333">컨텍스트 윈도우 (Context Window)</text>
+  <text x="750" y="88" font-size="11" fill="#888" font-style="italic">= LLM의 RAM</text>
+
+  <!-- Layer 1 -->
+  <rect x="60" y="100" width="780" height="40" rx="4" fill="#444"/>
+  <text x="80" y="125" font-size="13" font-weight="bold" fill="#fff">1. 작업 설명</text>
+  <text x="400" y="125" font-size="12" fill="#ccc">시스템 프롬프트, 역할 지정, 제약 조건</text>
+  <text x="770" y="125" text-anchor="end" font-size="11" fill="#999">CLAUDE.md</text>
+
+  <!-- Layer 2 -->
+  <rect x="60" y="145" width="780" height="40" rx="4" fill="#555"/>
+  <text x="80" y="170" font-size="13" font-weight="bold" fill="#fff">2. 퓨샷 예시</text>
+  <text x="400" y="170" font-size="12" fill="#ccc">입력-출력 쌍, 원하는 행동의 구체적 시연</text>
+  <text x="770" y="170" text-anchor="end" font-size="11" fill="#aaa">에피소딕 메모리</text>
+
+  <!-- Layer 3 -->
+  <rect x="60" y="190" width="780" height="40" rx="4" fill="#666"/>
+  <text x="80" y="215" font-size="13" font-weight="bold" fill="#fff">3. RAG 검색 결과</text>
+  <text x="400" y="215" font-size="12" fill="#ddd">벡터 DB, grep, 시맨틱 검색으로 가져온 관련 문서</text>
+  <text x="770" y="215" text-anchor="end" font-size="11" fill="#bbb">의미 메모리</text>
+
+  <!-- Layer 4 -->
+  <rect x="60" y="235" width="780" height="40" rx="4" fill="#777"/>
+  <text x="80" y="260" font-size="13" font-weight="bold" fill="#fff">4. 관련 데이터</text>
+  <text x="400" y="260" font-size="12" fill="#eee">코드 파일, 이미지, CSV, API 응답 (멀티모달)</text>
+  <text x="770" y="260" text-anchor="end" font-size="11" fill="#ccc">코드베이스</text>
+
+  <!-- Layer 5 -->
+  <rect x="60" y="280" width="780" height="40" rx="4" fill="#888"/>
+  <text x="80" y="305" font-size="13" font-weight="bold" fill="#fff">5. 도구 정의</text>
+  <text x="400" y="305" font-size="12" fill="#eee">MCP 서버, Bash, 파일 읽기/쓰기, 웹 검색</text>
+  <text x="770" y="305" text-anchor="end" font-size="11" fill="#ddd">MCP</text>
+
+  <!-- Layer 6 -->
+  <rect x="60" y="325" width="780" height="40" rx="4" fill="#999"/>
+  <text x="80" y="350" font-size="13" font-weight="bold" fill="#fff">6. 상태와 히스토리</text>
+  <text x="400" y="350" font-size="12" fill="#eee">대화 이력, Git 히스토리, 작업 진행 상태</text>
+  <text x="770" y="350" text-anchor="end" font-size="11" fill="#ddd">Auto Memory</text>
+
+  <!-- Layer 7 -->
+  <rect x="60" y="370" width="780" height="40" rx="4" fill="#aaa"/>
+  <text x="80" y="395" font-size="13" font-weight="bold" fill="#fff">7. 압축/컴팩팅</text>
+  <text x="400" y="395" font-size="12" fill="#fff">오래된 메시지 요약, 토큰 절약, auto-compact</text>
+  <text x="770" y="395" text-anchor="end" font-size="11" fill="#eee">요약 미들웨어</text>
+
+  <!-- Bottom insight -->
+  <rect x="120" y="448" width="660" height="24" rx="3" fill="#f0f0f0"/>
+  <text x="450" y="464" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">컨텍스트 엔지니어링 = 7개 계층을 의도적으로 설계하고 관리하는 실천</text>
+</svg>

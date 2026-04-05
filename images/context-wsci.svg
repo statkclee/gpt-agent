@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="Palatino Linotype, Palatino, Georgia, serif">
+  <rect width="900" height="400" fill="#fafafa" rx="4"/>
+  <text x="450" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">컨텍스트 관리 4대 전략 -- Write-Select-Compress-Isolate</text>
+  <line x1="80" y1="50" x2="820" y2="50" stroke="#999" stroke-width="0.5"/>
+  <defs>
+    <marker id="arW" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Center: Context Window -->
+  <rect x="310" y="130" width="280" height="130" rx="8" fill="none" stroke="#333" stroke-width="2"/>
+  <text x="450" y="165" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">컨텍스트 윈도우</text>
+  <text x="450" y="190" text-anchor="middle" font-size="12" fill="#666">현재 세션의</text>
+  <text x="450" y="208" text-anchor="middle" font-size="12" fill="#666">작업 정보</text>
+  <text x="450" y="248" text-anchor="middle" font-size="11" fill="#999" font-style="italic">토큰 한계 존재</text>
+
+  <!-- Write (top-left) -->
+  <rect x="40" y="70" width="220" height="90" rx="5" fill="none" stroke="#555" stroke-width="1.5"/>
+  <text x="150" y="95" text-anchor="middle" font-size="14" font-weight="bold" fill="#444">Write (저장)</text>
+  <text x="60" y="118" font-size="11" fill="#666">컨텍스트 밖에 정보 기록</text>
+  <text x="60" y="136" font-size="11" fill="#888">Auto Memory, 스크래치패드</text>
+  <text x="60" y="150" font-size="11" fill="#888">PROGRESS.md, 태스크 리스트</text>
+  <line x1="260" y1="115" x2="308" y2="150" stroke="#555" stroke-width="1.2" marker-end="url(#arW)"/>
+
+  <!-- Select (top-right) -->
+  <rect x="640" y="70" width="220" height="90" rx="5" fill="none" stroke="#555" stroke-width="1.5"/>
+  <text x="750" y="95" text-anchor="middle" font-size="14" font-weight="bold" fill="#444">Select (선택)</text>
+  <text x="660" y="118" font-size="11" fill="#666">필요한 정보만 가져오기</text>
+  <text x="660" y="136" font-size="11" fill="#888">RAG, grep, Explore 에이전트</text>
+  <text x="660" y="150" font-size="11" fill="#888">시맨틱 검색, 리랭킹</text>
+  <line x1="640" y1="115" x2="592" y2="150" stroke="#555" stroke-width="1.2" marker-end="url(#arW)"/>
+
+  <!-- Compress (bottom-left) -->
+  <rect x="40" y="240" width="220" height="90" rx="5" fill="none" stroke="#555" stroke-width="1.5"/>
+  <text x="150" y="265" text-anchor="middle" font-size="14" font-weight="bold" fill="#444">Compress (압축)</text>
+  <text x="60" y="288" font-size="11" fill="#666">토큰 소비 감소</text>
+  <text x="60" y="306" font-size="11" fill="#888">auto-compact (95% 도달 시)</text>
+  <text x="60" y="320" font-size="11" fill="#888">오래된 메시지 요약 대체</text>
+  <line x1="260" y1="280" x2="308" y2="245" stroke="#555" stroke-width="1.2" marker-end="url(#arW)"/>
+
+  <!-- Isolate (bottom-right) -->
+  <rect x="640" y="240" width="220" height="90" rx="5" fill="none" stroke="#555" stroke-width="1.5"/>
+  <text x="750" y="265" text-anchor="middle" font-size="14" font-weight="bold" fill="#444">Isolate (격리)</text>
+  <text x="660" y="288" font-size="11" fill="#666">복잡한 작업 분리</text>
+  <text x="660" y="306" font-size="11" fill="#888">서브에이전트 (Explore, Plan)</text>
+  <text x="660" y="320" font-size="11" fill="#888">Agent Teams, 워크트리</text>
+  <line x1="640" y1="280" x2="592" y2="245" stroke="#555" stroke-width="1.2" marker-end="url(#arW)"/>
+
+  <!-- Cycle arrows around center -->
+  <path d="M 370 128 A 120 80 0 0 1 530 128" fill="none" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+  <path d="M 530 262 A 120 80 0 0 1 370 262" fill="none" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Bottom -->
+  <rect x="120" y="355" width="660" height="36" rx="3" fill="#f0f0f0"/>
+  <text x="450" y="371" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">에이전트 실행 루프: 생성 → Write → 다음 단계에서 Select → 윈도우 차면 Compress → 복잡하면 Isolate</text>
+  <text x="450" y="387" text-anchor="middle" font-size="11" fill="#666">출처: LangChain Context Engineering for Agents (2025)</text>
+</svg>

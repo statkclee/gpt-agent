@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" font-family="Palatino Linotype, Palatino, Georgia, serif">
+  <rect width="900" height="360" fill="#fafafa" rx="4"/>
+  <text x="450" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">3단계 코드 리뷰 파이프라인 -- AI + 정적 분석 + 인간</text>
+  <line x1="80" y1="50" x2="820" y2="50" stroke="#999" stroke-width="0.5"/>
+  <defs>
+    <marker id="arR" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- PR -->
+  <rect x="30" y="100" width="100" height="50" rx="5" fill="#333"/>
+  <text x="80" y="130" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">PR 생성</text>
+
+  <line x1="130" y1="125" x2="168" y2="125" stroke="#555" stroke-width="2" marker-end="url(#arR)"/>
+
+  <!-- Stage 1: AI Review -->
+  <rect x="170" y="70" width="200" height="180" rx="6" fill="none" stroke="#555" stroke-width="1.5"/>
+  <rect x="170" y="70" width="200" height="32" rx="6" fill="#555"/>
+  <text x="270" y="92" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">1단계: AI 자동 리뷰</text>
+  <text x="190" y="122" font-size="11" fill="#555">소요: 수 초</text>
+  <text x="190" y="142" font-size="11" fill="#666">Copilot Code Review</text>
+  <text x="190" y="160" font-size="11" fill="#666">CodeRabbit, Qodo</text>
+  <line x1="190" y1="172" x2="350" y2="172" stroke="#eee" stroke-width="0.5"/>
+  <text x="190" y="190" font-size="10" font-weight="bold" fill="#888">탐지 대상:</text>
+  <text x="190" y="206" font-size="10" fill="#999">구문 오류, 타입 불일치</text>
+  <text x="190" y="220" font-size="10" fill="#999">기본 보안, 코드 스타일</text>
+  <text x="190" y="240" font-size="10" fill="#999">중복 코드 알림</text>
+
+  <line x1="370" y1="125" x2="408" y2="125" stroke="#555" stroke-width="2" marker-end="url(#arR)"/>
+
+  <!-- Stage 2: Static Analysis -->
+  <rect x="410" y="70" width="200" height="180" rx="6" fill="none" stroke="#555" stroke-width="1.5"/>
+  <rect x="410" y="70" width="200" height="32" rx="6" fill="#666"/>
+  <text x="510" y="92" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">2단계: 정적 분석</text>
+  <text x="430" y="122" font-size="11" fill="#555">소요: 수 분</text>
+  <text x="430" y="142" font-size="11" fill="#666">CodeQL, Semgrep</text>
+  <text x="430" y="160" font-size="11" fill="#666">Bandit, Dependabot</text>
+  <line x1="430" y1="172" x2="590" y2="172" stroke="#eee" stroke-width="0.5"/>
+  <text x="430" y="190" font-size="10" font-weight="bold" fill="#888">탐지 대상:</text>
+  <text x="430" y="206" font-size="10" fill="#999">SQL 인젝션, XSS</text>
+  <text x="430" y="220" font-size="10" fill="#999">환각 의존성 (슬롭스쿼팅)</text>
+  <text x="430" y="240" font-size="10" fill="#999">CWE 기반 취약점</text>
+
+  <line x1="610" y1="125" x2="648" y2="125" stroke="#555" stroke-width="2" marker-end="url(#arR)"/>
+
+  <!-- Stage 3: Human Review -->
+  <rect x="650" y="70" width="210" height="180" rx="6" fill="none" stroke="#333" stroke-width="2"/>
+  <rect x="650" y="70" width="210" height="32" rx="6" fill="#333"/>
+  <text x="755" y="92" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">3단계: 인간 리뷰</text>
+  <text x="670" y="122" font-size="11" fill="#555">집중 영역</text>
+  <text x="670" y="142" font-size="11" fill="#666">비즈니스 로직 정확성</text>
+  <text x="670" y="160" font-size="11" fill="#666">아키텍처 결정</text>
+  <line x1="670" y1="172" x2="840" y2="172" stroke="#eee" stroke-width="0.5"/>
+  <text x="670" y="190" font-size="10" font-weight="bold" fill="#888">인간만 판단 가능:</text>
+  <text x="670" y="206" font-size="10" fill="#999">설계 의도 적합성</text>
+  <text x="670" y="220" font-size="10" fill="#999">아키텍처 드리프트</text>
+  <text x="670" y="240" font-size="10" fill="#999">비즈니스 규칙 준수</text>
+
+  <!-- Merge -->
+  <line x1="755" y1="250" x2="755" y2="278" stroke="#555" stroke-width="2" marker-end="url(#arR)"/>
+  <rect x="700" y="280" width="110" height="35" rx="5" fill="#444"/>
+  <text x="755" y="302" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">병합</text>
+
+  <!-- AI label note -->
+  <rect x="30" y="275" width="320" height="65" rx="5" fill="#f0f0f0" stroke="#ddd" stroke-width="0.5"/>
+  <text x="50" y="296" font-size="12" font-weight="bold" fill="#444">AI 생성 코드 라벨링</text>
+  <text x="50" y="316" font-size="11" fill="#666">PR에 AI 생성 표시 → 프로덕션 버그 30-40% 감소</text>
+  <text x="50" y="332" font-size="10" fill="#888">"AI 코드를 인간 코드와 같은 방식으로 리뷰하면 놓친다"</text>
+</svg>
