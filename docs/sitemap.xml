@@ -2,35 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://statkclee.github.io/gpt-agent/index.html</loc>
-    <lastmod>2026-04-05T04:43:51.030Z</lastmod>
+    <lastmod>2026-04-05T04:43:51.029Z</lastmod>
+  </url>
+  <url>
+    <loc>https://statkclee.github.io/gpt-agent/chapters/p0-why-document.html</loc>
+    <lastmod>2026-04-05T12:54:58.174Z</lastmod>
   </url>
   <url>
     <loc>https://statkclee.github.io/gpt-agent/chapters/p0-writing.html</loc>
-    <lastmod>2026-04-05T06:27:46.111Z</lastmod>
+    <lastmod>2026-04-05T06:54:16.081Z</lastmod>
   </url>
   <url>
     <loc>https://statkclee.github.io/gpt-agent/chapters/p0-environment.html</loc>
-    <lastmod>2026-04-05T04:41:08.413Z</lastmod>
+    <lastmod>2026-04-05T06:37:40.506Z</lastmod>
+  </url>
+  <url>
+    <loc>https://statkclee.github.io/gpt-agent/chapters/p0-complexity.html</loc>
+    <lastmod>2026-04-05T12:33:40.627Z</lastmod>
+  </url>
+  <url>
+    <loc>https://statkclee.github.io/gpt-agent/chapters/p0-office.html</loc>
+    <lastmod>2026-04-05T07:04:29.809Z</lastmod>
   </url>
   <url>
     <loc>https://statkclee.github.io/gpt-agent/chapters/p0-documents.html</loc>
-    <lastmod>2026-04-05T06:49:52.123Z</lastmod>
+    <lastmod>2026-04-05T06:49:52.122Z</lastmod>
   </url>
   <url>
     <loc>https://statkclee.github.io/gpt-agent/chapters/p1-communication.html</loc>
-    <lastmod>2026-04-05T06:41:40.816Z</lastmod>
+    <lastmod>2026-04-05T06:41:40.815Z</lastmod>
+  </url>
+  <url>
+    <loc>https://statkclee.github.io/gpt-agent/chapters/p1-cc-writing.html</loc>
+    <lastmod>2026-04-05T13:29:13.491Z</lastmod>
   </url>
   <url>
     <loc>https://statkclee.github.io/gpt-agent/chapters/p1-paradigm.html</loc>
-    <lastmod>2026-04-05T04:41:08.419Z</lastmod>
+    <lastmod>2026-04-05T06:01:22.947Z</lastmod>
   </url>
   <url>
     <loc>https://statkclee.github.io/gpt-agent/chapters/p1-meta.html</loc>
-    <lastmod>2026-04-05T06:06:10.918Z</lastmod>
+    <lastmod>2026-04-05T06:06:10.917Z</lastmod>
   </url>
   <url>
     <loc>https://statkclee.github.io/gpt-agent/chapters/p1-context.html</loc>
-    <lastmod>2026-04-05T04:41:08.423Z</lastmod>
+    <lastmod>2026-04-05T06:01:22.950Z</lastmod>
   </url>
   <url>
     <loc>https://statkclee.github.io/gpt-agent/chapters/p1-workflow.html</loc>
@@ -38,43 +54,43 @@
   </url>
   <url>
     <loc>https://statkclee.github.io/gpt-agent/chapters/p1-review.html</loc>
-    <lastmod>2026-04-05T04:41:08.434Z</lastmod>
+    <lastmod>2026-04-05T06:01:22.976Z</lastmod>
   </url>
   <url>
     <loc>https://statkclee.github.io/gpt-agent/chapters/p1-tools.html</loc>
-    <lastmod>2026-04-05T04:41:08.439Z</lastmod>
+    <lastmod>2026-04-05T06:01:22.908Z</lastmod>
   </url>
   <url>
     <loc>https://statkclee.github.io/gpt-agent/chapters/p1-future.html</loc>
-    <lastmod>2026-04-05T04:41:08.444Z</lastmod>
+    <lastmod>2026-04-05T06:01:22.947Z</lastmod>
   </url>
   <url>
     <loc>https://statkclee.github.io/gpt-agent/chapters/p2-intro.html</loc>
-    <lastmod>2026-04-05T04:41:08.466Z</lastmod>
+    <lastmod>2026-04-05T06:01:22.947Z</lastmod>
   </url>
   <url>
     <loc>https://statkclee.github.io/gpt-agent/chapters/p2-positron.html</loc>
-    <lastmod>2026-04-05T04:41:08.476Z</lastmod>
+    <lastmod>2026-04-05T06:01:22.947Z</lastmod>
   </url>
   <url>
     <loc>https://statkclee.github.io/gpt-agent/chapters/p2-zed.html</loc>
-    <lastmod>2026-04-05T04:41:08.486Z</lastmod>
+    <lastmod>2026-04-05T06:01:22.976Z</lastmod>
   </url>
   <url>
     <loc>https://statkclee.github.io/gpt-agent/chapters/p2-extension.html</loc>
-    <lastmod>2026-04-05T04:41:08.470Z</lastmod>
+    <lastmod>2026-04-05T06:01:22.950Z</lastmod>
   </url>
   <url>
     <loc>https://statkclee.github.io/gpt-agent/chapters/p2-setup.html</loc>
-    <lastmod>2026-04-05T04:41:08.481Z</lastmod>
+    <lastmod>2026-04-05T06:01:22.976Z</lastmod>
   </url>
   <url>
     <loc>https://statkclee.github.io/gpt-agent/chapters/p2-docker.html</loc>
-    <lastmod>2026-04-05T04:41:08.455Z</lastmod>
+    <lastmod>2026-04-05T06:01:22.976Z</lastmod>
   </url>
   <url>
     <loc>https://statkclee.github.io/gpt-agent/chapters/p2-compendium.html</loc>
-    <lastmod>2026-04-05T04:41:08.449Z</lastmod>
+    <lastmod>2026-04-05T06:01:22.976Z</lastmod>
   </url>
   <url>
     <loc>https://statkclee.github.io/gpt-agent/chapters/glossary.html</loc>
@@ -82,6 +98,6 @@
   </url>
   <url>
     <loc>https://statkclee.github.io/gpt-agent/chapters/references.html</loc>
-    <lastmod>2026-04-05T04:41:08.495Z</lastmod>
+    <lastmod>2026-04-05T04:41:08.494Z</lastmod>
   </url>
 </urlset>

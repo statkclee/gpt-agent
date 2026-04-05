@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="460" viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg" font-family="Palatino Linotype, Georgia, serif">
+  <rect width="900" height="460" fill="#FEFEFE"/>
+
+  <!-- Header -->
+  <text x="50" y="30" font-size="10.5" fill="#555" letter-spacing="1.5px">복잡도 톱니바퀴 — 문서는 한 방향으로만 복잡해진다</text>
+  <line x1="50" y1="38" x2="630" y2="38" stroke="#003876" stroke-width="1" opacity="0.2"/>
+
+  <!-- ── Step diagram (올라가는 방향: Lv.0 아래 → Lv.4 위) ── -->
+
+  <!-- Step 1: Lv.0 (bottom-left) -->
+  <rect x="55" y="200" width="100" height="30" rx="3" fill="none" stroke="#003876" stroke-width="1"/>
+  <text x="105" y="220" text-anchor="middle" font-size="11" fill="#003876" font-weight="600">Lv.0 메모</text>
+  <text x="170" y="220" font-size="10" fill="#888">"간단한 메모 하나면 되지"</text>
+
+  <!-- Arrow up-right -->
+  <line x1="105" y1="200" x2="105" y2="185" stroke="#003876" stroke-width="0.8" opacity="0.3"/>
+  <line x1="105" y1="185" x2="155" y2="185" stroke="#003876" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- Step 2: Lv.1 -->
+  <rect x="155" y="165" width="120" height="30" rx="3" fill="none" stroke="#003876" stroke-width="1"/>
+  <text x="215" y="185" text-anchor="middle" font-size="11" fill="#003876" font-weight="600">Lv.1 보고서</text>
+  <text x="290" y="185" font-size="10" fill="#888">"표 좀 넣고, 서식 맞추자"</text>
+
+  <line x1="215" y1="165" x2="215" y2="150" stroke="#003876" stroke-width="0.8" opacity="0.3"/>
+  <line x1="215" y1="150" x2="265" y2="150" stroke="#003876" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- Step 3: Lv.2 -->
+  <rect x="265" y="130" width="130" height="30" rx="3" fill="none" stroke="#003876" stroke-width="1"/>
+  <text x="330" y="150" text-anchor="middle" font-size="11" fill="#003876" font-weight="600">Lv.2 논문·기술문서</text>
+  <text x="410" y="150" font-size="10" fill="#888">"수식, 교차참조 추가"</text>
+
+  <line x1="330" y1="130" x2="330" y2="115" stroke="#003876" stroke-width="0.8" opacity="0.3"/>
+  <line x1="330" y1="115" x2="370" y2="115" stroke="#003876" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- Step 4: Lv.3 — THE CLIFF -->
+  <rect x="370" y="90" width="170" height="35" rx="3" fill="none" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="455" y="107" text-anchor="middle" font-size="11" fill="#c0392b" font-weight="600">Lv.3 절벽!</text>
+  <text x="455" y="120" text-anchor="middle" font-size="9.5" fill="#c0392b" font-style="italic">"데이터 바뀌면 전체 수작업"</text>
+
+  <line x1="455" y1="90" x2="455" y2="75" stroke="#c0392b" stroke-width="0.8" opacity="0.3"/>
+  <line x1="455" y1="75" x2="490" y2="75" stroke="#c0392b" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- Step 5: Lv.4 (top-right) -->
+  <rect x="490" y="55" width="140" height="30" rx="3" fill="none" stroke="#003876" stroke-width="1"/>
+  <text x="560" y="75" text-anchor="middle" font-size="11" fill="#003876" font-weight="600">Lv.4 자동화 파이프라인</text>
+
+  <!-- ── "최종_진짜최종" illustration ── -->
+  <line x1="50" y1="250" x2="630" y2="250" stroke="#003876" stroke-width="0.5" opacity="0.1"/>
+  <text x="55" y="270" font-size="10.5" fill="#555" letter-spacing="1.5px">익숙한 풍경 — "최종_진짜최종_v3.hwp"</text>
+
+  <text x="65" y="295" font-size="11" fill="#888" font-family="Fira Code, monospace">보고서.hwp</text>
+  <text x="65" y="313" font-size="11" fill="#888" font-family="Fira Code, monospace">보고서_수정.hwp</text>
+  <text x="65" y="331" font-size="11" fill="#888" font-family="Fira Code, monospace">보고서_최종.hwp</text>
+  <text x="65" y="349" font-size="11" fill="#c0392b" font-family="Fira Code, monospace">보고서_최종_진짜최종.hwp</text>
+  <text x="65" y="367" font-size="11" fill="#c0392b" font-weight="600" font-family="Fira Code, monospace">보고서_최종_진짜최종_v3_김과장수정.hwp</text>
+
+  <!-- Right: diagnosis -->
+  <text x="400" y="295" font-size="11.5" fill="#444">이 현상의 구조적 원인:</text>
+  <text x="410" y="315" font-size="11" fill="#555">① 버전 관리 부재 → Git 필요</text>
+  <text x="410" y="335" font-size="11" fill="#555">② 교차참조 수동 → 자동화 필요</text>
+  <text x="410" y="355" font-size="11" fill="#555">③ 재현 불가 → 코드+문서 통합 필요</text>
+  <text x="410" y="375" font-size="11" fill="#003876" font-weight="600">= Lv.1 도구로 Lv.3 문서를 쓰는 불일치</text>
+
+  <!-- ── Bottom insight ── -->
+  <line x1="50" y1="395" x2="630" y2="395" stroke="#003876" stroke-width="0.5" opacity="0.15"/>
+
+  <line x1="55" y1="415" x2="60" y2="415" stroke="#003876" stroke-width="2.5"/>
+  <text x="70" y="419" font-size="12" fill="#444">복잡도는 요구사항이 추가될 때마다 한 칸씩 올라가지만, 되돌리기는 3~5배 비용</text>
+
+  <line x1="55" y1="438" x2="60" y2="438" stroke="#003876" stroke-width="2.5"/>
+  <text x="70" y="442" font-size="12" fill="#444">복잡해질 것 같으면 처음부터 상위 도구로 시작하라 — 진입 비용은 1회, 수작업은 매번</text>
+
+  <!-- Margin notes -->
+  <text x="710" y="60" font-size="10" fill="#888" font-style="italic">톱니바퀴:</text>
+  <text x="710" y="75" font-size="10" fill="#888" font-style="italic">한 방향으로만 도는</text>
+  <text x="710" y="90" font-size="10" fill="#888" font-style="italic">톱니. 역회전 불가.</text>
+
+  <text x="710" y="140" font-size="10" fill="#888" font-style="italic">Lv.3 절벽의 실체:</text>
+  <text x="710" y="155" font-size="10" fill="#888" font-style="italic">10페이지 업데이트 = 2시간</text>
+  <text x="710" y="170" font-size="10" fill="#888" font-style="italic">50페이지 업데이트 = 20시간</text>
+  <text x="710" y="185" font-size="10" fill="#888" font-style="italic">(5배가 아니라 10배!)</text>
+
+  <text x="710" y="270" font-size="10" fill="#888" font-style="italic">한국 사례:</text>
+  <text x="710" y="285" font-size="10" fill="#888" font-style="italic">HWP → HWPX(2021)</text>
+  <text x="710" y="300" font-size="10" fill="#888" font-style="italic">전환 비용 18~24개월.</text>
+  <text x="710" y="318" font-size="10" fill="#888" font-style="italic">이제 HWPX로 잠금 —</text>
+  <text x="710" y="333" font-size="10" fill="#888" font-style="italic">되돌리기 3~5배 비용.</text>
+
+  <text x="710" y="415" font-size="10" fill="#888" font-style="italic">황금률:</text>
+  <text x="710" y="430" font-size="10" fill="#888" font-style="italic">Lv 예측 +1의 도구 선택</text>
+</svg>

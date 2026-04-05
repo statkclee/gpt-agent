@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="460" viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg" font-family="Palatino Linotype, Georgia, serif">
+  <defs>
+    <marker id="as-a" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#003876" opacity="0.5"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="460" fill="#FEFEFE"/>
+
+  <!-- 슬라이드 제목이 있으므로 SVG 타이틀 생략 -->
+
+  <!-- Panel divider -->
+  <line x1="318" y1="50" x2="318" y2="275" stroke="#003876" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Section labels -->
+  <text x="170" y="55" text-anchor="middle" font-size="11" fill="#888" font-weight="600">이전</text>
+  <!-- Arrow connecting panels -->
+  <line x1="290" y1="55" x2="340" y2="55" stroke="#003876" stroke-width="1.2" opacity="0.35" marker-end="url(#as-a)"/>
+  <text x="315" y="50" text-anchor="middle" font-size="9" fill="#003876">AI 등장</text>
+  <text x="480" y="55" text-anchor="middle" font-size="11" fill="#003876" font-weight="600">이후</text>
+
+  <!-- ═══ LEFT: Before AI ═══ -->
+
+  <!-- Lv.4 -->
+  <circle cx="62" cy="82" r="13" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="62" y="87" text-anchor="middle" font-size="12" fill="#003876" font-weight="bold">4</text>
+  <text x="84" y="78" font-size="10.5" fill="#444" font-weight="600">자동화 파이프라인</text>
+  <text x="84" y="93" font-size="9.5" fill="#888" font-style="italic">DevOps·시스템 전문가 전용</text>
+
+  <!-- Lv.3 -->
+  <circle cx="62" cy="122" r="13" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="62" y="127" text-anchor="middle" font-size="12" fill="#003876" font-weight="bold">3</text>
+  <text x="84" y="118" font-size="10.5" fill="#444" font-weight="600">데이터 분석 보고서</text>
+  <text x="84" y="133" font-size="9.5" fill="#888" font-style="italic">데이터 과학자·통계 전문가</text>
+
+  <!-- Lv.2 -->
+  <circle cx="62" cy="162" r="13" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="62" y="167" text-anchor="middle" font-size="12" fill="#003876" font-weight="bold">2</text>
+  <text x="84" y="158" font-size="10.5" fill="#444" font-weight="600">학술논문 · 기술문서</text>
+  <text x="84" y="173" font-size="9.5" fill="#888" font-style="italic">LaTeX 숙련자·기술 편집자</text>
+
+  <!-- Lv.1 -->
+  <circle cx="62" cy="202" r="13" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="62" y="207" text-anchor="middle" font-size="12" fill="#003876" font-weight="bold">1</text>
+  <text x="84" y="198" font-size="10.5" fill="#444" font-weight="600">보고서 · 제안서</text>
+  <text x="84" y="213" font-size="9.5" fill="#888" font-style="italic">누구나 (Word/HWP)</text>
+
+  <!-- Lv.0 -->
+  <circle cx="62" cy="242" r="13" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="62" y="247" text-anchor="middle" font-size="12" fill="#003876" font-weight="bold">0</text>
+  <text x="84" y="238" font-size="10.5" fill="#444" font-weight="600">메모 · 이메일 · 채팅</text>
+  <text x="84" y="253" font-size="9.5" fill="#888" font-style="italic">누구나 (스마트폰)</text>
+
+  <!-- Vertical guideline left -->
+  <line x1="62" y1="67" x2="62" y2="257" stroke="#003876" stroke-width="0.5" stroke-dasharray="2,4" opacity="0.1"/>
+
+  <!-- ═══ RIGHT: After AI ═══ -->
+
+  <!-- Lv.4 -->
+  <circle cx="355" cy="82" r="13" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="355" y="87" text-anchor="middle" font-size="12" fill="#003876" font-weight="bold">4</text>
+  <text x="377" y="78" font-size="10.5" fill="#444" font-weight="600">자동화 파이프라인</text>
+  <line x1="530" y1="76" x2="530" y2="90" stroke="#003876" stroke-width="2" opacity="0.15"/>
+  <text x="538" y="87" font-size="10" fill="#003876" font-style="italic">AI + 의도 표현으로 가능</text>
+
+  <!-- Lv.3 -->
+  <circle cx="355" cy="122" r="13" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="355" y="127" text-anchor="middle" font-size="12" fill="#003876" font-weight="bold">3</text>
+  <text x="377" y="118" font-size="10.5" fill="#444" font-weight="600">데이터 분석 보고서</text>
+  <line x1="530" y1="116" x2="530" y2="130" stroke="#003876" stroke-width="2" opacity="0.15"/>
+  <text x="538" y="127" font-size="10" fill="#003876" font-style="italic">AI + 검증 능력으로 가능</text>
+
+  <!-- Lv.2 -->
+  <circle cx="355" cy="162" r="13" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="355" y="167" text-anchor="middle" font-size="12" fill="#003876" font-weight="bold">2</text>
+  <text x="377" y="158" font-size="10.5" fill="#444" font-weight="600">학술논문 · 기술문서</text>
+  <line x1="530" y1="156" x2="530" y2="170" stroke="#003876" stroke-width="2" opacity="0.12"/>
+  <text x="538" y="167" font-size="10" fill="#888" font-style="italic">AI + 구조 설계로 가능</text>
+
+  <!-- Lv.1 -->
+  <circle cx="355" cy="202" r="13" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="355" y="207" text-anchor="middle" font-size="12" fill="#003876" font-weight="bold">1</text>
+  <text x="377" y="198" font-size="10.5" fill="#444" font-weight="600">보고서 · 제안서</text>
+  <line x1="530" y1="196" x2="530" y2="210" stroke="#003876" stroke-width="2" opacity="0.08"/>
+  <text x="538" y="207" font-size="10" fill="#888" font-style="italic">AI 자동 초안 생성</text>
+
+  <!-- Lv.0 -->
+  <circle cx="355" cy="242" r="13" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="355" y="247" text-anchor="middle" font-size="12" fill="#003876" font-weight="bold">0</text>
+  <text x="377" y="238" font-size="10.5" fill="#444" font-weight="600">메모 · 이메일 · 채팅</text>
+  <line x1="530" y1="236" x2="530" y2="250" stroke="#003876" stroke-width="2" opacity="0.05"/>
+  <text x="538" y="247" font-size="10" fill="#888" font-style="italic">AI 문법·문체 보조</text>
+
+  <!-- Vertical guideline right -->
+  <line x1="355" y1="67" x2="355" y2="257" stroke="#003876" stroke-width="0.5" stroke-dasharray="2,4" opacity="0.1"/>
+
+  <!-- ═══ BOTTOM ═══ -->
+  <line x1="50" y1="275" x2="630" y2="275" stroke="#003876" stroke-width="0.5" opacity="0.15"/>
+
+  <text x="55" y="295" font-size="11" fill="#003876" font-weight="600">김대리가 AI + Quarto로 1월을 다시 시작한다면?</text>
+
+  <text x="65" y="315" font-size="10.5" fill="#555">2월 "국장님 보고" → AI가 서식·목차 자동 생성</text>
+  <text x="380" y="315" font-size="10.5" fill="#888" font-style="italic">도구 장벽 제거</text>
+
+  <text x="65" y="333" font-size="10.5" fill="#555">4월 "매달 만들어" → Quarto params + AI 자동화</text>
+  <text x="380" y="333" font-size="10.5" fill="#888" font-style="italic">도구 장벽 제거</text>
+
+  <text x="65" y="351" font-size="10.5" fill="#c0392b">6월 "규제 준수" → AI가 해결 못함, 인간이 설계해야</text>
+  <text x="380" y="351" font-size="10.5" fill="#c0392b" font-style="italic">지배 차원은 그대로</text>
+
+  <!-- Bottom key insight -->
+  <line x1="55" y1="370" x2="60" y2="370" stroke="#003876" stroke-width="2.5"/>
+  <text x="70" y="374" font-size="12" fill="#444">AI는 도구 장벽을 낮춰 Quarto 진입을 쉽게 한다 — 하지만 지배 차원은 인간의 몫</text>
+
+  <line x1="55" y1="393" x2="60" y2="393" stroke="#003876" stroke-width="2.5"/>
+  <text x="70" y="397" font-size="12" fill="#444">"어떤 차원이 이 문서를 지배하는가?" — AI 시대에 더 중요해진 질문</text>
+
+  <!-- Margin notes -->
+  <text x="710" y="55" font-size="10" fill="#888" font-style="italic">패러다임 전환</text>
+  <text x="710" y="72" font-size="9.5" fill="#888">전문가 독점 →</text>
+  <text x="710" y="87" font-size="9.5" fill="#888">범용 접근 가능</text>
+  <text x="710" y="105" font-size="9.5" fill="#888">단, AI도 Lv.4는</text>
+  <text x="710" y="120" font-size="9.5" fill="#888">구조 설계 필요</text>
+
+  <text x="710" y="170" font-size="10" fill="#888" font-style="italic">복잡도 문해력</text>
+  <text x="710" y="187" font-size="9.5" fill="#888">도구보다 중요한</text>
+  <text x="710" y="202" font-size="9.5" fill="#888">메타 능력:</text>
+  <text x="710" y="220" font-size="9.5" fill="#888">"어떤 문서가</text>
+  <text x="710" y="235" font-size="9.5" fill="#888">필요한가"를</text>
+  <text x="710" y="250" font-size="9.5" fill="#888">판단하는 힘</text>
+
+  <text x="710" y="305" font-size="10" fill="#888" font-style="italic">AI 영향도 차등:</text>
+  <text x="710" y="322" font-size="9.5" fill="#888">Lv.3~4: 영향 최대</text>
+  <text x="710" y="337" font-size="9.5" fill="#888">(진입장벽 극적↓)</text>
+  <text x="710" y="355" font-size="9.5" fill="#888">Lv.0~1: 영향 제한</text>
+  <text x="710" y="370" font-size="9.5" fill="#888">(이미 쉬움)</text>
+
+  <line x1="50" y1="445" x2="630" y2="445" stroke="#eee" stroke-width="0.5"/>
+</svg>

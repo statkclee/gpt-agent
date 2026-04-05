@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" font-family="Palatino Linotype, Palatino, Georgia, serif">
+  <rect width="900" height="380" fill="#fafafa" rx="4"/>
+  <text x="450" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">저작 파이프라인 -- 슬래시 커맨드로 자동화</text>
+  <line x1="100" y1="50" x2="800" y2="50" stroke="#999" stroke-width="0.5"/>
+
+  <defs>
+    <marker id="ar2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Phase 1: Planning -->
+  <rect x="30" y="70" width="250" height="115" rx="5" fill="none" stroke="#555" stroke-width="1.5"/>
+  <rect x="30" y="70" width="250" height="30" rx="5" fill="#444"/>
+  <text x="155" y="90" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">1단계: 기획</text>
+
+  <text x="50" y="120" font-size="12" fill="#555">/research [주제]</text>
+  <text x="200" y="120" font-size="10" fill="#999">최신 자료 조사</text>
+  <text x="50" y="142" font-size="12" fill="#555">/outline [파일명]</text>
+  <text x="200" y="142" font-size="10" fill="#999">아웃라인 설계</text>
+  <text x="50" y="164" font-size="12" fill="#555">/new-chapter [파일]</text>
+  <text x="200" y="164" font-size="10" fill="#999">챕터 생성</text>
+
+  <!-- Arrow 1->2 -->
+  <line x1="280" y1="127" x2="318" y2="127" stroke="#555" stroke-width="1.5" marker-end="url(#ar2)"/>
+
+  <!-- Phase 2: Writing -->
+  <rect x="320" y="70" width="250" height="115" rx="5" fill="none" stroke="#555" stroke-width="1.5"/>
+  <rect x="320" y="70" width="250" height="30" rx="5" fill="#555"/>
+  <text x="445" y="90" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">2단계: 집필</text>
+
+  <text x="340" y="120" font-size="12" fill="#555">/write-chapter [파일]</text>
+  <text x="500" y="120" font-size="10" fill="#999">본문 집필</text>
+  <text x="340" y="142" font-size="12" fill="#555">/diagram [설명]</text>
+  <text x="500" y="142" font-size="10" fill="#999">SVG 생성</text>
+  <text x="340" y="164" font-size="12" fill="#555">/execute [코드]</text>
+  <text x="500" y="164" font-size="10" fill="#999">코드 검증</text>
+
+  <!-- Arrow 2->3 -->
+  <line x1="570" y1="127" x2="608" y2="127" stroke="#555" stroke-width="1.5" marker-end="url(#ar2)"/>
+
+  <!-- Phase 3: Quality -->
+  <rect x="610" y="70" width="260" height="115" rx="5" fill="none" stroke="#555" stroke-width="1.5"/>
+  <rect x="610" y="70" width="260" height="30" rx="5" fill="#666"/>
+  <text x="740" y="90" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">3단계: 품질 관리</text>
+
+  <text x="630" y="120" font-size="12" fill="#555">/review [파일]</text>
+  <text x="790" y="120" font-size="10" fill="#999">원고 리뷰</text>
+  <text x="630" y="142" font-size="12" fill="#555">/style-check [파일]</text>
+  <text x="790" y="142" font-size="10" fill="#999">문체 검수</text>
+  <text x="630" y="164" font-size="12" fill="#555">/fact-check [파일]</text>
+  <text x="790" y="164" font-size="10" fill="#999">사실 검증</text>
+
+  <!-- Phase 4 row -->
+  <!-- Arrow down from quality -->
+  <line x1="740" y1="185" x2="740" y2="210" stroke="#555" stroke-width="1.5"/>
+  <line x1="740" y1="210" x2="590" y2="210" stroke="#555" stroke-width="1"/>
+  <line x1="590" y1="210" x2="590" y2="225" stroke="#555" stroke-width="1.5" marker-end="url(#ar2)"/>
+
+  <!-- Phase 4: Evaluation -->
+  <rect x="320" y="228" width="250" height="115" rx="5" fill="none" stroke="#555" stroke-width="1.5"/>
+  <rect x="320" y="228" width="250" height="30" rx="5" fill="#777"/>
+  <text x="445" y="248" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">4단계: 평가</text>
+
+  <text x="340" y="278" font-size="12" fill="#555">/evaluate [파일]</text>
+  <text x="500" y="278" font-size="10" fill="#999">품질 정량 평가</text>
+  <text x="340" y="300" font-size="12" fill="#555">/compare [A] [B]</text>
+  <text x="500" y="300" font-size="10" fill="#999">챕터 비교</text>
+  <text x="340" y="322" font-size="12" fill="#555">/translate [파일]</text>
+  <text x="500" y="322" font-size="10" fill="#999">용어 일관성</text>
+
+  <!-- Arrow 4->5 -->
+  <line x1="570" y1="285" x2="608" y2="285" stroke="#555" stroke-width="1.5" marker-end="url(#ar2)"/>
+
+  <!-- Phase 5: Publish -->
+  <rect x="610" y="228" width="260" height="115" rx="5" fill="none" stroke="#555" stroke-width="1.5"/>
+  <rect x="610" y="228" width="260" height="30" rx="5" fill="#888"/>
+  <text x="740" y="248" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">5단계: 출판</text>
+
+  <text x="630" y="278" font-size="12" fill="#555">/render [preview]</text>
+  <text x="790" y="278" font-size="10" fill="#999">Quarto 렌더링</text>
+  <text x="630" y="300" font-size="12" fill="#555">/publish</text>
+  <text x="790" y="300" font-size="10" fill="#999">빌드+커밋+배포</text>
+  <text x="630" y="322" font-size="12" fill="#555">/update-progress</text>
+  <text x="790" y="322" font-size="10" fill="#999">진행 기록</text>
+
+  <!-- Feedback loop -->
+  <rect x="30" y="228" width="250" height="115" rx="5" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="155" y="258" text-anchor="middle" font-size="12" font-weight="bold" fill="#888">피드백 루프</text>
+  <text x="50" y="285" font-size="11" fill="#999">/status 로 현황 점검</text>
+  <text x="50" y="305" font-size="11" fill="#999">Auto Memory로 학습 축적</text>
+  <text x="50" y="325" font-size="11" fill="#999">PROGRESS.md 자동 갱신</text>
+
+  <!-- Bottom -->
+  <rect x="140" y="356" width="620" height="20" rx="3" fill="#f0f0f0"/>
+  <text x="450" y="370" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">17개 슬래시 커맨드 = 기획 > 집필 > 품질 > 평가 > 출판의 완전한 파이프라인</text>
+</svg>

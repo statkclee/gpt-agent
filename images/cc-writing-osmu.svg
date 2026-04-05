@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="Palatino Linotype, Palatino, Georgia, serif">
+  <rect width="900" height="420" fill="#fafafa" rx="4"/>
+  <text x="450" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">단일 소스 다중 출력(OSMU) -- 하나의 .qmd, 여덟 가지 문서</text>
+  <line x1="80" y1="50" x2="820" y2="50" stroke="#999" stroke-width="0.5"/>
+
+  <defs>
+    <marker id="ar5" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Single Source -->
+  <rect x="40" y="140" width="200" height="120" rx="6" fill="#444"/>
+  <text x="140" y="172" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">.qmd</text>
+  <text x="140" y="195" text-anchor="middle" font-size="12" fill="#ccc">단일 소스 파일</text>
+  <text x="140" y="215" text-anchor="middle" font-size="11" fill="#aaa">콘텐츠 + 메타데이터</text>
+  <text x="140" y="240" text-anchor="middle" font-size="11" fill="#aaa">+ 코드 + 데이터</text>
+
+  <!-- Quarto Engine -->
+  <rect x="300" y="160" width="150" height="80" rx="6" fill="#666"/>
+  <text x="375" y="195" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">quarto</text>
+  <text x="375" y="215" text-anchor="middle" font-size="11" fill="#ccc">render --to all</text>
+
+  <!-- Arrow: source -> engine -->
+  <line x1="240" y1="200" x2="298" y2="200" stroke="#555" stroke-width="2" marker-end="url(#ar5)"/>
+
+  <!-- Outputs - fan out -->
+  <!-- HTML -->
+  <line x1="450" y1="175" x2="530" y2="75" stroke="#555" stroke-width="1.2" marker-end="url(#ar5)"/>
+  <rect x="535" y="60" width="155" height="35" rx="4" fill="none" stroke="#555" stroke-width="1"/>
+  <text x="545" y="82" font-size="12" font-weight="bold" fill="#444">HTML</text>
+  <text x="620" y="82" font-size="10" fill="#888">웹 문서</text>
+
+  <!-- PDF -->
+  <line x1="450" y1="185" x2="530" y2="110" stroke="#555" stroke-width="1.2" marker-end="url(#ar5)"/>
+  <rect x="535" y="95" width="155" height="35" rx="4" fill="none" stroke="#555" stroke-width="1"/>
+  <text x="545" y="117" font-size="12" font-weight="bold" fill="#444">PDF</text>
+  <text x="620" y="117" font-size="10" fill="#888">Typst/LaTeX</text>
+
+  <!-- Revealjs -->
+  <line x1="450" y1="193" x2="530" y2="145" stroke="#555" stroke-width="1.2" marker-end="url(#ar5)"/>
+  <rect x="535" y="130" width="155" height="35" rx="4" fill="none" stroke="#555" stroke-width="1"/>
+  <text x="545" y="152" font-size="12" font-weight="bold" fill="#444">Revealjs</text>
+  <text x="620" y="152" font-size="10" fill="#888">슬라이드</text>
+
+  <!-- Dashboard -->
+  <line x1="450" y1="200" x2="530" y2="182" stroke="#555" stroke-width="1.2" marker-end="url(#ar5)"/>
+  <rect x="535" y="165" width="155" height="35" rx="4" fill="none" stroke="#555" stroke-width="1"/>
+  <text x="545" y="187" font-size="12" font-weight="bold" fill="#444">Dashboard</text>
+  <text x="630" y="187" font-size="10" fill="#888">대시보드</text>
+
+  <!-- DOCX -->
+  <line x1="450" y1="207" x2="530" y2="218" stroke="#555" stroke-width="1.2" marker-end="url(#ar5)"/>
+  <rect x="535" y="200" width="155" height="35" rx="4" fill="none" stroke="#555" stroke-width="1"/>
+  <text x="545" y="222" font-size="12" font-weight="bold" fill="#444">DOCX</text>
+  <text x="620" y="222" font-size="10" fill="#888">Word 문서</text>
+
+  <!-- PPTX -->
+  <line x1="450" y1="215" x2="530" y2="253" stroke="#555" stroke-width="1.2" marker-end="url(#ar5)"/>
+  <rect x="535" y="240" width="155" height="35" rx="4" fill="none" stroke="#555" stroke-width="1"/>
+  <text x="545" y="262" font-size="12" font-weight="bold" fill="#444">PPTX</text>
+  <text x="620" y="262" font-size="10" fill="#888">PowerPoint</text>
+
+  <!-- ePub -->
+  <line x1="450" y1="222" x2="530" y2="290" stroke="#555" stroke-width="1.2" marker-end="url(#ar5)"/>
+  <rect x="535" y="278" width="155" height="35" rx="4" fill="none" stroke="#555" stroke-width="1"/>
+  <text x="545" y="300" font-size="12" font-weight="bold" fill="#444">ePub</text>
+  <text x="620" y="300" font-size="10" fill="#888">전자책</text>
+
+  <!-- Certificate -->
+  <line x1="450" y1="228" x2="530" y2="328" stroke="#555" stroke-width="1.2" marker-end="url(#ar5)"/>
+  <rect x="535" y="318" width="155" height="35" rx="4" fill="none" stroke="#555" stroke-width="1"/>
+  <text x="545" y="340" font-size="12" font-weight="bold" fill="#444">Certificate</text>
+  <text x="635" y="340" font-size="10" fill="#888">증명서</text>
+
+  <!-- Parameterized rendering note -->
+  <rect x="720" y="100" width="155" height="80" rx="4" fill="#f0f0f0" stroke="#ddd" stroke-width="0.5"/>
+  <text x="797" y="120" text-anchor="middle" font-size="11" font-weight="bold" fill="#555">매개변수화 렌더링</text>
+  <text x="797" y="140" text-anchor="middle" font-size="10" fill="#777">데이터만 바꿔서</text>
+  <text x="797" y="155" text-anchor="middle" font-size="10" fill="#777">N개 문서 자동 생성</text>
+  <text x="797" y="170" text-anchor="middle" font-size="10" fill="#999" font-style="italic">100장 증명서 = 10분</text>
+
+  <!-- Bottom -->
+  <rect x="100" y="375" width="700" height="36" rx="3" fill="#f0f0f0"/>
+  <text x="450" y="391" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Claude Code = 콘텐츠 작성 + 서식 설정 + 변환 실행의 전 과정을 자연어로 제어</text>
+  <text x="450" y="406" text-anchor="middle" font-size="11" fill="#666">"이 보고서를 PDF와 슬라이드로 동시에 만들어줘" -- 한 문장이면 된다</text>
+</svg>

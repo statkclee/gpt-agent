@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="Palatino Linotype, Palatino, Georgia, serif">
+  <rect width="900" height="420" fill="#fafafa" rx="4"/>
+  <text x="450" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">에이전트 오케스트레이션 -- 병렬 저작 시스템</text>
+  <line x1="100" y1="50" x2="800" y2="50" stroke="#999" stroke-width="0.5"/>
+
+  <defs>
+    <marker id="ar3" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Human (Author) -->
+  <rect x="350" y="65" width="200" height="45" rx="5" fill="#333"/>
+  <text x="450" y="92" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">저자 (오케스트레이터)</text>
+
+  <line x1="450" y1="110" x2="450" y2="140" stroke="#555" stroke-width="1.5" marker-end="url(#ar3)"/>
+
+  <!-- Main Agent -->
+  <rect x="300" y="143" width="300" height="40" rx="5" fill="#555"/>
+  <text x="450" y="168" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">Claude Code (메인 에이전트)</text>
+
+  <!-- Three branches -->
+  <line x1="350" y1="183" x2="150" y2="218" stroke="#555" stroke-width="1.5" marker-end="url(#ar3)"/>
+  <line x1="450" y1="183" x2="450" y2="218" stroke="#555" stroke-width="1.5" marker-end="url(#ar3)"/>
+  <line x1="550" y1="183" x2="750" y2="218" stroke="#555" stroke-width="1.5" marker-end="url(#ar3)"/>
+
+  <!-- Subagent 1: Explore -->
+  <rect x="40" y="220" width="220" height="110" rx="5" fill="none" stroke="#666" stroke-width="1.2"/>
+  <rect x="40" y="220" width="220" height="30" rx="5" fill="#666"/>
+  <text x="150" y="240" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Explore (탐색 에이전트)</text>
+  <text x="60" y="266" font-size="11" fill="#666">Haiku 모델, 읽기 전용</text>
+  <text x="60" y="286" font-size="11" fill="#666">챕터 간 참조 확인</text>
+  <text x="60" y="306" font-size="11" fill="#666">용어 일관성 검사</text>
+  <text x="60" y="322" font-size="11" fill="#666">기존 내용 탐색</text>
+
+  <!-- Subagent 2: Plan -->
+  <rect x="290" y="220" width="320" height="110" rx="5" fill="none" stroke="#555" stroke-width="1.2"/>
+  <rect x="290" y="220" width="320" height="30" rx="5" fill="#555"/>
+  <text x="450" y="240" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Plan (설계 에이전트)</text>
+  <text x="310" y="266" font-size="11" fill="#555">상위 모델, 읽기 전용</text>
+  <text x="310" y="286" font-size="11" fill="#555">챕터 아웃라인 설계, 구조 검토</text>
+  <text x="310" y="306" font-size="11" fill="#555">아키텍처 결정 (목차 배치, 흐름)</text>
+  <text x="310" y="322" font-size="11" fill="#555">트레이드오프 분석</text>
+
+  <!-- Subagent 3: General -->
+  <rect x="640" y="220" width="220" height="110" rx="5" fill="none" stroke="#444" stroke-width="1.2"/>
+  <rect x="640" y="220" width="220" height="30" rx="5" fill="#444"/>
+  <text x="750" y="240" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">General (실행 에이전트)</text>
+  <text x="660" y="266" font-size="11" fill="#555">상위 모델, 모든 도구</text>
+  <text x="660" y="286" font-size="11" fill="#555">본문 집필, SVG 생성</text>
+  <text x="660" y="306" font-size="11" fill="#555">Quarto 렌더링</text>
+  <text x="660" y="322" font-size="11" fill="#555">Git 커밋, 파일 편집</text>
+
+  <!-- Agent Teams -->
+  <rect x="40" y="348" width="820" height="60" rx="5" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="80" y="372" font-size="13" font-weight="bold" fill="#333">Agent Teams (확장)</text>
+  <text x="80" y="394" font-size="11" fill="#666">여러 Claude Code 인스턴스가 챕터별로 병렬 집필 + 리뷰어 에이전트가 관점별 검토</text>
+  <text x="680" y="372" font-size="11" fill="#999" font-style="italic">최대 10개 동시 실행</text>
+  <text x="680" y="394" font-size="11" fill="#999" font-style="italic">공유 태스크 리스트로 협업</text>
+</svg>

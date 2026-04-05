@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="460" viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg" font-family="Palatino Linotype, Georgia, serif">
+  <defs>
+    <marker id="cf-a" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#003876" opacity="0.5"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="460" fill="#FEFEFE"/>
+
+  <!-- Graph frame -->
+  <rect x="78" y="34" width="514" height="260" fill="none" stroke="#ddd" stroke-width="0.5"/>
+
+  <!-- Gridlines -->
+  <line x1="78" y1="90" x2="592" y2="90" stroke="#eee" stroke-width="0.5"/>
+  <line x1="78" y1="147" x2="592" y2="147" stroke="#eee" stroke-width="0.5"/>
+  <line x1="78" y1="204" x2="592" y2="204" stroke="#eee" stroke-width="0.5"/>
+  <line x1="78" y1="250" x2="592" y2="250" stroke="#eee" stroke-width="0.5"/>
+
+  <!-- Zone dividers -->
+  <line x1="207" y1="34" x2="207" y2="294" stroke="#ddd" stroke-width="0.5" stroke-dasharray="4,3"/>
+  <line x1="336" y1="34" x2="336" y2="294" stroke="#ddd" stroke-width="0.5" stroke-dasharray="4,3"/>
+  <line x1="464" y1="34" x2="464" y2="294" stroke="#ddd" stroke-width="0.5" stroke-dasharray="4,3"/>
+
+  <!-- Axes -->
+  <line x1="78" y1="294" x2="592" y2="294" stroke="#888" stroke-width="1"/>
+  <line x1="78" y1="34" x2="78" y2="294" stroke="#888" stroke-width="1"/>
+
+  <!-- Y-axis label -->
+  <text transform="rotate(-90)" x="-163" y="24" text-anchor="middle" font-size="9.5" fill="#888">구현 난이도</text>
+  <text x="74" y="93" text-anchor="end" font-size="9" fill="#aaa">높음</text>
+  <text x="74" y="207" text-anchor="end" font-size="9" fill="#aaa">중간</text>
+  <text x="74" y="253" text-anchor="end" font-size="9" fill="#aaa">낮음</text>
+
+  <!-- ══ CURVES (Tufte: #003876 main + gray tones + dash patterns) ══ -->
+
+  <!-- Word: dark gray, solid thick -->
+  <path d="M 82,268 C 130,260 168,248 207,232 C 250,216 287,196 325,172
+           C 360,148 398,118 438,94 C 465,78 508,56 552,42 C 568,38 580,36 592,35"
+        stroke="#555" stroke-width="2.5" fill="none"/>
+
+  <!-- LaTeX: medium gray, dashed -->
+  <path d="M 82,158 C 205,154 325,149 445,144 C 508,141 552,139 592,137"
+        stroke="#888" stroke-width="2" fill="none" stroke-dasharray="8,4"/>
+
+  <!-- Markdown/Pandoc: light gray, dotted -->
+  <path d="M 82,278 L 118,268 L 152,258 L 182,248 L 208,238 L 230,228 L 250,218
+           L 268,222 L 285,232 L 300,240 L 315,242 L 330,234 L 350,216 L 370,198
+           L 392,178 L 415,158 L 438,140 L 458,124 L 475,110 L 490,98
+           L 505,88 L 520,80 L 535,74 L 550,70 L 565,72 L 580,80 L 592,90"
+        stroke="#aaa" stroke-width="2" fill="none" stroke-dasharray="4,2"/>
+
+  <!-- Quarto: #003876 main, solid bold — hero line -->
+  <path d="M 82,280 C 178,276 258,270 336,262 C 415,254 496,244 592,232"
+        stroke="#003876" stroke-width="3" fill="none"/>
+
+  <!-- Legend (outline box, no fill) -->
+  <rect x="88" y="42" width="135" height="80" rx="4" fill="none" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="96" y1="57" x2="118" y2="57" stroke="#555" stroke-width="2.5"/>
+  <text x="124" y="61" font-size="10" fill="#555">Word</text>
+  <line x1="96" y1="72" x2="118" y2="72" stroke="#888" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="124" y="76" font-size="10" fill="#888">LaTeX</text>
+  <line x1="96" y1="87" x2="118" y2="87" stroke="#aaa" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="124" y="91" font-size="10" fill="#aaa">Markdown · Pandoc</text>
+  <line x1="96" y1="102" x2="118" y2="102" stroke="#003876" stroke-width="3"/>
+  <text x="124" y="106" font-size="10" fill="#003876" font-weight="600">Quarto</text>
+
+  <!-- Word 복잡도 절벽 — LaTeX와 Word 곡선 사이 빈 공간에 배치 -->
+  <!-- LaTeX y≈155 at x=150, Word y≈253 at x=150 → 사이 공간 충분 -->
+  <rect x="130" y="165" width="120" height="28" rx="3" fill="#FEFEFE" stroke="#555" stroke-width="0.8"/>
+  <text x="190" y="180" text-anchor="middle" font-size="9.5" fill="#555" font-weight="600">Word 복잡도 절벽</text>
+  <text x="190" y="190" text-anchor="middle" font-size="8.5" fill="#888">논문 단계부터 비용 급등</text>
+  <!-- 화살표: 박스 우측 → Word 곡선 급등 구간(287,196) -->
+  <line x1="250" y1="185" x2="285" y2="197" stroke="#555" stroke-width="0.8" stroke-dasharray="3,2" marker-end="url(#cf-a)"/>
+
+  <!-- Haskell 학습 요구 — 박스를 그래프 밖 상단에 배치, 화살표가 피크를 가리킴 -->
+  <rect x="445" y="140" width="120" height="28" rx="3" fill="#FEFEFE" stroke="#c0392b" stroke-width="0.8"/>
+  <text x="505" y="155" text-anchor="middle" font-size="9.5" fill="#c0392b" font-weight="600">Haskell 학습 요구!</text>
+  <text x="505" y="165" text-anchor="middle" font-size="8.5" fill="#888">Pandoc 필터 한계</text>
+  <line x1="540" y1="140" x2="548" y2="74" stroke="#c0392b" stroke-width="0.8" stroke-dasharray="3,2" marker-end="url(#cf-a)"/>
+
+  <!-- X-axis labels -->
+  <text x="143" y="308" text-anchor="middle" font-size="10" fill="#555">기본 보고서</text>
+  <text x="143" y="321" text-anchor="middle" font-size="9" fill="#888">공문 · 발표</text>
+  <text x="271" y="308" text-anchor="middle" font-size="10" fill="#555">수식 · 그림 포함</text>
+  <text x="271" y="321" text-anchor="middle" font-size="9" fill="#888">논문 · 레포트</text>
+  <text x="400" y="308" text-anchor="middle" font-size="10" fill="#555">페이지 레이아웃</text>
+  <text x="400" y="321" text-anchor="middle" font-size="9" fill="#888">웹 콘텐츠</text>
+  <text x="528" y="308" text-anchor="middle" font-size="10" fill="#555">전문 출판물</text>
+  <text x="528" y="321" text-anchor="middle" font-size="9" fill="#888">자동화 파이프라인</text>
+
+  <!-- Bottom insight -->
+  <line x1="50" y1="337" x2="630" y2="337" stroke="#003876" stroke-width="0.5" opacity="0.15"/>
+  <line x1="50" y1="333" x2="55" y2="333" stroke="#003876" stroke-width="2.5"/>
+  <text x="65" y="337" font-size="11" fill="#444">Word는 단순 문서엔 최선 — 복잡해질수록 <tspan font-weight="bold" fill="#003876">Quarto</tspan>가 누적 비용을 압도적으로 절감</text>
+
+  <!-- 2 bottom boxes (outline only) -->
+  <rect x="50" y="350" width="280" height="68" rx="4" fill="none" stroke="#003876" stroke-width="0.8" opacity="0.3"/>
+  <text x="190" y="367" text-anchor="middle" font-size="10" fill="#003876" font-weight="600">Word의 함정</text>
+  <line x1="58" y1="373" x2="322" y2="373" stroke="#003876" stroke-width="0.5" opacity="0.1"/>
+  <text x="60" y="388" font-size="10" fill="#555">처음엔 쉽지만 복잡도↑ → 수동 재작업 반복</text>
+  <text x="60" y="404" font-size="10" fill="#555">서식 깨짐 · 버전 충돌 · 재현 불가</text>
+  <text x="60" y="415" font-size="9" fill="#888" font-style="italic">진입은 쉽고, 탈출은 어렵다</text>
+
+  <rect x="345" y="350" width="285" height="68" rx="4" fill="none" stroke="#003876" stroke-width="0.8" opacity="0.3"/>
+  <text x="487" y="367" text-anchor="middle" font-size="10" fill="#003876" font-weight="600">LaTeX의 트레이드오프</text>
+  <line x1="353" y1="373" x2="622" y2="373" stroke="#003876" stroke-width="0.5" opacity="0.1"/>
+  <text x="355" y="388" font-size="10" fill="#555">진입장벽 높지만 복잡도↑에도 선형 유지</text>
+  <text x="355" y="404" font-size="10" fill="#555">수식·조판 최강 — 코드·데이터 통합은 어렵다</text>
+  <text x="355" y="415" font-size="9" fill="#888" font-style="italic">비싸게 시작하고, 예측 가능하게 유지된다</text>
+
+  <!-- Margin notes -->
+  <text x="710" y="48" font-size="10" fill="#888" font-style="italic">도구별 특성</text>
+  <text x="710" y="65" font-size="9.5" fill="#888">Word: 쉬운 시작</text>
+  <text x="710" y="80" font-size="9.5" fill="#888">→ 급격한 절벽</text>
+  <text x="710" y="98" font-size="9.5" fill="#888">LaTeX: 비싼 시작</text>
+  <text x="710" y="113" font-size="9.5" fill="#888">→ 예측 가능</text>
+  <text x="710" y="131" font-size="9.5" fill="#003876" font-weight="600">Quarto: 항상 최적</text>
+
+  <text x="710" y="175" font-size="10" fill="#888" font-style="italic">출처</text>
+  <text x="710" y="192" font-size="9.5" fill="#888">Kiran Dheepa Kumar</text>
+  <text x="710" y="207" font-size="9.5" fill="#888">kdheepak.com (2022)</text>
+
+  <text x="710" y="250" font-size="10" fill="#888" font-style="italic">Quarto 장점</text>
+  <text x="710" y="267" font-size="9.5" fill="#888">Markdown에서 시작</text>
+  <text x="710" y="282" font-size="9.5" fill="#888">LaTeX로 확장 가능</text>
+  <text x="710" y="297" font-size="9.5" fill="#888">코드 실행 내장</text>
+  <text x="710" y="312" font-size="9.5" fill="#888">다중 출력 기본 지원</text>
+
+  <text x="710" y="355" font-size="10" fill="#888" font-style="italic">절벽 임계점</text>
+  <text x="710" y="372" font-size="9.5" fill="#888">Word: 논문·레포트</text>
+  <text x="710" y="387" font-size="9.5" fill="#888">Markdown: 커스텀 필터</text>
+  <text x="710" y="402" font-size="9.5" fill="#888">LaTeX·Quarto: 없음</text>
+
+  <line x1="50" y1="445" x2="630" y2="445" stroke="#eee" stroke-width="0.5"/>
+</svg>

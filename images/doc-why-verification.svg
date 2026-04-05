@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" font-family="Palatino Linotype, Palatino, Georgia, serif">
+  <!-- Background -->
+  <rect width="900" height="440" fill="#fafafa" rx="4"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">검증 위기 — AI 생성 시대의 신뢰 문제</text>
+  <line x1="120" y1="52" x2="780" y2="52" stroke="#999" stroke-width="0.5"/>
+
+  <!-- Timeline: left to right -->
+  <line x1="80" y1="100" x2="820" y2="100" stroke="#888" stroke-width="1.5"/>
+
+  <!-- 2023 -->
+  <circle cx="180" cy="100" r="6" fill="#999"/>
+  <text x="180" y="85" text-anchor="middle" font-size="11" font-weight="bold" fill="#666">2023</text>
+  <text x="180" y="125" text-anchor="middle" font-size="11" fill="#777">ChatGPT 확산</text>
+  <text x="180" y="140" text-anchor="middle" font-size="11" fill="#777">AI 생성 문서 등장</text>
+
+  <!-- 2024 -->
+  <circle cx="370" cy="100" r="6" fill="#777"/>
+  <text x="370" y="85" text-anchor="middle" font-size="11" font-weight="bold" fill="#666">2024</text>
+  <text x="370" y="125" text-anchor="middle" font-size="11" fill="#777">환각 인용 0.3%</text>
+  <text x="370" y="140" text-anchor="middle" font-size="11" fill="#777">Nature 경고 발표</text>
+
+  <!-- 2025 -->
+  <circle cx="560" cy="100" r="8" fill="#555"/>
+  <text x="560" y="82" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">2025</text>
+  <text x="560" y="125" text-anchor="middle" font-size="12" font-weight="bold" fill="#444">환각 인용 2.6%</text>
+  <text x="560" y="142" text-anchor="middle" font-size="11" fill="#555">(전년 대비 9배 증가)</text>
+
+  <!-- 2026 -->
+  <circle cx="740" cy="100" r="8" fill="#333"/>
+  <text x="740" y="82" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">2026</text>
+  <text x="740" y="125" text-anchor="middle" font-size="12" fill="#444">수만 건 허위 참고문헌</text>
+  <text x="740" y="142" text-anchor="middle" font-size="11" fill="#555">학술 출판 오염 경고</text>
+
+  <!-- Central diagram: Verification Funnel -->
+  <text x="450" y="182" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">검증의 역설 (Verification Paradox)</text>
+
+  <!-- Funnel shape -->
+  <polygon points="200,210 700,210 620,310 280,310" fill="#f0f0f0" stroke="#888" stroke-width="1"/>
+  <text x="450" y="240" text-anchor="middle" font-size="13" fill="#555">AI 생성 콘텐츠 폭증</text>
+  <text x="450" y="260" text-anchor="middle" font-size="11" fill="#777">10분 만에 50쪽 보고서, 1시간에 100개 슬라이드</text>
+
+  <polygon points="280,315 620,315 570,370 330,370" fill="#e5e5e5" stroke="#777" stroke-width="1"/>
+  <text x="450" y="340" text-anchor="middle" font-size="13" fill="#444">인간 검증 병목</text>
+  <text x="450" y="358" text-anchor="middle" font-size="11" fill="#666">사실 확인, 출처 추적, 환각 탐지</text>
+
+  <polygon points="330,375 570,375 520,405 380,405" fill="#ddd" stroke="#666" stroke-width="1"/>
+  <text x="450" y="396" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">신뢰할 수 있는 문서</text>
+
+  <!-- Side annotations -->
+  <text x="140" y="260" text-anchor="end" font-size="11" fill="#888" font-style="italic">생성 비용</text>
+  <text x="140" y="278" text-anchor="end" font-size="14" fill="#666">↓↓↓</text>
+
+  <text x="760" y="340" text-anchor="start" font-size="11" fill="#888" font-style="italic">검증 비용</text>
+  <text x="760" y="358" text-anchor="start" font-size="14" fill="#444">↑↑↑</text>
+
+  <!-- Bottom insight -->
+  <rect x="120" y="415" width="660" height="20" rx="3" fill="none"/>
+  <text x="450" y="430" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">AI 시대의 문서 가치 = 생성 능력이 아니라 검증 가능성에서 나온다</text>
+</svg>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" font-family="Palatino Linotype, Palatino, Georgia, serif">
+  <rect width="900" height="380" fill="#fafafa" rx="4"/>
+  <text x="450" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">콘텐츠 + 서식 = 문서</text>
+  <line x1="150" y1="50" x2="750" y2="50" stroke="#999" stroke-width="0.5"/>
+
+  <!-- Content box -->
+  <rect x="40" y="75" width="280" height="220" rx="6" fill="none" stroke="#555" stroke-width="1.5"/>
+  <rect x="40" y="75" width="280" height="35" rx="6" fill="#444"/>
+  <text x="180" y="98" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">콘텐츠 (.qmd)</text>
+
+  <text x="60" y="135" font-size="12" font-weight="bold" fill="#555">텍스트</text>
+  <text x="60" y="155" font-size="11" fill="#777">마크다운 본문, 제목, 목록</text>
+
+  <text x="60" y="180" font-size="12" font-weight="bold" fill="#555">코드</text>
+  <text x="60" y="200" font-size="11" fill="#777">R, Python, Observable JS</text>
+
+  <text x="60" y="225" font-size="12" font-weight="bold" fill="#555">데이터</text>
+  <text x="60" y="245" font-size="11" fill="#777">CSV, API, 데이터베이스</text>
+
+  <text x="60" y="270" font-size="12" font-weight="bold" fill="#555">시각화</text>
+  <text x="60" y="290" font-size="11" fill="#777">SVG, ggplot, Plotly</text>
+
+  <!-- Plus sign -->
+  <text x="350" y="195" text-anchor="middle" font-size="40" font-weight="bold" fill="#333">+</text>
+
+  <!-- Format box -->
+  <rect x="390" y="75" width="200" height="220" rx="6" fill="none" stroke="#555" stroke-width="1.5"/>
+  <rect x="390" y="75" width="200" height="35" rx="6" fill="#555"/>
+  <text x="490" y="98" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">서식</text>
+
+  <text x="410" y="135" font-size="12" font-weight="bold" fill="#555">_quarto.yml</text>
+  <text x="410" y="155" font-size="11" fill="#777">포맷, 옵션, 구조</text>
+
+  <text x="410" y="180" font-size="12" font-weight="bold" fill="#555">SCSS 테마</text>
+  <text x="410" y="200" font-size="11" fill="#777">색상, 폰트, 레이아웃</text>
+
+  <text x="410" y="225" font-size="12" font-weight="bold" fill="#555">Typst 템플릿</text>
+  <text x="410" y="245" font-size="11" fill="#777">PDF 조판 규격</text>
+
+  <text x="410" y="270" font-size="12" font-weight="bold" fill="#555">참조 문서</text>
+  <text x="410" y="290" font-size="11" fill="#777">docx/pptx 스타일</text>
+
+  <!-- Equals sign -->
+  <text x="620" y="195" text-anchor="middle" font-size="40" font-weight="bold" fill="#333">=</text>
+
+  <!-- Document output -->
+  <rect x="660" y="75" width="200" height="220" rx="6" fill="none" stroke="#333" stroke-width="2"/>
+  <rect x="660" y="75" width="200" height="35" rx="6" fill="#333"/>
+  <text x="760" y="98" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">문서</text>
+
+  <g transform="translate(680, 125)">
+    <rect x="0" y="0" width="16" height="12" rx="2" fill="#666"/>
+    <text x="24" y="11" font-size="12" fill="#555">HTML 웹 문서</text>
+  </g>
+  <g transform="translate(680, 150)">
+    <rect x="0" y="0" width="16" height="12" rx="2" fill="#777"/>
+    <text x="24" y="11" font-size="12" fill="#555">PDF 보고서</text>
+  </g>
+  <g transform="translate(680, 175)">
+    <rect x="0" y="0" width="16" height="12" rx="2" fill="#888"/>
+    <text x="24" y="11" font-size="12" fill="#555">슬라이드</text>
+  </g>
+  <g transform="translate(680, 200)">
+    <rect x="0" y="0" width="16" height="12" rx="2" fill="#999"/>
+    <text x="24" y="11" font-size="12" fill="#555">대시보드</text>
+  </g>
+  <g transform="translate(680, 225)">
+    <rect x="0" y="0" width="16" height="12" rx="2" fill="#aaa"/>
+    <text x="24" y="11" font-size="12" fill="#555">증명서</text>
+  </g>
+  <g transform="translate(680, 250)">
+    <rect x="0" y="0" width="16" height="12" rx="2" fill="#bbb"/>
+    <text x="24" y="11" font-size="12" fill="#555">Word/PPT</text>
+  </g>
+  <g transform="translate(680, 275)">
+    <rect x="0" y="0" width="16" height="12" rx="2" fill="#ccc"/>
+    <text x="24" y="11" font-size="12" fill="#555">ePub 전자책</text>
+  </g>
+
+  <!-- Claude Code role -->
+  <rect x="40" y="310" width="820" height="55" rx="5" fill="#f0f0f0" stroke="#ddd" stroke-width="0.5"/>
+  <text x="60" y="332" font-size="13" font-weight="bold" fill="#333">Claude Code의 역할</text>
+  <text x="60" y="352" font-size="12" fill="#555">콘텐츠 생성(.qmd 작성) + 서식 설정(YAML/SCSS/Typst 편집) + 변환 실행(quarto render) = 등식 전체를 제어</text>
+</svg>

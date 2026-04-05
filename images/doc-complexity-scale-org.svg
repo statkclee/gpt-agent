@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="460" viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg" font-family="Palatino Linotype, Georgia, serif">
+  <rect width="900" height="460" fill="#FEFEFE"/>
+
+  <!-- Header -->
+  <text x="50" y="30" font-size="10.5" fill="#555" letter-spacing="1.5px">문서 복잡도의 5단계 — 개인에서 글로벌까지</text>
+  <line x1="50" y1="38" x2="630" y2="38" stroke="#003876" stroke-width="1" opacity="0.2"/>
+
+  <!-- Vertical guideline -->
+  <line x1="60" y1="50" x2="60" y2="430" stroke="#003876" stroke-width="0.8" stroke-dasharray="2,4" opacity="0.1"/>
+
+  <!-- ── Level 1: 개인 ── -->
+  <circle cx="60" cy="68" r="12" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="60" y="72" text-anchor="middle" font-size="10" fill="#003876" font-weight="bold">1</text>
+  <text x="82" y="63" font-size="13" fill="#003876" font-weight="600">개인</text>
+  <text x="82" y="80" font-size="11" fill="#555">김주임의 메모 → 보고서 → "최종_진짜최종_v3.hwp"</text>
+  <line x1="80" y1="87" x2="80" y2="97" stroke="#003876" stroke-width="2" opacity="0.15"/>
+  <text x="88" y="96" font-size="10.5" fill="#555" font-style="italic">복잡도 = 독자·재현·자동화. 도구: HWP → Quarto</text>
+
+  <!-- ── Level 2: 회사/조직 ── -->
+  <circle cx="60" cy="130" r="12" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="60" y="134" text-anchor="middle" font-size="10" fill="#003876" font-weight="bold">2</text>
+  <text x="82" y="125" font-size="13" fill="#003876" font-weight="600">회사 · 조직</text>
+  <text x="82" y="142" font-size="11" fill="#555">부서별 월간 보고서 × 12부서 × 12개월 = 144개 문서/년</text>
+  <line x1="80" y1="149" x2="80" y2="159" stroke="#003876" stroke-width="2" opacity="0.15"/>
+  <text x="88" y="158" font-size="10.5" fill="#555" font-style="italic">복잡도 += 브랜드 통일 · 승인 워크플로우 · 템플릿 관리</text>
+  <text x="88" y="173" font-size="10.5" fill="#888" font-style="italic">HP DocBook: 500+ 템플릿 재사용으로 비용 40%↓</text>
+
+  <!-- ── Level 3: 공공기관 ── -->
+  <circle cx="60" cy="205" r="12" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="60" y="209" text-anchor="middle" font-size="10" fill="#003876" font-weight="bold">3</text>
+  <text x="82" y="200" font-size="13" fill="#003876" font-weight="600">공공기관</text>
+  <text x="82" y="217" font-size="11" fill="#555">정부24 · 전자세금계산서(XML+PKI) · 나라장터(전자조달)</text>
+  <line x1="80" y1="224" x2="80" y2="234" stroke="#003876" stroke-width="2" opacity="0.15"/>
+  <text x="88" y="233" font-size="10.5" fill="#555" font-style="italic">복잡도 += 법적 의무 · 보존 기간(5~30년) · 국민 접근성</text>
+  <text x="88" y="248" font-size="10.5" fill="#888" font-style="italic">한국: HWP → HWPX(2021) 전환 18~24개월. 에스토니아: 99% 디지털</text>
+
+  <!-- ── Level 4: 국가 ── -->
+  <circle cx="60" cy="280" r="12" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="60" y="284" text-anchor="middle" font-size="10" fill="#003876" font-weight="bold">4</text>
+  <text x="82" y="275" font-size="13" fill="#003876" font-weight="600">국가</text>
+  <text x="82" y="292" font-size="11" fill="#555">법률 체계(Akoma Ntoso) · FDA 신약 승인(eCTD) · SEC 재무 공시(XBRL)</text>
+  <line x1="80" y1="299" x2="80" y2="309" stroke="#003876" stroke-width="2" opacity="0.15"/>
+  <text x="88" y="308" font-size="10.5" fill="#555" font-style="italic">복잡도 += 다중 관할권 · 법적 강제 · 감사 추적 · 시맨틱 태깅</text>
+  <text x="88" y="323" font-size="10.5" fill="#888" font-style="italic">영국 전체 법률 → XML 변환(2014). eCTD RFI 1건 회피 = 2~3개월 절약</text>
+
+  <!-- ── Level 5: 글로벌 ── -->
+  <circle cx="60" cy="355" r="12" fill="none" stroke="#003876" stroke-width="1.5"/>
+  <text x="60" y="359" text-anchor="middle" font-size="10" fill="#003876" font-weight="bold">5</text>
+  <text x="82" y="350" font-size="13" fill="#003876" font-weight="600">글로벌</text>
+  <text x="82" y="367" font-size="11" fill="#555">S1000D(NATO 40,000페이지 매뉴얼) · UN/EDIFACT · ISO 20022 금융 메시징</text>
+  <line x1="80" y1="374" x2="80" y2="384" stroke="#003876" stroke-width="2" opacity="0.15"/>
+  <text x="88" y="383" font-size="10.5" fill="#555" font-style="italic">복잡도 += 다국어 · 다문화 · 국제 표준 · 상호운용성 · 주권 이슈</text>
+  <text x="88" y="398" font-size="10.5" fill="#888" font-style="italic">S1000D: 미 해군 비용 48%↓. 하나의 정비 절차 변경 → 전 세계 함대 즉시 반영</text>
+
+  <!-- ── Bottom insight ── -->
+  <line x1="50" y1="415" x2="630" y2="415" stroke="#003876" stroke-width="0.5" opacity="0.15"/>
+
+  <line x1="55" y1="435" x2="60" y2="435" stroke="#003876" stroke-width="2.5"/>
+  <text x="70" y="439" font-size="12" fill="#444">단계가 올라갈수록 복잡도의 축이 추가된다 — 개인의 "도구 선택"이 글로벌의 "표준 설계"가 된다</text>
+
+  <!-- ── Margin notes ── -->
+  <text x="710" y="65" font-size="10" fill="#888" font-style="italic">각 단계는 이전 단계의</text>
+  <text x="710" y="80" font-size="10" fill="#888" font-style="italic">복잡도를 포함한다:</text>
+  <text x="710" y="98" font-size="10" fill="#888" font-style="italic">글로벌 문서 = 국가 규제</text>
+  <text x="710" y="113" font-size="10" fill="#888" font-style="italic">+ 공공 접근성 + 조직 관리</text>
+  <text x="710" y="128" font-size="10" fill="#888" font-style="italic">+ 개인 작성 전부 포함.</text>
+
+  <text x="710" y="195" font-size="10" fill="#888" font-style="italic">복잡도 축 누적:</text>
+  <text x="710" y="212" font-size="10" fill="#888" font-style="italic">① 개인: 4축</text>
+  <text x="710" y="227" font-size="10" fill="#888" font-style="italic">② 조직: +브랜드·워크플로우</text>
+  <text x="710" y="242" font-size="10" fill="#888" font-style="italic">③ 공공: +법적 의무·접근성</text>
+  <text x="710" y="257" font-size="10" fill="#888" font-style="italic">④ 국가: +관할권·감사 추적</text>
+  <text x="710" y="272" font-size="10" fill="#888" font-style="italic">⑤ 글로벌: +다국어·표준·주권</text>
+
+  <text x="710" y="350" font-size="10" fill="#888" font-style="italic">Glushko 원칙의 보편성:</text>
+  <text x="710" y="367" font-size="10" fill="#888" font-style="italic">Component·Assembly·</text>
+  <text x="710" y="382" font-size="10" fill="#888" font-style="italic">Context 모델이 모든</text>
+  <text x="710" y="397" font-size="10" fill="#888" font-style="italic">단계에서 동일하게 적용.</text>
+
+  <text x="710" y="435" font-size="10" fill="#888" font-style="italic">규모만 다를 뿐,</text>
+  <text x="710" y="450" font-size="10" fill="#888" font-style="italic">원칙은 같다.</text>
+
+  <line x1="50" y1="452" x2="630" y2="452" stroke="#eee" stroke-width="0.5"/>
+</svg>

@@ -42,13 +42,17 @@ book:
 
     - part: "**도입** AI 시대 글쓰기 환경"
       chapters:
+        - chapters/p0-why-document.qmd
         - chapters/p0-writing.qmd
         - chapters/p0-environment.qmd
+        - chapters/p0-complexity.qmd
+        - chapters/p0-office.qmd
         - chapters/p0-documents.qmd
         - chapters/p1-communication.qmd
 
     - part: "**1부** AI 코딩"
       chapters:
+        - chapters/p1-cc-writing.qmd
         - chapters/p1-paradigm.qmd
         - chapters/p1-meta.qmd
         - chapters/p1-context.qmd
@@ -93,6 +97,10 @@ format:
     author-meta: "이광춘(Openai)"
     callout-appearance: simple
     tbl-cap-location: bottom
+
+# ---------------------------------- #
+language:
+  crossref-ch-prefix: ""
 
 # ---------------------------------- #
 filters:

@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .title {
+        font-family: 'Noto Sans KR', Palatino, 'Book Antiqua', Georgia, serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #333333;
+      }
+      .hub-label {
+        font-family: 'Noto Sans KR', Palatino, 'Book Antiqua', Georgia, serif;
+        font-size: 15px;
+        font-weight: 700;
+        fill: #333333;
+      }
+      .factor-title {
+        font-family: 'Noto Sans KR', Palatino, 'Book Antiqua', Georgia, serif;
+        font-size: 13px;
+        font-weight: 600;
+        fill: #333333;
+      }
+      .factor-desc {
+        font-family: 'Noto Sans KR', Palatino, 'Book Antiqua', Georgia, serif;
+        font-size: 10px;
+        fill: #666666;
+      }
+      .caption {
+        font-family: 'Noto Sans KR', Palatino, 'Book Antiqua', Georgia, serif;
+        font-size: 10px;
+        fill: #999999;
+        font-style: italic;
+      }
+      .factor-number {
+        font-family: 'Noto Sans KR', Palatino, 'Book Antiqua', Georgia, serif;
+        font-size: 11px;
+        font-weight: 700;
+        fill: #999999;
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="400" y="35" class="title" text-anchor="middle">MS Office 30년 독점의 다섯 가지 요인</text>
+
+  <!-- ===== Center Hub ===== -->
+  <ellipse cx="400" cy="245" rx="72" ry="38" fill="#EEEEEE" stroke="#333333" stroke-width="2"/>
+  <text x="400" y="241" class="hub-label" text-anchor="middle">MS Office</text>
+  <text x="400" y="258" class="hub-label" text-anchor="middle">독점</text>
+
+  <!--
+    5 factors arranged in a pentagon around center (400, 245).
+    Positions (approximate):
+      1 (top):          400, 95
+      2 (upper-right):  610, 175
+      3 (lower-right):  540, 370
+      4 (lower-left):   260, 370
+      5 (upper-left):   190, 175
+  -->
+
+  <!-- ===== Spoke lines (center to each factor) ===== -->
+  <line x1="400" y1="207" x2="400" y2="135" stroke="#999999" stroke-width="1.2"/>
+  <line x1="462" y1="222" x2="555" y2="178" stroke="#999999" stroke-width="1.2"/>
+  <line x1="445" y1="272" x2="505" y2="340" stroke="#999999" stroke-width="1.2"/>
+  <line x1="355" y1="272" x2="295" y2="340" stroke="#999999" stroke-width="1.2"/>
+  <line x1="338" y1="222" x2="245" y2="178" stroke="#999999" stroke-width="1.2"/>
+
+  <!-- ===== Connecting arcs between adjacent factors (feedback loop) ===== -->
+  <!-- 1-2 -->
+  <line x1="435" y1="100" x2="570" y2="155" stroke="#CCCCCC" stroke-width="0.8" stroke-dasharray="4,3"/>
+  <!-- 2-3 -->
+  <line x1="600" y1="205" x2="555" y2="340" stroke="#CCCCCC" stroke-width="0.8" stroke-dasharray="4,3"/>
+  <!-- 3-4 -->
+  <line x1="490" y1="375" x2="325" y2="375" stroke="#CCCCCC" stroke-width="0.8" stroke-dasharray="4,3"/>
+  <!-- 4-5 -->
+  <line x1="240" y1="340" x2="200" y2="205" stroke="#CCCCCC" stroke-width="0.8" stroke-dasharray="4,3"/>
+  <!-- 5-1 -->
+  <line x1="230" y1="155" x2="365" y2="100" stroke="#CCCCCC" stroke-width="0.8" stroke-dasharray="4,3"/>
+
+  <!-- ===== Factor 1: Windows 번들 (top center) ===== -->
+  <rect x="320" y="65" width="160" height="60" rx="6" fill="#F5F5F5" stroke="#999999" stroke-width="1"/>
+  <text x="332" y="82" class="factor-number">①</text>
+  <text x="400" y="82" class="factor-title" text-anchor="middle">Windows 번들</text>
+  <text x="400" y="98" class="factor-desc" text-anchor="middle">OS와 함께 사전 설치</text>
+  <text x="400" y="112" class="factor-desc" text-anchor="middle">별도 구매 불필요</text>
+
+  <!-- ===== Factor 2: 파일 포맷 종속 (upper-right) ===== -->
+  <rect x="545" y="140" width="175" height="60" rx="6" fill="#F5F5F5" stroke="#999999" stroke-width="1"/>
+  <text x="557" y="157" class="factor-number">②</text>
+  <text x="632" y="157" class="factor-title" text-anchor="middle">파일 포맷 종속</text>
+  <text x="632" y="173" class="factor-desc" text-anchor="middle">.doc/.xls/.ppt가 사실상 표준</text>
+  <text x="632" y="187" class="factor-desc" text-anchor="middle">호환성 압력</text>
+
+  <!-- ===== Factor 3: 네트워크 효과 (lower-right) ===== -->
+  <rect x="475" y="330" width="175" height="60" rx="6" fill="#F5F5F5" stroke="#999999" stroke-width="1"/>
+  <text x="487" y="347" class="factor-number">③</text>
+  <text x="562" y="347" class="factor-title" text-anchor="middle">네트워크 효과</text>
+  <text x="562" y="363" class="factor-desc" text-anchor="middle">모든 동료가 사용</text>
+  <text x="562" y="377" class="factor-desc" text-anchor="middle">→ 나도 사용해야</text>
+
+  <!-- ===== Factor 4: 학습 비용 (lower-left) ===== -->
+  <rect x="150" y="330" width="175" height="60" rx="6" fill="#F5F5F5" stroke="#999999" stroke-width="1"/>
+  <text x="162" y="347" class="factor-number">④</text>
+  <text x="237" y="347" class="factor-title" text-anchor="middle">학습 비용</text>
+  <text x="237" y="363" class="factor-desc" text-anchor="middle">한번 익히면</text>
+  <text x="237" y="377" class="factor-desc" text-anchor="middle">전환 비용이 큼</text>
+
+  <!-- ===== Factor 5: 통합 제품군 (upper-left) ===== -->
+  <rect x="80" y="140" width="175" height="60" rx="6" fill="#F5F5F5" stroke="#999999" stroke-width="1"/>
+  <text x="92" y="157" class="factor-number">⑤</text>
+  <text x="167" y="157" class="factor-title" text-anchor="middle">통합 제품군</text>
+  <text x="167" y="173" class="factor-desc" text-anchor="middle">4개 도구가 하나의 패키지</text>
+  <text x="167" y="187" class="factor-desc" text-anchor="middle">상호 연동</text>
+
+  <!-- ===== Small reinforcement arrows on dashed lines ===== -->
+  <!-- Arrow markers would add complexity; small "+" signs indicate reinforcement -->
+  <text x="510" y="120" class="caption" text-anchor="middle" font-style="normal">+</text>
+  <text x="595" y="278" class="caption" text-anchor="middle" font-style="normal">+</text>
+  <text x="408" y="398" class="caption" text-anchor="middle" font-style="normal">+</text>
+  <text x="205" y="278" class="caption" text-anchor="middle" font-style="normal">+</text>
+  <text x="290" y="120" class="caption" text-anchor="middle" font-style="normal">+</text>
+
+  <!-- ===== Caption ===== -->
+  <text x="400" y="465" class="caption" text-anchor="middle">다섯 요인이 상호 강화하는 양의 피드백 고리</text>
+
+  <!-- Thin bottom rule line -->
+  <line x1="200" y1="475" x2="600" y2="475" stroke="#CCCCCC" stroke-width="0.5"/>
+</svg>

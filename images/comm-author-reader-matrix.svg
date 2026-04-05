@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <style>
+    text { font-family: Palatino, 'Book Antiqua', Georgia, serif; }
+  </style>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333333"
+        font-family="Palatino, 'Book Antiqua', Georgia, serif">저자 × 독자: 문서의 새 좌표계</text>
+  <text x="400" y="50" text-anchor="middle" font-size="11" font-style="italic" fill="#666666"
+        font-family="Palatino, 'Book Antiqua', Georgia, serif">AI 시대, '누가 쓰고 누가 읽는가'가 첫 번째 질문이다</text>
+
+  <!-- Axis: Horizontal — 독자 (Reader) -->
+  <text x="400" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#333333"
+        font-family="Palatino, 'Book Antiqua', Georgia, serif">독자 (Reader)</text>
+  <text x="285" y="96" text-anchor="middle" font-size="12" fill="#333333"
+        font-family="Palatino, 'Book Antiqua', Georgia, serif">인간</text>
+  <text x="555" y="96" text-anchor="middle" font-size="12" fill="#333333"
+        font-family="Palatino, 'Book Antiqua', Georgia, serif">기계</text>
+
+  <!-- Axis: Vertical — 저자 (Author) -->
+  <text x="102" y="260" text-anchor="middle" font-size="13" font-weight="bold" fill="#333333"
+        font-family="Palatino, 'Book Antiqua', Georgia, serif"
+        transform="rotate(-90, 102, 260)">저자 (Author)</text>
+  <text x="120" y="210" text-anchor="middle" font-size="12" fill="#333333"
+        font-family="Palatino, 'Book Antiqua', Georgia, serif"
+        transform="rotate(-90, 120, 210)">인간</text>
+  <text x="120" y="370" text-anchor="middle" font-size="12" fill="#333333"
+        font-family="Palatino, 'Book Antiqua', Georgia, serif"
+        transform="rotate(-90, 120, 370)">기계</text>
+
+  <!-- Grid lines -->
+  <line x1="140" y1="105" x2="140" y2="455" stroke="#999999" stroke-width="1"/>
+  <line x1="140" y1="105" x2="690" y2="105" stroke="#999999" stroke-width="1"/>
+  <line x1="690" y1="105" x2="690" y2="455" stroke="#999999" stroke-width="1"/>
+  <line x1="140" y1="455" x2="690" y2="455" stroke="#999999" stroke-width="1"/>
+  <!-- Middle dividers -->
+  <line x1="415" y1="105" x2="415" y2="455" stroke="#999999" stroke-width="1"/>
+  <line x1="140" y1="280" x2="690" y2="280" stroke="#999999" stroke-width="1"/>
+
+  <!-- Q1: Top-Left (인간→인간) — 전통 문서 -->
+  <rect x="141" y="106" width="273" height="173" fill="#F5F5F5" rx="3" ry="3"/>
+  <!-- Document icon -->
+  <g transform="translate(245, 125)">
+    <rect x="0" y="0" width="24" height="30" fill="none" stroke="#999999" stroke-width="1" rx="1"/>
+    <line x1="5" y1="8" x2="19" y2="8" stroke="#999999" stroke-width="0.8"/>
+    <line x1="5" y1="13" x2="19" y2="13" stroke="#999999" stroke-width="0.8"/>
+    <line x1="5" y1="18" x2="15" y2="18" stroke="#999999" stroke-width="0.8"/>
+    <polyline points="15,0 15,8 24,8" fill="none" stroke="#999999" stroke-width="1"/>
+  </g>
+  <text x="277" y="175" text-anchor="middle" font-size="15" font-weight="bold" fill="#333333"
+        font-family="Palatino, 'Book Antiqua', Georgia, serif">전통 문서</text>
+  <text x="277" y="195" text-anchor="middle" font-size="11" fill="#666666"
+        font-family="Palatino, 'Book Antiqua', Georgia, serif">보고서, 논문, 매뉴얼, 편지</text>
+  <text x="277" y="215" text-anchor="middle" font-size="10" font-style="italic" fill="#666666"
+        font-family="Palatino, 'Book Antiqua', Georgia, serif">목적에 따른 8가지 유형</text>
+
+  <!-- Arrow hint: 인간 → 인간 -->
+  <text x="277" y="265" text-anchor="middle" font-size="10" fill="#999999"
+        font-family="Palatino, 'Book Antiqua', Georgia, serif">인간 → 인간</text>
+
+  <!-- Q2: Top-Right (인간→기계) — 실행 문서 -->
+  <rect x="416" y="106" width="273" height="173" fill="#F5F5F5" rx="3" ry="3"/>
+  <!-- Code icon -->
+  <g transform="translate(520, 125)">
+    <text font-size="22" fill="#999999" font-family="Palatino, 'Book Antiqua', Georgia, serif"
+          text-anchor="middle" x="12" y="24">&lt;/&gt;</text>
+  </g>
+  <text x="552" y="175" text-anchor="middle" font-size="15" font-weight="bold" fill="#333333"
+        font-family="Palatino, 'Book Antiqua', Georgia, serif">실행 문서</text>
+  <text x="552" y="195" text-anchor="middle" font-size="11" fill="#666666"
+        font-family="Palatino, 'Book Antiqua', Georgia, serif">코드, CLAUDE.md, Terraform, SQL</text>
+  <text x="552" y="215" text-anchor="middle" font-size="10" font-style="italic" fill="#666666"
+        font-family="Palatino, 'Book Antiqua', Georgia, serif">읽히는 동시에 실행된다</text>
+
+  <!-- Arrow hint -->
+  <text x="552" y="265" text-anchor="middle" font-size="10" fill="#999999"
+        font-family="Palatino, 'Book Antiqua', Georgia, serif">인간 → 기계</text>
+
+  <!-- Q3: Bottom-Left (기계→인간) — AI 생성 문서 -->
+  <rect x="141" y="281" width="273" height="173" fill="#F5F5F5" rx="3" ry="3"/>
+  <!-- AI/spark icon -->
+  <g transform="translate(252, 300)">
+    <circle cx="12" cy="12" r="10" fill="none" stroke="#999999" stroke-width="1"/>
+    <text font-size="14" fill="#999999" font-family="Palatino, 'Book Antiqua', Georgia, serif"
+          text-anchor="middle" x="12" y="17">AI</text>
+  </g>
+  <text x="277" y="350" text-anchor="middle" font-size="15" font-weight="bold" fill="#333333"
+        font-family="Palatino, 'Book Antiqua', Georgia, serif">AI 생성 문서</text>
+  <text x="277" y="370" text-anchor="middle" font-size="11" fill="#666666"
+        font-family="Palatino, 'Book Antiqua', Georgia, serif">ChatGPT 응답, AI 보고서, 자동 뉴스</text>
+  <text x="277" y="390" text-anchor="middle" font-size="10" font-style="italic" fill="#666666"
+        font-family="Palatino, 'Book Antiqua', Georgia, serif">검증이 핵심 과제</text>
+
+  <!-- Arrow hint -->
+  <text x="277" y="440" text-anchor="middle" font-size="10" fill="#999999"
+        font-family="Palatino, 'Book Antiqua', Georgia, serif">기계 → 인간</text>
+
+  <!-- Q4: Bottom-Right (기계→기계) — 자동 교환 (emphasized) -->
+  <rect x="416" y="281" width="273" height="173" fill="#EEEEEE" stroke="#666666" stroke-width="1.5" rx="3" ry="3"/>
+  <!-- Exchange icon -->
+  <g transform="translate(525, 300)">
+    <line x1="0" y1="8" x2="20" y2="8" stroke="#666666" stroke-width="1.2"/>
+    <polyline points="15,3 20,8 15,13" fill="none" stroke="#666666" stroke-width="1.2"/>
+    <line x1="24" y1="18" x2="4" y2="18" stroke="#666666" stroke-width="1.2"/>
+    <polyline points="9,13 4,18 9,23" fill="none" stroke="#666666" stroke-width="1.2"/>
+  </g>
+  <text x="552" y="350" text-anchor="middle" font-size="15" font-weight="bold" fill="#333333"
+        font-family="Palatino, 'Book Antiqua', Georgia, serif">자동 교환</text>
+  <text x="552" y="370" text-anchor="middle" font-size="11" fill="#666666"
+        font-family="Palatino, 'Book Antiqua', Georgia, serif">EDI, API/JSON, IoT, 블록체인</text>
+  <text x="552" y="390" text-anchor="middle" font-size="10" font-style="italic" fill="#666666"
+        font-family="Palatino, 'Book Antiqua', Georgia, serif">전체 데이터의 80~90%</text>
+
+  <!-- Arrow hint -->
+  <text x="552" y="440" text-anchor="middle" font-size="10" fill="#999999"
+        font-family="Palatino, 'Book Antiqua', Georgia, serif">기계 → 기계</text>
+
+  <!-- Bottom annotation -->
+  <line x1="140" y1="475" x2="690" y2="475" stroke="#CCCCCC" stroke-width="0.5"/>
+  <text x="415" y="495" text-anchor="middle" font-size="11" font-style="italic" fill="#666666"
+        font-family="Palatino, 'Book Antiqua', Georgia, serif">전통적 문서는 좌상단(인간→인간)에만 해당. AI 시대에 나머지 3사분면이 부각되었다.</text>
+</svg>

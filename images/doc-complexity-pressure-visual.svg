@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="460" viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg" font-family="Palatino Linotype, Georgia, serif">
+  <defs>
+    <marker id="pv-a" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#003876" opacity="0.5"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="460" fill="#FEFEFE"/>
+
+  <!-- Header -->
+  <text x="50" y="30" font-size="10.5" fill="#555" letter-spacing="1.5px">복잡도 상승의 해부 — 단순한 메모가 어떻게 괴물이 되는가</text>
+  <line x1="50" y1="38" x2="630" y2="38" stroke="#003876" stroke-width="1" opacity="0.2"/>
+
+  <!-- ══════ Document growth — 4 stages ══════ -->
+
+  <!-- Stage 1: Simple memo (smallest) -->
+  <rect x="55" y="68" width="90" height="44" rx="3" fill="none" stroke="#003876" stroke-width="1"/>
+  <text x="100" y="88" text-anchor="middle" font-size="11.5" fill="#003876" font-weight="600">메모 1장</text>
+  <text x="100" y="103" text-anchor="middle" font-size="9.5" fill="#888">Lv.0</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="145" y1="90" x2="168" y2="90" stroke="#003876" stroke-width="1" opacity="0.3" marker-end="url(#pv-a)"/>
+
+  <!-- Stage 2: Report (medium) -->
+  <rect x="175" y="58" width="105" height="64" rx="3" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="227" y="80" text-anchor="middle" font-size="11.5" fill="#003876" font-weight="600">보고서 5장</text>
+  <text x="227" y="96" text-anchor="middle" font-size="10" fill="#555">목차 + 표 + 서식</text>
+  <text x="227" y="112" text-anchor="middle" font-size="9.5" fill="#888">Lv.1</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="280" y1="90" x2="303" y2="90" stroke="#003876" stroke-width="1" opacity="0.3" marker-end="url(#pv-a)"/>
+
+  <!-- Stage 3: Technical doc (large) -->
+  <rect x="310" y="48" width="120" height="84" rx="3" fill="none" stroke="#003876" stroke-width="1.4"/>
+  <text x="370" y="70" text-anchor="middle" font-size="11.5" fill="#003876" font-weight="600">기술문서 30장</text>
+  <text x="370" y="87" text-anchor="middle" font-size="10" fill="#555">교차참조 + 수식</text>
+  <text x="370" y="103" text-anchor="middle" font-size="10" fill="#555">데이터 + 코드</text>
+  <text x="370" y="122" text-anchor="middle" font-size="9.5" fill="#888">Lv.2~3</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="430" y1="90" x2="453" y2="90" stroke="#003876" stroke-width="1" opacity="0.3" marker-end="url(#pv-a)"/>
+
+  <!-- Stage 4: Pipeline (largest) -->
+  <rect x="460" y="40" width="160" height="100" rx="3" fill="none" stroke="#003876" stroke-width="1.8"/>
+  <text x="540" y="62" text-anchor="middle" font-size="11.5" fill="#003876" font-weight="600">자동화 파이프라인</text>
+  <text x="540" y="79" text-anchor="middle" font-size="10" fill="#555">CI/CD + Git + 다중 출력</text>
+  <text x="540" y="95" text-anchor="middle" font-size="10" fill="#555">매개변수 N개 문서</text>
+  <text x="540" y="111" text-anchor="middle" font-size="10" fill="#555">규제 준수 + 감사 추적</text>
+  <text x="540" y="130" text-anchor="middle" font-size="9.5" fill="#888">Lv.4</text>
+
+  <!-- ══════ Timeline: 김대리 6개월 ══════ -->
+  <line x1="50" y1="155" x2="630" y2="155" stroke="#003876" stroke-width="0.5" opacity="0.15"/>
+
+  <text x="55" y="177" font-size="10.5" fill="#555" letter-spacing="1.5px">실전 시나리오 — 공무원 김대리 6개월</text>
+
+  <line x1="70" y1="205" x2="610" y2="205" stroke="#003876" stroke-width="1" opacity="0.2"/>
+
+  <!-- Month 1 -->
+  <circle cx="90" cy="205" r="4" fill="#003876"/>
+  <text x="90" y="196" text-anchor="middle" font-size="9.5" fill="#888">1월</text>
+  <text x="90" y="223" text-anchor="middle" font-size="10.5" fill="#555">"간단한 현황</text>
+  <text x="90" y="237" text-anchor="middle" font-size="10.5" fill="#555">메모 하나"</text>
+  <text x="90" y="256" text-anchor="middle" font-size="10" fill="#003876">HWP 1장</text>
+
+  <!-- Month 2 -->
+  <circle cx="210" cy="205" r="4" fill="#003876"/>
+  <text x="210" y="196" text-anchor="middle" font-size="9.5" fill="#888">2월</text>
+  <text x="210" y="223" text-anchor="middle" font-size="10.5" fill="#555">"국장님께</text>
+  <text x="210" y="237" text-anchor="middle" font-size="10.5" fill="#555">보고드려야 해"</text>
+  <text x="210" y="256" text-anchor="middle" font-size="10" fill="#003876">HWP 5장 + 표</text>
+
+  <!-- Month 3 -->
+  <circle cx="330" cy="205" r="4" fill="#003876"/>
+  <text x="330" y="196" text-anchor="middle" font-size="9.5" fill="#888">3월</text>
+  <text x="330" y="223" text-anchor="middle" font-size="10.5" fill="#555">"데이터 근거</text>
+  <text x="330" y="237" text-anchor="middle" font-size="10.5" fill="#555">첨부해줘"</text>
+  <text x="330" y="256" text-anchor="middle" font-size="10" fill="#003876">HWP + Excel 복붙</text>
+
+  <!-- Month 4 — turning point -->
+  <circle cx="450" cy="205" r="5" fill="#c0392b"/>
+  <text x="450" y="196" text-anchor="middle" font-size="9.5" fill="#888">4월</text>
+  <text x="450" y="223" text-anchor="middle" font-size="10.5" fill="#c0392b">"매달 만들어야</text>
+  <text x="450" y="237" text-anchor="middle" font-size="10.5" fill="#c0392b">한다고?!"</text>
+  <text x="450" y="256" text-anchor="middle" font-size="10" fill="#c0392b">복사-붙여넣기 지옥</text>
+
+  <!-- Month 6 — crisis -->
+  <circle cx="570" cy="205" r="5" fill="#c0392b"/>
+  <text x="570" y="196" text-anchor="middle" font-size="9.5" fill="#888">6월</text>
+  <text x="570" y="223" text-anchor="middle" font-size="10.5" fill="#c0392b">"웹으로도 줘"</text>
+  <text x="570" y="237" text-anchor="middle" font-size="10.5" fill="#c0392b">"3개 부서 버전"</text>
+  <text x="570" y="256" text-anchor="middle" font-size="10" fill="#c0392b">최종_진짜최종_v3</text>
+
+  <!-- ══════ Diagnosis ══════ -->
+  <line x1="50" y1="278" x2="630" y2="278" stroke="#003876" stroke-width="0.5" opacity="0.1"/>
+  <text x="55" y="300" font-size="10.5" fill="#555" letter-spacing="1.5px">진단 — 6개월간 무엇이 변했는가</text>
+
+  <text x="65" y="325" font-size="11.5" fill="#888">1월 (Lv.0)</text>
+  <text x="195" y="325" font-size="11.5" fill="#555">독자: 본인 · 수명: 1일 · 재현: 불필요 · 자동화: 없음</text>
+
+  <text x="65" y="350" font-size="11.5" fill="#c0392b" font-weight="600">6월 (Lv.3)</text>
+  <text x="195" y="350" font-size="11.5" fill="#555">독자: 국장+3부서 · 수명: 연간 · 재현: 데이터 · 월간 반복</text>
+
+  <text x="65" y="378" font-size="13" fill="#003876" font-weight="600">도구는 그대로: HWP</text>
+
+  <!-- ══════ Key insight ══════ -->
+  <line x1="50" y1="398" x2="630" y2="398" stroke="#003876" stroke-width="0.5" opacity="0.15"/>
+
+  <line x1="55" y1="418" x2="60" y2="418" stroke="#003876" stroke-width="2.5"/>
+  <text x="70" y="422" font-size="12.5" fill="#444">요구사항은 Lv.0→Lv.3, 도구는 Lv.1 — 이것이 불일치의 구조적 원인</text>
+
+  <line x1="55" y1="442" x2="60" y2="442" stroke="#003876" stroke-width="2.5"/>
+  <text x="70" y="446" font-size="12.5" fill="#444">1월에 Quarto로 시작했다면, 도구 변경 없이 6월까지 수용 가능했다</text>
+
+  <!-- ══════ Margin notes ══════ -->
+  <text x="710" y="55" font-size="10" fill="#888" font-style="italic">문서가 커지는 게 아니라</text>
+  <text x="710" y="70" font-size="10" fill="#888" font-style="italic">요구사항이 커진다.</text>
+
+  <text x="710" y="110" font-size="10" fill="#888" font-style="italic">김대리은 아무것도</text>
+  <text x="710" y="125" font-size="10" fill="#888" font-style="italic">잘못하지 않았다.</text>
+  <text x="710" y="140" font-size="10" fill="#888" font-style="italic">도구를 안 바꾼 것만</text>
+  <text x="710" y="155" font-size="10" fill="#888" font-style="italic">잘못이다.</text>
+
+  <text x="710" y="205" font-size="10" fill="#888" font-style="italic">압력 순서:</text>
+  <text x="710" y="222" font-size="10" fill="#888" font-style="italic">① 독자 확대 (2월)</text>
+  <text x="710" y="237" font-size="10" fill="#888" font-style="italic">② 재현 요구 (3월)</text>
+  <text x="710" y="252" font-size="10" fill="#888" font-style="italic">③ 반복 자동화 (4월)</text>
+  <text x="710" y="267" font-size="10" fill="#888" font-style="italic">④ 다중 출력 (6월)</text>
+
+  <text x="710" y="325" font-size="10" fill="#888" font-style="italic">만약 1월에 Quarto:</text>
+  <text x="710" y="342" font-size="10" fill="#888" font-style="italic">진입 비용 4시간,</text>
+  <text x="710" y="357" font-size="10" fill="#888" font-style="italic">절약 비용 수백 시간.</text>
+
+  <text x="710" y="420" font-size="10" fill="#888" font-style="italic">황금률:</text>
+  <text x="710" y="435" font-size="10" fill="#888" font-style="italic">Lv 예측 +1의 도구 선택</text>
+
+  <line x1="50" y1="455" x2="630" y2="455" stroke="#eee" stroke-width="0.5"/>
+</svg>

@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="Palatino Linotype, Palatino, Georgia, serif">
+  <rect width="900" height="520" fill="#fafafa" rx="4"/>
+  <text x="450" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">문서 생성 엔진 비교 -- Quarto는 유일한 선택인가</text>
+  <line x1="100" y1="50" x2="800" y2="50" stroke="#999" stroke-width="0.5"/>
+
+  <!-- Axis labels -->
+  <text x="450" y="78" text-anchor="middle" font-size="13" fill="#888">5대 기준 평가 (5점 만점)</text>
+
+  <!-- Table header -->
+  <rect x="40" y="90" width="820" height="30" rx="3" fill="#444"/>
+  <text x="145" y="110" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">도구</text>
+  <text x="290" y="110" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">다중 출력</text>
+  <text x="390" y="110" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">코드 통합</text>
+  <text x="490" y="110" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">AI 적합성</text>
+  <text x="590" y="110" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">생태계</text>
+  <text x="680" y="110" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">학습 곡선</text>
+  <text x="790" y="110" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">총점</text>
+
+  <!-- Quarto row (highlighted) -->
+  <rect x="40" y="122" width="820" height="32" rx="0" fill="#e8e8e8" stroke="#555" stroke-width="1"/>
+  <text x="145" y="143" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Quarto</text>
+  <text x="290" y="143" text-anchor="middle" font-size="18" fill="#333">●●●●●</text>
+  <text x="390" y="143" text-anchor="middle" font-size="18" fill="#333">●●●●●</text>
+  <text x="490" y="143" text-anchor="middle" font-size="18" fill="#333">●●●●●</text>
+  <text x="590" y="143" text-anchor="middle" font-size="18" fill="#333">●●●●○</text>
+  <text x="680" y="143" text-anchor="middle" font-size="18" fill="#333">●●●○○</text>
+  <text x="790" y="143" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">22</text>
+
+  <!-- R Markdown -->
+  <rect x="40" y="156" width="820" height="32" rx="0" fill="#f5f5f5"/>
+  <text x="145" y="177" text-anchor="middle" font-size="12" fill="#555">R Markdown</text>
+  <text x="290" y="177" text-anchor="middle" font-size="18" fill="#777">●●●●○</text>
+  <text x="390" y="177" text-anchor="middle" font-size="18" fill="#777">●●●●○</text>
+  <text x="490" y="177" text-anchor="middle" font-size="18" fill="#777">●●●●●</text>
+  <text x="590" y="177" text-anchor="middle" font-size="18" fill="#777">●●●●○</text>
+  <text x="680" y="177" text-anchor="middle" font-size="18" fill="#777">●●●○○</text>
+  <text x="790" y="177" text-anchor="middle" font-size="13" fill="#555">20</text>
+
+  <!-- Jupyter Book -->
+  <rect x="40" y="190" width="820" height="32" rx="0" fill="#f5f5f5"/>
+  <text x="145" y="211" text-anchor="middle" font-size="12" fill="#555">Jupyter Book</text>
+  <text x="290" y="211" text-anchor="middle" font-size="18" fill="#777">●●○○○</text>
+  <text x="390" y="211" text-anchor="middle" font-size="18" fill="#777">●●●●●</text>
+  <text x="490" y="211" text-anchor="middle" font-size="18" fill="#777">●●●○○</text>
+  <text x="590" y="211" text-anchor="middle" font-size="18" fill="#777">●●●○○</text>
+  <text x="680" y="211" text-anchor="middle" font-size="18" fill="#777">●●●○○</text>
+  <text x="790" y="211" text-anchor="middle" font-size="13" fill="#555">16</text>
+
+  <!-- Pandoc -->
+  <rect x="40" y="224" width="820" height="32" rx="0" fill="#f5f5f5"/>
+  <text x="145" y="245" text-anchor="middle" font-size="12" fill="#555">Pandoc</text>
+  <text x="290" y="245" text-anchor="middle" font-size="18" fill="#777">●●●●○</text>
+  <text x="390" y="245" text-anchor="middle" font-size="18" fill="#777">●○○○○</text>
+  <text x="490" y="245" text-anchor="middle" font-size="18" fill="#777">●●●●○</text>
+  <text x="590" y="245" text-anchor="middle" font-size="18" fill="#777">●●●○○</text>
+  <text x="680" y="245" text-anchor="middle" font-size="18" fill="#777">●●●○○</text>
+  <text x="790" y="245" text-anchor="middle" font-size="13" fill="#555">15</text>
+
+  <!-- MkDocs -->
+  <rect x="40" y="258" width="820" height="32" rx="0" fill="#f5f5f5"/>
+  <text x="145" y="279" text-anchor="middle" font-size="12" fill="#555">MkDocs</text>
+  <text x="290" y="279" text-anchor="middle" font-size="18" fill="#777">●○○○○</text>
+  <text x="390" y="279" text-anchor="middle" font-size="18" fill="#777">●○○○○</text>
+  <text x="490" y="279" text-anchor="middle" font-size="18" fill="#777">●●●●○</text>
+  <text x="590" y="279" text-anchor="middle" font-size="18" fill="#777">●●●●○</text>
+  <text x="680" y="279" text-anchor="middle" font-size="18" fill="#777">●●●●●</text>
+  <text x="790" y="279" text-anchor="middle" font-size="13" fill="#555">15</text>
+
+  <!-- Docusaurus -->
+  <rect x="40" y="292" width="820" height="32" rx="0" fill="#f5f5f5"/>
+  <text x="145" y="313" text-anchor="middle" font-size="12" fill="#555">Docusaurus</text>
+  <text x="290" y="313" text-anchor="middle" font-size="18" fill="#777">●○○○○</text>
+  <text x="390" y="313" text-anchor="middle" font-size="18" fill="#777">●○○○○</text>
+  <text x="490" y="313" text-anchor="middle" font-size="18" fill="#777">●●●●○</text>
+  <text x="590" y="313" text-anchor="middle" font-size="18" fill="#777">●●●●○</text>
+  <text x="680" y="313" text-anchor="middle" font-size="18" fill="#777">●●●●○</text>
+  <text x="790" y="313" text-anchor="middle" font-size="13" fill="#555">14</text>
+
+  <!-- LaTeX -->
+  <rect x="40" y="326" width="820" height="32" rx="0" fill="#f5f5f5"/>
+  <text x="145" y="347" text-anchor="middle" font-size="12" fill="#555">LaTeX</text>
+  <text x="290" y="347" text-anchor="middle" font-size="18" fill="#777">●●○○○</text>
+  <text x="390" y="347" text-anchor="middle" font-size="18" fill="#777">●●○○○</text>
+  <text x="490" y="347" text-anchor="middle" font-size="18" fill="#777">●●●○○</text>
+  <text x="590" y="347" text-anchor="middle" font-size="18" fill="#777">●●●●●</text>
+  <text x="680" y="347" text-anchor="middle" font-size="18" fill="#777">●○○○○</text>
+  <text x="790" y="347" text-anchor="middle" font-size="13" fill="#555">13</text>
+
+  <!-- Typst -->
+  <rect x="40" y="360" width="820" height="32" rx="0" fill="#f5f5f5"/>
+  <text x="145" y="381" text-anchor="middle" font-size="12" fill="#555">Typst</text>
+  <text x="290" y="381" text-anchor="middle" font-size="18" fill="#777">●○○○○</text>
+  <text x="390" y="381" text-anchor="middle" font-size="18" fill="#777">●○○○○</text>
+  <text x="490" y="381" text-anchor="middle" font-size="18" fill="#777">●●●●○</text>
+  <text x="590" y="381" text-anchor="middle" font-size="18" fill="#777">●●○○○</text>
+  <text x="680" y="381" text-anchor="middle" font-size="18" fill="#777">●●●●○</text>
+  <text x="790" y="381" text-anchor="middle" font-size="13" fill="#555">12</text>
+
+  <!-- Insight section -->
+  <rect x="40" y="410" width="400" height="95" rx="5" fill="none" stroke="#555" stroke-width="1.2"/>
+  <text x="60" y="432" font-size="12" font-weight="bold" fill="#333">각 도구의 강점 영역</text>
+  <text x="60" y="452" font-size="11" fill="#666">Typst: PDF 인쇄 품질 최고, 컴파일 10-100배 빠름</text>
+  <text x="60" y="470" font-size="11" fill="#666">LaTeX: 40년 학술 표준, 가장 넓은 템플릿</text>
+  <text x="60" y="488" font-size="11" fill="#666">MkDocs: 가장 쉬운 학습 곡선, 문서 사이트 특화</text>
+
+  <!-- Recommendation -->
+  <rect x="460" y="410" width="400" height="95" rx="5" fill="#f0f0f0" stroke="#555" stroke-width="1.2"/>
+  <text x="480" y="432" font-size="12" font-weight="bold" fill="#333">추천: Quarto + 보완 조합</text>
+  <text x="480" y="452" font-size="11" fill="#555">인쇄 PDF → Quarto + Typst (format: typst)</text>
+  <text x="480" y="470" font-size="11" fill="#555">API 문서 → MkDocs/Sphinx (별도 프로젝트)</text>
+  <text x="480" y="488" font-size="11" fill="#555">학술 투고 → Quarto + journal 템플릿</text>
+</svg>

@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="Palatino, 'Book Antiqua', Georgia, serif">
+
+  <!-- Title and Subtitle -->
+  <text x="400" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#333333">네 가지 문제, 세 시대의 해법</text>
+  <text x="400" y="46" text-anchor="middle" font-size="11" font-style="italic" fill="#666666">글쓰기 도구는 바뀌어도 문제는 같다</text>
+
+  <!-- Grid constants: top=70, row-height=95, col-start=135, col-width=215, row-label-width=120 -->
+
+  <!-- Column Headers Background -->
+  <rect x="135" y="58" width="215" height="28" fill="#EEEEEE" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="350" y="58" width="215" height="28" fill="#EEEEEE" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="565" y="58" width="215" height="28" fill="#EEEEEE" stroke="#CCCCCC" stroke-width="0.5"/>
+
+  <!-- Column Headers Text -->
+  <text x="242" y="76" text-anchor="middle" font-size="12" font-weight="bold" fill="#333333">Office 이전 (1970s~)</text>
+  <text x="457" y="76" text-anchor="middle" font-size="12" font-weight="bold" fill="#333333">MS Office 시대 (1990~2022)</text>
+  <text x="672" y="76" text-anchor="middle" font-size="12" font-weight="bold" fill="#333333">AI 시대 (2022~)</text>
+
+  <!-- Row Label Column Background -->
+  <rect x="15" y="86" width="120" height="95" fill="#F5F5F5" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="15" y="181" width="120" height="95" fill="#F5F5F5" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="15" y="276" width="120" height="95" fill="#F5F5F5" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="15" y="371" width="120" height="95" fill="#F5F5F5" stroke="#CCCCCC" stroke-width="0.5"/>
+
+  <!-- Row Labels -->
+  <text x="75" y="126" text-anchor="middle" font-size="14" font-weight="bold" fill="#333333">작성</text>
+  <text x="75" y="143" text-anchor="middle" font-size="11" fill="#666666">(Write)</text>
+
+  <text x="75" y="221" text-anchor="middle" font-size="14" font-weight="bold" fill="#333333">계산</text>
+  <text x="75" y="238" text-anchor="middle" font-size="11" fill="#666666">(Calculate)</text>
+
+  <text x="75" y="316" text-anchor="middle" font-size="14" font-weight="bold" fill="#333333">발표</text>
+  <text x="75" y="333" text-anchor="middle" font-size="11" fill="#666666">(Present)</text>
+
+  <text x="75" y="411" text-anchor="middle" font-size="14" font-weight="bold" fill="#333333">정리</text>
+  <text x="75" y="428" text-anchor="middle" font-size="11" fill="#666666">(Organize)</text>
+
+  <!-- Grid Cells -->
+  <!-- Row 1 -->
+  <rect x="135" y="86" width="215" height="95" fill="white" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="350" y="86" width="215" height="95" fill="white" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="565" y="86" width="215" height="95" fill="white" stroke="#CCCCCC" stroke-width="0.5"/>
+  <!-- Row 2 -->
+  <rect x="135" y="181" width="215" height="95" fill="white" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="350" y="181" width="215" height="95" fill="white" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="565" y="181" width="215" height="95" fill="white" stroke="#CCCCCC" stroke-width="0.5"/>
+  <!-- Row 3 -->
+  <rect x="135" y="276" width="215" height="95" fill="white" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="350" y="276" width="215" height="95" fill="white" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="565" y="276" width="215" height="95" fill="white" stroke="#CCCCCC" stroke-width="0.5"/>
+  <!-- Row 4 -->
+  <rect x="135" y="371" width="215" height="95" fill="white" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="350" y="371" width="215" height="95" fill="white" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="565" y="371" width="215" height="95" fill="white" stroke="#CCCCCC" stroke-width="0.5"/>
+
+  <!-- ==================== ROW 1: 작성 (Write) ==================== -->
+  <!-- Cell 1,1: 타자기 → WordStar → WordPerfect -->
+  <rect x="152" y="104" width="56" height="22" rx="2" fill="#F5F5F5" stroke="#999999" stroke-width="0.7"/>
+  <text x="180" y="119" text-anchor="middle" font-size="10" fill="#333333">타자기</text>
+  <text x="215" y="119" text-anchor="middle" font-size="11" fill="#999999">→</text>
+  <rect x="224" y="104" width="56" height="22" rx="2" fill="#F5F5F5" stroke="#999999" stroke-width="0.7"/>
+  <text x="252" y="119" text-anchor="middle" font-size="10" fill="#333333">WordStar</text>
+  <text x="162" y="152" text-anchor="middle" font-size="11" fill="#999999">→</text>
+  <rect x="172" y="138" width="78" height="22" rx="2" fill="#F5F5F5" stroke="#999999" stroke-width="0.7"/>
+  <text x="211" y="153" text-anchor="middle" font-size="10" fill="#333333">WordPerfect</text>
+
+  <!-- Cell 1,2: Word (.doc → .docx) -->
+  <rect x="407" y="114" width="100" height="26" rx="2" fill="#EEEEEE" stroke="#666666" stroke-width="0.7"/>
+  <text x="457" y="132" text-anchor="middle" font-size="11" fill="#333333">Word</text>
+  <text x="457" y="152" text-anchor="middle" font-size="10" fill="#666666">.doc → .docx</text>
+
+  <!-- Cell 1,3: Markdown + LLM -->
+  <rect x="600" y="108" width="74" height="22" rx="2" fill="#F5F5F5" stroke="#999999" stroke-width="0.7"/>
+  <text x="637" y="123" text-anchor="middle" font-size="10" fill="#333333">Markdown</text>
+  <text x="680" y="123" text-anchor="middle" font-size="11" fill="#999999">+</text>
+  <rect x="690" y="108" width="52" height="22" rx="2" fill="#F5F5F5" stroke="#999999" stroke-width="0.7"/>
+  <text x="716" y="123" text-anchor="middle" font-size="10" fill="#333333">LLM</text>
+
+  <!-- ==================== ROW 2: 계산 (Calculate) ==================== -->
+  <!-- Cell 2,1: 장부 → VisiCalc → Lotus 1-2-3 -->
+  <rect x="155" y="199" width="46" height="22" rx="2" fill="#F5F5F5" stroke="#999999" stroke-width="0.7"/>
+  <text x="178" y="214" text-anchor="middle" font-size="10" fill="#333333">장부</text>
+  <text x="208" y="214" text-anchor="middle" font-size="11" fill="#999999">→</text>
+  <rect x="218" y="199" width="58" height="22" rx="2" fill="#F5F5F5" stroke="#999999" stroke-width="0.7"/>
+  <text x="247" y="214" text-anchor="middle" font-size="10" fill="#333333">VisiCalc</text>
+  <text x="162" y="247" text-anchor="middle" font-size="11" fill="#999999">→</text>
+  <rect x="172" y="233" width="78" height="22" rx="2" fill="#F5F5F5" stroke="#999999" stroke-width="0.7"/>
+  <text x="211" y="248" text-anchor="middle" font-size="10" fill="#333333">Lotus 1-2-3</text>
+
+  <!-- Cell 2,2: Excel (.xls → .xlsx) -->
+  <rect x="407" y="209" width="100" height="26" rx="2" fill="#EEEEEE" stroke="#666666" stroke-width="0.7"/>
+  <text x="457" y="227" text-anchor="middle" font-size="11" fill="#333333">Excel</text>
+  <text x="457" y="247" text-anchor="middle" font-size="10" fill="#666666">.xls → .xlsx</text>
+
+  <!-- Cell 2,3: Python/R + AI -->
+  <rect x="600" y="203" width="74" height="22" rx="2" fill="#F5F5F5" stroke="#999999" stroke-width="0.7"/>
+  <text x="637" y="218" text-anchor="middle" font-size="10" fill="#333333">Python/R</text>
+  <text x="680" y="218" text-anchor="middle" font-size="11" fill="#999999">+</text>
+  <rect x="690" y="203" width="52" height="22" rx="2" fill="#F5F5F5" stroke="#999999" stroke-width="0.7"/>
+  <text x="716" y="218" text-anchor="middle" font-size="10" fill="#333333">AI</text>
+
+  <!-- ==================== ROW 3: 발표 (Present) ==================== -->
+  <!-- Cell 3,1: OHP → 35mm 슬라이드 → Harvard Graphics -->
+  <rect x="151" y="294" width="42" height="22" rx="2" fill="#F5F5F5" stroke="#999999" stroke-width="0.7"/>
+  <text x="172" y="309" text-anchor="middle" font-size="10" fill="#333333">OHP</text>
+  <text x="200" y="309" text-anchor="middle" font-size="11" fill="#999999">→</text>
+  <rect x="209" y="294" width="72" height="22" rx="2" fill="#F5F5F5" stroke="#999999" stroke-width="0.7"/>
+  <text x="245" y="309" text-anchor="middle" font-size="9.5" fill="#333333">35mm 슬라이드</text>
+  <text x="162" y="343" text-anchor="middle" font-size="11" fill="#999999">→</text>
+  <rect x="172" y="328" width="100" height="22" rx="2" fill="#F5F5F5" stroke="#999999" stroke-width="0.7"/>
+  <text x="222" y="343" text-anchor="middle" font-size="10" fill="#333333">Harvard Graphics</text>
+
+  <!-- Cell 3,2: PowerPoint (.ppt → .pptx) -->
+  <rect x="395" y="304" width="124" height="26" rx="2" fill="#EEEEEE" stroke="#666666" stroke-width="0.7"/>
+  <text x="457" y="322" text-anchor="middle" font-size="11" fill="#333333">PowerPoint</text>
+  <text x="457" y="342" text-anchor="middle" font-size="10" fill="#666666">.ppt → .pptx</text>
+
+  <!-- Cell 3,3: Quarto Revealjs + AI -->
+  <rect x="586" y="298" width="102" height="22" rx="2" fill="#F5F5F5" stroke="#999999" stroke-width="0.7"/>
+  <text x="637" y="313" text-anchor="middle" font-size="10" fill="#333333">Quarto Revealjs</text>
+  <text x="693" y="313" text-anchor="middle" font-size="11" fill="#999999">+</text>
+  <rect x="700" y="298" width="52" height="22" rx="2" fill="#F5F5F5" stroke="#999999" stroke-width="0.7"/>
+  <text x="726" y="313" text-anchor="middle" font-size="10" fill="#333333">AI</text>
+
+  <!-- ==================== ROW 4: 정리 (Organize) ==================== -->
+  <!-- Cell 4,1: 색인카드 → dBASE → FoxPro -->
+  <rect x="148" y="389" width="60" height="22" rx="2" fill="#F5F5F5" stroke="#999999" stroke-width="0.7"/>
+  <text x="178" y="404" text-anchor="middle" font-size="10" fill="#333333">색인카드</text>
+  <text x="215" y="404" text-anchor="middle" font-size="11" fill="#999999">→</text>
+  <rect x="224" y="389" width="56" height="22" rx="2" fill="#F5F5F5" stroke="#999999" stroke-width="0.7"/>
+  <text x="252" y="404" text-anchor="middle" font-size="10" fill="#333333">dBASE</text>
+  <text x="162" y="437" text-anchor="middle" font-size="11" fill="#999999">→</text>
+  <rect x="172" y="423" width="60" height="22" rx="2" fill="#F5F5F5" stroke="#999999" stroke-width="0.7"/>
+  <text x="202" y="438" text-anchor="middle" font-size="10" fill="#333333">FoxPro</text>
+
+  <!-- Cell 4,2: Access (.mdb → .accdb) -->
+  <rect x="407" y="399" width="100" height="26" rx="2" fill="#EEEEEE" stroke="#666666" stroke-width="0.7"/>
+  <text x="457" y="417" text-anchor="middle" font-size="11" fill="#333333">Access</text>
+  <text x="457" y="437" text-anchor="middle" font-size="10" fill="#666666">.mdb → .accdb</text>
+
+  <!-- Cell 4,3: SQL/NoSQL + AI -->
+  <rect x="600" y="393" width="74" height="22" rx="2" fill="#F5F5F5" stroke="#999999" stroke-width="0.7"/>
+  <text x="637" y="408" text-anchor="middle" font-size="10" fill="#333333">SQL/NoSQL</text>
+  <text x="680" y="408" text-anchor="middle" font-size="11" fill="#999999">+</text>
+  <rect x="690" y="393" width="52" height="22" rx="2" fill="#F5F5F5" stroke="#999999" stroke-width="0.7"/>
+  <text x="716" y="408" text-anchor="middle" font-size="10" fill="#333333">AI</text>
+
+  <!-- ==================== ERA ARROWS ==================== -->
+  <!-- Arrow from col1 to col2 -->
+  <line x1="340" y1="133" x2="356" y2="133" stroke="#999999" stroke-width="1"/>
+  <polygon points="356,130 362,133 356,136" fill="#999999"/>
+  <line x1="340" y1="228" x2="356" y2="228" stroke="#999999" stroke-width="1"/>
+  <polygon points="356,225 362,228 356,231" fill="#999999"/>
+  <line x1="340" y1="323" x2="356" y2="323" stroke="#999999" stroke-width="1"/>
+  <polygon points="356,320 362,323 356,326" fill="#999999"/>
+  <line x1="340" y1="418" x2="356" y2="418" stroke="#999999" stroke-width="1"/>
+  <polygon points="356,415 362,418 356,421" fill="#999999"/>
+
+  <!-- Arrow from col2 to col3 -->
+  <line x1="555" y1="133" x2="571" y2="133" stroke="#999999" stroke-width="1"/>
+  <polygon points="571,130 577,133 571,136" fill="#999999"/>
+  <line x1="555" y1="228" x2="571" y2="228" stroke="#999999" stroke-width="1"/>
+  <polygon points="571,225 577,228 571,231" fill="#999999"/>
+  <line x1="555" y1="323" x2="571" y2="323" stroke="#999999" stroke-width="1"/>
+  <polygon points="571,320 577,323 571,326" fill="#999999"/>
+  <line x1="555" y1="418" x2="571" y2="418" stroke="#999999" stroke-width="1"/>
+  <polygon points="571,415 577,418 571,421" fill="#999999"/>
+
+  <!-- ==================== BOTTOM ANNOTATION ==================== -->
+  <line x1="60" y1="485" x2="740" y2="485" stroke="#CCCCCC" stroke-width="0.5"/>
+  <text x="400" y="504" text-anchor="middle" font-size="11" font-style="italic" fill="#666666">도구는 바뀌었지만 네 가지 문제는 5,000년간 동일하다</text>
+
+</svg>

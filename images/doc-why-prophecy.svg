@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="Palatino Linotype, Palatino, Georgia, serif">
+  <!-- Background -->
+  <rect width="900" height="420" fill="#fafafa" rx="4"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">"문서가 사라진다" — 예언 vs 현실</text>
+  <line x1="120" y1="50" x2="780" y2="50" stroke="#999" stroke-width="0.5"/>
+
+  <!-- Left: Prophecy -->
+  <rect x="40" y="70" width="380" height="300" rx="6" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="6,3"/>
+  <text x="230" y="100" text-anchor="middle" font-size="15" font-weight="bold" fill="#555">예언 (2022~2023)</text>
+
+  <text x="70" y="135" font-size="13" fill="#666">"AI가 모든 문서를 실시간 생성한다"</text>
+  <text x="70" y="162" font-size="13" fill="#666">"구조화된 문서는 불필요해진다"</text>
+  <text x="70" y="189" font-size="13" fill="#666">"검색 대신 AI에게 물어보면 된다"</text>
+  <text x="70" y="216" font-size="13" fill="#666">"기술 문서 작성자는 사라질 직업"</text>
+
+  <text x="230" y="260" text-anchor="middle" font-size="40" fill="#ccc">&#x2620;</text>
+  <text x="230" y="295" text-anchor="middle" font-size="12" font-style="italic" fill="#999">문서 종말론</text>
+  <text x="230" y="315" text-anchor="middle" font-size="12" font-style="italic" fill="#999">(Document Apocalypse)</text>
+
+  <!-- Arrow -->
+  <line x1="435" y1="220" x2="475" y2="220" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- Right: Reality -->
+  <rect x="480" y="70" width="380" height="300" rx="6" fill="none" stroke="#555" stroke-width="1.5"/>
+  <text x="670" y="100" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">현실 (2025~2026)</text>
+
+  <g transform="translate(510, 120)">
+    <circle cx="8" cy="0" r="4" fill="#555"/>
+    <text x="22" y="5" font-size="13" fill="#444">84만+ 사이트가 llms.txt 도입</text>
+  </g>
+  <g transform="translate(510, 150)">
+    <circle cx="8" cy="0" r="4" fill="#555"/>
+    <text x="22" y="5" font-size="13" fill="#444">CLAUDE.md, AGENTS.md 표준화</text>
+  </g>
+  <g transform="translate(510, 180)">
+    <circle cx="8" cy="0" r="4" fill="#555"/>
+    <text x="22" y="5" font-size="13" fill="#444">EU AI Act — 문서화 법적 의무화</text>
+  </g>
+  <g transform="translate(510, 210)">
+    <circle cx="8" cy="0" r="4" fill="#555"/>
+    <text x="22" y="5" font-size="13" fill="#444">환각 인용 2.6% (2024년 0.3%의 9배)</text>
+  </g>
+  <g transform="translate(510, 240)">
+    <circle cx="8" cy="0" r="4" fill="#555"/>
+    <text x="22" y="5" font-size="13" fill="#444">16%만 워크플로우 문서화 완료</text>
+  </g>
+  <g transform="translate(510, 270)">
+    <circle cx="8" cy="0" r="4" fill="#555"/>
+    <text x="22" y="5" font-size="13" fill="#444">기술 문서 작성자 역할 확장 중</text>
+  </g>
+
+  <text x="670" y="340" text-anchor="middle" font-size="12" font-style="italic" fill="#555">문서는 사라지지 않았다 — 진화했다</text>
+
+  <!-- Bottom insight -->
+  <rect x="120" y="385" width="660" height="28" rx="3" fill="#f0f0f0"/>
+  <text x="450" y="404" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">핵심: AI는 문서를 소멸시키는 것이 아니라, 문서의 품질에 더 의존하게 만든다</text>
+</svg>

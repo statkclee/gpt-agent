@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="460" viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg" font-family="Palatino Linotype, Georgia, serif">
+  <defs>
+    <marker id="co-a" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#003876" opacity="0.5"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="460" fill="#FEFEFE"/>
+
+  <!-- Header (슬라이드 제목과 중복 방지 — SVG 타이틀 생략, 본문 y=30부터 시작) -->
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  Center: 개인 문서 (origin)                 -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <circle cx="310" cy="185" r="50" fill="none" stroke="#003876" stroke-width="2"/>
+  <text x="310" y="175" text-anchor="middle" font-size="13" fill="#003876" font-weight="700">김대리</text>
+  <text x="310" y="193" text-anchor="middle" font-size="13" fill="#003876" font-weight="700">보고서</text>
+  <text x="310" y="210" text-anchor="middle" font-size="10" fill="#888">Lv.2 (이미 복잡)</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  4 external forces pushing complexity UP    -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- Force 1: 다른 개인 (top) r=38 -->
+  <circle cx="310" cy="62" r="38" fill="none" stroke="#555" stroke-width="1.2"/>
+  <text x="310" y="58" text-anchor="middle" font-size="11" fill="#555" font-weight="600">다른 개인</text>
+  <text x="310" y="72" text-anchor="middle" font-size="9.5" fill="#888">박과장 · 이사님</text>
+
+  <!-- Arrow: 다른 개인 → 중심 (시작 y=100 = 62+38) -->
+  <line x1="310" y1="100" x2="310" y2="133" stroke="#555" stroke-width="1" opacity="0.35" marker-end="url(#co-a)"/>
+
+  <!-- Impact label -->
+  <g transform="translate(-30, 10)">
+    <text x="370" y="105" font-size="10.5" fill="#555">"내 양식에 맞춰줘"</text>
+    <text x="370" y="119" font-size="10" fill="#888" font-style="italic">+ 서식 충돌 · 버전 분기</text>
+  </g>
+
+  <!-- Force 2: 조직 (right) r=38 -->
+  <circle cx="510" cy="185" r="38" fill="none" stroke="#555" stroke-width="1.2"/>
+  <text x="510" y="181" text-anchor="middle" font-size="11" fill="#555" font-weight="600">조직</text>
+  <text x="510" y="195" text-anchor="middle" font-size="9.5" fill="#888">부서 · 팀 · 본부</text>
+
+  <!-- Arrow: 조직 → 중심 (시작 x=472 = 510-38) -->
+  <line x1="472" y1="185" x2="362" y2="185" stroke="#555" stroke-width="1" opacity="0.35" marker-end="url(#co-a)"/>
+
+  <!-- Impact label (조직 원 아래 빈 공간에 배치) -->
+  <g transform="translate(-95, -30)">
+    <text x="460" y="240" font-size="10.5" fill="#555">"브랜드 가이드 따라"</text>
+    <text x="460" y="254" font-size="10" fill="#888" font-style="italic">+ 승인 워크플로우 · 템플릿</text>
+  </g>
+
+  <!-- Force 3: 규제 (bottom) r=38 -->
+  <circle cx="310" cy="310" r="38" fill="none" stroke="#c0392b" stroke-width="1.2"/>
+  <text x="310" y="306" text-anchor="middle" font-size="11" fill="#c0392b" font-weight="600">규제</text>
+  <text x="310" y="320" text-anchor="middle" font-size="9.5" fill="#888">법률 · 감사 · 인증</text>
+
+  <!-- Arrow: 규제 → 중심 (시작 y=272 = 310-38) -->
+  <line x1="310" y1="272" x2="310" y2="237" stroke="#c0392b" stroke-width="1" opacity="0.35" marker-end="url(#co-a)"/>
+
+  <!-- Impact label -->
+  <g transform="translate(-30, -20)">
+    <text x="370" y="275" font-size="10.5" fill="#c0392b">"이 항목 법적 의무야"</text>
+    <text x="370" y="289" font-size="10" fill="#888" font-style="italic">+ 보존 30년 · 감사 추적 · PKI 서명</text>
+  </g>
+
+  <!-- Force 4: 외부 시스템 (left) r=38 -->
+  <circle cx="110" cy="185" r="38" fill="none" stroke="#555" stroke-width="1.2"/>
+  <text x="110" y="181" text-anchor="middle" font-size="11" fill="#555" font-weight="600">외부 시스템</text>
+  <text x="110" y="195" text-anchor="middle" font-size="9.5" fill="#888">API · DB · 파트너</text>
+
+  <!-- Arrow: 외부 → 중심 (시작 x=148 = 110+38) -->
+  <line x1="148" y1="185" x2="258" y2="185" stroke="#555" stroke-width="1" opacity="0.35" marker-end="url(#co-a)"/>
+
+  <!-- Impact label (왼쪽 원 아래 빈 공간에 배치) -->
+  <g transform="translate(95, -20)">
+    <text x="60" y="238" font-size="10.5" fill="#555">"실시간 데이터 연동"</text>
+    <text x="60" y="252" font-size="10" fill="#888" font-style="italic">+ 스키마 · 인증 · 다중 포맷</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  Result: complexity explosion               -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <line x1="50" y1="355" x2="630" y2="355" stroke="#003876" stroke-width="0.5" opacity="0.15"/>
+
+  <text x="55" y="378" font-size="10.5" fill="#555" letter-spacing="1.5px">충돌 결과 — 복잡도가 곱셈으로 증가</text>
+
+  <!-- Before → After -->
+  <text x="65" y="403" font-size="12" fill="#888">혼자일 때</text>
+  <text x="175" y="403" font-size="12" fill="#555">Lv.2 (수식 + 교차참조)</text>
+
+  <text x="65" y="425" font-size="12" fill="#c0392b" font-weight="600">충돌 후</text>
+  <text x="175" y="425" font-size="12" fill="#555">Lv.2 × 서식충돌 × 승인 × 규제 × 연동 =</text>
+  <text x="420" y="425" font-size="14" fill="#c0392b" font-weight="700">Lv.4+</text>
+
+  <line x1="55" y1="442" x2="60" y2="442" stroke="#003876" stroke-width="2.5"/>
+  <text x="70" y="446" font-size="12" fill="#444">개인의 복잡도는 덧셈, 외부와의 충돌은 곱셈 — 도구 없이는 감당 불가</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  Margin notes                               -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <text x="710" y="60" font-size="10" fill="#888" font-style="italic">개인 복잡도:</text>
+  <text x="710" y="77" font-size="10" fill="#888" font-style="italic">독자 + 수명 + 재현</text>
+  <text x="710" y="92" font-size="10" fill="#888" font-style="italic">= 선형 증가 (덧셈)</text>
+
+  <text x="710" y="140" font-size="10" fill="#888" font-style="italic">외부 충돌 복잡도:</text>
+  <text x="710" y="157" font-size="10" fill="#888" font-style="italic">서식×승인×규제×연동</text>
+  <text x="710" y="172" font-size="10" fill="#888" font-style="italic">= 비선형 폭발 (곱셈)</text>
+
+  <text x="710" y="225" font-size="10" fill="#888" font-style="italic">실전 예시:</text>
+  <text x="710" y="242" font-size="10" fill="#888" font-style="italic">김대리 보고서(Lv.2)가</text>
+  <text x="710" y="257" font-size="10" fill="#888" font-style="italic">감사팀 규제(×) +</text>
+  <text x="710" y="272" font-size="10" fill="#888" font-style="italic">3부서 양식(×) +</text>
+  <text x="710" y="287" font-size="10" fill="#888" font-style="italic">외부 API(×)를 만나면</text>
+  <text x="710" y="302" font-size="10" fill="#888" font-style="italic">→ 순식간에 Lv.4+</text>
+
+  <text x="710" y="378" font-size="10" fill="#888" font-style="italic">해법:</text>
+  <text x="710" y="395" font-size="10" fill="#888" font-style="italic">충돌을 예측하고</text>
+  <text x="710" y="410" font-size="10" fill="#888" font-style="italic">처음부터 구조화 도구</text>
+  <text x="710" y="425" font-size="10" fill="#888" font-style="italic">(Quarto + Git)로 시작.</text>
+  <text x="710" y="443" font-size="10" fill="#888" font-style="italic">충돌 후 전환 비용 &gt;&gt;</text>
+  <text x="710" y="455" font-size="10" fill="#888" font-style="italic">사전 진입 비용.</text>
+</svg>

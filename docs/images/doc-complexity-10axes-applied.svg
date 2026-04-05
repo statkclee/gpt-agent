@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="460" viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg" font-family="Palatino Linotype, Georgia, serif">
+  <rect width="900" height="460" fill="#FEFEFE"/>
+
+  <!-- 슬라이드 제목이 있으므로 SVG 타이틀 생략 -->
+
+  <!-- Column headers -->
+  <text x="55" y="30" font-size="10" fill="#003876" font-weight="600">차원</text>
+  <text x="175" y="30" font-size="10.5" fill="#888">카카오톡</text>
+  <text x="300" y="30" font-size="10.5" fill="#555">김대리 보고서</text>
+  <text x="440" y="30" font-size="10.5" fill="#003876">전자세금계산서</text>
+  <text x="570" y="30" font-size="10.5" fill="#003876">S1000D</text>
+  <line x1="50" y1="38" x2="630" y2="38" stroke="#003876" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- 핵심 4차원 (학술 근거) -->
+  <text x="55" y="55" font-size="9" fill="#003876" font-weight="600" letter-spacing="1px">핵심 차원</text>
+
+  <text x="55" y="75" font-size="10.5" fill="#444">독자</text>
+  <text x="175" y="75" font-size="10.5" fill="#888">본인</text>
+  <text x="300" y="75" font-size="10.5" fill="#555">팀 + 상급자</text>
+  <text x="440" y="75" font-size="10.5" fill="#444">국세청 + 거래처</text>
+  <text x="570" y="75" font-size="10.5" fill="#444">NATO 전 함대</text>
+
+  <text x="55" y="98" font-size="10.5" fill="#444">수명</text>
+  <text x="175" y="98" font-size="10.5" fill="#888">1일</text>
+  <text x="300" y="98" font-size="10.5" fill="#555">월간</text>
+  <text x="440" y="98" font-size="10.5" fill="#444">5년 보존 의무</text>
+  <text x="570" y="98" font-size="10.5" fill="#444">항공기 수명 30년+</text>
+
+  <text x="55" y="121" font-size="10.5" fill="#444">재현</text>
+  <text x="175" y="121" font-size="10.5" fill="#888">—</text>
+  <text x="300" y="121" font-size="10.5" fill="#555">데이터 근거</text>
+  <text x="440" y="121" font-size="10.5" fill="#444">법적 감사 추적</text>
+  <text x="570" y="121" font-size="10.5" fill="#444">정비 이력 완전 추적</text>
+
+  <text x="55" y="144" font-size="10.5" fill="#444">자동화</text>
+  <text x="175" y="144" font-size="10.5" fill="#888">—</text>
+  <text x="300" y="144" font-size="10.5" fill="#555">수동</text>
+  <text x="440" y="144" font-size="10.5" fill="#444">XML+PKI 자동 전송</text>
+  <text x="570" y="144" font-size="10.5" fill="#444">CSDB 자동 배포</text>
+
+  <!-- 구분선 -->
+  <line x1="50" y1="158" x2="630" y2="158" stroke="#003876" stroke-width="0.5" opacity="0.08"/>
+  <text x="55" y="175" font-size="9" fill="#555" letter-spacing="1px">추가 차원</text>
+
+  <text x="55" y="195" font-size="10.5" fill="#444">규제</text>
+  <text x="175" y="195" font-size="10.5" fill="#888">—</text>
+  <text x="300" y="195" font-size="10.5" fill="#555">—</text>
+  <text x="440" y="195" font-size="10.5" fill="#c0392b" font-weight="600">법적 의무</text>
+  <text x="570" y="195" font-size="10.5" fill="#c0392b" font-weight="600">국제 표준 의무</text>
+
+  <text x="55" y="218" font-size="10.5" fill="#444">다중 출력</text>
+  <text x="175" y="218" font-size="10.5" fill="#888">—</text>
+  <text x="300" y="218" font-size="10.5" fill="#555">HWP만</text>
+  <text x="440" y="218" font-size="10.5" fill="#444">XML + PDF</text>
+  <text x="570" y="218" font-size="10.5" fill="#444">PDF + 웹 + IETM</text>
+
+  <text x="55" y="241" font-size="10.5" fill="#444">협업</text>
+  <text x="175" y="241" font-size="10.5" fill="#888">1:1</text>
+  <text x="300" y="241" font-size="10.5" fill="#555">팀 내</text>
+  <text x="440" y="241" font-size="10.5" fill="#444">기관 간</text>
+  <text x="570" y="241" font-size="10.5" fill="#444">다국적 + NATO</text>
+
+  <text x="55" y="264" font-size="10.5" fill="#444">다국어</text>
+  <text x="175" y="264" font-size="10.5" fill="#888">한국어</text>
+  <text x="300" y="264" font-size="10.5" fill="#555">한국어</text>
+  <text x="440" y="264" font-size="10.5" fill="#444">한국어</text>
+  <text x="570" y="264" font-size="10.5" fill="#444">30+ 언어</text>
+
+  <!-- ═══ 진단 결과 ═══ -->
+  <line x1="50" y1="282" x2="630" y2="282" stroke="#003876" stroke-width="0.5" opacity="0.15"/>
+
+  <text x="55" y="305" font-size="11" fill="#003876" font-weight="600">지배 차원</text>
+  <text x="175" y="305" font-size="11" fill="#888">없음</text>
+  <text x="300" y="305" font-size="11" fill="#555">독자 + 반복</text>
+  <text x="440" y="305" font-size="11" fill="#c0392b" font-weight="600">규제</text>
+  <text x="570" y="305" font-size="11" fill="#c0392b" font-weight="600">전부 다</text>
+
+  <text x="55" y="328" font-size="11" fill="#003876" font-weight="600">복잡도</text>
+  <text x="175" y="328" font-size="11" fill="#888">낮음</text>
+  <text x="300" y="328" font-size="11" fill="#555">중간</text>
+  <text x="440" y="328" font-size="11" fill="#003876">높음</text>
+  <text x="570" y="328" font-size="11" fill="#003876" font-weight="600">극한</text>
+
+  <text x="55" y="351" font-size="11" fill="#003876" font-weight="600">적정 도구</text>
+  <text x="175" y="351" font-size="10.5" fill="#888" font-style="italic">메모앱</text>
+  <text x="300" y="351" font-size="10.5" fill="#555" font-style="italic">Quarto</text>
+  <text x="440" y="351" font-size="10.5" fill="#003876" font-style="italic">XML + PKI</text>
+  <text x="570" y="351" font-size="10.5" fill="#003876" font-style="italic">S1000D + CSDB</text>
+
+  <!-- ═══ Bottom insight ═══ -->
+  <line x1="50" y1="375" x2="630" y2="375" stroke="#003876" stroke-width="0.5" opacity="0.15"/>
+
+  <line x1="55" y1="398" x2="60" y2="398" stroke="#003876" stroke-width="2.5"/>
+  <text x="70" y="402" font-size="12" fill="#444">같은 "문서"라도 지배 차원이 다르면 필요한 도구가 완전히 다르다</text>
+
+  <line x1="55" y1="422" x2="60" y2="422" stroke="#003876" stroke-width="2.5"/>
+  <text x="70" y="426" font-size="12" fill="#444">"어떤 차원이 이 문서를 지배하는가?" — 이 질문이 도구 선택의 시작점</text>
+
+  <!-- ═══ Margin notes ═══ -->
+  <text x="710" y="55" font-size="10" fill="#888" font-style="italic">핵심 4차원은</text>
+  <text x="710" y="70" font-size="10" fill="#888" font-style="italic">모든 문서에 공통.</text>
+  <text x="710" y="88" font-size="10" fill="#888" font-style="italic">추가 차원은</text>
+  <text x="710" y="103" font-size="10" fill="#888" font-style="italic">문서 유형에 따라</text>
+  <text x="710" y="118" font-size="10" fill="#888" font-style="italic">선택적으로 적용.</text>
+
+  <text x="710" y="175" font-size="10" fill="#888" font-style="italic">전자세금계산서:</text>
+  <text x="710" y="192" font-size="10" fill="#888" font-style="italic">"규제" 차원이 지배.</text>
+  <text x="710" y="210" font-size="10" fill="#888" font-style="italic">자동화는 낮아도</text>
+  <text x="710" y="225" font-size="10" fill="#888" font-style="italic">규제 때문에</text>
+  <text x="710" y="240" font-size="10" fill="#888" font-style="italic">단순 도구로는 불가.</text>
+
+  <text x="710" y="305" font-size="10" fill="#888" font-style="italic">S1000D:</text>
+  <text x="710" y="322" font-size="10" fill="#888" font-style="italic">모든 차원이 높음</text>
+  <text x="710" y="337" font-size="10" fill="#888" font-style="italic">= 가장 복잡한 문서.</text>
+  <text x="710" y="355" font-size="10" fill="#888" font-style="italic">미 해군 48%↓는</text>
+  <text x="710" y="370" font-size="10" fill="#888" font-style="italic">이 복잡도를</text>
+  <text x="710" y="385" font-size="10" fill="#888" font-style="italic">구조화한 결과.</text>
+
+  <line x1="50" y1="443" x2="630" y2="443" stroke="#eee" stroke-width="0.5"/>
+</svg>

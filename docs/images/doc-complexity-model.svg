@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="460" viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg" font-family="Palatino Linotype, Georgia, serif">
+  <rect width="900" height="460" fill="#FEFEFE"/>
+
+  <!-- Header -->
+  <text x="50" y="30" font-size="10.5" fill="#555" letter-spacing="1.5px">문서 복잡도는 스펙트럼이다 — Lv.0(메모)에서 Lv.4(자동화)까지</text>
+  <line x1="50" y1="38" x2="630" y2="38" stroke="#003876" stroke-width="1" opacity="0.2"/>
+
+  <!-- Spectrum bar (thin line, no gradient) -->
+  <line x1="70" y1="58" x2="610" y2="58" stroke="#003876" stroke-width="2" opacity="0.25"/>
+  <text x="70" y="52" font-size="9.5" fill="#888">← 단순 · 즉각적</text>
+  <text x="610" y="52" text-anchor="end" font-size="9.5" fill="#003876">복잡 · 자동화 →</text>
+
+  <!-- 5 level circles (outline only) -->
+  <circle cx="90" cy="100" r="24" fill="none" stroke="#003876" stroke-width="1.5"/>
+  <text x="90" y="96" text-anchor="middle" font-size="16" fill="#003876" font-weight="bold">0</text>
+  <text x="90" y="112" text-anchor="middle" font-size="9" fill="#888">메모</text>
+
+  <circle cx="220" cy="100" r="24" fill="none" stroke="#003876" stroke-width="1.5"/>
+  <text x="220" y="96" text-anchor="middle" font-size="16" fill="#003876" font-weight="bold">1</text>
+  <text x="220" y="112" text-anchor="middle" font-size="9" fill="#888">보고서</text>
+
+  <circle cx="350" cy="100" r="24" fill="none" stroke="#003876" stroke-width="1.5"/>
+  <text x="350" y="96" text-anchor="middle" font-size="16" fill="#003876" font-weight="bold">2</text>
+  <text x="350" y="112" text-anchor="middle" font-size="9" fill="#888">논문</text>
+
+  <circle cx="480" cy="100" r="24" fill="none" stroke="#003876" stroke-width="1.5"/>
+  <text x="480" y="96" text-anchor="middle" font-size="16" fill="#003876" font-weight="bold">3</text>
+  <text x="480" y="112" text-anchor="middle" font-size="9" fill="#888">분석보고서</text>
+
+  <circle cx="600" cy="100" r="24" fill="none" stroke="#003876" stroke-width="1.5"/>
+  <text x="600" y="96" text-anchor="middle" font-size="16" fill="#003876" font-weight="bold">4</text>
+  <text x="600" y="112" text-anchor="middle" font-size="9" fill="#888">자동화</text>
+
+  <!-- Timeline connecting line -->
+  <line x1="114" y1="100" x2="196" y2="100" stroke="#003876" stroke-width="0.8" opacity="0.2"/>
+  <line x1="244" y1="100" x2="326" y2="100" stroke="#003876" stroke-width="0.8" opacity="0.2"/>
+  <line x1="374" y1="100" x2="456" y2="100" stroke="#003876" stroke-width="0.8" opacity="0.2"/>
+  <line x1="504" y1="100" x2="576" y2="100" stroke="#003876" stroke-width="0.8" opacity="0.2"/>
+
+  <!-- Level names -->
+  <text x="90" y="142" text-anchor="middle" font-size="12" fill="#003876" font-weight="600">즉각 소통</text>
+  <text x="220" y="142" text-anchor="middle" font-size="12" fill="#003876" font-weight="600">행정·업무</text>
+  <text x="350" y="142" text-anchor="middle" font-size="12" fill="#003876" font-weight="600">학술·기술</text>
+  <text x="480" y="142" text-anchor="middle" font-size="12" fill="#003876" font-weight="600">데이터 분석</text>
+  <text x="600" y="142" text-anchor="middle" font-size="12" fill="#003876" font-weight="600">자동화</text>
+
+  <!-- Audience -->
+  <text x="90" y="158" text-anchor="middle" font-size="10" fill="#888">본인·지인</text>
+  <text x="220" y="158" text-anchor="middle" font-size="10" fill="#888">상급자·기관</text>
+  <text x="350" y="158" text-anchor="middle" font-size="10" fill="#888">전문가 집단</text>
+  <text x="480" y="158" text-anchor="middle" font-size="10" fill="#888">개발자·분석가</text>
+  <text x="600" y="158" text-anchor="middle" font-size="10" fill="#888">시스템·CI</text>
+
+  <!-- Content boxes (outline only) -->
+  <line x1="50" y1="175" x2="630" y2="175" stroke="#003876" stroke-width="0.5" opacity="0.1"/>
+
+  <!-- Lv.0 -->
+  <rect x="48" y="185" width="112" height="75" rx="3" fill="none" stroke="#003876" stroke-width="0.8" opacity="0.3"/>
+  <text x="104" y="203" text-anchor="middle" font-size="10" fill="#555">메모 · 이메일</text>
+  <text x="104" y="219" text-anchor="middle" font-size="10" fill="#555">SNS · 채팅</text>
+  <line x1="56" y1="228" x2="152" y2="228" stroke="#003876" stroke-width="0.5" opacity="0.1"/>
+  <text x="104" y="248" text-anchor="middle" font-size="10" fill="#888" font-style="italic">메모앱 · 카카오톡</text>
+
+  <!-- Lv.1 -->
+  <rect x="170" y="185" width="112" height="75" rx="3" fill="none" stroke="#003876" stroke-width="0.8" opacity="0.3"/>
+  <text x="226" y="203" text-anchor="middle" font-size="10" fill="#555">보고서 · 공문</text>
+  <text x="226" y="219" text-anchor="middle" font-size="10" fill="#555">제안서 · 회의록</text>
+  <line x1="178" y1="228" x2="274" y2="228" stroke="#003876" stroke-width="0.5" opacity="0.1"/>
+  <text x="226" y="248" text-anchor="middle" font-size="10" fill="#888" font-style="italic">Word · HWP</text>
+
+  <!-- Lv.2 -->
+  <rect x="292" y="185" width="112" height="75" rx="3" fill="none" stroke="#003876" stroke-width="0.8" opacity="0.3"/>
+  <text x="348" y="203" text-anchor="middle" font-size="10" fill="#555">논문 · 기술문서</text>
+  <text x="348" y="219" text-anchor="middle" font-size="10" fill="#555">학위논문 · 매뉴얼</text>
+  <line x1="300" y1="228" x2="396" y2="228" stroke="#003876" stroke-width="0.5" opacity="0.1"/>
+  <text x="348" y="248" text-anchor="middle" font-size="10" fill="#888" font-style="italic">LaTeX · Quarto</text>
+
+  <!-- Lv.3 -->
+  <rect x="414" y="185" width="112" height="75" rx="3" fill="none" stroke="#003876" stroke-width="0.8" opacity="0.3"/>
+  <text x="470" y="203" text-anchor="middle" font-size="10" fill="#555">데이터 분석 보고서</text>
+  <text x="470" y="219" text-anchor="middle" font-size="10" fill="#555">대시보드 · EDA</text>
+  <line x1="422" y1="228" x2="518" y2="228" stroke="#003876" stroke-width="0.5" opacity="0.1"/>
+  <text x="470" y="248" text-anchor="middle" font-size="10" fill="#888" font-style="italic">Quarto + R/Python</text>
+
+  <!-- Lv.4 -->
+  <rect x="542" y="185" width="112" height="75" rx="3" fill="none" stroke="#003876" stroke-width="0.8" opacity="0.3"/>
+  <text x="598" y="203" text-anchor="middle" font-size="10" fill="#555">자동 보고서</text>
+  <text x="598" y="219" text-anchor="middle" font-size="10" fill="#555">API 문서 · 모니터링</text>
+  <line x1="550" y1="228" x2="646" y2="228" stroke="#003876" stroke-width="0.5" opacity="0.1"/>
+  <text x="598" y="248" text-anchor="middle" font-size="10" fill="#888" font-style="italic">Quarto + CI/CD</text>
+
+  <!-- Bottom insight -->
+  <line x1="50" y1="280" x2="630" y2="280" stroke="#003876" stroke-width="0.5" opacity="0.15"/>
+
+  <text x="55" y="300" font-size="10.5" fill="#003876" font-weight="600">복잡도 = 도구 선택의 기준</text>
+  <text x="240" y="300" font-size="10.5" fill="#555">— Lv에 맞는 도구가 최소 비용, 최대 효과</text>
+
+  <!-- 3 bottom boxes (outline only, all same style) -->
+  <rect x="50" y="315" width="180" height="80" rx="4" fill="none" stroke="#003876" stroke-width="0.8" opacity="0.3"/>
+  <text x="140" y="332" text-anchor="middle" font-size="10" fill="#003876" font-weight="600">수명과 재사용</text>
+  <line x1="58" y1="338" x2="222" y2="338" stroke="#003876" stroke-width="0.5" opacity="0.1"/>
+  <text x="58" y="354" font-size="10" fill="#555">Lv.0–1: 단기 · 1회성</text>
+  <text x="58" y="370" font-size="10" fill="#555">Lv.2–3: 중장기 · 인용</text>
+  <text x="58" y="386" font-size="9.5" fill="#888" font-style="italic">수명↑ → 구조화 도구 필요</text>
+
+  <rect x="242" y="315" width="180" height="80" rx="4" fill="none" stroke="#003876" stroke-width="0.8" opacity="0.3"/>
+  <text x="332" y="332" text-anchor="middle" font-size="10" fill="#003876" font-weight="600">협업과 재현성</text>
+  <line x1="250" y1="338" x2="414" y2="338" stroke="#003876" stroke-width="0.5" opacity="0.1"/>
+  <text x="250" y="354" font-size="10" fill="#555">Lv.2+: 버전 관리 필수</text>
+  <text x="250" y="370" font-size="10" fill="#555">Lv.3+: 코드 = 문서</text>
+  <text x="250" y="386" font-size="9.5" fill="#888" font-style="italic">plain text → Git → 재현</text>
+
+  <rect x="434" y="315" width="196" height="80" rx="4" fill="none" stroke="#003876" stroke-width="0.8" opacity="0.3"/>
+  <text x="532" y="332" text-anchor="middle" font-size="10" fill="#003876" font-weight="600">AI 시대의 변화</text>
+  <line x1="442" y1="338" x2="622" y2="338" stroke="#003876" stroke-width="0.5" opacity="0.1"/>
+  <text x="442" y="354" font-size="10" fill="#555">AI가 Lv.3–4 진입장벽↓</text>
+  <text x="442" y="370" font-size="10" fill="#555">인간: 복잡도 판단·검증</text>
+  <text x="442" y="386" font-size="9.5" fill="#888" font-style="italic">도구 사용법 &lt; 판단력</text>
+
+  <!-- Margin notes -->
+  <text x="710" y="55" font-size="10" fill="#888" font-style="italic">복잡도 기준</text>
+  <text x="710" y="70" font-size="9.5" fill="#888">독자 범위</text>
+  <text x="710" y="85" font-size="9.5" fill="#888">수명 (단기↔장기)</text>
+  <text x="710" y="100" font-size="9.5" fill="#888">재현 필요 여부</text>
+  <text x="710" y="115" font-size="9.5" fill="#888">자동화 여부</text>
+
+  <text x="710" y="155" font-size="10" fill="#888" font-style="italic">Lv.0 예시</text>
+  <text x="710" y="170" font-size="9.5" fill="#888">카카오톡 · Slack</text>
+  <text x="710" y="185" font-size="9.5" fill="#888">메모앱 노트</text>
+
+  <text x="710" y="225" font-size="10" fill="#888" font-style="italic">Lv.4 예시</text>
+  <text x="710" y="240" font-size="9.5" fill="#888">GitHub Actions로</text>
+  <text x="710" y="255" font-size="9.5" fill="#888">매일 자동 배포 대시보드</text>
+
+  <text x="710" y="315" font-size="10" fill="#888" font-style="italic">불일치 비용</text>
+  <text x="710" y="330" font-size="9.5" fill="#888">Lv.1에 LaTeX →</text>
+  <text x="710" y="345" font-size="9.5" fill="#888">설정 비용 &gt; 이점</text>
+  <text x="710" y="360" font-size="9.5" fill="#888">Lv.3에 Word →</text>
+  <text x="710" y="375" font-size="9.5" fill="#888">재현 불가, 낭비</text>
+
+  <line x1="50" y1="445" x2="630" y2="445" stroke="#eee" stroke-width="0.5"/>
+</svg>

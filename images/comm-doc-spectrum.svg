@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480">
+  <defs>
+    <style>
+      .title {
+        font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+        fill: #333;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .subtitle {
+        font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+        fill: #666;
+        font-size: 12px;
+        font-style: italic;
+      }
+      .lane-title {
+        font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+        fill: #333;
+        font-size: 13px;
+        font-weight: bold;
+      }
+      .lane-desc {
+        font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+        fill: #666;
+        font-size: 11px;
+        font-style: italic;
+      }
+      .lane-caption {
+        font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+        fill: #666;
+        font-size: 11px;
+        font-style: italic;
+      }
+      .node-label {
+        font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+        fill: #333;
+        font-size: 11px;
+      }
+      .node-year {
+        font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+        fill: #666;
+        font-size: 9.5px;
+      }
+      .converge-label {
+        font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+        fill: #333;
+        font-size: 13px;
+        font-weight: bold;
+      }
+      .converge-year {
+        font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+        fill: #666;
+        font-size: 11px;
+      }
+      .footer {
+        font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+        fill: #999;
+        font-size: 10px;
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="480" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="400" y="32" class="title" text-anchor="middle">문서 유형 스펙트럼과 진화</text>
+  <text x="400" y="52" class="subtitle" text-anchor="middle">서사형 ↔ 하이브리드 ↔ 트랜잭션형, 세 유형이 Quarto에서 수렴한다</text>
+
+  <!-- Top rule -->
+  <line x1="30" y1="64" x2="770" y2="64" stroke="#CCCCCC" stroke-width="0.8"/>
+
+  <!-- ============================================================ -->
+  <!-- LANE 1: 서사형 (Narrative) -->
+  <!-- ============================================================ -->
+  <text x="40" y="90" class="lane-title">서사형 (Narrative)</text>
+  <text x="40" y="104" class="lane-desc">인간이 읽고 해석</text>
+
+  <!-- Timeline axis -->
+  <line x1="80" y1="132" x2="620" y2="132" stroke="#999" stroke-width="1"/>
+  <!-- Arrow tip -->
+  <polygon points="618,129 625,132 618,135" fill="#999"/>
+
+  <!-- Node 1: troff -->
+  <circle cx="120" cy="132" r="4" fill="#333"/>
+  <text x="120" y="122" class="node-label" text-anchor="middle">troff</text>
+  <text x="120" y="150" class="node-year" text-anchor="middle">1970s</text>
+
+  <!-- Node 2: TeX -->
+  <circle cx="220" cy="132" r="4" fill="#333"/>
+  <text x="220" y="122" class="node-label" text-anchor="middle">TeX</text>
+  <text x="220" y="150" class="node-year" text-anchor="middle">1978</text>
+
+  <!-- Node 3: SGML -->
+  <circle cx="320" cy="132" r="4" fill="#333"/>
+  <text x="320" y="122" class="node-label" text-anchor="middle">SGML</text>
+  <text x="320" y="150" class="node-year" text-anchor="middle">1986</text>
+
+  <!-- Node 4: Markdown -->
+  <circle cx="440" cy="132" r="4" fill="#333"/>
+  <text x="440" y="122" class="node-label" text-anchor="middle">Markdown</text>
+  <text x="440" y="150" class="node-year" text-anchor="middle">2004</text>
+
+  <!-- Node 5: Quarto -->
+  <circle cx="580" cy="132" r="5" fill="#333"/>
+  <text x="580" y="122" class="node-label" text-anchor="middle" font-weight="bold">Quarto</text>
+  <text x="580" y="150" class="node-year" text-anchor="middle">2022</text>
+
+  <!-- Caption -->
+  <text x="40" y="166" class="lane-caption">소설, 논문, 매뉴얼, 법률 문서</text>
+
+  <!-- Dashed lane separator -->
+  <line x1="30" y1="180" x2="770" y2="180" stroke="#CCCCCC" stroke-width="0.6" stroke-dasharray="4,3"/>
+
+  <!-- ============================================================ -->
+  <!-- LANE 2: 하이브리드 (Hybrid) -->
+  <!-- ============================================================ -->
+  <text x="40" y="206" class="lane-title">하이브리드 (Hybrid)</text>
+  <text x="40" y="220" class="lane-desc">텍스트 + 코드 + 데이터</text>
+
+  <!-- Timeline axis -->
+  <line x1="80" y1="248" x2="620" y2="248" stroke="#999" stroke-width="1"/>
+  <polygon points="618,245 625,248 618,251" fill="#999"/>
+
+  <!-- Node 1: Knuth LP -->
+  <circle cx="140" cy="248" r="4" fill="#333"/>
+  <text x="140" y="238" class="node-label" text-anchor="middle">Knuth LP</text>
+  <text x="140" y="266" class="node-year" text-anchor="middle">1984</text>
+
+  <!-- Node 2: Sweave -->
+  <circle cx="260" cy="248" r="4" fill="#333"/>
+  <text x="260" y="238" class="node-label" text-anchor="middle">Sweave</text>
+  <text x="260" y="266" class="node-year" text-anchor="middle">2002</text>
+
+  <!-- Node 3: knitr -->
+  <circle cx="370" cy="248" r="4" fill="#333"/>
+  <text x="370" y="238" class="node-label" text-anchor="middle">knitr</text>
+  <text x="370" y="266" class="node-year" text-anchor="middle">2012</text>
+
+  <!-- Node 4: Jupyter -->
+  <circle cx="460" cy="248" r="4" fill="#333"/>
+  <text x="460" y="238" class="node-label" text-anchor="middle">Jupyter</text>
+  <text x="460" y="266" class="node-year" text-anchor="middle">2014</text>
+
+  <!-- Node 5: Quarto -->
+  <circle cx="580" cy="248" r="5" fill="#333"/>
+  <text x="580" y="238" class="node-label" text-anchor="middle" font-weight="bold">Quarto</text>
+  <text x="580" y="266" class="node-year" text-anchor="middle">2022</text>
+
+  <!-- Caption -->
+  <text x="40" y="282" class="lane-caption">노트북, 재현가능 논문, 대시보드</text>
+
+  <!-- Dashed lane separator -->
+  <line x1="30" y1="296" x2="770" y2="296" stroke="#CCCCCC" stroke-width="0.6" stroke-dasharray="4,3"/>
+
+  <!-- ============================================================ -->
+  <!-- LANE 3: 트랜잭션형 (Transactional) -->
+  <!-- ============================================================ -->
+  <text x="40" y="322" class="lane-title">트랜잭션형 (Transactional)</text>
+  <text x="40" y="336" class="lane-desc">기계가 자동 처리</text>
+
+  <!-- Timeline axis -->
+  <line x1="80" y1="364" x2="620" y2="364" stroke="#999" stroke-width="1"/>
+  <polygon points="618,361 625,364 618,367" fill="#999"/>
+
+  <!-- Node 1: EDI -->
+  <circle cx="120" cy="364" r="4" fill="#333"/>
+  <text x="120" y="354" class="node-label" text-anchor="middle">EDI</text>
+  <text x="120" y="382" class="node-year" text-anchor="middle">1968</text>
+
+  <!-- Node 2: X12 -->
+  <circle cx="220" cy="364" r="4" fill="#333"/>
+  <text x="220" y="354" class="node-label" text-anchor="middle">X12</text>
+  <text x="220" y="382" class="node-year" text-anchor="middle">1979</text>
+
+  <!-- Node 3: XML -->
+  <circle cx="340" cy="364" r="4" fill="#333"/>
+  <text x="340" y="354" class="node-label" text-anchor="middle">XML</text>
+  <text x="340" y="382" class="node-year" text-anchor="middle">1998</text>
+
+  <!-- Node 4: JSON/REST -->
+  <circle cx="450" cy="364" r="4" fill="#333"/>
+  <text x="450" y="354" class="node-label" text-anchor="middle">JSON/REST</text>
+  <text x="450" y="382" class="node-year" text-anchor="middle">2005</text>
+
+  <!-- Node 5: OpenAPI -->
+  <circle cx="560" cy="364" r="4" fill="#333"/>
+  <text x="560" y="354" class="node-label" text-anchor="middle">OpenAPI</text>
+  <text x="560" y="382" class="node-year" text-anchor="middle">2016</text>
+
+  <!-- Caption -->
+  <text x="40" y="398" class="lane-caption">주문서, 송장, API 페이로드</text>
+
+  <!-- ============================================================ -->
+  <!-- CONVERGENCE: Right side box -->
+  <!-- ============================================================ -->
+
+  <!-- Convergence box -->
+  <rect x="680" y="215" width="90" height="50" fill="#F5F5F5" stroke="#333" stroke-width="1.5" rx="3"/>
+  <text x="725" y="237" class="converge-label" text-anchor="middle">Quarto</text>
+  <text x="725" y="253" class="converge-year" text-anchor="middle">(2022)</text>
+
+  <!-- Dotted convergence lines from Lane 1 -->
+  <line x1="590" y1="132" x2="680" y2="228" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Dotted convergence lines from Lane 2 -->
+  <line x1="590" y1="248" x2="680" y2="240" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Dotted convergence lines from Lane 3 (conceptual convergence) -->
+  <line x1="570" y1="364" x2="680" y2="252" stroke="#666" stroke-width="0.8" stroke-dasharray="3,4"/>
+  <!-- Lighter line for Lane 3 — partial convergence -->
+
+  <!-- Small convergence arrows at box edge -->
+  <polygon points="680,228 674,225 674,231" fill="#999"/>
+  <polygon points="680,240 674,237 674,243" fill="#999"/>
+  <polygon points="680,252 674,249 674,255" fill="#666"/>
+
+  <!-- ============================================================ -->
+  <!-- Bottom rule and footer -->
+  <!-- ============================================================ -->
+  <line x1="30" y1="418" x2="770" y2="418" stroke="#CCCCCC" stroke-width="0.8"/>
+
+  <!-- Convergence annotation -->
+  <text x="400" y="440" class="subtitle" text-anchor="middle">서사형과 하이브리드는 Quarto로 직접 수렴, 트랜잭션형은 OpenAPI/YAML을 통해 연결된다</text>
+
+  <!-- Source -->
+  <text x="400" y="466" class="footer" text-anchor="middle">Glushko &amp; McGrath (2005) MIT Press — Document Engineering 기반</text>
+</svg>

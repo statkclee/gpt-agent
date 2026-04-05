@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="460" viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg" font-family="Palatino Linotype, Georgia, serif">
+  <defs>
+    <marker id="cp-a" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#003876" opacity="0.5"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="460" fill="#FEFEFE"/>
+
+  <!-- 슬라이드 제목이 있으므로 SVG 타이틀 생략 -->
+
+  <!-- ══════ Left: AI가 낮추는 복잡도 ══════ -->
+  <text x="55" y="62" font-size="12" fill="#003876" font-weight="600">AI가 낮추는 복잡도 ↓</text>
+
+  <circle cx="65" cy="92" r="11" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="65" y="96" text-anchor="middle" font-size="10" fill="#003876" font-weight="bold">1</text>
+  <text x="85" y="88" font-size="11.5" fill="#444">코딩 장벽</text>
+  <text x="85" y="104" font-size="10.5" fill="#888" font-style="italic">Copilot 코드 제안 수용률 30%, 시간 30%↓</text>
+
+  <circle cx="65" cy="132" r="11" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="65" y="136" text-anchor="middle" font-size="10" fill="#003876" font-weight="bold">2</text>
+  <text x="85" y="128" font-size="11.5" fill="#444">서식 지정</text>
+  <text x="85" y="144" font-size="10.5" fill="#888" font-style="italic">AI가 LaTeX/Typst 코드 생성 → 학습 비용 80%↓</text>
+
+  <circle cx="65" cy="172" r="11" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="65" y="176" text-anchor="middle" font-size="10" fill="#003876" font-weight="bold">3</text>
+  <text x="85" y="168" font-size="11.5" fill="#444">다국어 번역</text>
+  <text x="85" y="184" font-size="10.5" fill="#888" font-style="italic">DeepL 95% 정확도, 번역 비용 90%↓</text>
+
+  <circle cx="65" cy="212" r="11" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="65" y="216" text-anchor="middle" font-size="10" fill="#003876" font-weight="bold">4</text>
+  <text x="85" y="208" font-size="11.5" fill="#444">초안 작성</text>
+  <text x="85" y="224" font-size="10.5" fill="#888" font-style="italic">AI 초안 → 인간 편집, 작성 시간 50%↓</text>
+
+  <!-- ══════ Separator ══════ -->
+  <line x1="50" y1="245" x2="630" y2="245" stroke="#c0392b" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- ══════ Right: AI가 낮추지 못하는 복잡도 ══════ -->
+  <text x="55" y="268" font-size="12" fill="#c0392b" font-weight="600">AI가 낮추지 못하는 복잡도 (여전히 인간)</text>
+
+  <circle cx="65" cy="298" r="11" fill="none" stroke="#c0392b" stroke-width="1.2"/>
+  <text x="65" y="302" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="bold">A</text>
+  <text x="85" y="294" font-size="11.5" fill="#444">복잡도 판단</text>
+  <text x="85" y="310" font-size="10.5" fill="#555">"이 문서가 Lv 몇인가?" — 맥락·목적·독자 이해 필요</text>
+
+  <circle cx="65" cy="338" r="11" fill="none" stroke="#c0392b" stroke-width="1.2"/>
+  <text x="65" y="342" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="bold">B</text>
+  <text x="85" y="334" font-size="11.5" fill="#444">규제 준수</text>
+  <text x="85" y="350" font-size="10.5" fill="#555">법률·규정 해석은 법적 책임 수반 — AI 판단 불가</text>
+
+  <circle cx="65" cy="378" r="11" fill="none" stroke="#c0392b" stroke-width="1.2"/>
+  <text x="65" y="382" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="bold">C</text>
+  <text x="85" y="374" font-size="11.5" fill="#444">환각 검증</text>
+  <text x="85" y="390" font-size="10.5" fill="#555">AI 생성 콘텐츠 사실 확인 — 문서당 3~10시간 추가</text>
+
+  <!-- ══════ Bottom: The Paradox + 지배 차원 연결 ══════ -->
+  <line x1="50" y1="410" x2="630" y2="410" stroke="#003876" stroke-width="0.5" opacity="0.15"/>
+
+  <line x1="55" y1="428" x2="60" y2="428" stroke="#003876" stroke-width="2.5"/>
+  <text x="70" y="432" font-size="12" fill="#444">AI는 도구 장벽(코딩·서식)은 낮추지만, 지배 차원(규제·관할권)은 못 건드린다</text>
+
+  <line x1="55" y1="450" x2="60" y2="450" stroke="#003876" stroke-width="2.5"/>
+  <text x="70" y="454" font-size="12" fill="#444">"어떤 차원이 이 문서를 지배하는가?"를 아는 것이 AI 시대의 복잡도 문해력</text>
+
+  <!-- ══════ Margin notes ══════ -->
+  <text x="710" y="70" font-size="10" fill="#888" font-style="italic">AI 생산성 데이터:</text>
+  <text x="710" y="85" font-size="10" fill="#888" font-style="italic">McKinsey: 숙련 AI 사용자</text>
+  <text x="710" y="100" font-size="10" fill="#888" font-style="italic">하루 105분 절약.</text>
+  <text x="710" y="118" font-size="10" fill="#888" font-style="italic">GitHub: Copilot 코드</text>
+  <text x="710" y="133" font-size="10" fill="#888" font-style="italic">제안 수용률 30%.</text>
+
+  <text x="710" y="200" font-size="10" fill="#888" font-style="italic">하지만:</text>
+  <text x="710" y="215" font-size="10" fill="#888" font-style="italic">의료·법률 분야</text>
+  <text x="710" y="230" font-size="10" fill="#888" font-style="italic">AI 콘텐츠 사실 확인에</text>
+  <text x="710" y="245" font-size="10" fill="#888" font-style="italic">추가 20% 시간 소요.</text>
+
+  <text x="710" y="300" font-size="10" fill="#888" font-style="italic">AI 시대 핵심 능력:</text>
+  <text x="710" y="315" font-size="10" fill="#888" font-style="italic">도구 사용법 암기 ✗</text>
+  <text x="710" y="333" font-size="10" fill="#888" font-style="italic">복잡도 문해력 ✓</text>
+  <text x="710" y="348" font-size="10" fill="#888" font-style="italic">= Complexity Literacy</text>
+
+  <text x="710" y="420" font-size="10" fill="#888" font-style="italic">결론:</text>
+  <text x="710" y="435" font-size="10" fill="#888" font-style="italic">저자 → 설계자(Architect)</text>
+  <text x="710" y="450" font-size="10" fill="#888" font-style="italic">의도를 설계하는 능력</text>
+</svg>

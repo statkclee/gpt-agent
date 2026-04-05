@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <style>
+    text { font-family: Palatino, 'Book Antiqua', Georgia, serif; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="white"/>
+
+  <!-- ============================================ -->
+  <!-- TITLE at very top                            -->
+  <!-- ============================================ -->
+  <text x="400" y="36" text-anchor="middle"
+        font-size="18" font-weight="bold" fill="#333333">
+    지식노동의 네 기둥: 5,000년간 변하지 않는 것
+  </text>
+
+  <!-- ============================================ -->
+  <!-- TOP SECTION: Ephemeral tools strip           -->
+  <!-- ============================================ -->
+  <rect x="60" y="54" width="680" height="42" rx="3" ry="3" fill="#F5F5F5" stroke="#CCCCCC" stroke-width="0.5"/>
+  <text x="400" y="68" text-anchor="middle"
+        font-size="11" fill="#999999" font-style="italic">
+    도구는 변한다
+  </text>
+  <text x="400" y="86" text-anchor="middle"
+        font-size="12" fill="#999999" font-style="italic" letter-spacing="1">
+    점토판 → 파피루스 → 타자기 → Word → Markdown → AI
+  </text>
+
+  <!-- Thin separator: ephemeral ↔ permanent -->
+  <line x1="60" y1="104" x2="740" y2="104" stroke="#CCCCCC" stroke-width="0.5" stroke-dasharray="4,3"/>
+
+  <!-- ============================================ -->
+  <!-- MIDDLE SECTION: Four Pillars                 -->
+  <!-- ============================================ -->
+  <!-- Pillar geometry constants:
+       pillar width = 140, gap = 20
+       total = 4*140 + 3*20 = 620, left margin = (800-620)/2 = 90
+       pillar top y = 118, pillar bottom y = 380, height = 262
+  -->
+
+  <!-- ===== Pillar 1: 작성 (Write) ===== -->
+  <rect x="90" y="118" width="140" height="262" rx="2" ry="2"
+        fill="#D8D8D8" stroke="#999999" stroke-width="1"/>
+  <!-- Capstone -->
+  <rect x="84" y="112" width="152" height="14" rx="1" ry="1"
+        fill="#CCCCCC" stroke="#999999" stroke-width="0.5"/>
+  <!-- Base molding -->
+  <rect x="84" y="374" width="152" height="10" rx="1" ry="1"
+        fill="#CCCCCC" stroke="#999999" stroke-width="0.5"/>
+  <!-- Icon: simple pen stroke -->
+  <g transform="translate(160, 175)">
+    <line x1="-12" y1="20" x2="12" y2="-20" stroke="#666666" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="-14" y1="22" x2="-8" y2="22" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <!-- Title -->
+  <text x="160" y="228" text-anchor="middle"
+        font-size="16" font-weight="bold" fill="#333333">
+    작성
+  </text>
+  <text x="160" y="248" text-anchor="middle"
+        font-size="13" fill="#666666">
+    Write
+  </text>
+  <!-- Subtitle - two lines for balance -->
+  <text x="160" y="290" text-anchor="middle"
+        font-size="12" fill="#666666">
+    생각을
+  </text>
+  <text x="160" y="308" text-anchor="middle"
+        font-size="12" fill="#666666">
+    기호로 변환
+  </text>
+
+  <!-- ===== Pillar 2: 계산 (Calculate) ===== -->
+  <rect x="250" y="118" width="140" height="262" rx="2" ry="2"
+        fill="#D8D8D8" stroke="#999999" stroke-width="1"/>
+  <rect x="244" y="112" width="152" height="14" rx="1" ry="1"
+        fill="#CCCCCC" stroke="#999999" stroke-width="0.5"/>
+  <rect x="244" y="374" width="152" height="10" rx="1" ry="1"
+        fill="#CCCCCC" stroke="#999999" stroke-width="0.5"/>
+  <!-- Icon: tally marks -->
+  <g transform="translate(320, 175)">
+    <line x1="-15" y1="-15" x2="-15" y2="15" stroke="#666666" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-7" y1="-15" x2="-7" y2="15" stroke="#666666" stroke-width="2" stroke-linecap="round"/>
+    <line x1="1" y1="-15" x2="1" y2="15" stroke="#666666" stroke-width="2" stroke-linecap="round"/>
+    <line x1="9" y1="-15" x2="9" y2="15" stroke="#666666" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-18" y1="5" x2="14" y2="-10" stroke="#666666" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <text x="320" y="228" text-anchor="middle"
+        font-size="16" font-weight="bold" fill="#333333">
+    계산
+  </text>
+  <text x="320" y="248" text-anchor="middle"
+        font-size="13" fill="#666666">
+    Calculate
+  </text>
+  <text x="320" y="290" text-anchor="middle"
+        font-size="12" fill="#666666">
+    수량을
+  </text>
+  <text x="320" y="308" text-anchor="middle"
+        font-size="12" fill="#666666">
+    처리하고 분석
+  </text>
+
+  <!-- ===== Pillar 3: 발표 (Present) ===== -->
+  <rect x="410" y="118" width="140" height="262" rx="2" ry="2"
+        fill="#D8D8D8" stroke="#999999" stroke-width="1"/>
+  <rect x="404" y="112" width="152" height="14" rx="1" ry="1"
+        fill="#CCCCCC" stroke="#999999" stroke-width="0.5"/>
+  <rect x="404" y="374" width="152" height="10" rx="1" ry="1"
+        fill="#CCCCCC" stroke="#999999" stroke-width="0.5"/>
+  <!-- Icon: person at podium -->
+  <g transform="translate(480, 175)">
+    <!-- head -->
+    <circle cx="0" cy="-16" r="6" fill="none" stroke="#666666" stroke-width="1.8"/>
+    <!-- body -->
+    <line x1="0" y1="-10" x2="0" y2="6" stroke="#666666" stroke-width="1.8" stroke-linecap="round"/>
+    <!-- arms -->
+    <line x1="-10" y1="-3" x2="10" y2="-3" stroke="#666666" stroke-width="1.8" stroke-linecap="round"/>
+    <!-- podium -->
+    <rect x="-12" y="8" width="24" height="12" rx="1" fill="none" stroke="#666666" stroke-width="1.5"/>
+  </g>
+  <text x="480" y="228" text-anchor="middle"
+        font-size="16" font-weight="bold" fill="#333333">
+    발표
+  </text>
+  <text x="480" y="248" text-anchor="middle"
+        font-size="13" fill="#666666">
+    Present
+  </text>
+  <text x="480" y="290" text-anchor="middle"
+        font-size="12" fill="#666666">
+    청중에게
+  </text>
+  <text x="480" y="308" text-anchor="middle"
+        font-size="12" fill="#666666">
+    전달하고 설득
+  </text>
+
+  <!-- ===== Pillar 4: 정리 (Organize) ===== -->
+  <rect x="570" y="118" width="140" height="262" rx="2" ry="2"
+        fill="#D8D8D8" stroke="#999999" stroke-width="1"/>
+  <rect x="564" y="112" width="152" height="14" rx="1" ry="1"
+        fill="#CCCCCC" stroke="#999999" stroke-width="0.5"/>
+  <rect x="564" y="374" width="152" height="10" rx="1" ry="1"
+        fill="#CCCCCC" stroke="#999999" stroke-width="0.5"/>
+  <!-- Icon: grid/table -->
+  <g transform="translate(640, 175)">
+    <rect x="-16" y="-16" width="32" height="32" rx="1" fill="none" stroke="#666666" stroke-width="1.5"/>
+    <line x1="-16" y1="-5" x2="16" y2="-5" stroke="#666666" stroke-width="1.2"/>
+    <line x1="-16" y1="6" x2="16" y2="6" stroke="#666666" stroke-width="1.2"/>
+    <line x1="-5" y1="-16" x2="-5" y2="16" stroke="#666666" stroke-width="1.2"/>
+    <line x1="6" y1="-16" x2="6" y2="16" stroke="#666666" stroke-width="1.2"/>
+  </g>
+  <text x="640" y="228" text-anchor="middle"
+        font-size="16" font-weight="bold" fill="#333333">
+    정리
+  </text>
+  <text x="640" y="248" text-anchor="middle"
+        font-size="13" fill="#666666">
+    Organize
+  </text>
+  <text x="640" y="290" text-anchor="middle"
+        font-size="12" fill="#666666">
+    데이터를
+  </text>
+  <text x="640" y="308" text-anchor="middle"
+        font-size="12" fill="#666666">
+    구조화하고 검색
+  </text>
+
+  <!-- ============================================ -->
+  <!-- BOTTOM SECTION: Foundation Base              -->
+  <!-- ============================================ -->
+  <!-- Main foundation block -->
+  <rect x="60" y="392" width="680" height="48" rx="2" ry="2"
+        fill="#E0E0E0" stroke="#999999" stroke-width="1.2"/>
+  <!-- Top edge highlight for architectural feel -->
+  <line x1="60" y1="392" x2="740" y2="392" stroke="#999999" stroke-width="1.5"/>
+
+  <text x="400" y="416" text-anchor="middle"
+        font-size="16" font-weight="bold" fill="#333333">
+    지식노동 (Knowledge Work)
+  </text>
+  <text x="400" y="433" text-anchor="middle"
+        font-size="11" fill="#666666">
+    불변의 네 활동 — 도구와 무관하게 5,000년간 지속
+  </text>
+
+  <!-- Attribution / Quote -->
+  <text x="400" y="468" text-anchor="middle"
+        font-size="11" fill="#999999" font-style="italic">
+    피터 드러커(1959): "육체가 아닌 지식으로 가치를 만드는 노동"
+  </text>
+
+  <!-- Subtle vertical lines connecting pillars to foundation -->
+  <line x1="160" y1="384" x2="160" y2="392" stroke="#999999" stroke-width="0.8"/>
+  <line x1="320" y1="384" x2="320" y2="392" stroke="#999999" stroke-width="0.8"/>
+  <line x1="480" y1="384" x2="480" y2="392" stroke="#999999" stroke-width="0.8"/>
+  <line x1="640" y1="384" x2="640" y2="392" stroke="#999999" stroke-width="0.8"/>
+
+</svg>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="460" viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg" font-family="Palatino Linotype, Georgia, serif">
+  <rect width="900" height="460" fill="#FEFEFE"/>
+
+  <!-- Header -->
+  <text x="50" y="30" font-size="10.5" fill="#555" letter-spacing="1.5px">복잡도는 왜 올라가는가 — 아무도 원하지 않았지만, 모두가 요구했다</text>
+  <line x1="50" y1="38" x2="630" y2="38" stroke="#003876" stroke-width="1" opacity="0.2"/>
+
+  <!-- ── Vertical pressure accumulation ── -->
+
+  <!-- Pressure 1: 독자 확대 -->
+  <circle cx="62" cy="72" r="12" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="62" y="76" text-anchor="middle" font-size="10" fill="#003876" font-weight="bold">1</text>
+  <text x="84" y="67" font-size="13" fill="#003876" font-weight="600">독자가 늘어난다</text>
+  <text x="84" y="84" font-size="11" fill="#555">"이 보고서 팀장님한테도 보여줘" → 서식·목차·요약 추가</text>
+  <text x="84" y="100" font-size="10.5" fill="#888" font-style="italic">본인용 메모가 공식 문서로 격상되는 순간</text>
+
+  <!-- Guideline -->
+  <line x1="62" y1="55" x2="62" y2="420" stroke="#003876" stroke-width="0.8" stroke-dasharray="2,4" opacity="0.1"/>
+
+  <!-- Pressure 2: 재현성 요구 -->
+  <circle cx="62" cy="132" r="12" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="62" y="136" text-anchor="middle" font-size="10" fill="#003876" font-weight="bold">2</text>
+  <text x="84" y="127" font-size="13" fill="#003876" font-weight="600">재현을 요구받는다</text>
+  <text x="84" y="144" font-size="11" fill="#555">"이 수치 어디서 나왔어?" → 데이터 소스·계산 과정 첨부</text>
+  <text x="84" y="160" font-size="10.5" fill="#888" font-style="italic">Nature 2016: 연구자 70%가 타인 결과 재현 실패</text>
+
+  <!-- Pressure 3: 다중 출력 -->
+  <circle cx="62" cy="192" r="12" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="62" y="196" text-anchor="middle" font-size="10" fill="#003876" font-weight="bold">3</text>
+  <text x="84" y="187" font-size="13" fill="#003876" font-weight="600">다른 형식을 요구받는다</text>
+  <text x="84" y="204" font-size="11" fill="#555">"PDF 말고 웹으로도 줘" "슬라이드도 만들어줘" → 다중 출력 필요</text>
+  <text x="84" y="220" font-size="10.5" fill="#888" font-style="italic">하나의 콘텐츠가 PDF·HTML·PPTX·EPUB로 분기</text>
+
+  <!-- Pressure 4: 규제 추가 -->
+  <circle cx="62" cy="252" r="12" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="62" y="256" text-anchor="middle" font-size="10" fill="#003876" font-weight="bold">4</text>
+  <text x="84" y="247" font-size="13" fill="#003876" font-weight="600">규정이 추가된다</text>
+  <text x="84" y="264" font-size="11" fill="#555">"이 항목도 법적으로 포함해야 해" → 조건부 섹션·메타데이터 추가</text>
+  <text x="84" y="280" font-size="10.5" fill="#888" font-style="italic">전자세금계산서 의무(2011), XBRL 공시(2019), eCTD v4.0(2024)</text>
+
+  <!-- Pressure 5: 반복 자동화 -->
+  <circle cx="62" cy="312" r="12" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="62" y="316" text-anchor="middle" font-size="10" fill="#003876" font-weight="bold">5</text>
+  <text x="84" y="307" font-size="13" fill="#003876" font-weight="600">반복이 쌓인다</text>
+  <text x="84" y="324" font-size="11" fill="#555">"이거 매달 만들어야 해" → 수작업 20시간/월 → 자동화 요구</text>
+  <text x="84" y="340" font-size="10.5" fill="#888" font-style="italic">월간 보고서, 부서별 리포트, 분기 실적 — 복사-붙여넣기의 지옥</text>
+
+  <!-- Pressure 6: 협업 확대 -->
+  <circle cx="62" cy="372" r="12" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="62" y="376" text-anchor="middle" font-size="10" fill="#003876" font-weight="bold">6</text>
+  <text x="84" y="367" font-size="13" fill="#003876" font-weight="600">사람이 늘어난다</text>
+  <text x="84" y="384" font-size="11" fill="#555">"김과장도 같이 쓰게 해줘" → 버전 관리·권한·동시 편집 필요</text>
+  <text x="84" y="400" font-size="10.5" fill="#888" font-style="italic">최종_진짜최종_v3_김과장수정.hwp 의 탄생</text>
+
+  <!-- ── Bottom insight ── -->
+  <line x1="50" y1="418" x2="630" y2="418" stroke="#003876" stroke-width="0.5" opacity="0.15"/>
+
+  <line x1="55" y1="437" x2="60" y2="437" stroke="#003876" stroke-width="2.5"/>
+  <text x="70" y="441" font-size="12.5" fill="#444">6가지 압력은 모두 한 방향 — 추가만 되고 제거되지 않는다 (래칫 효과)</text>
+
+  <!-- ── Margin notes ── -->
+  <text x="710" y="65" font-size="10" fill="#888" font-style="italic">핵심 통찰:</text>
+  <text x="710" y="82" font-size="10" fill="#888" font-style="italic">복잡도는 "선택"이 아니라</text>
+  <text x="710" y="97" font-size="10" fill="#888" font-style="italic">"외부 압력"으로 올라간다.</text>
+  <text x="710" y="115" font-size="10" fill="#888" font-style="italic">아무도 복잡한 문서를</text>
+  <text x="710" y="130" font-size="10" fill="#888" font-style="italic">원하지 않지만, 모든 이가</text>
+  <text x="710" y="145" font-size="10" fill="#888" font-style="italic">요구사항을 추가한다.</text>
+
+  <text x="710" y="200" font-size="10" fill="#888" font-style="italic">래칫 효과:</text>
+  <text x="710" y="217" font-size="10" fill="#888" font-style="italic">①~⑥ 중 어느 것도</text>
+  <text x="710" y="232" font-size="10" fill="#888" font-style="italic">"이제 안 해도 됩니다"</text>
+  <text x="710" y="247" font-size="10" fill="#888" font-style="italic">라고 말하는 사람이 없다.</text>
+  <text x="710" y="265" font-size="10" fill="#888" font-style="italic">한번 올라간 복잡도는</text>
+  <text x="710" y="280" font-size="10" fill="#888" font-style="italic">되돌릴 수 없다.</text>
+
+  <text x="710" y="330" font-size="10" fill="#888" font-style="italic">실전 사례:</text>
+  <text x="710" y="347" font-size="10" fill="#888" font-style="italic">① + ③ + ⑤ 동시 발생 시</text>
+  <text x="710" y="362" font-size="10" fill="#888" font-style="italic">→ Lv.1 → Lv.3 급상승</text>
+  <text x="710" y="380" font-size="10" fill="#888" font-style="italic">이때 도구를 안 바꾸면</text>
+  <text x="710" y="395" font-size="10" fill="#888" font-style="italic">"최종_진짜최종" 지옥</text>
+
+  <text x="710" y="435" font-size="10" fill="#888" font-style="italic">해법: 압력 ①~⑥을</text>
+  <text x="710" y="450" font-size="10" fill="#888" font-style="italic">미리 예측하고 도구 선택</text>
+
+  <!-- Citation -->
+  <line x1="50" y1="452" x2="630" y2="452" stroke="#eee" stroke-width="0.5"/>
+  <text x="50" y="458" font-size="8.5" fill="#999" font-style="italic">Nature (2016) Reproducibility / SEC XBRL (2019) / FDA eCTD v4.0 (2024) / 국세청 전자세금계산서 (2011)</text>
+</svg>

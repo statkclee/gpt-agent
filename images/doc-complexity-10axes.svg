@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="460" viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg" font-family="Palatino Linotype, Georgia, serif">
+  <rect width="900" height="460" fill="#FEFEFE"/>
+
+  <!-- 슬라이드 제목이 있으므로 SVG 타이틀 생략 -->
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  학술적 근거가 있는 4가지 차원               -->
+  <!-- ══════════════════════════════════════════ -->
+
+  <text x="55" y="35" font-size="10.5" fill="#003876" font-weight="600" letter-spacing="1px">학술적 근거가 있는 차원</text>
+  <line x1="50" y1="42" x2="630" y2="42" stroke="#003876" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Dimension 1 -->
+  <circle cx="62" cy="68" r="11" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="62" y="72" text-anchor="middle" font-size="10" fill="#003876" font-weight="bold">1</text>
+  <text x="82" y="64" font-size="12" fill="#003876" font-weight="600">독자 범위</text>
+  <text x="82" y="80" font-size="11" fill="#555">본인 → 팀 → 기관 → 글로벌</text>
+  <text x="400" y="72" font-size="10" fill="#888" font-style="italic">Glushko (2005) Document Engineering</text>
+
+  <!-- Dimension 2 -->
+  <circle cx="62" cy="108" r="11" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="62" y="112" text-anchor="middle" font-size="10" fill="#003876" font-weight="bold">2</text>
+  <text x="82" y="104" font-size="12" fill="#003876" font-weight="600">수명</text>
+  <text x="82" y="120" font-size="11" fill="#555">일회성 → 연간 → 영구 보존</text>
+  <text x="400" y="112" font-size="10" fill="#888" font-style="italic">ISO 15489 기록 관리 표준</text>
+
+  <!-- Dimension 3 -->
+  <circle cx="62" cy="148" r="11" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="62" y="152" text-anchor="middle" font-size="10" fill="#003876" font-weight="bold">3</text>
+  <text x="82" y="144" font-size="12" fill="#003876" font-weight="600">재현성</text>
+  <text x="82" y="160" font-size="11" fill="#555">불필요 → 코드 포함 → 완전 재현 + 감사</text>
+  <text x="400" y="152" font-size="10" fill="#888" font-style="italic">Nature (2016) 재현성 위기 조사</text>
+
+  <!-- Dimension 4 -->
+  <circle cx="62" cy="188" r="11" fill="none" stroke="#003876" stroke-width="1.2"/>
+  <text x="62" y="192" text-anchor="middle" font-size="10" fill="#003876" font-weight="bold">4</text>
+  <text x="82" y="184" font-size="12" fill="#003876" font-weight="600">자동화</text>
+  <text x="82" y="200" font-size="11" fill="#555">수동 → 스크립트 → CI/CD 파이프라인</text>
+  <text x="400" y="192" font-size="10" fill="#888" font-style="italic">DevOps / Docs as Code 패러다임</text>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  실무에서 마주치는 추가 차원                  -->
+  <!-- ══════════════════════════════════════════ -->
+
+  <line x1="50" y1="222" x2="630" y2="222" stroke="#003876" stroke-width="0.5" opacity="0.1"/>
+  <text x="55" y="242" font-size="10.5" fill="#555" letter-spacing="1px">실무에서 마주치는 추가 차원</text>
+
+  <!-- Row 1 -->
+  <text x="55" y="268" font-size="11.5" fill="#444">인터랙티브</text>
+  <text x="170" y="268" font-size="10.5" fill="#888">정적 PDF → 실시간 대시보드</text>
+
+  <text x="370" y="268" font-size="11.5" fill="#444">다중 출력</text>
+  <text x="470" y="268" font-size="10.5" fill="#888">단일 포맷 → HTML+PDF+PPTX</text>
+
+  <!-- Row 2 -->
+  <text x="55" y="293" font-size="11.5" fill="#444">협업 규모</text>
+  <text x="170" y="293" font-size="10.5" fill="#888">혼자 → 팀 → 오픈소스</text>
+
+  <text x="370" y="293" font-size="11.5" fill="#444">데이터 의존</text>
+  <text x="470" y="293" font-size="10.5" fill="#888">없음 → 정적 → 스트리밍 API</text>
+
+  <!-- Row 3 -->
+  <text x="55" y="318" font-size="11.5" fill="#444">규제 준수</text>
+  <text x="170" y="318" font-size="10.5" fill="#888">없음 → 법적 의무 + 감사</text>
+
+  <text x="370" y="318" font-size="11.5" fill="#444">접근성</text>
+  <text x="470" y="318" font-size="10.5" fill="#888">없음 → WCAG 인증</text>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  Bottom insight                            -->
+  <!-- ══════════════════════════════════════════ -->
+
+  <line x1="50" y1="345" x2="630" y2="345" stroke="#003876" stroke-width="0.5" opacity="0.15"/>
+
+  <line x1="55" y1="370" x2="60" y2="370" stroke="#003876" stroke-width="2.5"/>
+  <text x="70" y="374" font-size="12" fill="#444">4가지 핵심 차원만으로는 "왜 Word로 안 되지?"의 전체를 설명 못한다</text>
+
+  <line x1="55" y1="395" x2="60" y2="395" stroke="#003876" stroke-width="2.5"/>
+  <text x="70" y="399" font-size="12" fill="#444">정부 문서는 자동화는 낮지만 규제가 높다 — 차원별 가중치가 다르다</text>
+
+  <line x1="55" y1="420" x2="60" y2="420" stroke="#003876" stroke-width="2.5"/>
+  <text x="70" y="424" font-size="12" fill="#444">도구를 고르기 전에 "어떤 차원이 이 문서를 지배하는가?"를 먼저 물어라</text>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  Margin notes                              -->
+  <!-- ══════════════════════════════════════════ -->
+
+  <text x="710" y="55" font-size="10" fill="#888" font-style="italic">핵심 4차원은</text>
+  <text x="710" y="70" font-size="10" fill="#888" font-style="italic">학술 문헌에서 도출.</text>
+  <text x="710" y="88" font-size="10" fill="#888" font-style="italic">추가 차원은</text>
+  <text x="710" y="103" font-size="10" fill="#888" font-style="italic">실무 경험에서 관찰.</text>
+
+  <text x="710" y="155" font-size="10" fill="#888" font-style="italic">예시:</text>
+  <text x="710" y="172" font-size="10" fill="#888" font-style="italic">정부 보고서는</text>
+  <text x="710" y="187" font-size="10" fill="#888" font-style="italic">④자동화 = 낮음</text>
+  <text x="710" y="202" font-size="10" fill="#888" font-style="italic">규제 준수 = 높음</text>
+  <text x="710" y="220" font-size="10" fill="#888" font-style="italic">→ 핵심 4차원만으로는</text>
+  <text x="710" y="235" font-size="10" fill="#888" font-style="italic">도구 선택 오류 발생.</text>
+
+  <text x="710" y="290" font-size="10" fill="#888" font-style="italic">차원의 수가</text>
+  <text x="710" y="305" font-size="10" fill="#888" font-style="italic">중요한 게 아니라,</text>
+  <text x="710" y="323" font-size="10" fill="#888" font-style="italic">"이 문서를 지배하는</text>
+  <text x="710" y="338" font-size="10" fill="#888" font-style="italic">차원이 무엇인가?"가</text>
+  <text x="710" y="353" font-size="10" fill="#888" font-style="italic">핵심 질문.</text>
+
+  <line x1="50" y1="440" x2="630" y2="440" stroke="#eee" stroke-width="0.5"/>
+  <text x="50" y="453" font-size="9" fill="#999" font-style="italic">Glushko (2005) / ISO 15489 / Nature (2016) Baker / WCAG 2.1 / DevOps Handbook</text>
+</svg>
