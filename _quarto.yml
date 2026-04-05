@@ -5,27 +5,27 @@ project:
     port: 7771
     browser: false
   render:
-    - "*.qmd"
+    - "chapters/*.qmd"
     - "!*.Rmd"
 
 lang: ko-KR
 
 # ---------------------------------- #
 book:
-  title: "AI Agent 코딩"
+  title: "AI 에이전트 글쓰기"
   reader-mode: true
-  subtitle: "LLM과 IDE로 시작하는 차세대 프로그래밍"
+  subtitle: "에이전트가 저작을 바꾸는 과학기술 글쓰기"
 
   page-footer:
     left: |
-      AI Agent Coding with LLM
+      AI 에이전트 글쓰기 — 과학기술 저작
     right: |
       Built with <a href="https://quarto.org/">Quarto</a> · Powered by AI Agents
 
   cover-image: images/book_cover.jpg
   favicon: images/logo.png
-  site-url: https://r2bit.com/gpt-coding/
-  repo-url: https://github.com/bit2r/gpt-coding/
+  site-url: https://statkclee.github.io/gpt-agent/
+  repo-url: https://github.com/statkclee/gpt-agent/
   repo-branch: main
   repo-actions: [edit, issue]
 
@@ -40,34 +40,40 @@ book:
   chapters:
     - index.qmd
 
-    - part: "**8부** AI 시대 프로그래밍"
+    - part: "**1부** AI 시대 프로그래밍"
       chapters:
-        - 71-gpt.qmd
-        - 72-paradigm-shift.qmd
-        - 73-context-engineering.qmd
-        - 74-workflow.qmd
-        - 75-code-review.qmd
-        - 76-ai-tools.qmd
-        - 77-developer-future.qmd
+        - chapters/71-gpt.qmd
+        - chapters/72-paradigm-shift.qmd
+        - chapters/73-context-engineering.qmd
+        - chapters/74-workflow.qmd
+        - chapters/75-code-review.qmd
+        - chapters/76-ai-tools.qmd
+        - chapters/77-developer-future.qmd
 
-    - part: "**9부** 통합 개발 환경"
+    - part: "**2부** 통합 개발 환경"
       chapters:
-        - ide.qmd
-        - ide_positron.qmd
-        - ide_extension.qmd
-        - ide_setup.qmd
-        - docker_concept.qmd
-        - compendium.qmd
+        - chapters/ide.qmd
+        - chapters/ide_positron.qmd
+        - chapters/ide_zed.qmd
+        - chapters/ide_extension.qmd
+        - chapters/ide_setup.qmd
+        - chapters/docker_concept.qmd
+        - chapters/compendium.qmd
 
     - part: "**부록**"
       chapters:
-        - glossary.qmd
+        - chapters/glossary.qmd
 
-    - references.qmd
+    - chapters/references.qmd
 
 # ---------------------------------- #
 format:
   html:
+    lightbox:
+      match: auto
+      effect: zoom
+    fig-width: 12
+    fig-height: 9
     mermaid:
       theme: neutral
     theme:

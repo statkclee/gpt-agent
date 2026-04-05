@@ -1,0 +1,90 @@
+---
+execute:
+  eval: false
+---
+
+# 용어사전 {#sec-glossary .unnumbered}
+
+AI 시대 프로그래밍과 개발 환경에서 사용하는 핵심 용어를 정리한다.
+
+
+## AI 핵심 개념 {.unnumbered}
+
+{{< glossary LLM >}}
+{{< glossary "AI 에이전트" >}}
+{{< glossary 토큰 >}}
+{{< glossary "컨텍스트 윈도우" >}}
+{{< glossary 할루시네이션 >}}
+{{< glossary 멀티모달 >}}
+{{< glossary 임베딩 >}}
+{{< glossary 파인튜닝 >}}
+
+
+## 프롬프트와 컨텍스트 {.unnumbered}
+
+{{< glossary 프롬프트 >}}
+{{< glossary "프롬프트 엔지니어링" >}}
+{{< glossary "컨텍스트 엔지니어링" >}}
+{{< glossary "시스템 프롬프트" >}}
+{{< glossary 체인오브소트 >}}
+
+
+## AI 코딩 패러다임 {.unnumbered}
+
+{{< glossary "바이브 코딩" >}}
+{{< glossary "에이전트 코딩" >}}
+{{< glossary "페어 프로그래밍" >}}
+{{< glossary "코드 리뷰" >}}
+{{< glossary 리팩토링 >}}
+
+
+## AI 도구와 서비스 {.unnumbered}
+
+{{< glossary API >}}
+{{< glossary SDK >}}
+{{< glossary RAG >}}
+{{< glossary "Function Calling" >}}
+{{< glossary MCP >}}
+{{< glossary Ollama >}}
+{{< glossary "GitHub Copilot" >}}
+{{< glossary Cursor >}}
+{{< glossary "Claude Code" >}}
+
+
+## IDE와 개발 환경 {.unnumbered}
+
+{{< glossary IDE >}}
+{{< glossary LSP >}}
+{{< glossary "Extension Host" >}}
+{{< glossary Positron >}}
+{{< glossary Zed >}}
+{{< glossary Quarto >}}
+
+
+## Docker와 컨테이너 {.unnumbered}
+
+{{< glossary Docker >}}
+{{< glossary 컨테이너 >}}
+{{< glossary "Docker 이미지" >}}
+{{< glossary Dockerfile >}}
+{{< glossary 볼륨 >}}
+{{< glossary "Docker Hub" >}}
+
+
+## Research Compendium {.unnumbered}
+
+{{< glossary "Research Compendium" >}}
+{{< glossary 재현성 >}}
+
+
+## 기타 핵심 용어 {.unnumbered}
+
+{{< glossary Git >}}
+{{< glossary 파이프라인 >}}
+{{< glossary 오픈소스 >}}
+{{< glossary 마크다운 >}}
+
+
+## 전체 용어 목록 {.unnumbered}
+
+{{< glossary table=true >}}

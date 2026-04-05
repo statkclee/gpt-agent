@@ -1,1 +1,1 @@
-Sitemap: https://r2bit.com/gpt-coding/sitemap.xml
+Sitemap: https://statkclee.github.io/gpt-agent/sitemap.xml

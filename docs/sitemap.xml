@@ -1,67 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://r2bit.com/gpt-coding/index.html</loc>
-    <lastmod>2026-01-18T13:42:35.262Z</lastmod>
+    <loc>https://statkclee.github.io/gpt-agent/index.html</loc>
+    <lastmod>2026-04-05T04:43:51.030Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/gpt-coding/71-gpt.html</loc>
-    <lastmod>2026-01-18T12:45:37.634Z</lastmod>
+    <loc>https://statkclee.github.io/gpt-agent/chapters/71-gpt.html</loc>
+    <lastmod>2026-04-05T04:41:08.413Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/gpt-coding/72-paradigm-shift.html</loc>
-    <lastmod>2026-01-18T12:45:38.343Z</lastmod>
+    <loc>https://statkclee.github.io/gpt-agent/chapters/72-paradigm-shift.html</loc>
+    <lastmod>2026-04-05T04:41:08.419Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/gpt-coding/73-context-engineering.html</loc>
-    <lastmod>2026-01-18T12:45:37.615Z</lastmod>
+    <loc>https://statkclee.github.io/gpt-agent/chapters/73-context-engineering.html</loc>
+    <lastmod>2026-04-05T04:41:08.423Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/gpt-coding/74-workflow.html</loc>
-    <lastmod>2026-01-18T13:43:52.756Z</lastmod>
+    <loc>https://statkclee.github.io/gpt-agent/chapters/74-workflow.html</loc>
+    <lastmod>2026-04-05T04:41:08.429Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/gpt-coding/75-code-review.html</loc>
-    <lastmod>2026-01-18T13:28:41.516Z</lastmod>
+    <loc>https://statkclee.github.io/gpt-agent/chapters/75-code-review.html</loc>
+    <lastmod>2026-04-05T04:41:08.434Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/gpt-coding/76-ai-tools.html</loc>
-    <lastmod>2026-01-18T12:45:38.342Z</lastmod>
+    <loc>https://statkclee.github.io/gpt-agent/chapters/76-ai-tools.html</loc>
+    <lastmod>2026-04-05T04:41:08.439Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/gpt-coding/77-developer-future.html</loc>
-    <lastmod>2026-01-18T12:45:38.065Z</lastmod>
+    <loc>https://statkclee.github.io/gpt-agent/chapters/77-developer-future.html</loc>
+    <lastmod>2026-04-05T04:41:08.444Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/gpt-coding/ide.html</loc>
-    <lastmod>2026-01-18T12:45:38.467Z</lastmod>
+    <loc>https://statkclee.github.io/gpt-agent/chapters/ide.html</loc>
+    <lastmod>2026-04-05T04:41:08.466Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/gpt-coding/ide_positron.html</loc>
-    <lastmod>2026-01-18T13:28:45.411Z</lastmod>
+    <loc>https://statkclee.github.io/gpt-agent/chapters/ide_positron.html</loc>
+    <lastmod>2026-04-05T04:41:08.476Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/gpt-coding/ide_extension.html</loc>
-    <lastmod>2026-01-18T12:45:38.474Z</lastmod>
+    <loc>https://statkclee.github.io/gpt-agent/chapters/ide_zed.html</loc>
+    <lastmod>2026-04-05T04:41:08.486Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/gpt-coding/ide_setup.html</loc>
-    <lastmod>2026-01-18T13:28:45.409Z</lastmod>
+    <loc>https://statkclee.github.io/gpt-agent/chapters/ide_extension.html</loc>
+    <lastmod>2026-04-05T04:41:08.470Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/gpt-coding/docker_concept.html</loc>
-    <lastmod>2026-01-18T12:45:37.622Z</lastmod>
+    <loc>https://statkclee.github.io/gpt-agent/chapters/ide_setup.html</loc>
+    <lastmod>2026-04-05T04:41:08.481Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/gpt-coding/compendium.html</loc>
-    <lastmod>2026-01-18T13:28:41.519Z</lastmod>
+    <loc>https://statkclee.github.io/gpt-agent/chapters/docker_concept.html</loc>
+    <lastmod>2026-04-05T04:41:08.455Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/gpt-coding/glossary.html</loc>
-    <lastmod>2026-01-18T12:45:38.339Z</lastmod>
+    <loc>https://statkclee.github.io/gpt-agent/chapters/compendium.html</loc>
+    <lastmod>2026-04-05T04:41:08.449Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/gpt-coding/references.html</loc>
-    <lastmod>2026-01-18T13:28:41.524Z</lastmod>
+    <loc>https://statkclee.github.io/gpt-agent/chapters/glossary.html</loc>
+    <lastmod>2026-04-05T04:51:51.226Z</lastmod>
+  </url>
+  <url>
+    <loc>https://statkclee.github.io/gpt-agent/chapters/references.html</loc>
+    <lastmod>2026-04-05T04:41:08.495Z</lastmod>
   </url>
 </urlset>

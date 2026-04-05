@@ -8,7 +8,7 @@
 
 <meta name="author" content="이광춘(Openai)">
 
-<title>AI 에이전트 글쓰기</title>
+<title>참고문헌 – AI 에이전트 글쓰기</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -24,32 +24,48 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./chapters/71-gpt.html" rel="next">
-<link href="./images/logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-a10cfefd4a74d1695ded868c564009f8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c68594dfef9b4fb828be3ca3c7ed08e4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/glossary.html" rel="prev">
+<link href="../images/logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a10cfefd4a74d1695ded868c564009f8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-c68594dfef9b4fb828be3ca3c7ed08e4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,7 +120,7 @@ ga('send', {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">서문</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/references.html">참고문헌</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
@@ -119,7 +135,7 @@ ga('send', {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">AI 에이전트 글쓰기</a> 
+      <a href="../">AI 에이전트 글쓰기</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/statkclee/gpt-agent/" title="소스 코드" class="quarto-navigation-tool px-1" aria-label="소스 코드"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="리더 모드 전환">
@@ -139,7 +155,7 @@ ga('send', {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">서문</span></a>
   </div>
 </li>
@@ -154,43 +170,43 @@ ga('send', {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/71-gpt.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/71-gpt.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">소프트웨어 3.0 시대</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/72-paradigm-shift.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/72-paradigm-shift.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">재사용에서 재생성으로</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/73-context-engineering.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/73-context-engineering.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">프롬프트에서 컨텍스트로</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/74-workflow.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/74-workflow.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">AI 코딩 실전 워크플로우</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/75-code-review.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/75-code-review.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">코드 리뷰와 품질 관리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/76-ai-tools.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/76-ai-tools.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">AI 도구 생태계</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/77-developer-future.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/77-developer-future.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">개발자의 미래</span></span></a>
   </div>
 </li>
@@ -207,43 +223,43 @@ ga('send', {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/ide.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/ide.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">IDE 선택과 발전</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/ide_positron.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/ide_positron.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">포지트론</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/ide_zed.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/ide_zed.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Zed</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/ide_extension.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/ide_extension.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">IDE 확장 프로그램</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/ide_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/ide_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">개발 환경 구축</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/docker_concept.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/docker_concept.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">도커: 재현 환경</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/compendium.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/compendium.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">연구 컴펜디엄</span></span></a>
   </div>
 </li>
@@ -260,7 +276,7 @@ ga('send', {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/glossary.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/glossary.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">용어사전</span></a>
   </div>
 </li>
@@ -268,7 +284,7 @@ ga('send', {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/references.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/references.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">참고문헌</span></a>
   </div>
 </li>
@@ -277,52 +293,22 @@ ga('send', {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">목차</h2>
-   
-  <ul>
-  <li><a href="#서문" id="toc-서문" class="nav-link active" data-scroll-target="#서문">서문</a>
-  <ul class="collapse">
-  <li><a href="#ai-네이티브-시스템의-구성-요소" id="toc-ai-네이티브-시스템의-구성-요소" class="nav-link" data-scroll-target="#ai-네이티브-시스템의-구성-요소">AI 네이티브 시스템의 구성 요소</a></li>
-  <li><a href="#감사의-글" id="toc-감사의-글" class="nav-link" data-scroll-target="#감사의-글">감사의 글</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/statkclee/gpt-agent/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>편집</a></li><li><a href="https://github.com/statkclee/gpt-agent/issues/new" class="toc-action"><i class="bi empty"></i>이슈 보고</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">AI 에이전트 글쓰기</h1>
-<p class="subtitle lead">에이전트가 저작을 바꾸는 과학기술 글쓰기</p>
+<h1 class="title">참고문헌</h1>
 </div>
 
 
-<div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">저자</div>
-  <div class="quarto-title-meta-heading">소속</div>
-  
-    <div class="quarto-title-meta-contents">
-    <p class="author">이광춘 </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            국가인공지능전략위원회 자문위원
-          </p>
-      </div>
-  </div>
 
 <div class="quarto-title-meta">
 
-      
-    <div>
-    <div class="quarto-title-meta-heading">공개</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">2026년 04월 05일</p>
-    </div>
-  </div>
+    
   
     
   </div>
@@ -332,54 +318,225 @@ ga('send', {
 </header>
 
 
-
-<section id="서문" class="level1 unnumbered">
-<h1 class="unnumbered">서문</h1><p><img src="images/book_cover.jpg" title="AI 에이전트 글쓰기" class="quarto-cover-image nolightbox img-fluid"></p>
-<p>지난 몇 년간, 인공지능(AI)의 발전은 우리가 코드를 이해하고 데이터를 바라보는 방식을 근본적으로 바꾸어 놓았습니다. AI가 코드 초안을 작성해주고, 막혔던 질문에 길을 터주는 시대에, 어떤 역량을 갖춰야 할까요? 넘쳐나는 정보와 도구 속에서 길을 잃지 않고, 데이터로부터 진정한 가치를 만들어내는 전문가로 성장하려면 무엇을 배워야 할까요?</p>
-<p>많은 이들이 데이터 과학 프로젝트를 ’일회성 실험’으로 생각합니다. 데이터를 가져와 모델을 만들고, 결과를 보고하는 작업은 분명 중요합니다. 하지만 거기서 멈춘다면, 그 노력은 파편적인 코드와 지식으로만 남게 됩니다. AI에게 복잡한 작업을 맡기더라도, 그 결과가 얼마나 믿을 수 있는지, 내일 또 다른 데이터가 들어왔을 때 전체 과정을 손쉽게 반복할 수 있는지 확신하기 어렵습니다.</p>
-<p>이 책은 그 한계를 넘어서기 위한 여정으로의 초대입니다.</p>
-<p>단순히 코딩 문법이나 AI 도구 사용법을 나열하는 데 그치지 않고, 이 책은 <strong>‘스스로 살아 움직이며 가치를 창출하는 지능형 데이터 시스템’</strong> 을 구축하는 전체 과정을 안내합니다.</p>
-<section id="ai-네이티브-시스템의-구성-요소" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="ai-네이티브-시스템의-구성-요소">AI 네이티브 시스템의 구성 요소</h2>
-<p>현대적인 AI 시스템은 하나의 언어나 도구로 만들어지지 않습니다. 여러 기술이 각자의 역할을 수행하며 유기적으로 연결된 ’스택(Stack)’의 형태를 띱니다. 이 책에서 우리는 AI 네이티브 시스템을 구성하는 네 개의 핵심 계층을 탐험할 것이며, 각 계층은 다음과 같은 근본적인 질문에 답합니다.</p>
-<div id="fig-ai-native-stack" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-ai-native-stack-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/ai-native-stack.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="그림&nbsp;1: AI 네이티브 시스템 스택"><img src="images/ai-native-stack.svg" class="img-fluid figure-img"></a>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-Markowetz2015" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">F.
+Markowetz, <span>“Five selfish reasons to work reproducibly,”</span>
+<em>Genome Biology</em>, vol. 16, no. 1, p. 274, Dec. 2015, doi: <a href="https://doi.org/10.1186/s13059-015-0850-7">10.1186/s13059-015-0850-7</a>.</div>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ai-native-stack-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1: AI 네이티브 시스템 스택
-</figcaption>
-</figure>
+<div id="ref-Baker2016" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">M.
+Baker, <span>“1,500 scientists lift the lid on reproducibility,”</span>
+<em>Nature</em>, vol. 533, no. 7604, pp. 452–454, May 2016, doi: <a href="https://doi.org/10.1038/533452a">10.1038/533452a</a>.</div>
 </div>
-<ul>
-<li><p><strong>기반 계층 (Foundation Layer): Git, Docker, Shell</strong> <em>“이 코드가 1년 뒤 내 동료의 컴퓨터에서도 똑같이 작동한다고 어떻게 확신할 수 있는가?”</em> 모든 것의 기반이 되는 <strong>재현성과 환경</strong>의 기술입니다. 코드를 관리하고, 협업하며, 어떤 컴퓨터에서든 동일한 환경을 보장하는 단단한 암반과 같습니다.</p></li>
-<li><p><strong>처리 계층 (Processing Layer): R &amp; Python</strong> <em>“이 지저분한 원본 데이터를 어떻게 의미 있는 형태로 가장 효율적으로 바꿀 수 있는가?”</em> 데이터를 읽고, 변형하며, 비즈니스 로직을 구현하는 <strong>논리와 연산</strong>의 엔진입니다.</p></li>
-<li><p><strong>지능 계층 (Intelligence Layer): LLM APIs, Vector DBs</strong> <em>“수만 개의 고객 리뷰를 모두 읽지 않고도, 핵심적인 불만 사항과 긍정적인 반응을 어떻게 추출할 수 있는가?”</em> 시스템에 ’생각하는 능력’을 부여하는 <strong>인지</strong>의 코어입니다.</p></li>
-<li><p><strong>조율 계층 (Orchestration Layer): Make, GitHub Actions</strong> <em>“매일 아침 9시, 내가 키보드에 손대지 않고도 이 모든 과정이 자동으로 실행되게 하려면 어떻게 해야 하는가?”</em> 각 계층의 작업을 정해진 순서에 따라 자동으로 실행하도록 지휘하는 <strong>오케스트라 지휘자</strong>입니다.</p></li>
-</ul>
-<p>이 책의 최종 목표는, 이 모든 것을 통합하여 <strong>매일 새로운 데이터를 바탕으로 AI의 지능을 빌려 새로운 지식을 창출하고, 그 결과를 정해진 형태로 만들어내는 하나의 완전한 ’자동화된 지능형 시스템’을 완성하는 것입니다.</strong></p>
-<p>이 책을 덮을 때쯤, 독자 여러분은 단순히 코드를 작성하는 사람을 넘어, 신뢰할 수 있고 자동화된 데이터 시스템을 설계하고 구축하는 전문가로 성장해 있을 것입니다. AI의 시대, 데이터로 진짜 문제를 해결하는 전문가가 되기 위한 여정을 이제 시작하겠습니다.</p>
-</section>
-<section id="감사의-글" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="감사의-글">감사의 글</h2>
-<style>
-.flushright {
-   text-align: right;
-}
-</style>
-<p>이 책이 탄생할 수 있도록 도움을 주신 여러분께 깊은 감사의 마음을 표합니다.</p>
-<p>공익법인 한국 R 사용자회가 없었다면 데이터 과학분야 챗GPT 시리즈가 세상에 나오지 못했을 것입니다. 한국 R 사용자회의 유충현 회장님, 신종화 사무처장님, 홍성학 감사님, 올해부터 새롭게 공익법인 한국 R 사용자를 이끌어주실 형환희 회장님께 감사드립니다.</p>
-<p>또한 이 책은 2014년 처음 몸담게 된 소프트웨어 카펜트리 그렉 윌슨 박사님과 Python for Informatics 저자인 미시건 대학 찰스 세브란스 교수님을 비롯한 전세계 수많은 익명의 기여자들의 노력과 지원이 있었고, 서울 R 미트업에서 발표해주시고 참여해주신 수많은 분들이 격려와 영감을 주셨기에 가능했습니다.</p>
-<p>이 책이 출간되는데 있어 이들 모든 분들의 도움 없이는 어려웠을 것입니다. 그동안의 관심과 지원에 깊은 감사를 드리며, 이 책이 데이터 과학의 발전과 독자들에게 도움이 될 수 있기를 바라는 마음으로 마무리하겠습니다.</p>
-<div class="flushright">
-<p>2024년 3월 속초 청초호</p>
-<p>이광춘</p>
+<div id="ref-wu2023brief" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">T.
+Wu <em>et al.</em>, <span>“A brief overview of ChatGPT: The history,
+status quo and potential future development,”</span> <em>IEEE/CAA
+Journal of Automatica Sinica</em>, vol. 10, no. 5, pp. 1122–1136,
+2023.</div>
+</div>
+<div id="ref-chiang2023chatgpt" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">T.
+Chiang, <span>“ChatGPT is a blurry JPEG of the web,”</span> <em>The New
+Yorker</em>, vol. 9, p. 2023, 2023.</div>
+</div>
+<div id="ref-marwick2018packaging" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">B.
+Marwick, C. Boettiger, and L. Mullen, <span>“Packaging data analytical
+work reproducibly using r (and friends),”</span> <em>The American
+Statistician</em>, vol. 72, no. 1, pp. 80–88, 2018.</div>
+</div>
+<div id="ref-McKiernan2016" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline"><span class="nocase">E. C. McKiernan <em>et
+al.</em></span>, <span>“How open science helps researchers
+succeed,”</span> <em>eLife</em>, vol. 5, p. e16800, 2016, doi: <a href="https://doi.org/10.7554/eLife.16800">10.7554/eLife.16800</a>.</div>
+</div>
+<div id="ref-NSF2015" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline">K.
+Bollen, J. T. Cacioppo, R. M. Kaplan, J. A. Krosnick, J. L. Olds, and H.
+Dean, <span>“Social, behavioral, and economic sciences perspectives on
+robust and reliable science,”</span> National Science Foundation,
+Directorate for Social, Behavioral,; Economic Sciences, Report of the
+Subcommittee on Replicability in Science Advisory Committee to the
+National Science Foundation, 2015. Available: <a href="https://www.nsf.gov/sbe/AC_Materials/SBE_Robust_and_Reliable_Research_Report.pdf">https://www.nsf.gov/sbe/AC_Materials/SBE_Robust_and_Reliable_Research_Report.pdf</a></div>
+</div>
+<div id="ref-Simmons2011" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline">J.
+P. Simmons, L. D. Nelson, and U. Simonsohn, <span>“False-positive
+psychology: Undisclosed flexibility in data collection and analysis
+allows presenting anything as significant,”</span> <em>Psychological
+Science</em>, vol. 22, no. 11, pp. 1359–1366, Nov. 2011, doi: <a href="https://doi.org/10.1177/0956797611417632">10.1177/0956797611417632</a>.</div>
+</div>
+<div id="ref-Kerr1998" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[9] </div><div class="csl-right-inline">N.
+L. Kerr, <span>“HARKing: Hypothesizing after the results are
+known,”</span> <em>Personality and Social Psychology Review</em>, vol.
+2, no. 3, pp. 196–217, 1998, doi: <a href="https://doi.org/10.1207/s15327957pspr0203_4">10.1207/s15327957pspr0203_4</a>.</div>
+</div>
+<div id="ref-John2012" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[10] </div><div class="csl-right-inline">L.
+K. John, G. Loewenstein, and D. Prelec, <span>“Measuring the prevalence
+of questionable research practices with incentives for truth
+telling,”</span> <em>Psychological Science</em>, vol. 23, no. 5, pp.
+524–532, May 2012, doi: <a href="https://doi.org/10.1177/0956797611430953">10.1177/0956797611430953</a>.</div>
+</div>
+<div id="ref-Wilkinson2016" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[11] </div><div class="csl-right-inline"><span class="nocase">M. D. Wilkinson <em>et
+al.</em></span>, <span>“The FAIR guiding principles for scientific data
+management and stewardship,”</span> <em>Scientific Data</em>, vol. 3,
+no. 1, p. 160018, 2016, doi: <a href="https://doi.org/10.1038/sdata.2016.18">10.1038/sdata.2016.18</a>.</div>
+</div>
+<div id="ref-Gentleman2004" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[12] </div><div class="csl-right-inline">R.
+Gentleman and D. Temple Lang, <span>“Statistical analyses and
+reproducible research,”</span> Bioconductor Project, Working Paper 2,
+May 2004. Available: <a href="https://biostats.bepress.com/bioconductor/paper2/">https://biostats.bepress.com/bioconductor/paper2/</a></div>
+</div>
+<div id="ref-Claerbout1992" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[13] </div><div class="csl-right-inline">J.
+F. Claerbout and M. Karrenbach, <span>“Electronic documents give
+reproducible research a new meaning,”</span> in <em>SEG technical
+program expanded abstracts</em>, New Orleans, Louisiana: Society of
+Exploration Geophysicists, 1992, pp. 601–604. doi: <a href="https://doi.org/10.1190/1.1822162">10.1190/1.1822162</a>.</div>
+</div>
+<div id="ref-Piwowar2007" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[14] </div><div class="csl-right-inline">H.
+A. Piwowar, R. S. Day, and D. B. Fridsma, <span>“Sharing detailed
+research data is associated with increased citation rate,”</span>
+<em>PLoS ONE</em>, vol. 2, no. 3, p. e308, Mar. 2007, doi: <a href="https://doi.org/10.1371/journal.pone.0000308">10.1371/journal.pone.0000308</a>.</div>
+</div>
+<div id="ref-Piwowar2013" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[15] </div><div class="csl-right-inline">H.
+A. Piwowar and T. J. Vision, <span>“Data reuse and the open data
+citation advantage,”</span> <em>PeerJ</em>, vol. 1, p. e175, 2013, doi:
+<a href="https://doi.org/10.7717/peerj.175">10.7717/peerj.175</a>.</div>
+</div>
+<div id="ref-Pienta2010" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[16] </div><div class="csl-right-inline">A.
+M. Pienta, G. C. Alter, and J. A. Lyle, <span>“The enduring value of
+social science research: The use and reuse of primary research
+data,”</span> in <em>The organisation, economics and policy of
+scientific research workshop</em>, Torino, Italy, 2010. Available: <a href="https://deepblue.lib.umich.edu/handle/2027.42/78307">https://deepblue.lib.umich.edu/handle/2027.42/78307</a></div>
+</div>
+<div id="ref-Stodden2009" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[17] </div><div class="csl-right-inline">V.
+Stodden, <span>“The legal framework for reproducible scientific
+research: Licensing and copyright,”</span> <em>Computing in Science
+&amp; Engineering</em>, vol. 11, no. 1, pp. 35–40, 2009, doi: <a href="https://doi.org/10.1109/MCSE.2009.19">10.1109/MCSE.2009.19</a>.</div>
+</div>
+<div id="ref-Klein2014" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[18] </div><div class="csl-right-inline">M.
+Klein <em>et al.</em>, <span>“Scholarly context not found: One in five
+articles suffers from reference rot,”</span> <em>PLoS ONE</em>, vol. 9,
+no. 12, p. e115253, 2014, doi: <a href="https://doi.org/10.1371/journal.pone.0115253">10.1371/journal.pone.0115253</a>.</div>
+</div>
+<div id="ref-vanKampen2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[19] </div><div class="csl-right-inline">A.
+H. C. van Kampen <em>et al.</em>, <span>“<span>ENCORE</span>: A
+practical implementation to improve reproducibility and transparency of
+computational research,”</span> <em>Nature Communications</em>, vol. 15,
+no. 1, p. 8117, Sep. 2024, doi: <a href="https://doi.org/10.1038/s41467-024-52446-8">10.1038/s41467-024-52446-8</a>.</div>
+</div>
+<div id="ref-TuringWay2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[20] </div><div class="csl-right-inline">The Turing Way Community, <em>The turing way: A
+handbook for reproducible, ethical and collaborative research</em>.
+Zenodo, 2024. doi: <a href="https://doi.org/10.5281/zenodo.3233853">10.5281/zenodo.3233853</a>.</div>
+</div>
+<div id="ref-Jones2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[21] </div><div class="csl-right-inline">M.
+Jones, <span>“Introducing reproducible research standards at the world
+bank,”</span> <em>Harvard Data Science Review</em>, vol. 6, no. 4, Oct.
+2024, doi: <a href="https://doi.org/10.1162/99608f92.21328ce3">10.1162/99608f92.21328ce3</a>.</div>
+</div>
+<div id="ref-Wilson2017" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[22] </div><div class="csl-right-inline">G.
+Wilson, J. Bryan, K. Cranston, J. Kitzes, L. Nederbragt, and T. K. Teal,
+<span>“Good enough practices in scientific computing,”</span> <em>PLOS
+Computational Biology</em>, vol. 13, no. 6, p. e1005510, 2017, doi: <a href="https://doi.org/10.1371/journal.pcbi.1005510">10.1371/journal.pcbi.1005510</a>.</div>
+</div>
+<div id="ref-Rule2019" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[23] </div><div class="csl-right-inline">A.
+Rule <em>et al.</em>, <span>“Ten simple rules for writing and sharing
+computational analyses in jupyter notebooks,”</span> <em>PLOS
+Computational Biology</em>, vol. 15, no. 7, p. e1007007, 2019, doi: <a href="https://doi.org/10.1371/journal.pcbi.1007007">10.1371/journal.pcbi.1007007</a>.</div>
+</div>
+<div id="ref-Pimentel2019" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[24] </div><div class="csl-right-inline">J.
+F. Pimentel, L. Murta, V. Braganholo, and J. Freire, <span>“A
+large-scale study about quality and reproducibility of jupyter
+notebooks,”</span> in <em>Proceedings of the 16th international
+conference on mining software repositories (MSR)</em>, IEEE, 2019, pp.
+507–517. doi: <a href="https://doi.org/10.1109/MSR.2019.00077">10.1109/MSR.2019.00077</a>.</div>
+</div>
+<div id="ref-Kluyver2016" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[25] </div><div class="csl-right-inline">T.
+Kluyver <em>et al.</em>, <span>“Jupyter notebooks – a publishing format
+for reproducible computational workflows,”</span> in <em>Positioning and
+power in academic publishing: Players, agents and agendas</em>, IOS
+Press, 2016, pp. 87–90. doi: <a href="https://doi.org/10.3233/978-1-61499-649-1-87">10.3233/978-1-61499-649-1-87</a>.</div>
+</div>
+<div id="ref-Aakanksha2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[26] </div><div class="csl-right-inline">Aakanksha, P. Kumari, M. Thakur, and S.
+Chakraborty, <span>“Natural language outlines for code: Literate
+programming in the LLM era,”</span> <em>Proceedings of the ACM
+International Conference on the Foundations of Software Engineering
+(FSE)</em>, 2024, doi: <a href="https://doi.org/10.1145/3696630.3728541">10.1145/3696630.3728541</a>.</div>
+</div>
+<div id="ref-Zhu2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[27] </div><div class="csl-right-inline">Y.
+Zhu <em>et al.</em>, <span>“Renaissance of literate programming in the
+era of LLMs: Enhancing LLM-based code generation in large-scale
+projects,”</span> <em>arXiv preprint</em>, 2024, Available: <a href="https://arxiv.org/abs/2502.17441">https://arxiv.org/abs/2502.17441</a></div>
+</div>
+<div id="ref-Souza2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[28] </div><div class="csl-right-inline">R.
+Souza <em>et al.</em>, <span>“Workflow provenance in the computing
+continuum for responsible, trustworthy, and energy-efficient AI,”</span>
+in <em>IEEE international conference on e-science</em>, 2024.</div>
+</div>
+<div id="ref-Souza2024Prov" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[29] </div><div class="csl-right-inline"><span class="nocase">R. Souza <em>et
+al.</em></span>, <span>“PROV-AGENT: Unified provenance for tracking AI
+agent interactions in agentic workflows,”</span> <em>5th Workshop on
+Reproducible Workflows, Data Management, and Security</em>, 2024.</div>
+</div>
+<div id="ref-Chen2025" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[30] </div><div class="csl-right-inline"><span class="nocase">H. Chen, R. Souza, <em>et
+al.</em></span>, <span>“The (r)evolution of scientific workflows in the
+agentic AI era: Towards autonomous science,”</span> <em>Proceedings of
+the SC ’25 Workshops</em>, 2025, doi: <a href="https://doi.org/10.1145/3731599.3767580">10.1145/3731599.3767580</a>.</div>
+</div>
+<div id="ref-Gamma1994" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[31] </div><div class="csl-right-inline">E.
+Gamma, R. Helm, R. Johnson, and J. Vlissides, <em>Design patterns:
+Elements of reusable object-oriented software</em>. Addison-Wesley,
+1994.</div>
+</div>
+<div id="ref-MITTR2025DisposableCode" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[32] </div><div class="csl-right-inline">MIT Technology Review, <span>“AI coding is now
+everywhere. But not everyone is convinced.”</span> <em>MIT Technology
+Review</em>, Dec. 2025, Available: <a href="https://www.technologyreview.com/2025/12/15/1128352/rise-of-ai-coding-developers-2026/">https://www.technologyreview.com/2025/12/15/1128352/rise-of-ai-coding-developers-2026/</a></div>
+</div>
+<div id="ref-Karpathy2025VibeCoding" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[33] </div><div class="csl-right-inline">A.
+Karpathy, <span>“Vibe coding.”</span> Twitter/X, Feb. 02, 2025.</div>
+</div>
+<div id="ref-IBM2025VibeCoding" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[34] </div><div class="csl-right-inline">IBM, <span>“What is vibe coding?”</span>
+[Online]. Available: <a href="https://www.ibm.com/think/topics/vibe-coding">https://www.ibm.com/think/topics/vibe-coding</a></div>
+</div>
+<div id="ref-CollinsDictionary2025" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[35] </div><div class="csl-right-inline">Collins Dictionary, <span>“Word of the year
+2025: Vibe coding.”</span> Collins Dictionary, 2025.</div>
+</div>
+<div id="ref-IBMTech2025AIPeriodicTable" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[36] </div><div class="csl-right-inline">IBM Technology, <span>“The AI periodic table
+explained.”</span> YouTube, Jan. 2025. Available: <a href="https://www.youtube.com/watch?v=ESBMgZHzfG0">https://www.youtube.com/watch?v=ESBMgZHzfG0</a></div>
+</div>
 </div>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -823,11 +980,11 @@ ga('send', {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../chapters/glossary.html" class="pagination-link" aria-label="용어사전">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">용어사전</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./chapters/71-gpt.html" class="pagination-link" aria-label="소프트웨어 3.0 시대">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">소프트웨어 3.0 시대</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -838,44 +995,12 @@ ga('send', {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/statkclee/gpt-agent/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>편집</a></li><li><a href="https://github.com/statkclee/gpt-agent/issues/new" class="toc-action"><i class="bi empty"></i>이슈 보고</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/statkclee/gpt-agent/edit/main/chapters/references.qmd" class="toc-action"><i class="bi bi-github"></i>편집</a></li><li><a href="https://github.com/statkclee/gpt-agent/issues/new" class="toc-action"><i class="bi empty"></i>이슈 보고</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Built with <a href="https://quarto.org/">Quarto</a> · Powered by AI Agents</p>
 </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 

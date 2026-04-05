@@ -110,3 +110,31 @@ code a:any-link {
 pre {
   background-image: linear-gradient(160deg,#f8f8f8 0,#f1f1f1 100%);
 }
+
+/* SVG Images ------------------------------------------------ */
+/* figure 요소 크기 제한 해제 */
+figure {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* 모든 SVG 이미지를 크게 표시 */
+img[src$=".svg"] {
+  width: 100% !important;
+  max-width: 1400px !important;
+  height: auto !important;
+  display: block !important;
+  margin: 2rem auto !important;
+}
+
+/* no-lightbox 클래스가 있는 figure */
+figure.no-lightbox {
+  max-width: 1400px !important;
+  width: 100% !important;
+  margin: 2rem auto !important;
+}
+
+figure.no-lightbox img {
+  width: 100% !important;
+  max-width: none !important;
+}
